@@ -1016,4 +1016,13 @@ GPUs	Parallelism	Faster training
 
 
 
+Week 3 – Data Handling & EDA
+
+● Data cleaning (missing values, duplicates)
+● Data preprocessing & scaling
+● Feature engineering basics
+● Exploratory Data Analysis (EDA)
+● Data visualization (Matplotlib, Seaborn)
+
+
 
