@@ -72,7 +72,7 @@ B) A sweeping biopic about a historical figure.
 
 ## What is linear algebra for machine learning?
 
-🧠 2️⃣ What is Linear Algebra?
+###  What is Linear Algebra?
 
 Linear algebra is a branch of mathematics that deals with:
 
@@ -88,7 +88,7 @@ In simple words:
 
 Linear algebra is the mathematics of organizing and transforming numbers in space.
 
-🧠 2️⃣ Why Linear Algebra is the Language of ML
+## Why Linear Algebra is the Language of ML
 
 Machine Learning works with:
 
@@ -125,9 +125,8 @@ Train neural networks
 <img width="1525" height="1030" alt="image" src="https://github.com/user-attachments/assets/794b1fba-a03b-4a12-aba9-decdbfefb2dc" />
 
 
-
-🧩 3️⃣ Core Building Blocks
-🔹 A. Scalars
+Core Building Blocks
+A. Scalars
 
 A single number.
 
@@ -152,7 +151,7 @@ Person data:
 
 That’s a vector.
 
-📌 Geometric Meaning:
+Geometric Meaning:
 
 A vector = a point in space.
 
@@ -162,7 +161,7 @@ Each row in dataset = vector
 
 Each feature = dimension
 
-🔹 C. Matrices
+ C. Matrices
 
 A 2D collection of numbers.
 
@@ -178,7 +177,7 @@ This entire table = Matrix
 In ML:
 Dataset = Matrix
 
-🔹 D. Tensors
+ D. Tensors
 
 Generalization of matrices.
 
@@ -284,7 +283,7 @@ Linear algebra enables the expression of complex datasets in a way that algorith
 
 
 
-## 🟢 Section A: MCQs
+##  Section A: MCQs
 
 1. What is a vector in ML?
 
@@ -322,7 +321,7 @@ D) Bias
 
 Answer: C
 
-## 🟡 Section B: True / False
+##  Section B: True / False
 
 Neural networks rely on matrix multiplication.
 Answer: True
@@ -336,9 +335,9 @@ Answer: True
 A matrix is a 1D structure.
 Answer: False
 
-## 🔵 Section C: Short Answer (Detailed but Simple)
+## Section C: Short Answer (Detailed but Simple)
 
-1️⃣ What is the dot product?
+## What is the dot product?
 Simple Definition:
 
 The dot product is a mathematical operation that multiplies two vectors and adds the results to give a single number.
@@ -370,7 +369,7 @@ Used in neural networks
 
 Used to measure similarity between data points
 
-👉 In simple words:
+In simple words:
 Dot product helps the model calculate predictions.
 
 2️⃣ Why is matrix multiplication important in deep learning?
@@ -396,7 +395,7 @@ Z = Output
 
 Every neuron calculation is matrix multiplication.
 
-✅ Why It Matters:
+ Why It Matters:
 
 Allows fast computation
 
@@ -405,11 +404,11 @@ Works well with GPUs
 Processes multiple inputs at once
 
 Enables batch training
+ Without matrix multiplication, deep learning cannot function.
 
-👉 Without matrix multiplication, deep learning cannot function.
+What is the difference between vector and matrix?
 
-3️⃣ What is the difference between vector and matrix?
-✅ Vector:
+### Vector:
 
 A one-dimensional list of numbers
 
@@ -424,7 +423,7 @@ A data point
 
 Model weights
 
-✅ Matrix:
+### Matrix:
 
 A two-dimensional table of numbers
 
@@ -441,17 +440,19 @@ Dataset
 
 Transformations
 
-📌 Key Difference:
-Vector	Matrix
+### Key Difference:
+
+### Vector	Matrix
 1D structure	2D structure
 Single row or column	Multiple rows & columns
 Represents one data point	Represents entire dataset
-4️⃣ What is a transpose of a matrix?
-✅ Simple Definition:
+
+### What is a transpose of a matrix?
+Simple Definition:
 
 Transpose means converting rows into columns and columns into rows.
 
-✅ Example:
+ Example:
 
 Original Matrix:
 
@@ -476,28 +477,28 @@ Used in backpropagation
 
 Used to align dimensions for multiplication
 
-👉 Transpose helps fix dimension mismatch.
+ Transpose helps fix dimension mismatch.
 
-5️⃣ Why do we use norms in ML?
-✅ Simple Definition:
+##  Why do we use norms in ML?
+## Simple Definition:
 
 A norm measures the size or length of a vector.
 
-🔹 L1 Norm:
+##  L1 Norm:
 
 Sum of absolute values
 
 Example:
 |[2, -3]| = |2| + |−3| = 5
 
-🔹 L2 Norm:
+##  L2 Norm:
 
 Square root of sum of squares
 
 Example:
 √(2² + 3²) = √13
 
-✅ Why Important in ML?
+## Why Important in ML?
 
 Norms are used for:
 
@@ -513,14 +514,14 @@ Used in KNN
 
 Used in clustering
 
-3️⃣ Model Stability
+## Model Stability
 
-👉 Norms help make models simpler and more stable.
+ Norms help make models simpler and more stable.
 
-## 🟣 Section D: Long Answer / Conceptual
+##  Section D: Long Answer / Conceptual
 
-🟣 1️⃣ Explain How Linear Algebra is Used in Neural Networks
-✅ Simple Understanding
+## Explain How Linear Algebra is Used in Neural Networks
+Simple Understanding
 
 Neural networks use matrix multiplication and vector operations to process input data and make predictions.
 
@@ -544,7 +545,8 @@ b = Bias vector
 
 Z = Output
 
-🧠 Step-by-Step Explanation
+### Step-by-Step Explanation
+
 Step 1: Input Representation
 
 If you input:
@@ -646,12 +648,12 @@ W=W−α∇J
 
 Again, vector subtraction.
 
-🎯 Key Idea
+## Key Idea
 
 Neural networks are just:
 
-👉 Stacked linear transformations
-👉 Followed by non-linear activation
+ Stacked linear transformations
+ Followed by non-linear activation
 
 Without linear algebra, neural networks cannot compute anything.
 
@@ -659,12 +661,12 @@ Without linear algebra, neural networks cannot compute anything.
 
 Linear algebra is fundamental to neural networks because all computations are performed using vectors and matrices. Inputs are represented as vectors, weights are stored as matrices, and outputs are calculated using matrix multiplication. Each layer performs a linear transformation followed by a non-linear activation function. Backpropagation also uses matrix operations to compute gradients and update weights efficiently. Thus, neural networks are essentially layered matrix computations optimized using linear algebra.
 
-🟣 2️⃣ Why is Vectorization Faster Than Loops in Python?
-✅ Simple Explanation
+### Why is Vectorization Faster Than Loops in Python?
+## Simple Explanation
 
 Vectorization uses optimized C-level operations in libraries like NumPy instead of slow Python loops.
 
-🧠 Detailed Explanation
+## Detailed Explanation
 Loop Example (Slow):
 for i in range(n):
     result[i] = a[i] * b[i]
@@ -688,7 +690,7 @@ Uses parallel computation
 
 Uses optimized memory layout
 
-🚀 Why Faster?
+## Why Faster?
 
 Fewer Python interpreter calls
 
@@ -698,7 +700,7 @@ Better cache utilization
 
 Parallel execution
 
-🎯 In ML
+### In ML
 
 Instead of looping through each data sample:
 
@@ -718,12 +720,12 @@ That’s why deep learning works efficiently.
 
 Vectorization is faster than loops in Python because it uses optimized low-level implementations in libraries such as NumPy. These implementations are written in C and make use of parallel computation and efficient memory handling. In machine learning, vectorization allows batch processing of data using matrix multiplication, which significantly improves computational speed compared to iterative loops.
 
-🟣 3️⃣ Explain the Role of Eigenvalues in PCA
-✅ Simple Understanding
+## Explain the Role of Eigenvalues in PCA
+ Simple Understanding
 
 Eigenvalues help us find the most important directions in data.
 
-🧠 Step-by-Step PCA Logic
+### Step-by-Step PCA Logic
 Step 1: Center Data
 
 Subtract mean.
@@ -737,7 +739,7 @@ Step 3: Compute Eigenvalues & Eigenvectors
 Eigenvectors → Direction of maximum variance
 Eigenvalues → Amount of variance in that direction
 
-🎯 Why Important?
+### Why Important?
 
 In PCA:
 
@@ -747,7 +749,7 @@ This keeps maximum information.
 
 Reduces dimensions.
 
-📌 Example
+## Example
 
 If eigenvalues are:
 
@@ -765,8 +767,8 @@ Because they explain most variance.
 
 Eigenvalues in PCA represent the amount of variance captured by their corresponding eigenvectors. PCA computes the covariance matrix of the data and finds its eigenvalues and eigenvectors. Eigenvectors define the direction of maximum variance, while eigenvalues indicate the magnitude of variance in those directions. By selecting the eigenvectors with the highest eigenvalues, PCA reduces dimensionality while retaining most of the information in the dataset.
 
-🟣 4️⃣ What Happens if a Matrix is Not Invertible?
-✅ Simple Meaning
+ What Happens if a Matrix is Not Invertible?
+ Simple Meaning
 
 A matrix is not invertible if its determinant is zero.
 
@@ -776,7 +778,7 @@ No unique solution
 
 Some features are linearly dependent
 
-🧠 Why This Happens in ML
+## Why This Happens in ML
 
 If two features are highly correlated:
 
@@ -797,7 +799,7 @@ X
 
 Becomes non-invertible.
 
-📌 Problems Caused
+Problems Caused
 
 Cannot compute normal equation
 
@@ -866,7 +868,7 @@ This problem is called:
 
 What Problems Does It Cause?
 
-1️⃣ No unique solution in linear regression
+1️ No unique solution in linear regression
 2️⃣ Model coefficients become unstable
 3️⃣ Small data change → large weight change
 4️⃣ Interpretation becomes unreliable
@@ -1930,6 +1932,7 @@ Replace extreme values with limits.
 ### Transformation
 
 Apply log transformation.
+
 import numpy as np
 df["salary"] = np.log(df["salary"])
 
@@ -1942,8 +1945,11 @@ An outlier is a data point that significantly differs from other observations in
 ### What are missing values in a dataset?
 
 A) Extra data
+
 B) Data that is not required
+
 C) Data that is not stored or unavailable
+
 D) Duplicate data
 
 Answer: C
@@ -1951,8 +1957,11 @@ Answer: C
 ### Which of the following represents missing values in datasets?
 
 A) 0
+
 B) NaN
+
 C) Null
+
 D) Both B and C
 
 Answer: D
@@ -1960,8 +1969,11 @@ Answer: D
 ### Why do missing values occur?
 
 A) Data entry errors
+
 B) Sensor failure
+
 C) Incomplete forms
+
 D) All of the above
 
  Answer: D
@@ -1969,8 +1981,12 @@ D) All of the above
  ### Which Python library is commonly used to detect missing values?
 
 A) NumPy
+
 B) Pandas
+
 C) TensorFlow
+
+
 D) Keras
 
 Answer: B
@@ -1978,8 +1994,12 @@ Answer: B
 ### Which function checks missing values in Pandas?
 
 A) isnull()
+
 B) missing()
+
 C) checknull()
+
+
 D) empty()
 
 Answer: A
@@ -1987,8 +2007,11 @@ Answer: A
 ### Which method removes rows with missing values?
 
 A) dropna()
+
 B) remove()
+
 C) delete()
+
 D) clear()
 
 Answer: A
@@ -1996,8 +2019,12 @@ Answer: A
 ### What is imputation?
 
 A) Removing data
+
 B) Filling missing values with statistical values
+
 C) Sorting data
+
+
 D) Converting data
 
 Answer: B
@@ -2005,8 +2032,11 @@ Answer: B
 Which value is commonly used to fill missing numerical values?
 
 A) Mean
+
 B) Median
+
 C) Mode
+
 D) All of the above
 
  Answer: D
@@ -2014,17 +2044,25 @@ D) All of the above
 ### Missing values can cause problems in:
 
 A) Machine learning models
+
 B) Data analysis
+
 C) Visualization
+
 D) All of the above
+
 
 Answer: D
 
  ### Which technique replaces missing values with the most frequent value?
 
 A) Mean Imputation
+
 B) Median Imputation
+
 C) Mode Imputation
+
+
 D) Scaling
 
 Answer: C
@@ -2032,8 +2070,12 @@ Answer: C
 ### What are wrong values in a dataset?
 
 A) Missing data
+
 B) Incorrect or invalid data
+
 C) Duplicate records
+
+
 D) Empty rows
 
 Answer: B
@@ -2043,6 +2085,7 @@ Answer: B
 Age = 200
 
 A) Correct
+
 B) Wrong
 
 Answer: B
@@ -2050,8 +2093,11 @@ Answer: B
 ### Which issue can cause wrong values?
 
 A) Typing error
+
 B) Measurement error
+
 C) System error
+
 D) All of the above
 
 Answer: D
@@ -2059,8 +2105,11 @@ Answer: D
 ### Which technique helps detect wrong values?
 
 A) Range check
+
 B) Data validation
+
 C) Visualization
+
 D) All of the above
 
 Answer: D
@@ -2070,8 +2119,11 @@ Answer: D
 Gender column contains:
 
 A) Male
+
 B) Female
+
 C) 123
+
 D) Other
 
 Answer: C
@@ -2079,8 +2131,11 @@ Answer: C
 ###  Which step helps fix wrong values?
 
 A) Replace incorrect value
+
 B) Remove row
+
 C) Correct the value
+
 D) All of the above
 
 Answer: D
@@ -2088,8 +2143,11 @@ Answer: D
 ###  Which visualization helps detect wrong values quickly?
 
 A) Histogram
+
 B) Boxplot
+
 C) Scatter plot
+
 D) All of the above
 
 Answer: D
@@ -2097,8 +2155,11 @@ Answer: D
 ### Wrong values mostly occur during:
 
 A) Data entry
+
 B) Data collection
+
 C) Data transfer
+
 D) All of the above
 
 Answer: D
@@ -2106,8 +2167,11 @@ Answer: D
 ### Which method validates whether values are within acceptable limits?
 
 A) Range validation
+
 B) Scaling
+
 C) Encoding
+
 D) Normalization
 
 Answer: A
@@ -2115,8 +2179,11 @@ Answer: A
 ### Wrong values reduce:
 
 A) Model accuracy
+
 B) Data quality
+
 C) Analysis reliability
+
 D) All of the above
 
 Answer: D
@@ -2125,8 +2192,11 @@ Answer: D
 ###  What are duplicate records?
 
 A) Missing rows
+
 B) Repeated rows in a dataset
+
 C) Wrong values
+
 D) Outliers
 
  Answer: B
@@ -2134,22 +2204,30 @@ D) Outliers
 ###  Why do duplicate records occur?
 
 A) Multiple data entries
+
 B) Data merging errors
+
 C) System glitches
+
 D) All of the above
 
 ### Answer: D
 
 ##  Example of duplicate data:
 ID	Name
+
 1	Rahul
+
 1	Rahul
 
 ### What is this?
 
 A) Missing value
+
 B) Duplicate record
+
 C) Outlier
+
 D) Correct data
 
 Answer: B
@@ -2157,8 +2235,11 @@ Answer: B
 ### Which Pandas function detects duplicates?
 
 A) duplicate()
+
 B) duplicated()
+
 C) repeat()
+
 D) copy()
 
 Answer: B
@@ -2166,8 +2247,11 @@ Answer: B
 ###  Which function removes duplicate rows?
 
 A) remove()
+
 B) drop_duplicates()
+
 C) delete()
+
 D) unique()
 
 Answer: B
@@ -2175,8 +2259,12 @@ Answer: B
 ### Duplicate data can cause:
 
 A) Biased analysis
+
 B) Incorrect statistics
+
+
 C) Model errors
+
 D) All of the above
 
 Answer: D
@@ -2184,8 +2272,11 @@ Answer: D
 ### Which field is commonly used to detect duplicates?
 
 A) Unique ID
+
 B) Name
+
 C) Age
+
 D) Address
 
 Answer: A
@@ -2193,8 +2284,11 @@ Answer: A
 ###  Duplicate records affect:
 
 A) Dataset size
+
 B) Model performance
+
 C) Data reliability
+
 D) All of the above
 
 Answer: D
@@ -2202,8 +2296,11 @@ Answer: D
 ### When might duplicates be allowed?
 
 A) Transaction logs
+
 B) Sensor data
+
 C) Time series data
+
 D) All of the above
 
 Answer: D
@@ -2211,8 +2308,11 @@ Answer: D
 ###  Removing duplicates improves:
 
 A) Data quality
+
 B) Model accuracy
+
 C) Analysis reliability
+
 D) All of the above
 
 Answer: D
@@ -2221,8 +2321,11 @@ Answer: D
 ### What is an outlier?
 
 A) Missing value
+
 B) Extremely different data point
+
 C) Duplicate data
+
 D) Wrong value
 
 Answer: B
@@ -2234,8 +2337,11 @@ Salary data:
 40K, 42K, 38K, 5M
 
 A) 42K
+
 B) 38K
+
 C) 5M
+
 D) 40K
 
 Answer: C
@@ -2243,8 +2349,11 @@ Answer: C
 ### Which visualization detects outliers best?
 
 A) Pie chart
+
 B) Box plot
+
 C) Line chart
+
 D) Bar chart
 
 Answer: B
@@ -2252,8 +2361,11 @@ Answer: B
 ### Which statistical method detects outliers?
 
 A) Z-score
+
 B) IQR
+
 C) Standard deviation
+
 D) All of the above
 
 Answer: D
@@ -2261,8 +2373,11 @@ Answer: D
 ### What does a high Z-score indicate?
 
 A) Normal value
+
 B) Outlier possibility
+
 C) Missing value
+
 D) Duplicate value
 
 Answer: B
@@ -2270,8 +2385,11 @@ Answer: B
 ### IQR stands for:
 
 A) Inter Quartile Range
+
 B) Internal Quality Ratio
+
 C) Input Query Range
+
 D) Integrated Quantile Rule
 
 Answer: A
@@ -2279,8 +2397,11 @@ Answer: A
 ### Outliers can occur due to:
 
 A) Data entry error
+
 B) Rare events
+
 C) Measurement errors
+
 D) All of the above
 
 Answer: D
@@ -2288,8 +2409,11 @@ Answer: D
 ### What can outliers affect?
 
 A) Mean value
+
 B) Machine learning models
+
 C) Data visualization
+
 D) All of the above
 
 Answer: D
@@ -2297,8 +2421,11 @@ Answer: D
 ### When should we keep outliers?
 
 A) When they represent real events
+
 B) When they are errors
+
 C) When dataset is small
+
 D) Never
 
 Answer: A
@@ -2306,12 +2433,479 @@ Answer: A
 ### Outliers can be handled by:
 
 A) Removing them
+
 B) Transforming data
+
 C) Capping values
+
 D) All of the above
 
 Answer: D
+
+
+
+ ### Feature engineering
+
+ # What is Feature Engineering
  
+Feature Engineering is the process of creating, selecting, or transforming variables (features) from raw data so that machine learning models can understand patterns better and make accurate predictions.
+
+In simple words:
+
+### Feature Engineering = Preparing and improving data features so the ML model can learn better.
+
+Think of it like preparing ingredients before cooking a meal.
+Good ingredients → Better dish
+Good features → Better ML model
+
+### What is a Feature?
+
+A feature is simply a column or variable in a dataset.
+
+Example dataset:
+
+| Age | Salary | Experience | Buy Product |
+| --- | ------ | ---------- | ----------- |
+| 25  | 40000  | 2          | Yes         |
+| 30  | 60000  | 5          | No          |
+
+
+Here:
+
+Age → Feature
+
+Salary → Feature
+
+Experience → Feature
+
+Buy Product → Target variable
+
+
+###  Real-Time Example (Machine Learning)
+
+Example: House Price Prediction
+
+
+Raw Dataset:
+
+| House Size | Bedrooms | Location | Price |
+| ---------- | -------- | -------- | ----- |
+| 1200       | 2        | City A   | 50L   |
+| 2000       | 3        | City B   | 80L   |
+
+
+### Now we create new useful features.
+
+## Feature Engineering:
+
+| House Size | Bedrooms | Location | **Price per sqft** |
+| ---------- | -------- | -------- | ------------------ |
+| 1200       | 2        | City A   | 4167               |
+| 2000       | 3        | City B   | 4000               |
+
+
+
+Now the model can understand the relationship better.
+
+## Non-Technical Example (Easy to Understand)
+
+Imagine a teacher predicting student performance.
+
+Raw Data:
+
+| Study Hours | Attendance | Result |
+| ----------- | ---------- | ------ |
+| 2           | 60%        | Fail   |
+| 6           | 90%        | Pass   |
+
+
+Teacher creates a new feature:
+
+Study Score = Study Hours × Attendance
+
+This new feature helps better predict performance.
+
+This is Feature Engineering.
+
+
+Why Feature Engineering is Important in Machine Learning
+
+Feature engineering helps ML models:
+
+1️⃣ Improve prediction accuracy
+
+2️⃣ Discover hidden patterns
+
+3️⃣ Reduce noise in data
+
+4️⃣ Make models learn faster
+
+5️⃣ Improve model performance
+
+
+### Important concept:
+
+
+### Better features → Better model performance
+
+Even simple algorithms perform well with good features.
+
+Where Feature Engineering is Used
+
+Feature engineering is used in almost every machine learning project.
+
+Examples:
+
+| Industry   | Example                |
+| ---------- | ---------------------- |
+| Finance    | Fraud detection        |
+| E-commerce | Product recommendation |
+| Healthcare | Disease prediction     |
+| Banking    | Credit scoring         |
+| Marketing  | Customer segmentation  |
+
+
+Example:
+
+Netflix uses features like:
+
+Watch history
+
+Movie rating
+
+Genre preference
+
+to recommend movies.
+
+When Feature Engineering is Done
+
+Feature Engineering is usually done during the data preprocessing stage.
+
+Typical ML workflow:
+
+<img width="885" height="426" alt="image" src="https://github.com/user-attachments/assets/f47a67dd-a978-40ef-9d87-4abe103b0e3f" />
+
+
+
+<img width="1472" height="570" alt="image" src="https://github.com/user-attachments/assets/e30fd4fc-6e8d-4fdd-9dd0-b035a59d5fc9" />
+
+
+
+Data Collection
+       ↓
+Data Cleaning
+       ↓
+Exploratory Data Analysis
+       ↓
+Feature Engineering
+       ↓
+Model Training
+       ↓
+Model Evaluation
+
+
+## How Feature Engineering is Done (Common Techniques)
+
+1. Creating New Features
+
+Example:
+
+Age → Create Age Group
+
+| Age | Age Group |
+| --- | --------- |
+| 22  | Young     |
+| 45  | Adult     |
+
+
+2. Encoding Categorical Data
+
+Convert text to numbers.
+
+Example:
+
+| City   |
+| ------ |
+| Delhi  |
+| Mumbai |
+
+
+| City |
+| ---- |
+| 0    |
+| 1    |
+
+
+3. Scaling Features
+
+Make values comparable.
+
+Example:
+
+| Salary | Age |
+| ------ | --- |
+| 50000  | 25  |
+
+
+Scale values between 0 and 1.
+
+4. Feature Selection
+
+Remove useless columns.
+
+Example:
+
+Remove ID column because it doesn't help prediction.
+
+
+5. Date Feature Extraction
+
+From a date column we can extract:
+
+| Date       | Day    | Month | Year |
+| ---------- | ------ | ----- | ---- |
+| 12-03-2025 | Monday | March | 2025 |
+
+
+Example: E-Commerce ML System
+
+Original Data:
+
+| User | Login Time       |
+| ---- | ---------------- |
+| A    | 2025-03-01 22:00 |
+
+
+## Feature Engineering:
+
+Extract:
+
+| User | Hour | Weekend |
+| ---- | ---- | ------- |
+| A    | 22   | Yes     |
+
+
+This helps predict shopping behavior.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/141137cf-59be-4a9a-a42c-636c13b4ff8d" />
+
+#### Quick Summary
+
+Feature Engineering means:
+
+Creating useful features
+
+Transforming raw data
+
+Selecting important variables
+
+Purpose:
+
+Improve model accuracy
+
+Help ML algorithms learn patterns
+
+Make predictions better
+
+
+### Feature Engineering Quiz
+
+### What is Feature Engineering?
+
+A) Training machine learning models
+
+B) Creating and transforming data features to improve model performance
+
+C) Removing datasets
+
+
+D) Deploying models
+
+
+
+Answer: B
+
+2. A feature in a dataset refers to:
+
+A) Row
+
+B) Column or variable
+
+C) Dataset
+
+D) Model
+
+Answer: B
+
+3. Which stage of ML pipeline usually includes feature engineering?
+
+A) Model Deployment
+
+B) Data Preprocessing
+
+C) Model Evaluation
+
+D) Prediction
+
+Answer: B
+
+
+
+4. Which of the following is an example of feature engineering?
+
+A) Removing duplicate rows
+
+B) Creating "Age Group" from "Age"
+
+C) Training a model
+
+D) Running predictions
+
+ Answer: B
+
+5. Why is feature engineering important?
+
+A) Improves model accuracy
+
+B) Helps model understand patterns
+
+C) Reduces noise in data
+
+D) All of the above
+
+ Answer: D
+
+6. Which technique converts categorical data into numerical values?
+
+A) Feature Scaling
+
+B) Encoding
+
+C) Normalization
+
+D) Imputation
+
+Answer: B
+
+7. Which of the following is a feature engineering technique?
+
+A) One-hot encoding
+
+
+B) Feature scaling
+
+C) Polynomial features
+
+
+D) All of the above
+
+Answer: D
+
+8. Which column usually should NOT be used as a feature?
+
+A) Age
+
+B) Salary
+
+C) ID number
+
+D) Experience
+
+Answer: C
+
+9. Extracting "Month" from a "Date" column is an example of:
+
+A) Feature creation
+
+B) Feature selection
+
+C) Feature scaling
+
+D) Feature deletion
+
+Answer: A
+
+10. Feature engineering mainly helps:
+
+A) Machine learning algorithms understand data better
+
+B) Increase dataset size
+
+C) Reduce model complexity
+
+D) Replace models
+
+Answer: A
+
+### Section B: True / False
+
+11. Feature engineering helps improve machine learning model performance.
+
+ Answer: True
+
+12. Feature engineering is done after model deployment.
+
+ Answer: False
+
+13. Creating new variables from existing data is part of feature engineering.
+
+ Answer: True
+
+14. Machine learning models always perform well without feature engineering.
+
+Answer: False
+
+15. Feature scaling is part of feature engineering.
+
+Answer: True
+
+### Section C: Short Answer Questions
+
+16. What is a feature in machine learning?
+
+ Answer:
+ 
+A feature is a measurable variable or column in a dataset used as input for machine learning models.
+
+Example: Age, Salary, Experience.
+
+17. What is feature scaling?
+
+ Answer:
+ 
+Feature scaling is the process of adjusting numerical features to a similar range so that machine learning algorithms can process them effectively.
+
+18. What is one-hot encoding?
+
+ Answer:
+ 
+One-hot encoding converts categorical variables into binary numerical columns so that machine learning models can understand them.
+
+Example:
+
+City = Delhi, Mumbai
+
+Becomes:
+
+Delhi → (1,0)
+
+Mumbai → (0,1)
+
+19. Give one real-life example of feature engineering.
+
+ Answer:
+ 
+In a house price prediction system, we can create a new feature:
+
+Price per square foot = Price / House Size.
+
+This helps the model understand property value better.
+
+20. Why is feature engineering important in machine learning?
+
+ Answer:
+Feature engineering improves data quality and helps models identify important patterns, which leads to better predictions and higher accuracy.
+
 
 
 
