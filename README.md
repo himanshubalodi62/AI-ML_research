@@ -339,11 +339,11 @@ Answer: False
 ## 🔵 Section C: Short Answer (Detailed but Simple)
 
 1️⃣ What is the dot product?
-✅ Simple Definition:
+Simple Definition:
 
 The dot product is a mathematical operation that multiplies two vectors and adds the results to give a single number.
 
-✅ Formula:
+ Formula:
 
 If
 A = [a₁, a₂, a₃]
@@ -353,7 +353,7 @@ Then:
 
 A · B = (a₁×b₁) + (a₂×b₂) + (a₃×b₃)
 
-✅ Example:
+Example:
 
 A = [1, 2, 3]
 B = [4, 5, 6]
@@ -362,7 +362,7 @@ Dot Product = (1×4) + (2×5) + (3×6)
 = 4 + 10 + 18
 = 32
 
-✅ Why Important in ML?
+Why Important in ML?
 
 Used in linear regression
 
@@ -374,7 +374,7 @@ Used to measure similarity between data points
 Dot product helps the model calculate predictions.
 
 2️⃣ Why is matrix multiplication important in deep learning?
-✅ Simple Answer:
+Simple Answer:
 
 Matrix multiplication allows neural networks to process large amounts of data efficiently.
 
@@ -805,29 +805,29 @@ Infinite solutions possible
 
 Model unstable
 
-🎯 Solution
+Solution
 
 Remove correlated features
 
 Use Regularization (Ridge)
 
 Use Pseudo-inverse
-
-📝 Exam Answer
+ Exam Answer
 
 If a matrix is not invertible, it means its determinant is zero and it does not have a unique inverse. In machine learning, this usually occurs when features are linearly dependent. This causes problems in methods like linear regression where the inverse of XᵀX is required. To handle this issue, techniques such as feature selection, regularization, or pseudo-inverse methods are used to ensure stable model computation.
 
-🧠 Final Conceptual Summary
+Final Conceptual Summary
 Concept	Why Important
 Neural networks	Built on matrix multiplication
 Vectorization	Enables fast computation
 Eigenvalues	Power dimensionality reduction
 Non-invertible matrix	Causes instability in models
 
-### 🧠 8️⃣ Critical Thinking Questions.
+### Critical Thinking Questions.
 
-🧠 1️⃣ What Happens If Two Features Are Perfectly Correlated?
-✅ Simple Intuition
+What Happens If Two Features Are Perfectly Correlated?
+
+Simple Intuition
 
 If two features are perfectly correlated, they carry the same information.
 
@@ -841,7 +841,7 @@ They are just scaled versions of each other.
 
 So the model gets duplicate information.
 
-🧠 Technical Explanation
+Technical Explanation
 
 If:
 
@@ -862,16 +862,16 @@ to become non-invertible (determinant = 0).
 
 This problem is called:
 
-👉 Multicollinearity
+ Multicollinearity
 
-⚠️ What Problems Does It Cause?
+What Problems Does It Cause?
 
 1️⃣ No unique solution in linear regression
 2️⃣ Model coefficients become unstable
 3️⃣ Small data change → large weight change
 4️⃣ Interpretation becomes unreliable
 
-📊 Real Example
+Real Example
 
 Suppose dataset:
 
@@ -881,8 +881,7 @@ Income	Savings
 
 If Savings = 0.2 × Income exactly
 Then model cannot decide which feature is important.
-
-🛠️ Solutions
+ Solutions
 
 Remove one feature
 
@@ -890,26 +889,25 @@ Use PCA
 
 Use Ridge regularization
 
-🎯 Interview Answer
+ Interview Answer
 
 If two features are perfectly correlated, the feature matrix becomes linearly dependent, making XᵀX non-invertible. This leads to unstable or infinite solutions in linear regression. The problem is called multicollinearity and can be addressed using regularization or dimensionality reduction techniques like PCA.
 
-🧠 2️⃣ Why Does High Dimensionality Cause Problems in ML?
-✅ Simple Idea
+ Why Does High Dimensionality Cause Problems in ML?
+ Simple Idea
 
 More features ≠ better model.
 
 Too many features cause:
 
-👉 Sparse data
-👉 Overfitting
-👉 Slow computation
+ Sparse data
+ Overfitting
+ Slow computation
 
 This is called:
 
-🎯 Curse of Dimensionality
-
-🧠 Deeper Explanation
+Curse of Dimensionality
+ Deeper Explanation
 
 When dimensions increase:
 
@@ -918,7 +916,7 @@ When dimensions increase:
 3️⃣ Model needs exponentially more data
 4️⃣ Noise increases
 
-📌 Example
+ Example
 
 Imagine:
 
@@ -928,7 +926,7 @@ Imagine:
 
 Distance loses meaning.
 
-⚠️ Problems Caused
+Problems Caused
 
 KNN performs poorly
 
@@ -938,7 +936,7 @@ Overfitting increases
 
 Training time increases
 
-🛠️ Solutions
+ Solutions
 
 PCA
 
@@ -948,19 +946,19 @@ Regularization
 
 Collect more data
 
-🎯 Interview Answer
+ Interview Answer
 
 High dimensionality causes the curse of dimensionality, where data becomes sparse and distance measures lose meaning. Models require significantly more data to generalize properly and are more prone to overfitting. Dimensionality reduction techniques such as PCA help mitigate this issue.
 
-🧠 3️⃣ Why Are GPUs Good for Deep Learning?
-✅ Simple Explanation
+ Why Are GPUs Good for Deep Learning?
+ Simple Explanation
 
 Deep learning = matrix multiplication
 GPUs are designed for massive parallel computation
 
 So they process matrix operations much faster than CPUs.
 
-🧠 Technical Reasoning
+Technical Reasoning
 
 CPU:
 
@@ -982,7 +980,7 @@ Compute one value at a time
 GPU:
 Compute thousands at once.
 
-📊 Example
+Example
 
 Matrix multiplication:
 
@@ -992,7 +990,7 @@ That’s 1 million multiplications.
 CPU → sequential
 GPU → parallel
 
-🚀 Why This Matters in Deep Learning
+ Why This Matters in Deep Learning
 
 Training neural networks requires:
 
@@ -1004,11 +1002,11 @@ Backpropagation
 
 GPU accelerates all.
 
-🎯 Interview Answer
+ Interview Answer
 
 GPUs are highly efficient for deep learning because neural networks rely heavily on matrix multiplication, which can be parallelized. GPUs contain thousands of cores designed for simultaneous arithmetic operations, allowing faster computation compared to CPUs, which are optimized for sequential tasks.
 
-🧠 Final Deep Understanding
+ Final Deep Understanding
 Concept	Core Problem	ML Impact
 Perfect correlation	Linear dependency	Unstable models
 High dimensionality	Data sparsity	Overfitting
@@ -1023,6 +1021,1307 @@ Week 3 – Data Handling & EDA
 ● Feature engineering basics
 ● Exploratory Data Analysis (EDA)
 ● Data visualization (Matplotlib, Seaborn)
+
+### 1. What is Exploratory Data Analysis (EDA)?
+
+Definition
+
+Exploratory Data Analysis (EDA) is the process of understanding, summarizing, and visualizing a dataset before applying machine learning or statistical models.
+
+It helps us answer questions like:
+
+What patterns exist in the data?
+
+Are there missing values?
+
+Are there outliers?
+
+How are variables related?
+
+EDA helps analysts detect mistakes, patterns, and insights in data.
+
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/69fb57fa-5df9-45f2-ac57-5c46379e2909" />
+
+
+
+### 2. Why EDA is Important
+
+| Reason                  | Explanation                                  |
+| ----------------------- | -------------------------------------------- |
+| Understand Data         | Know the structure and meaning of variables  |
+| Detect Errors           | Identify missing or incorrect values         |
+| Find Patterns           | Discover trends and correlations             |
+| Improve Models          | Good EDA leads to better feature engineering |
+| Avoid Wrong Conclusions | Prevent misleading models                    |
+
+
+## Why We Use EDA ?
+
+We use EDA for several important reasons.
+
+1. To Understand the Data
+
+EDA helps us know:
+
+How many rows and columns exist
+
+What each variable represents
+
+Data types (numeric, categorical, text)
+
+Example:
+
+Age	Salary	City
+25	30000	Delhi
+30	45000	Mumbai
+
+EDA tells us what kind of information we are working with.
+
+2. To Find Missing Values
+
+Real-world datasets often have missing information.
+
+Example:
+
+Name	Age	Salary
+Riya	25	40000
+Rahul	NA	50000
+
+EDA helps identify missing values so we can fix them.
+
+3. To Detect Outliers
+
+Outliers are extreme or unusual values.
+
+Example:
+
+Salary
+30000
+35000
+40000
+9000000
+
+The value 9000000 is probably an error.
+
+4. To Discover Patterns
+
+EDA allows us to find relationships between variables.
+
+Example:
+
+People with higher income may purchase more products.
+
+EDA helps visualize this using graphs and charts.
+
+5. To Prepare Data for Machine Learning
+
+Machine learning models need clean and structured data.
+
+EDA helps us:
+
+Clean data
+
+Transform variables
+
+Select useful features
+
+Without EDA, models may give wrong predictions.
+
+
+Real-Time Example (Industry Example)
+Example: E-commerce Company
+
+An online shopping company wants to predict:
+
+Will a customer buy a product or not?
+
+Dataset:
+
+Age	Income	Time_on_Website	Purchase
+25	35000	2 min	No
+30	60000	10 min	Yes
+22	20000	1 min	No
+Step 1 — Perform EDA
+
+The analyst checks:
+
+Missing values
+
+Distribution of income
+
+Relationship between time on website and purchase
+
+Insight Found
+
+Customers spending more than 8 minutes on the website are more likely to purchase.
+
+This insight helps the company:
+
+Improve website design
+
+Target engaged customers
+
+Non-Technical Example (Easy to Understand)
+
+Imagine a teacher analyzing exam results.
+
+Student marks:
+
+Student	Marks
+A	45
+B	75
+C	90
+D	30
+
+Before deciding anything, the teacher first analyzes the marks.
+
+Teacher asks questions:
+
+What is the average score?
+
+Who scored highest?
+
+Are many students failing?
+
+This process is similar to EDA.
+
+Teacher is exploring the data before making decisions.
+
+<img width="977" height="550" alt="image" src="https://github.com/user-attachments/assets/b319e493-d48f-43c6-beca-32957c22e0bc" />
+
+
+
+
+Steps to Perform EDA
+
+There are 6 simple steps most data analysts follow.
+
+1️⃣ Understand the Dataset
+
+The first step is to look at the data and understand what it contains.
+
+Questions to ask:
+
+How many rows are there?
+
+How many columns?
+
+What does each column represent?
+
+What type of data is it? (number, text, date)
+
+Example dataset:
+
+Age	Salary	City	Purchased
+25	30000	Delhi	Yes
+30	45000	Mumbai	No
+
+Python example:
+
+df.shape
+df.head()
+df.info()
+
+This step helps us understand the structure of the data.
+
+2️⃣ Check Missing Values
+
+Real-world data often has missing values.
+
+Example:
+
+Name	Age	Salary
+Riya	25	40000
+Rahul	NA	50000
+
+We need to detect them.
+
+Python example:
+
+df.isnull().sum()
+
+Solutions:
+
+Fill with mean
+
+Fill with median
+
+Drop rows
+
+Fill with most common value
+
+3️⃣ Remove Duplicate Data
+
+Sometimes datasets contain duplicate rows.
+
+Example:
+
+ID	Name	Salary
+101	Amit	40000
+101	Amit	40000
+
+Duplicates can create wrong analysis.
+
+Python example:
+
+df.drop_duplicates()
+4️⃣ Analyze Data Distribution
+
+We check how values are distributed.
+
+For example:
+
+Salary distribution.
+
+Visualization tools:
+
+Histogram
+
+Boxplot
+
+Density plot
+
+Example:
+
+import matplotlib.pyplot as plt
+df["salary"].hist()
+
+This helps us understand:
+
+Common values
+
+Spread of data
+
+5️⃣ Detect Outliers
+
+Outliers are extreme values.
+
+Example:
+
+Salary
+30000
+35000
+40000
+9000000
+
+9000000 is likely incorrect.
+
+Visualization:
+
+Boxplot.
+
+Example:
+
+import seaborn as sns
+sns.boxplot(x=df["salary"])
+
+Outliers may need:
+
+Removal
+
+Transformation
+
+Investigation
+
+6️⃣ Analyze Relationships Between Variables
+
+Now we check how variables affect each other.
+
+Example:
+
+Does income affect purchasing behavior?
+
+Tools used:
+
+Scatter plot
+
+Correlation matrix
+
+Pair plots
+
+Example:
+
+sns.scatterplot(x="income", y="purchase", data=df)
+
+Correlation example:
+
+df.corr()
+
+This helps identify important features for modeling.
+
+## EDA Workflow
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/f13549b3-9188-4790-9c1c-d65942269443" />
+
+
+EDA is the process of exploring and analyzing datasets using statistics and visualizations to understand patterns, detect anomalies, and prepare data for machine learning models.
+
+
+### 2. Data Cleaning & preprocessing
+
+What is Data Cleaning?
+
+Data Cleaning is the process of detecting and fixing incorrect, missing, duplicate, or inconsistent data.
+
+Real-world data is rarely perfect.
+
+It may contain:
+
+Missing values
+
+Wrong values
+
+Duplicate records
+
+Outliers
+
+Data cleaning ensures the dataset is accurate and reliable.
+
+<img width="1728" height="1176" alt="image" src="https://github.com/user-attachments/assets/fb083d95-2ffd-4820-9542-f6dcde6736a5" />
+
+
+
+## Missing value 
+
+Missing values are data points that are not recorded or are empty in a dataset.
+In simple words, it means some information is not available for certain rows or columns.
+
+
+| Name  | Age   | City   |
+| ----- | ----- | ------ |
+| Rahul | 25    | Delhi  |
+| Priya | 30    | *NULL* |
+| Aman  | *NaN* | Mumbai |
+
+
+Here:
+
+Priya's City is missing → NULL
+
+Aman's Age is missing → NaN
+
+These are called missing values.
+
+
+### Common Ways Missing Values Appear
+
+Different systems represent missing data differently:
+| Representation     | Meaning         |
+| ------------------ | --------------- |
+| `NULL`             | SQL databases   |
+| `NaN`              | Python / Pandas |
+| Blank / Empty cell | Excel           |
+| `None`             | Python          |
+| `NA`               | R               |
+
+
+### Why Missing Values Occur
+
+Missing data can happen because:
+
+1️⃣ Data not collected
+Example: A person didn't fill their age.
+
+2️⃣ Data entry error
+Example: Someone forgot to enter a value.
+
+3️⃣ System error
+Example: Sensor failed to record temperature.
+
+4️⃣ Data lost during processing
+
+Types of Missing Data (Important for Interviews)
+1. MCAR — Missing Completely At Random
+
+Missing values occur randomly.
+
+Example:
+
+Some survey responses lost randomly.
+
+2. MAR — Missing At Random
+
+Missing depends on another variable.
+
+Example:
+
+Younger people skipped income question.
+
+3. MNAR — Missing Not At Random
+
+Missing depends on the value itself.
+
+Example:
+
+People with very high income refuse to answer salary.
+
+How Data Analysts Handle Missing Values
+
+1️⃣ Remove rows
+
+If few rows have missing values.
+
+df.dropna()
+
+2️⃣ Fill with Mean / Median / Mode
+
+df["Age"].fillna(df["Age"].mean())
+
+3️⃣ Fill with constant value
+
+df.fillna(0)
+
+4️⃣ Forward / Backward fill (time series)
+
+
+df.fillna(method="ffill")
+
+Simple Interview Definition (Best Answer)
+
+Missing values are data points that are not recorded or unavailable in a dataset. They are usually represented as NULL, NaN, or blank values and must be handled properly using techniques like deletion or imputation to avoid bias in analysis or machine learning models.
+
+### 2. Wrong value
+
+A wrong value in a dataset means a value that is incorrect, unrealistic, or does not follow the expected format or range of the data. These values usually appear because of data entry errors, system issues, or incorrect data collection.
+
+| Name  | Age    | Salary      |
+| ----- | ------ | ----------- |
+| Rahul | 25     | 40000       |
+| Priya | **-5** | 50000       |
+| Aman  | 30     | **9999999** |
+
+
+Here:
+
+Age -5 → impossible → wrong value
+
+Salary 9999999 → unrealistic → wrong value
+
+These values are called invalid or wrong values.
+
+### Types of Wrong Values
+
+1. Out-of-Range Values
+
+Values outside the valid range.
+
+Example:
+| Age     |
+| ------- |
+| 25      |
+| **150** |
+
+Age 150 is not realistic.
+
+2. Wrong Data Type
+| Age          |
+| ------------ |
+| 25           |
+| **"Twenty"** |
+
+Age should be numeric, not text.
+
+3. Inconsistent Values
+
+| Gender |
+| ------ |
+| Male   |
+| Female |
+| **M**  |
+| **F**  |
+
+Different formats for the same category cause inconsistency.
+
+4. Typo Errors
+
+| City       |
+| ---------- |
+| Delhi      |
+| **Delhii** |
+| **Dheli**  |
+
+Spelling mistakes create wrong values.
+
+Wrong values are incorrect or invalid data entries in a dataset that do not follow the expected format, range, or logic. These errors may occur due to data entry mistakes, system issues, or inconsistent formats and are usually detected using validation rules, summary statistics, and data cleaning techniques.
+
+### 3. Duplicate Data 
+Duplicate data means the same record appears more than once in a dataset.
+
+In simple words:
+
+Duplicate data = repeated rows or repeated information.
+
+This usually happens because of:
+
+Data entry mistakes
+
+System errors
+
+Data merging from multiple sources
+
+Importing the same dataset multiple times
+
+Example of Duplicate Data
+
+Dataset:
+
+| Customer_ID | Name  | City   |
+| ----------- | ----- | ------ |
+| 101         | Rahul | Delhi  |
+| 102         | Priya | Mumbai |
+| 101         | Rahul | Delhi  |
+
+Here:
+
+Row 1 and Row 3 are exactly the same.
+
+So Row 3 is a duplicate record.
+
+## Why Duplicate Data is a Problem
+
+Duplicate records can cause:
+
+| Problem                        | Explanation                  |
+| ------------------------------ | ---------------------------- |
+| Incorrect analysis             | Counts become wrong          |
+| Biased machine learning models | Model learns repeated data   |
+| Waste of storage               | Extra unnecessary data       |
+| Wrong business decisions       | Statistics become inaccurate |
+
+Example:
+
+If duplicates exist, a company may think more customers exist than reality.
+
+### Types of Duplicate Data
+
+There are mainly two types of duplicates.
+Exact Duplicate
+
+When all column values are identical.
+
+Example:
+
+| ID  | Name | Salary |
+| --- | ---- | ------ |
+| 101 | Amit | 50000  |
+| 101 | Amit | 50000  |
+
+
+Partial Duplicate
+
+When some columns are the same but others differ slightly.
+
+Example:
+
+| ID  | Name  | City      |
+| --- | ----- | --------- |
+| 101 | Rahul | Delhi     |
+| 101 | Rahul | New Delhi |
+
+Same person but slightly different values.
+
+This is called a Partial Duplicate.
+
+### How to Detect Duplicate Data (Python)
+
+Using Pandas:
+
+Detect duplicates
+
+df.duplicated()
+
+This returns True or False for duplicate rows.
+
+View duplicate rows
+
+df[df.duplicated()]
+
+### How to Remove Duplicate Data
+
+Remove duplicates
+df.drop_duplicates()
+
+### Remove duplicates permanently
+
+df.drop_duplicates(inplace=True)
+
+### Remove duplicates based on specific column
+
+Example:
+
+df.drop_duplicates(subset=["Customer_ID"])
+
+Real-Time Technical Example
+
+### E-commerce Dataset
+| Order_ID | Customer | Product |
+| -------- | -------- | ------- |
+| 5001     | Rahul    | Laptop  |
+| 5002     | Priya    | Phone   |
+| 5001     | Rahul    | Laptop  |
+
+Order 5001 appears twice.
+
+If we calculate total orders:
+
+Without removing duplicates → 3 orders
+Actual orders → 2 orders
+
+So duplicates create incorrect reports.
+
+Solution:
+
+Remove duplicate rows.
+
+### Non-Technical Example
+
+Imagine a teacher recording attendance.
+
+| Student | Present |
+| ------- | ------- |
+| Rahul   | Yes     |
+| Priya   | Yes     |
+| Rahul   | Yes     |
+
+
+Rahul appears twice.
+
+Teacher may think 3 students attended, but actually only 2 students attended.
+
+This is duplicate data.
+
+### When Should We Remove Duplicate Data?
+
+Remove duplicates when:
+
+Dataset contains repeated records
+
+Duplicate entries are errors
+
+Unique records are required
+
+Example:
+
+Customer database.
+
+When We Should NOT Remove Duplicates
+
+Sometimes duplicates are valid information.
+
+Example:
+
+Sales Dataset:
+
+| Customer | Product |
+| -------- | ------- |
+| Rahul    | Laptop  |
+| Rahul    | Phone   |
+
+This is not duplicate data.
+
+Rahul bought two different products.
+
+So we should not remove it.
+
+Duplicate data refers to repeated records in a dataset. It can lead to incorrect analysis and must be detected and removed using techniques like duplicate detection and data cleaning methods such as drop_duplicates().
+
+
+### Quick Quiz
+
+
+Which function removes duplicate rows in Pandas?
+
+A) remove()
+B) drop_duplicates()
+C) delete_rows()
+D) clean_data()
+
+ Answer: B
+
+True / False
+
+Duplicate records can affect data analysis.
+
+True
+
+
+### Outliers
+
+What is an Outlier?
+
+An outlier is a data point that is very different from the rest of the data.
+
+In simple words:
+Outlier = an unusual or extreme value in a dataset.
+
+## Example Dataset
+
+| Salary      |
+| ----------- |
+| 30000       |
+| 35000       |
+| 40000       |
+| 45000       |
+| **9000000** |
+
+Here 9,000,000 is extremely larger than other values.
+
+This value is called an outlier.
+
+## Simple Non-Technical Example
+
+Imagine a class of students' heights.
+
+| Student | Height (cm) |
+| ------- | ----------- |
+| A       | 165         |
+| B       | 170         |
+| C       | 168         |
+| D       | **240**     |
+
+Height 240 cm is very unusual compared to others.
+
+Real-World Technical Example
+Credit Card Fraud Detection
+
+Dataset:
+
+| Transaction Amount |
+| ------------------ |
+| 200                |
+| 500                |
+| 700                |
+| 1000               |
+| **100000**         |
+
+Most transactions are small.
+
+But 100000 may indicate fraud.
+
+In this case, the outlier is important information.
+
+### Why Outliers Matter?
+
+Outliers can affect analysis and machine learning models.
+
+| Problem           | Explanation                       |
+| ----------------- | --------------------------------- |
+| Incorrect average | Outliers change mean value        |
+| Model bias        | ML model may learn wrong patterns |
+| Poor predictions  | Algorithms become unstable        |
+
+Example:
+
+Dataset:
+
+10, 12, 15, 18, 500
+
+Average becomes very large because of 500.
+
+When Outliers Are Useful
+
+Not all outliers should be removed.
+
+Sometimes they contain important insights.
+
+Examples:
+
+| Field             | Outlier Meaning    |
+| ----------------- | ------------------ |
+| Fraud detection   | Large transactions |
+| Medical diagnosis | Rare diseases      |
+| Network security  | Abnormal traffic   |
+
+
+So we must analyze before removing them.
+
+### When We Should Remove Outliers?
+
+Remove outliers if:
+
+They are data entry errors
+
+They are measurement mistakes
+
+They distort the dataset
+
+Example:
+
+Age = 300 years
+
+Clearly a data error.
+
+### How to Detect Outliers?
+
+There are several methods.
+
+Visualization Methods
+
+### Box Plot
+
+A box plot clearly shows outliers.
+
+Outliers appear as points outside the box.
+
+Example (Python):
+
+import seaborn as sns
+sns.boxplot(x=df["salary"])
+
+### Scatter Plot
+
+Scatter plots help identify unusual points.
+
+Example:
+
+import matplotlib.pyplot as plt
+plt.scatter(df["age"], df["income"])
+
+### Statistical Methods
+
+IQR Method (Most Common)
+
+Steps:
+
+Calculate Q1 (25%)
+
+Calculate Q3 (75%)
+
+Compute IQR = Q3 − Q1
+
+Outlier rule:
+
+Lower limit = Q1 − 1.5 × IQR
+Upper limit = Q3 + 1.5 × IQR
+
+Q1 = df["salary"].quantile(0.25)
+Q3 = df["salary"].quantile(0.75)
+
+IQR = Q3 - Q1
+
+lower = Q1 - 1.5 * IQR
+upper = Q3 + 1.5 * IQR
+
+### Z-Score Method
+
+Measures how far a value is from the mean.
+
+Formula:
+
+Z = (X − Mean) / Standard Deviation
+
+Rule:
+
+| Z-score | Meaning |
+| ------- | ------- |
+
+### How to Handle Outliers
+
+Methods used by data scientists:
+
+##  Remove the outlier
+
+df = df[df["salary"] < upper]
+
+Cap the values (Winsorization)
+
+Replace extreme values with limits.
+
+### Transformation
+
+Apply log transformation.
+import numpy as np
+df["salary"] = np.log(df["salary"])
+
+An outlier is a data point that significantly differs from other observations in a dataset. It may occur due to measurement errors, data entry mistakes, or rare events and can be detected using statistical methods such as IQR, Z-score, or visualization techniques like boxplots and scatter plots.
+
+<img width="1350" height="759" alt="image" src="https://github.com/user-attachments/assets/79ada18f-0263-489a-bcec-a53f84ceb7b9" />
+
+## QUIZE 
+
+### What are missing values in a dataset?
+
+A) Extra data
+B) Data that is not required
+C) Data that is not stored or unavailable
+D) Duplicate data
+
+Answer: C
+
+### Which of the following represents missing values in datasets?
+
+A) 0
+B) NaN
+C) Null
+D) Both B and C
+
+Answer: D
+
+### Why do missing values occur?
+
+A) Data entry errors
+B) Sensor failure
+C) Incomplete forms
+D) All of the above
+
+ Answer: D
+
+ ### Which Python library is commonly used to detect missing values?
+
+A) NumPy
+B) Pandas
+C) TensorFlow
+D) Keras
+
+Answer: B
+
+### Which function checks missing values in Pandas?
+
+A) isnull()
+B) missing()
+C) checknull()
+D) empty()
+
+Answer: A
+
+### Which method removes rows with missing values?
+
+A) dropna()
+B) remove()
+C) delete()
+D) clear()
+
+Answer: A
+
+### What is imputation?
+
+A) Removing data
+B) Filling missing values with statistical values
+C) Sorting data
+D) Converting data
+
+Answer: B
+
+Which value is commonly used to fill missing numerical values?
+
+A) Mean
+B) Median
+C) Mode
+D) All of the above
+
+ Answer: D
+
+### Missing values can cause problems in:
+
+A) Machine learning models
+B) Data analysis
+C) Visualization
+D) All of the above
+
+Answer: D
+
+ ### Which technique replaces missing values with the most frequent value?
+
+A) Mean Imputation
+B) Median Imputation
+C) Mode Imputation
+D) Scaling
+
+Answer: C
+
+### What are wrong values in a dataset?
+
+A) Missing data
+B) Incorrect or invalid data
+C) Duplicate records
+D) Empty rows
+
+Answer: B
+
+### Example of a wrong value?
+
+Age = 200
+
+A) Correct
+B) Wrong
+
+Answer: B
+
+### Which issue can cause wrong values?
+
+A) Typing error
+B) Measurement error
+C) System error
+D) All of the above
+
+Answer: D
+
+### Which technique helps detect wrong values?
+
+A) Range check
+B) Data validation
+C) Visualization
+D) All of the above
+
+Answer: D
+
+### Example of wrong categorical data:
+
+Gender column contains:
+
+A) Male
+B) Female
+C) 123
+D) Other
+
+Answer: C
+
+###  Which step helps fix wrong values?
+
+A) Replace incorrect value
+B) Remove row
+C) Correct the value
+D) All of the above
+
+Answer: D
+
+###  Which visualization helps detect wrong values quickly?
+
+A) Histogram
+B) Boxplot
+C) Scatter plot
+D) All of the above
+
+Answer: D
+
+### Wrong values mostly occur during:
+
+A) Data entry
+B) Data collection
+C) Data transfer
+D) All of the above
+
+Answer: D
+
+### Which method validates whether values are within acceptable limits?
+
+A) Range validation
+B) Scaling
+C) Encoding
+D) Normalization
+
+Answer: A
+
+### Wrong values reduce:
+
+A) Model accuracy
+B) Data quality
+C) Analysis reliability
+D) All of the above
+
+Answer: D
+
+
+###  What are duplicate records?
+
+A) Missing rows
+B) Repeated rows in a dataset
+C) Wrong values
+D) Outliers
+
+ Answer: B
+
+###  Why do duplicate records occur?
+
+A) Multiple data entries
+B) Data merging errors
+C) System glitches
+D) All of the above
+
+### Answer: D
+
+##  Example of duplicate data:
+ID	Name
+1	Rahul
+1	Rahul
+
+### What is this?
+
+A) Missing value
+B) Duplicate record
+C) Outlier
+D) Correct data
+
+Answer: B
+
+### Which Pandas function detects duplicates?
+
+A) duplicate()
+B) duplicated()
+C) repeat()
+D) copy()
+
+Answer: B
+
+###  Which function removes duplicate rows?
+
+A) remove()
+B) drop_duplicates()
+C) delete()
+D) unique()
+
+Answer: B
+
+### Duplicate data can cause:
+
+A) Biased analysis
+B) Incorrect statistics
+C) Model errors
+D) All of the above
+
+Answer: D
+
+### Which field is commonly used to detect duplicates?
+
+A) Unique ID
+B) Name
+C) Age
+D) Address
+
+Answer: A
+
+###  Duplicate records affect:
+
+A) Dataset size
+B) Model performance
+C) Data reliability
+D) All of the above
+
+Answer: D
+
+### When might duplicates be allowed?
+
+A) Transaction logs
+B) Sensor data
+C) Time series data
+D) All of the above
+
+Answer: D
+
+###  Removing duplicates improves:
+
+A) Data quality
+B) Model accuracy
+C) Analysis reliability
+D) All of the above
+
+Answer: D
+
+
+### What is an outlier?
+
+A) Missing value
+B) Extremely different data point
+C) Duplicate data
+D) Wrong value
+
+Answer: B
+
+### Example of an outlier?
+
+Salary data:
+
+40K, 42K, 38K, 5M
+
+A) 42K
+B) 38K
+C) 5M
+D) 40K
+
+Answer: C
+
+### Which visualization detects outliers best?
+
+A) Pie chart
+B) Box plot
+C) Line chart
+D) Bar chart
+
+Answer: B
+
+### Which statistical method detects outliers?
+
+A) Z-score
+B) IQR
+C) Standard deviation
+D) All of the above
+
+Answer: D
+
+### What does a high Z-score indicate?
+
+A) Normal value
+B) Outlier possibility
+C) Missing value
+D) Duplicate value
+
+Answer: B
+
+### IQR stands for:
+
+A) Inter Quartile Range
+B) Internal Quality Ratio
+C) Input Query Range
+D) Integrated Quantile Rule
+
+Answer: A
+
+### Outliers can occur due to:
+
+A) Data entry error
+B) Rare events
+C) Measurement errors
+D) All of the above
+
+Answer: D
+
+### What can outliers affect?
+
+A) Mean value
+B) Machine learning models
+C) Data visualization
+D) All of the above
+
+Answer: D
+
+### When should we keep outliers?
+
+A) When they represent real events
+B) When they are errors
+C) When dataset is small
+D) Never
+
+Answer: A
+
+### Outliers can be handled by:
+
+A) Removing them
+B) Transforming data
+C) Capping values
+D) All of the above
+
+Answer: D
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
