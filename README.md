@@ -1199,7 +1199,7 @@ Steps to Perform EDA
 
 There are 6 simple steps most data analysts follow.
 
-1️⃣ Understand the Dataset
+##  Understand the Dataset
 
 The first step is to look at the data and understand what it contains.
 
@@ -1227,7 +1227,7 @@ df.info()
 
 This step helps us understand the structure of the data.
 
-2️⃣ Check Missing Values
+##  Check Missing Values
 
 Real-world data often has missing values.
 
@@ -1253,7 +1253,7 @@ Drop rows
 
 Fill with most common value
 
-3️⃣ Remove Duplicate Data
+## Remove Duplicate Data
 
 Sometimes datasets contain duplicate rows.
 
@@ -7721,11 +7721,1121 @@ Answer: A
 
 
 
+### Unsupervised Learning —
+
+Unsupervised Learning is a type of machine learning where the algorithm learns patterns from data without labeled outputs.
+
+In simple terms:
+
+The machine tries to discover hidden patterns or groups in data by itself.
+
+Unlike supervised learning:
+
+| Supervised Learning     | Unsupervised Learning          |
+| ----------------------- | ------------------------------ |
+| Data has labels         | Data has no labels             |
+| Predict answers         | Discover patterns              |
+| Example: spam detection | Example: customer segmentation |
+
+
+
+### Simple Intuition (Layman Explanation)
+
+Imagine you walk into a room full of mixed fruits:
+
+Apples
+
+Bananas
+
+Oranges
+
+But no labels are given.
+
+If you group them based on color and shape, you are doing unsupervised learning.
+
+
+Mixed Fruits
+
+     ↓
+	 
+Find Similarities
+
+     ↓
+	 
+Group Them
+
+
+The machine does exactly the same thing with data.
+
+
+Why Do We Use Unsupervised Learning?
+
+We use unsupervised learning when:
+
+ Data has no labels
+ 
+ We want to discover patterns
+ 
+ We want to understand structure of data
+
+Example situations:
+
+| Problem                | Why Unsupervised Learning    |
+| ---------------------- | ---------------------------- |
+| Customer segmentation  | Find similar customer groups |
+| Market research        | Discover buying patterns     |
+| Fraud detection        | Identify unusual behavior    |
+| Recommendation systems | Find similar users           |
+
+
+### Real-Life Example
+
+Example: E-commerce Customer Segmentation
+
+Dataset:
+
+| Customer | Age | Purchase Amount |
+| -------- | --- | --------------- |
+| A        | 20  | 200             |
+| B        | 22  | 180             |
+| C        | 45  | 1200            |
+| D        | 48  | 1500            |
+
+
+Unsupervised learning may discover:
+
+
+Cluster 1 → Young customers
+
+
+Cluster 2 → High spending customers
+
+
+Companies use this to target marketing campaigns.
+
+
+### Non-Technical Example
+
+Imagine a teacher observing students in a classroom.
+
+Without any labels, the teacher notices:
+
+
+Group 1 → Students who love math
+
+
+Group 2 → Students who love sports
+
+
+Group 3 → Students who love art
+
+The teacher discovers groups naturally.
+
+This is exactly how unsupervised learning works.
+
+
+### How Unsupervised Learning Works
+
+Basic Workflow
+
+Raw Data
+
+   ↓
+   
+Find similarities
+
+   ↓
+   
+Group similar data
+
+   ↓
+   
+Discover patterns
+
+### Algorithm tries to answer:
+
+
+Which data points are similar?
+
+
+Which ones belong together?
+
+
+### Main Types of Unsupervised Learning
+
+
+| Type                      | Purpose                          |
+| ------------------------- | -------------------------------- |
+| Clustering                | Group similar data               |
+| Dimensionality Reduction  | Reduce number of features        |
+| Association Rule Learning | Find relationships between items |
+
+
+### Clustering (Most Common Method)
+
+Clustering groups similar data points.
+
+Example:
+
+Customer dataset:
+
+Customer Data
+
+   ↓
+   
+Algorithm groups similar customers
+
+Result:
+
+Cluster A → Young buyers
+
+Cluster B → Premium buyers
+
+Cluster C → Occasional buyers
+
+### Popular clustering algorithms:
+
+K-Means
+
+Hierarchical Clustering
+
+DBSCAN
+
+
+## Visualization of Clustering.
+
+Before Clustering
+
+*     *      *
+     *   *
+   *        *
+
+
+
+
+After Clustering
+
+
+Cluster A      Cluster B
+*  *  *        *  *  *
+
+### Dimensionality Reduction
+
+Sometimes datasets have too many features.
+
+Example dataset:
+
+| Age |   Income |   Location   |    Purchase History    |   Device   |   Website Visits   |
+
+Too many features make learning difficult.
+
+Dimensionality reduction simplifies data:
+
+
+Many Features
+
+     ↓
+	 
+Reduce dimensions
+
+     ↓
+
+	 
+Simpler dataset
+
+### Association Rule Learning
+
+This technique finds relationships between items.
+
+Example: supermarket analysis.
+
+Dataset:
+
+| Items Purchased |
+| --------------- |
+| Milk, Bread     |
+| Milk, Butter    |
+| Bread, Butter   |
+
+
+
+People who buy Milk
+
+
+often buy Bread
+
+
+This rule helps stores place products together.
+
+Popular algorithm:
+
+Apriori Algorithm
+
+### Visual Workflow of Unsupervised Learning
+
+Raw Dataset
+
+     ↓
+	 
+Data Preprocessing
+
+     ↓
+	 
+Apply Algorithm
+
+     ↓
+	 
+Find Hidden Patterns
+
+     ↓
+	 
+Generate Insights
+
+<img width="672" height="249" alt="image" src="https://github.com/user-attachments/assets/d347dcda-de72-4d41-9b6b-218802c45820" />
+
+<img width="596" height="264" alt="image" src="https://github.com/user-attachments/assets/399cc75e-2580-4c1b-bbcf-ec2dbd68404c" />
 
 
 
 
 
+
+## Real Industry Applications
+
+| Industry     | Application               |
+| ------------ | ------------------------- |
+| Retail       | Customer segmentation     |
+| Healthcare   | Disease pattern discovery |
+| Finance      | Fraud detection           |
+| Social Media | User behavior analysis    |
+| Marketing    | Target audience grouping  |
+
+
+### Example Case Study
+
+### Netflix Recommendation System
+
+Netflix analyzes viewing behavior.
+
+Dataset includes:
+
+Watch history
+
+Movie ratings
+
+Genre preferences
+
+Algorithm groups users into clusters:
+
+Cluster 1 → Action lovers
+
+
+Cluster 2 → Comedy lovers
+
+
+Cluster 3 → Drama fans
+
+Then Netflix recommends similar content.
+
+### Advantages
+
+ Works with unlabeled data
+ 
+Finds hidden patterns
+
+Useful for exploratory analysis
+
+Helps understand data structure
+
+
+
+### Limitations
+
+Harder to evaluate results
+
+May find meaningless patterns
+
+Requires domain knowledge
+
+
+### Unsupervised Learning vs Supervised Learning
+
+| Feature | Supervised     | Unsupervised        |
+| ------- | -------------- | ------------------- |
+| Labels  | Yes            | No                  |
+| Goal    | Prediction     | Pattern discovery   |
+| Example | Spam detection | Customer clustering |
+
+
+### K-Means Clustering — (Unsupervised Learning)
+
+
+## What is K-Means Clustering?
+
+
+K-Means Clustering is an unsupervised machine learning algorithm used to group similar data points into clusters.
+
+The algorithm divides the dataset into K number of groups (clusters).
+
+Where:
+
+K = number of clusters
+
+Means = average (center of cluster)
+
+So the algorithm finds groups of similar data points around a center.
+
+## Simple Intuition
+
+Imagine a basket of mixed fruits:
+
+Apples
+
+Bananas
+
+Oranges
+
+No labels exist.
+
+You group them by similar color and shape.
+
+Mixed Fruits
+
+   ↓
+   
+Look for similarity
+
+   ↓
+   
+Group them
+
+
+### Why Do We Use K-Means?
+
+We use K-Means when:
+
+Data has no labels
+
+We want to find natural groups
+
+We want to understand hidden patterns
+
+Example problems:
+
+| Problem               | Use                    |
+| --------------------- | ---------------------- |
+| Customer segmentation | Group customers        |
+| Image compression     | Reduce colors          |
+| Market research       | Find buying behavior   |
+| Document clustering   | Group similar articles |
+
+
+### Real-World Example (Industry)
+
+
+Customer Segmentation in E-commerce
+
+Dataset:
+
+| Customer | Age | Spending |
+| -------- | --- | -------- |
+| A        | 20  | 200      |
+| B        | 22  | 180      |
+| C        | 45  | 1500     |
+| D        | 48  | 1400     |
+
+
+K-Means may create:
+
+
+Cluster 1 → Young low spenders
+
+
+Cluster 2 → High spending adults
+
+Companies use this for targeted marketing.
+
+### Non-Technical Example
+
+Imagine a school playground.
+
+Students naturally form groups:
+
+Sports lovers
+
+Music lovers
+
+Study group
+
+No teacher tells them to group.
+
+They group based on similarity.
+
+This is K-Means clustering behavior.
+
+Key Concept: Centroid
+
+A centroid is the center point of a cluster.
+
+Example cluster:
+
+   *
+ *   *
+   C
+ *   *
+   *
+
+C = centroid
+
+All nearby points belong to that cluster.
+
+### How K-Means Works (Step-by-Step)
+
+
+Step 1: Choose number of clusters (K)
+
+
+Step 2: Randomly place centroids
+
+
+Step 3: Assign data points to nearest centroid
+
+
+Step 4: Recalculate centroid positions
+
+
+Step 5: Repeat until clusters stabilize
+
+### Visual Workflow:
+
+
+Dataset
+
+   ↓
+   
+Choose K clusters
+
+   ↓
+   
+Place centroids
+
+   ↓
+   
+Assign nearest points
+
+   ↓
+   
+Update centroids
+
+   ↓
+   
+Repeat
+
+   ↓
+   
+Final clusters
+
+
+<img width="1400" height="933" alt="image" src="https://github.com/user-attachments/assets/4d7bf1c1-9aae-4423-acbd-6364e6f20832" />
+
+<img width="344" height="342" alt="image" src="https://github.com/user-attachments/assets/b0f78825-3db3-4f50-ba3a-79de8e4508cd" />
+
+<img width="850" height="406" alt="image" src="https://github.com/user-attachments/assets/0f4579f0-e7f6-4435-a13c-276814b45dc6" />
+
+### Example Dataset
+
+Points:
+
+( 1 , 2 )
+
+( 2  , 2 )
+
+( 8 , 7 )
+
+( 9 , 8 )
+
+## Choose:
+
+K  =  2
+
+## Clusters:
+
+Cluster  A → ( 1 , 2 ) , ( 2 , 2 )
+
+Cluster B → ( 8 , 7 ) , ( 9 , 8 )
+
+Centroids:
+
+Cluster A centroid:
+
+( 1 + 2 ) / 2  = 1 . 5
+
+( 2 + 2 ) / 2  =  2
+
+Cluster B centroid:
+
+( 8 + 9 ) / 2  = 8.5
+
+( 7 + 8 ) / 2 = 7 . 5
+
+### Mathematical Intuition
+
+K-Means tries to minimize Within Cluster Sum of Squares (WCSS).
+
+Formula:
+
+W C S S  =  ∑ ( distance ( point , centroid ) ) 2
+
+Goal:
+
+Keep points close to centroid
+
+Meaning:
+
+Minimize cluster distance
+
+### Distance Calculation
+
+Most common metric:
+
+### Euclidean Distance
+
+Formula:
+
+
+d = ( x1​ − x2​ ) 2 + ( y 1​ − y 2​ )2
+
+Example:
+
+Point A = ( 2 , 3)
+
+
+Centroid = ( 5 , 7)
+
+### Distance:
+
+( 2 − 5 ) 2 + ( 3 − 7 ) 2
+	​
+
+
+This tells the algorithm which centroid is closest.​
+
+​
+## How Data Points Move
+
+Iteration 1:
+
+*     *
+   C1
+
+       *
+         C2
+
+
+Iteration 2:
+
+Centroids move toward clusters.
+
+Cluster A           Cluster B
+*  *                 *  *
+   C1                  C2
+
+
+   After several iterations:
+
+Clusters stabilize.
+
+### Choosing the Best K (Elbow Method)
+
+Problem:
+
+How do we choose best K?
+
+Solution:
+
+## Elbow Method
+
+Graph:
+
+Error
+ |
+ |\
+ | \
+ |  \__
+ |     \__
+ |
+ ----------------
+     K
+
+Where curve bends = optimal K.
+
+### Python Implementation
+
+from sklearn.cluster import KMeans
+
+
+kmeans = KMeans(n_clusters=3)
+
+
+kmeans.fit(X)
+
+
+labels = kmeans.labels_
+
+
+centroids =  kmeans . cluster_centers_
+
+
+Output:
+
+cluster labels
+
+centroid positions
+
+
+### Advantages
+
+ Simple and fast
+ 
+ Works well for large datasets
+
+ 
+ Easy to interpret
+
+
+ ### Limitations
+
+ Need to choose K beforehand
+
+ Sensitive to outliers
+
+ Works best with spherical clusters
+
+### Applications of K-Means
+
+| Industry         | Use                      |
+| ---------------- | ------------------------ |
+| Retail           | Customer segmentation    |
+| Healthcare       | Disease grouping         |
+| Finance          | Fraud detection patterns |
+| Marketing        | Target audience analysis |
+| Image Processing | Image compression        |
+
+
+### Simple Summary
+
+K-Means works like:
+
+Find groups
+
+Find center
+
+Assign points
+
+Move center
+
+Repeat
+
+
+Final result:
+
+Natural clusters in data
+
+### Complete Workflow Visualization
+
+
+Raw Data
+
+   ↓
+   
+Choose K
+
+   ↓
+   
+Initialize Centroids
+
+   ↓
+   
+Assign Points
+
+   ↓
+   
+Update Centroids
+
+   ↓
+   
+Repeat
+
+   ↓
+   
+Final Clusters
+
+
+### Quiz — K-Means Clustering (10 MCQs)
+
+K-Means is used for:
+
+A) Classification
+
+B) Clustering
+
+C) Regression
+
+D) Reinforcement learning
+
+Answer: B
+
+
+
+ K represents:
+
+A) Number of features
+
+B) Number of clusters
+
+C) Number of rows
+
+D) Number of algorithms
+
+
+Answer: B
+
+ K-Means belongs to:
+
+A) Supervised learning
+
+B) Unsupervised learning
+
+C) Reinforcement learning
+
+D) Deep learning
+
+Answer: B
+
+Cluster center is called:
+
+A) Node
+
+B) Centroid
+
+C) Hyperplane
+
+D) Weight
+
+ Answer: B
+
+
+
+K-Means minimizes:
+
+A) Classification error
+
+B) Cluster distance
+
+C) Data variance
+
+
+D) Feature size
+
+Answer: B
+
+
+Most common distance used in K-Means:
+
+A) Euclidean distance
+
+B) Hamming distance
+
+C) Cosine similarity
+
+D) Manhattan distance
+
+
+
+Answer: A
+
+K-Means works best when clusters are:
+
+A) Random
+
+B) Spherical
+
+C) Linear
+
+
+D) Hierarchical
+
+
+Answer: B
+
+
+
+ K-Means requires:
+
+A) Labeled data
+
+B) Unlabeled data
+
+C) Images only
+
+
+D) Text only
+
+Answer: B
+
+Method used to choose K:
+
+A) Random method
+
+B) Elbow method
+
+C) Gradient descent
+
+D) Bagging
+
+Answer: B
+
+ K-Means stops when:
+
+A) Centroids stop moving
+
+B) Dataset changes
+
+C) Accuracy increases
+
+D) Features reduce
+
+Answer: A
+
+
+### Hierarchical Clustering 
+
+
+## What is Hierarchical Clustering?
+
+
+Hierarchical Clustering is an unsupervised machine learning algorithm used to group similar data points into clusters using a tree-like structure.
+
+The algorithm builds a hierarchy of clusters.
+
+This structure is called a Dendrogram.
+
+Think of it like a family tree of data points.
+
+Data Points
+
+   ↓
+   
+Group Similar Items
+
+   ↓
+   
+Build Tree Structure
+
+   ↓
+   
+Final Clusters
+
+### Simple Intuition
+
+Imagine a library with many books.
+
+Books can be grouped like this:
+
+Books
+
+ ├── Science
+ 
+ │    ├── Physics
+ 
+ │    └── Biology
+ 
+ └── Literature
+ 
+      ├── Poetry
+	  
+      └── Novels
+
+
+We start with small groups and gradually create bigger groups.
+
+This is exactly how hierarchical clustering works.
+
+### Why Do We Use Hierarchical Clustering?
+
+We use hierarchical clustering when:
+
+
+We want to see relationships between data points
+
+ 
+ We want a tree-like structure of clusters
+
+ 
+ We do not know the number of clusters in advance
+
+## Advantages over K-Means:
+
+| Feature                   | Hierarchical Clustering |
+| ------------------------- | ----------------------- |
+| Clusters known beforehand | Not required            |
+| Shows relationships       | Yes                     |
+| Visualization             | Dendrogram              |
+
+
+### Where Hierarchical Clustering is Used
+
+## Biology (Genomics)
+
+Scientists group genes and DNA sequences based on similarity.
+
+## Customer Segmentation
+
+Businesses group customers by:
+
+spending behavior
+
+age
+
+location
+
+## Document Organization
+
+Search engines cluster similar documents or articles.
+
+## Non-Technical Example
+
+Imagine a group of friends forming teams.
+
+
+First two friends who are closest become a group.
+
+
+Then another friend joins.
+
+
+Eventually multiple small groups combine into larger groups.
+
+Friend A + Friend B
+
+      ↓
+	  
+Add Friend C
+
+      ↓
+	  
+Merge with another group
+
+
+This step-by-step merging is hierarchical clustering.
+
+
+## Types of Hierarchical Clustering
+
+### Agglomerative Clustering (Bottom-Up)
+
+Start with individual points.
+
+Gradually merge clusters.
+
+Points  →  Small clusters  →   Bigger clusters
+
+This is the most common approach.
+
+## Divisive Clustering (Top-Down)
+
+Start with one big cluster.
+
+Gradually split into smaller clusters.
+
+Big cluster   →   Split   →   Smaller clusters
+
+
+### How Hierarchical Clustering Works (Agglomerative)
+
+Step 1 → Start with each data point as a cluster
+
+
+Step 2 → Calculate distance between clusters
+
+
+Step 3 → Merge closest clusters
+
+
+Step 4 → Update distances
+
+
+Step 5 → Repeat until all points form one cluster
+
+### Visual Workflow
+
+Data Points
+
+   ↓
+   
+Calculate distances
+
+   ↓
+   
+Merge closest points
+
+   ↓
+   
+Create new clusters
+
+   ↓
+   
+Repeat
+
+   ↓
+   
+Build cluster tree
+
+
+
+###c Example Dataset
+
+### Points:
+
+A ( 1 , 1 )
+
+B ( 2 , 2 )
+
+C ( 8 , 8 )
+
+D ( 9 , 9 )
+
+
+Step 1:
+
+A  B  C  D
+
+Step 2:
+
+Closest points merge.
+
+( A ,  B)   ( C , D )
+
+Step 3:
+
+Final merge:
+
+( ( A , B ) , ( C , D ) )
+
+
+### Dendrogram (Cluster Tree)
+
+        ________
+       |        |
+    ___|___   __|__
+   |       | |     |
+   A       B C     D
+
+Height represents distance between clusters.
+
+
+
+	 
 
 
 
