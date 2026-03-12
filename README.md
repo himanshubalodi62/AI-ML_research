@@ -7250,6 +7250,18 @@ Logistic Regression is a supervised machine learning algorithm used for classifi
 
 Even though its name contains “regression”, it is used to predict categories (classes).
 
+Logistic Regression is a supervised machine learning algorithm used for classification problems. Unlike linear regression which 
+
+predicts continuous values it predicts the probability that an input belongs to a specific class.
+
+
+It is used for binary classification where the output can be one of two possible categories such as Yes/No, True/False or 0/1.
+It uses sigmoid function to convert inputs into a probability value between 0 and 1.
+
+
+
+
+
 Example:
 
 | Problem           | Prediction           |
@@ -7260,6 +7272,127 @@ Example:
 
 
 So logistic regression predicts probability of belonging to a class.
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/a1c8bce4-8ff0-406f-b0c9-25dbb856a659" />
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/ee10c89b-09bd-4310-a444-8a423bacf9ff" />
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/ce6e653a-bb0c-4e85-bc7d-c4adfef79189" />
+
+
+### Types of Logistic Regression
+
+Logistic regression can be classified into three main types based on the nature of the dependent variable:
+
+Binomial Logistic Regression:
+
+This type is used when the dependent variable has only two possible categories. Examples include Yes/No, Pass/Fail or 0/1. It is the most common form of logistic regression and is used for binary classification problems.
+
+Multinomial Logistic Regression:
+
+This is used when the dependent variable has three or more possible categories that are not ordered. For example, classifying animals into categories like "cat," "dog" or "sheep." It extends the binary logistic regression to handle multiple classes.
+
+Ordinal Logistic Regression:
+
+This type applies when the dependent variable has three or more categories with a natural order or ranking. Examples include ratings like "low," "medium" and "high." It takes the order of the categories into account when modeling.
+
+## Assumptions of Logistic Regression
+
+Understanding the assumptions behind logistic regression is important to ensure the model is applied correctly, main assumptions are:
+
+
+Independent observations:
+
+Each data point is assumed to be independent of the others means there should be no correlation or dependence between the input samples.
+
+Binary dependent variables:
+
+It takes the assumption that the dependent variable must be binary, means it can take only two values. For more than two categories SoftMax functions are used.
+
+Linearity relationship between independent variables and log odds: 
+
+The model assumes a linear relationship between the independent variables and the log odds of the dependent variable which means the predictors affect the log odds in a linear way.
+
+No outliers: 
+
+The dataset should not contain extreme outliers as they can distort the estimation of the logistic regression coefficients.
+
+Large sample size: 
+
+It requires a sufficiently large sample size to produce reliable and stable results.
+
+### Understanding Sigmoid Function
+
+1. The sigmoid function is a important part of logistic regression which is used to convert the raw output of the model into a
+   probability value between 0 and 1.
+
+3. This function takes any real number and maps it into the range 0 to 1 forming an "S" shaped curve called the sigmoid curve or logistic curve. Because probabilities must lie between 0 and 1, the sigmoid function is perfect for this purpose.
+
+4. In logistic regression, we use a threshold value usually 0.5 to decide the class label.
+
+If the sigmoid output is same or above the threshold, the input is classified as Class 1.
+
+If it is below the threshold, the input is classified as Class 0.
+
+This approach helps to transform continuous input values into meaningful class predictions.
+
+### How Logistic Regression Works
+
+Logistic Regression is a classification algorithm used when the output variable has two possible categories.
+
+For example:
+
+Email → Spam or Not Spam
+
+Loan → Approved or Rejected
+
+Disease → Yes or No
+
+So the output variable Y can take only two values:
+
+Y = { 0  class 1
+      1  Class 2 
+
+
+
+### Input Features (Independent Variables)
+
+Suppose we have many input features.
+
+These features can be written as a matrix:
+
+<img width="259" height="141" alt="image" src="https://github.com/user-attachments/assets/18cbdf50-25f0-4767-9280-7f98ad3f6a98" />
+
+Where:
+
+n = number of data points
+
+m = number of features
+
+Example features:
+
+| Age | Salary | Experience |
+| --- | ------ | ---------- |
+| 25  | 30k    | 2          |
+| 40  | 80k    | 10         |
+
+
+These values become the input X.
+
+3. Linear Combination (First Step)
+
+Logistic regression first computes a linear equation similar to linear regression.
+
+<img width="348" height="162" alt="image" src="https://github.com/user-attachments/assets/4e42e12c-c58b-42d8-a450-c00d032d4229" />
+
+
+
+	​
+
+
+
+
+
 
 
 ### Simple Intuition
@@ -8077,6 +8210,16 @@ K-Means Clustering is an unsupervised machine learning algorithm used to group s
 
 The algorithm divides the dataset into K number of groups (clusters).
 
+K-Means Clustering groups similar data points into clusters without needing labeled data. It is used to uncover hidden patterns when the goal is to organize data based on similarity.
+
+Helps identify natural groupings in unlabeled datasets
+
+Works by grouping points based on distance to cluster centers
+
+Commonly used in customer segmentation, image compression, and pattern discovery
+
+Useful when you need structure from raw, unorganized data
+
 Where:
 
 K = number of clusters
@@ -8084,6 +8227,209 @@ K = number of clusters
 Means = average (center of cluster)
 
 So the algorithm finds groups of similar data points around a center.
+
+## Working of K-Means Clustering
+
+Suppose we are given a data set of items with certain features and values for these features like a vector. The task is to categorize those items into groups. To achieve this we will use the K-means algorithm. "
+k
+
+k" represents the number of groups or clusters we want to classify our items into.
+
+The algorithm will categorize the items into "
+k
+k" groups or clusters of similarity. To calculate that similarity we will use the Euclidean distance as a measurement. The algorithm
+
+works as follows:  
+
+Initialization: We begin by randomly selecting k cluster centroids.
+
+Assignment Step: Each data point is assigned to the nearest centroid, forming clusters.
+
+Update Step: After the assignment, we recalculate the centroid of each cluster by averaging the points within it.
+
+Repeat: This process repeats until the centroids no longer change or the maximum number of iterations is reached.
+
+### Why Use K-Means Clustering?
+K-Means is popular in a wide variety of applications due to its simplicity, efficiency and effectiveness. Here’s why it is widely used:
+
+Data Segmentation: One of the most common uses of K-Means is segmenting data into distinct groups. For example, businesses use K-Means
+
+to group customers based on behavior, such as purchasing patterns or website interaction.
+
+Image Compression: K-Means can be used to reduce the complexity of images by grouping similar pixels into clusters, effectively 
+
+compressing the image. This is useful for image storage and processing.
+
+Anomaly Detection: K-Means can be applied to detect anomalies or outliers by identifying data points that do not belong to any of the
+
+clusters.
+
+Document Clustering: In natural language processing (NLP), K-Means is used to group similar documents or articles together. It’s often 
+
+used in applications like recommendation systems or news categorization.
+
+Organizing Large Datasets: When dealing with large datasets, K-Means can help in organizing the data into smaller, more manageable 
+
+chunks based on similarities, improving the efficiency of data analysis.
+
+
+
+Implementation of K-Means Clustering
+
+We will be using blobs datasets and show how clusters are made using Python programming language.
+
+Step 1: Importing the necessary libraries
+
+We will be importing the following libraries.
+
+
+Numpy: for numerical operations (e.g., distance calculation).
+
+Matplotlib: for plotting data and results.
+
+Scikit learn: to create a synthetic dataset using make_blobs
+
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+from sklearn.datasets import make_blobs
+
+Step 2: Creating Custom Dataset
+
+We will generate a synthetic dataset with make_blobs.
+
+make_blobs(n_samples=500, n_features=2, centers=3): Generates 500 data points in a 2D space, grouped into 3 clusters.
+
+plt.scatter(X[:, 0], X[:, 1]): Plots the dataset in 2D, showing all the points.
+
+plt.show(): Displays the plot
+
+X,y = make_blobs(n_samples = 500,n_features = 2,centers = 3,random_state = 23)
+
+fig = plt.figure(0)
+plt.grid(True)
+plt.scatter(X[:,0],X[:,1])
+plt.show()
+
+<img width="559" height="413" alt="image" src="https://github.com/user-attachments/assets/a1f422e5-3af0-4ed7-baa2-1b0c1649df01" />
+
+## Step 3: Initializing Random Centroids
+
+We will randomly initialize the centroids for K-Means clustering
+
+np.random.seed(23): Ensures reproducibility by fixing the random seed.
+
+The for loop initializes k random centroids, with values between -2 and 2, for a 2D dataset.
+
+k = 3
+
+clusters = {}
+np.random.seed(23)
+
+for idx in range(k):
+    center = 2*(2*np.random.random((X.shape[1],))-1)
+    points = []
+    cluster = {
+        'center' : center,
+        'points' : []
+    }
+    
+    clusters[idx] = cluster
+    
+clusters
+
+Step 4: Plotting Random Initialized Center with Data Points
+We will now plot the data points and the initial centroids.
+
+plt.grid(): Plots a grid.
+plt.scatter(center[0], center[1], marker='*', c='red'): Plots the cluster center as a red star (* marker).
+
+
+plt.scatter(X[:,0],X[:,1])
+plt.grid(True)
+for i in clusters:
+    center = clusters[i]['center']
+    plt.scatter(center[0],center[1],marker = '*',c = 'red')
+plt.show()
+
+
+<img width="559" height="413" alt="image" src="https://github.com/user-attachments/assets/c0ce5d84-5381-4067-942f-be9fa91e3d7c" />
+
+Step 5: Defining Euclidean Distance
+
+To assign data points to the nearest centroid, we define a distance function:
+
+np.sqrt(): Computes the square root of a number or array element-wise.
+
+np.sum(): Sums all elements in an array or along a specified axis
+
+def distance(p1,p2):
+
+    return np.sqrt(np.sum((p1-p2)**2))
+
+
+Step 6: Creating Assign and Update Functions
+
+Next, we define functions to assign points to the nearest centroid and update the centroids based on the average of the points assigned to each cluster.
+
+dist.append(dis): Appends the calculated distance to the list dist.
+
+curr_cluster = np.argmin(dist): Finds the index of the closest cluster by selecting the minimum distance.
+
+new_center = points.mean(axis=0): Calculates the new centroid by taking the mean of the points in the cluster.
+
+
+Step 7: Predicting the Cluster for the Data Points
+
+We create a function to predict the cluster for each data point based on the final centroids.
+
+
+pred.append(np.argmin(dist)): Appends the index of the closest cluster (the one with the minimum distance) to pred.
+
+Step 8: Assigning, Updating and Predicting the Cluster Centers
+
+We assign points to clusters, update the centroids and predict the final cluster labels.
+
+assign_clusters(X, clusters): Assigns data points to the nearest centroids.
+
+update_clusters(X, clusters): Recalculates the centroids.
+
+
+pred_cluster(X, clusters): Predicts the final clusters for all data points.
+
+Step 9: Plotting Data Points with Predicted Cluster Centers
+
+Finally, we plot the data points, colored by their predicted clusters, along with the updated centroids.
+
+
+center = clusters[i]['center']: Retrieves the center (centroid) of the current cluster.
+
+plt.scatter(center[0], center[1], marker='^', c='red'): Plots the cluster center as a red triangle (^ marker).
+
+
+<img width="559" height="413" alt="image" src="https://github.com/user-attachments/assets/5ef091a6-a0a0-4e8c-a7a8-bceb9af85bb4" />
+
+## Challenges with K-Means Clustering
+
+K-Means algorithm has the following limitations:
+
+
+Choosing the Right Number of Clusters (
+
+k
+k): 
+One of the biggest challenges is deciding how many clusters to use.
+
+Sensitive to Initial Centroids: The final clusters can vary depending on the initial random placement of centroids.
+
+Non-Spherical Clusters: K-Means assumes that the clusters are spherical and equally sized. This can be a problem when the actual 
+
+clusters in the data are of different shapes or densities.
+
+Outliers: K-Means is sensitive to outliers, which can distort the centroid and, ultimately, the clusters.
+
+
 
 ## Simple Intuition
 
@@ -8616,6 +8962,40 @@ Answer: A
 
 Hierarchical Clustering is an unsupervised machine learning algorithm used to group similar data points into clusters using a tree-like structure.
 
+Hierarchical Clustering is an unsupervised learning technique that groups data into a hierarchy of clusters based on similarity. It builds a tree‑like structure (dendrogram) that helps visualize relationships and decide the optimal number of clusters.
+
+Does not require pre‑selecting the number of clusters.
+
+Uses agglomerative or divisive approaches.
+
+Commonly applied in data exploration and pattern discovery.
+
+It is commonly used in pattern recognition, customer segmentation and image grouping.
+
+
+
+Hierarchical Clustering is a method of cluster analysis that seeks to build a hierarchy of clusters. Instead of creating a flat set of 
+
+groups (like K-Means), it creates a tree-like structure that shows the relationships between all data points.Think of it like a Family 
+
+Tree for your data.The Two Main Approaches
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/a0c7f790-bc06-4b5e-bf2c-44141cce3997" />
+
+
+
+
+
+ ## Approach,Method,Analogy
+ 
+Agglomerative (Bottom-Up),Starts with each point as its own cluster and merges the closest pairs until only one cluster 
+
+remains.,"Individuals forming small groups, then neighborhoods, then a whole city."
+
+Divisive (Top-Down),Starts with everyone in one giant cluster and recursively splits them into smaller groups.,"A large organization
+
+splitting into departments, then teams, then individuals."
+
 The algorithm builds a hierarchy of clusters.
 
 This structure is called a Dendrogram.
@@ -8734,6 +9114,16 @@ This step-by-step merging is hierarchical clustering.
 
 ### Agglomerative Clustering (Bottom-Up)
 
+It is also known as the bottom-up approach or hierarchical agglomerative clustering (HAC). Bottom-up algorithms treat each data as a
+
+singleton cluster at the outset and then successively agglomerate pairs of clusters until all clusters have been merged into a single
+
+cluster that contains all data. 
+
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/ce26277f-e401-4ad8-bb6a-b45be36976ea" />
+
+
 Start with individual points.
 
 Gradually merge clusters.
@@ -8742,13 +9132,235 @@ Points  →  Small clusters  →   Bigger clusters
 
 This is the most common approach.
 
+### Workflow for Hierarchical Agglomerative clustering
+
+Start with individual points: Each data point is its own cluster. For example if we have 5 data points we start with 5 clusters each 
+
+containing just one data point.
+
+Calculate distances between clusters: 
+Calculate the distance between every pair of clusters. Initially since each cluster has one point
+
+this is the distance between the two data points.
+
+Merge the closest clusters: 
+Identify the two clusters with the smallest distance and merge them into a single cluster.
+
+Update distance matrix:
+After merging we now have one less cluster. Recalculate the distances between the new cluster and the remaining clusters.
+
+Repeat steps 3 and 4: 
+Keep merging the closest clusters and updating the distance matrix until we have only one cluster left.
+
+Create a dendrogram: 
+
+As the process continues we can visualize the merging of clusters using a tree-like diagram called a dendrogram. It shows the hierarchy of how clusters are merged.
+
+### Implementation
+
+Let's see the implementation of Agglomerative Clustering,
+
+Start with each data point as its own cluster.
+
+Compute distances between all clusters.
+
+Merge the two closest clusters based on a linkage method.
+
+Update the distances to reflect the new cluster.
+
+Repeat merging until the desired number of clusters or one cluster remains.
+
+The dendrogram visualizes these merges as a tree, showing cluster relationships and distances.
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import AgglomerativeClustering
+from scipy.cluster.hierarchy import dendrogram
+from sklearn.datasets import make_blobs
+
+X, _ = make_blobs(n_samples=30, centers=3, cluster_std=10, random_state=42)
+
+clustering = AgglomerativeClustering(n_clusters=3)
+labels = clustering.fit_predict(X)
+
+agg = AgglomerativeClustering(distance_threshold=0, n_clusters=None)
+agg.fit(X)
+
+
+def plot_dendrogram(model, **kwargs):
+    counts = np.zeros(model.children_.shape[0])
+    n_samples = len(model.labels_)
+
+    for i, merge in enumerate(model.children_):
+        current_count = 0
+        for child_idx in merge:
+            if child_idx < n_samples:
+                current_count += 1
+            else:
+                current_count += counts[child_idx - n_samples]
+        counts[i] = current_count
+
+    linkage_matrix = np.column_stack(
+        [model.children_, model.distances_, counts]).astype(float)
+    dendrogram(linkage_matrix, **kwargs)
+
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+ax1.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis', s=70)
+ax1.set_title("Agglomerative Clustering")
+ax1.set_xlabel("Feature 1")
+ax1.set_ylabel("Feature 2")
+
+plt.sca(ax2)
+plot_dendrogram(agg, truncate_mode='level', p=5)
+plt.title("Hierarchical Clustering Dendrogram")
+plt.xlabel("Sample index")
+plt.ylabel("Distance")
+
+plt.tight_layout()
+plt.show()
+
+
+<img width="1000" height="425" alt="image" src="https://github.com/user-attachments/assets/d05c3b80-0c28-4c08-a92f-3d2236b791d2" />
+
+<img width="1000" height="425" alt="image" src="https://github.com/user-attachments/assets/1dd570a6-9abb-4559-9909-cdd0df507fe4" />
+
+
+
+
 ## Divisive Clustering (Top-Down)
+
+Divisive clustering is also known as a top-down approach. Top-down clustering requires a method for splitting a cluster that contains the whole data and proceeds by splitting clusters recursively until individual data have been split into singleton clusters.
+
+Workflow for Hierarchical Divisive clustering : 
+
+Start with all data points in one cluster: Treat the entire dataset as a single large cluster.
+
+Split the cluster: Divide the cluster into two smaller clusters. The division is typically done by finding the two most dissimilar
+
+points in the cluster and using them to separate the data into two parts.
+
+Repeat the process: For each of the new clusters, repeat the splitting process: Choose the cluster with the most dissimilar points and
+
+split it again into two smaller clusters.
+
+Stop when each data point is in its own cluster: Continue this process until every data point is its own cluster or the stopping 
+
+condition (such as a predefined number of clusters) is met.
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/bf8db98f-8a35-4f62-972b-dd60c4baefd2" />
+
+## Implementation
+
+Let's see the implementation of Divisive Clustering,
+
+Starts with all data points as one big cluster.
+
+Finds the largest cluster and splits it into two using KMeans.
+
+Repeats splitting the largest cluster until reaching the desired number of clusters.
+
+Assigns cluster labels to each data point based on the splits.
+
+Returns history of clusters at each step and final labels.
+
+
+Visualizes data points colored by their final cluster.
+
 
 Start with one big cluster.
 
 Gradually split into smaller clusters.
 
 Big cluster   →   Split   →   Smaller clusters
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+from scipy.cluster.hierarchy import dendrogram, linkage
+
+X, _ = make_blobs(n_samples=30, centers=5, cluster_std=10, random_state=42)
+
+
+def divisive_clustering(data, max_clusters=3):
+    while len(clusters) < max_clusters:
+        cluster_to_split = max(clusters, key=lambda x: len(x))
+        clusters.remove(cluster_to_split)
+
+        kmeans = KMeans(n_clusters=2, random_state=42).fit(cluster_to_split)
+        cluster1 = cluster_to_split[kmeans.labels_ == 0]
+        cluster2 = cluster_to_split[kmeans.labels_ == 1]
+
+        clusters.extend([cluster1, cluster2])
+    return clusters
+
+
+clusters = divisive_clustering(X, max_clusters=3)
+
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1)
+colors = ['r', 'g', 'b', 'c', 'm', 'y']
+for i, cluster in enumerate(clusters):
+    plt.scatter(cluster[:, 0], cluster[:, 1], s=50,
+                c=colors[i], label=f'Cluster {i+1}')
+plt.title('Divisive Clustering Result')
+plt.legend()
+
+linked = linkage(X, method='ward')
+
+plt.subplot(1, 2, 2)
+dendrogram(linked, orientation='top',
+           distance_sort='descending', show_leaf_counts=True)
+plt.title('Hierarchical Clustering Dendrogram')
+
+plt.tight_layout()
+plt.show()
+
+<img width="1000" height="412" alt="image" src="https://github.com/user-attachments/assets/b51ac6d1-1aba-4984-8128-6fff849359bb" />
+
+<img width="1000" height="412" alt="image" src="https://github.com/user-attachments/assets/38f00852-4e22-4916-87e1-0e183a5dcc94" />
+
+## Computing Distance Matrix
+
+While merging two clusters we check the distance between two every pair of clusters and merge the pair with the least distance/most 
+
+similarity. But the question is how is that distance determined. There are different ways of defining Inter Cluster
+
+distance/similarity. Some of them are:
+
+Min Distance: Find the minimum distance between any two points of the cluster.
+
+Max Distance: Find the maximum distance between any two points of the cluster.
+
+Group Average: Find the average distance between every two points of the clusters.
+
+Ward's Method: The similarity of two clusters is based on the increase in squared error when two clusters are merged.
+
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/0c8301a2-8e61-4cd9-b7f6-1f564a936d33" />
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/6e9aee77-b591-4b38-b29d-7693ded87a0d" />
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/a847b71b-25d0-4038-8529-7afd121615d2" />
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/11e7c17b-4a0a-4aeb-81f5-56673575ef13" />
+
+
+The image compares cluster distance methods:
+
+Min uses the shortest distance between clusters
+
+Max uses the longest
+
+Group Average computes the mean of all pairwise distances
+
+
+Ward’s method minimizes the increase in within-cluster variance during merging
+
+
 
 
 ### How Hierarchical Clustering Works (Agglomerative)
@@ -8825,13 +9437,981 @@ Final merge:
 
 ### Dendrogram (Cluster Tree)
 
-        ________
-       |        |
-    ___|___   __|__
-   |       | |     |
-   A       B C     D
+A dendrogram is like a family tree for clusters. It shows how individual data points or groups of data merge together. The bottom shows each data point as its own group and as we move up, similar groups are combined.
+
+The lower the merge point, the more similar the groups are. It helps us see how things are grouped step by step.
+
+     <img width="375" height="308" alt="image" src="https://github.com/user-attachments/assets/7f0c1979-3516-4634-bc5f-4262802cc613" />
+
+At the bottom of the dendrogram the points P, Q, R, S and T are all separate.
+
+As we move up, the closest points are merged into a single group.
+
+The lines connecting the points show how they are progressively merged based on similarity.
+
+The height at which they are connected shows how similar the points are to each other; the shorter the line the more similar they are
+
 
 Height represents distance between clusters.
+
+
+### Mathematical Intuition
+
+Hierarchical clustering relies on distance measures.
+
+Common metric:
+
+Euclidean Distance
+
+d = (  x 1​ − x 2​)2 + ( y 1​ − y 2 ​) 2
+
+This determines similarity between data points.
+
+## Linkage Methods
+
+Linkage defines distance between clusters.
+
+## Single Linkage
+
+Distance between closest points.
+
+Cluster  distance  =  minimum  distance
+
+### Average Linkage
+
+Average distance between cluster points.
+
+### Ward Method
+
+Minimizes cluster variance.
+
+Most commonly used method.  
+
+#### Visual Example of Cluster Formation
+
+Iteration 1:
+
+A   B       C   D
+
+Iteration 2:
+
+( A , B )       ( C , D )
+
+Iteration 3:
+
+( ( A , B ) , ( C , D ) )
+
+Clusters gradually merge.
+
+### Python Example
+
+from sklearn.cluster import AgglomerativeClustering
+
+
+model = AgglomerativeClustering(n_clusters=3)
+
+
+labels = model.fit_predict(X)
+
+### To visualize dendrogram:
+
+
+from scipy.cluster.hierarchy import dendrogram, linkage
+
+## Advantages
+
+ No need to choose cluster number initially
+ 
+Easy to visualize relationships
+
+Works well with small datasets
+
+## Limitations
+
+ Slow for large datasets
+
+ Once merged, clusters cannot be undone
+
+ Computationally expensive
+
+ ### Applications
+
+ | Industry    | Use                    |
+| ----------- | ---------------------- |
+| Healthcare  | Disease clustering     |
+| Biology     | Gene sequence grouping |
+| Marketing   | Customer segmentation  |
+| Text Mining | Document clustering    |
+
+
+### Quiz — Hierarchical Clustering (10 MCQs)
+
+Hierarchical clustering belongs to:
+
+A) Supervised learning
+
+B) Unsupervised learning
+
+C) Reinforcement learning
+
+D) Deep learning
+
+Answer: B
+
+Tree structure used in hierarchical clustering is called:
+
+A) Graph
+
+B) Dendrogram
+
+C) Tree map
+
+D) Cluster map
+
+Answer: B
+
+Agglomerative clustering follows:
+
+A) Top-down approach
+
+B) Bottom-up approach
+
+C) Random grouping
+
+D) Regression
+
+ Answer: B
+
+ Divisive clustering follows:
+
+A) Bottom-up
+
+B) Top-down
+
+C) Random grouping
+
+D) Ensemble learning
+
+Answer: B
+
+Distance commonly used in clustering:
+
+A) Euclidean distance
+
+B) Log distance
+
+C) Probability distance
+
+D) Random distance
+
+Answer: A
+
+Linkage method defines:
+
+A) Dataset size
+
+B) Cluster distance
+
+C) Model accuracy
+
+D) Feature importance
+
+Answer: B
+
+Ward method tries to minimize:
+
+A) Distance
+
+B) Variance
+
+C) Dataset size
+
+D) Cluster count
+
+
+Answer: B
+
+ Hierarchical clustering is best for:
+
+A) Small datasets
+
+B) Huge datasets
+
+C) Image classification
+
+
+D) Reinforcement learning
+
+Answer: A
+
+Hierarchical clustering produces:
+
+A) Tree structure
+
+B) Linear model
+
+C) Neural network
+
+D) Regression line
+
+Answer: A
+
+Dendrogram helps to:
+
+A) Visualize cluster hierarchy
+
+B) Predict labels
+
+C) Train models
+
+D) Reduce features
+
+ Answer: A
+
+
+ ## DBSCAN Clustering (Unsupervised Learning)
+
+
+ ## What is DBSCAN?
+
+While there’s nothing wrong with that approach, it does limit what you can do when faced with clustering projects. And why limit yourself when you can expand your learning, knowledge, and skillset by learning the powerful DBSCAN clustering algorithm?
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsupervised machine learning algorithm used to find clusters based on data density.
+
+Clustering is an essential technique in machine learning and is used widely across domains and industries (think about Uber’s route optimization, Amazon’s recommendation system, Netflix’s customer segmentation, and so on). This article is for anyone who wants to add an invaluable algorithm to their budding machine learning skillset – DBSCAN clustering!
+
+<img width="1050" height="520" alt="image" src="https://github.com/user-attachments/assets/d1ba04e7-cd67-4705-baf8-0a76302e0a44" />
+
+
+#### Why do we need DBSCAN Clustering?
+
+This is a pertinent question. We already have basic clustering algorithms, so why should you spend your time and energy learning about
+
+yet another clustering method? It’s a fair question, so let me answer it before discussing what DBSCAN clustering is.
+
+First, let’s clear up the role of clustering.
+
+Clustering is an unsupervised learning technique where we try to group the data points based on specific characteristics. There are 
+
+various clustering algorithms with K-Means and Hierarchical being the most used ones. Some of the use cases of clustering algorithms include:
+
+Document Clustering
+
+Recommendation Engine
+
+Image Segmentation
+
+Market Segmentation
+
+Search Result Grouping
+
+and Anomaly Detection.
+
+All these problems use the concept of clustering to reach their end goal. Therefore, it is crucial to understand the concept of 
+
+
+clustering. But here’s the issue with these two clustering algorithms.
+
+<img width="759" height="721" alt="image" src="https://github.com/user-attachments/assets/0f5ce6a0-1236-4019-8027-962723d72f49" />
+
+We can see three different dense clusters in the form of concentric circles with some noise here. Now, let’s run K-Means and 
+
+Hierarchical clustering algorithms and see how they cluster these data points.
+
+<img width="790" height="382" alt="image" src="https://github.com/user-attachments/assets/f3987abb-627c-4e9d-8755-32e6827bb7bb" />
+
+You might be wondering why there are four colors in the graph. As I said earlier, this data contains noise, too. Therefore, I have taken 
+
+noise as a different cluster, which is represented by the purple color. Sadly, both of them failed to cluster the data points. Also, 
+
+they were not able to detect the noise present in the dataset properly. Now, let’s take a look at the results from DBSCAN clustering.
+
+<img width="740" height="721" alt="image" src="https://github.com/user-attachments/assets/4bce35fe-b7d2-46ec-8d96-78a306303cd8" />
+
+
+Awesome! DBSCAN cannot only cluster the data points correctly but also perfectly detect noise in the dataset.
+
+
+What Parameters Required DBSCAN Algorithm?
+
+The DBSCAN algorithm relies on two main parameters to identify clusters in your data:
+
+eps (ε): 
+This parameter defines the radius of a neighborhood around a data point. Points within this distance are considered neighbors of the central point.
+
+minPts:
+This parameter represents the minimum number of points required within the ε-neighborhood of a point to classify it as a core point. A core point is considered to be dense enough to be part of a cluster.
+
+
+These parameters work together to identify high-density regions in your data. Points with enough neighbors within the specified distance (core points) are grouped together as clusters, while points with insufficient neighbors are classified as noise.pen_sparktunesharemore_vert
+
+It groups ‘densely grouped’ data points into a single cluster. It can identify clusters in large spatial datasets by looking at the local density of the data points. The most exciting feature of DBSCAN clustering is that it is robust to outliers. Unlike K-Means, where we have to specify the number of centroids, it also does not require the number of clusters to be told beforehand.
+
+The DBSCAN algorithm requires only two parameters: epsilon and minPoints. Epsilon is the radius of the circle to be created around each data point to check its density, and minPoints is the minimum number of data points required inside that circle for that data point to be classified as a Core point.
+
+<img width="257" height="197" alt="image" src="https://github.com/user-attachments/assets/dbc2595e-03df-4ab4-8f8f-4c84e02be63c" />
+
+
+
+
+In higher dimensions, the circle becomes a hypersphere, epsilon becomes its radius, and minPoints is the minimum number of data points required inside it.
+
+
+Sounds confusing? Let’s understand it with the help of an example
+
+Here, we have some data points represented by grey color. Let’s see how DBSCAN clusters these data points.
+
+DBSCAN algorithm creates a circle of epsilon radius around every data point and classifies them into Core point, Border point, and Noise. A data point is a Core point if the circle around it contains at least ‘minPoints’ number of points. If the number of points is less than minPoints, then it is classified as Border Point, and if there are no other data points around any data point within epsilon radius, then it treated as Noise.
+
+<img width="375" height="308" alt="image" src="https://github.com/user-attachments/assets/9660ae40-4bf0-47b0-b36c-b9f3f5277150" />
+
+The above figure shows a cluster created by DBCAN with minPoints = 3. Here, we draw a circle of equal radius epsilon around every data point. These two parameters help create spatial clusters.
+
+All the data points with at least 3 points in the circle, including itself, are considered as Core points represented by red color. All the data points with less than 3 but greater than 1 point in the circle, including itself, are considered as Border points. They are represented by yellow color. Finally, data points with no point other than itself present inside the circle are considered Noise, represented by the purple colour.
+
+DBSCAN uses Euclidean distance to locate data points in space, although other methods can also be used (like great circle distance for geographical data). It also needs to scan through the entire dataset once, whereas other algorithms require multiple scans.
+
+Reachability and Connectivity
+
+These are the two concepts that you need to understand before moving further. Reachability states if a data point can be accessed from another data point directly or indirectly, whereas Connectivity states whether two data points belong to the same cluster or not. In terms of reachability and connectivity, two points in DBSCAN can be referred to as:
+
+Directly Density-Reachable
+
+Density-Reachable
+
+Density-Connected
+
+Let’s understand what they are.
+
+A point X is directly density-reachable from point Y w.r.t epsilon, minPoints if,
+
+X belongs to the neighborhood of Y, i.e, dist(X, Y) <= epsilon
+
+Y is a core point
+
+<img width="199" height="191" alt="image" src="https://github.com/user-attachments/assets/559bd387-bd72-4d5c-9e51-b7904eaebd84" />
+
+Here, X is directly density-reachable from Y, but vice versa is not valid.
+
+A point X is density-reachable from point Y w.r.t epsilon, minPoints if there is a chain of points p1, p2, p3, …, pn and p1=X and pn=Y 
+
+such that pi+1 is directly density-reachable from pi.
+
+<img width="321" height="243" alt="image" src="https://github.com/user-attachments/assets/98422581-8fdc-47a1-936f-ff5ec9caa904" />
+
+Here, X is density-reachable from Y with X being directly density-reachable from P2, P2 from P3, and P3 from Y. But, the inverse of this is not valid.
+
+A point X is density-connected from point Y w.r.t epsilon and minPoints if a point O exists such that both X and Y are density-reachable from O w.r.t to epsilon and minPoints.
+
+<img width="321" height="243" alt="image" src="https://github.com/user-attachments/assets/2a436307-0383-415c-a8c4-7d668c3ee4a5" />
+
+Here, both X and Y are density-reachable from O, therefore, we can say that X is density-connected from Y.
+
+Parameter Selection in DBSCAN Clustering
+DBSCAN is very sensitive to the values of epsilon and minPoints. Therefore, it is very important to understand how to select these values. A slight variation in these values can significantly change the results produced by the DBSCAN algorithm.
+
+The value of minPoints should be at least one greater than the number of dimensions of the dataset, i.e., 
+
+minPoints>=Dimensions+1.
+
+It does not make sense to take minPoints as 1 because each point will be a separate cluster. Therefore, it must be at least 3. Generally, it is twice the dimensions. But domain knowledge also decides its value.
+
+The value of epsilon can be decided from the K-distance graph. The point of maximum curvature (elbow) in this graph tells us about the value of epsilon. If the value of epsilon chosen is too small, then more clusters will be created, and more data points will be taken as noise. However, if chosen too big, various small clusters will merge into a big cluster, and we will lose details.
+
+Implementing DBSCAN Clustering in Python
+
+Now, it’s implementation time! In this section, we’ll apply DBSCAN clustering on a dataset and compare its result with K-Means and Hierarchical Clustering.
+
+Step 1-
+Let’s start by importing the necessary libraries.
+
+Python Code:
+
+import numpy as np
+
+import pandas as pd
+
+import math
+
+import matplotlib.pyplot as plt
+
+import matplotlib
+
+Step 2-
+
+Here, I am creating a dataset with only two features so that we can visualize it easily. For creating the dataset, I have created a function PointsInCircum, which takes the radius and number of data points as arguments and returns an array of data points which, when plotted, forms a circle. We do this with the help of sin and cosine curves.
+
+np.random.seed(42)
+
+# Function for creating datapoints in the form of a circle
+def PointsInCircum(r,n=100):
+
+    return [(math.cos(2*math.pi/n*x)*r+np.random.normal(-30,30),math.sin(2*math.pi/n*x)*r+np.random.normal(-30,30))
+	for x in range(1,n+1)]
+
+Step 3-
+
+One circle won’t be sufficient to show DBSCAN’s clustering ability. Therefore, I have created three concentric circles of different 
+
+radii. I will also add noise to this data so that we can see how different types of clustering algorithms deal with noise.
+
+# Creating data points in the form of a circle
+
+df=pd.DataFrame(PointsInCircum(500,1000))
+
+df=df.append(PointsInCircum(300,700))
+
+df=df.append(PointsInCircum(100,300))
+
+# Adding noise to the dataset
+
+df=df.append([(np.random.randint(-600,600),np.random.randint(-600,600)) for i in range(300)])
+
+<img width="268" height="474" alt="image" src="https://github.com/user-attachments/assets/aecdc6d4-e0ec-41bf-8f75-04244a373325" />
+
+Step 4-
+
+Let’s plot these data points and see how they look in the feature space. Here, I use the scatter plot to plot these data points. Use the following syntax:
+
+plt.figure(figsize=(10,10))
+
+plt.scatter(df[0],df[1],s=15,color='grey')
+
+plt.title('Dataset',fontsize=20)
+
+plt.xlabel('Feature 1',fontsize=14)
+
+plt.ylabel('Feature 2',fontsize=14)
+
+plt.show()
+
+<img width="759" height="721" alt="image" src="https://github.com/user-attachments/assets/99ca6d33-4317-41c8-b5df-1ee5a8bd3f59" />
+
+
+### What Exactly is DBSCAN Clustering?
+
+DBSCAN stands for Density-Based Spatial Clustering of Applications with Noise.
+
+K-Means and Hierarchical Clustering both fail to create clusters of arbitrary shapes. They are not able to form clusters based on varying densities. That’s why we need DBSCAN clustering.
+
+Example
+Let’s try to understand it with an example. Here we have data points densely present in the form of concentric circles:
+
+
+Instead of grouping points by distance from a center (like K-Means), DBSCAN groups areas where many data points are close together.
+
+It can also detect noise or outliers.
+
+Dense Regions  →  Clusters
+
+
+Sparse Regions  →  Noise
+
+
+
+## Simple Intuition
+
+Imagine a city map with people standing in different locations.
+
+Some places have crowds, while some places have very few people.
+
+DBSCAN identifies:
+
+Crowded areas → clusters
+
+Isolated people → noise
+
+Crowded Area → Cluster
+
+Lonely Points → Outliers
+
+### Why Do We Use DBSCAN?
+
+DBSCAN solves some problems that other clustering algorithms have.
+
+## Advantages over K-Means
+
+| Problem                 | DBSCAN Solution          |
+| ----------------------- | ------------------------ |
+| Need to choose K        | No need for K            |
+| Cannot detect outliers  | Detects noise            |
+| Only spherical clusters | Detects irregular shapes |
+
+
+K-Means → Circular clusters
+
+DBSCAN → Any shape clusters
+
+
+### Where DBSCAN is Used
+
+Fraud Detection
+
+Unusual financial transactions appear as outliers.
+
+DBSCAN helps detect them.
+
+ GPS Data Analysis
+
+Cities analyze traffic hotspots.
+
+High-density regions = traffic clusters.
+
+Image Processing
+
+DBSCAN identifies object groups in images.
+
+Astronomy
+
+Scientists detect galaxy clusters using density-based clustering.
+
+### Non-Technical Example
+
+Imagine a concert crowd.
+
+People gather in groups near the stage.
+
+Far away, a few people stand alone.
+
+DBSCAN will detect:
+
+Crowd → Cluster
+
+Single person → Noise
+
+
+Key Concepts in DBSCAN
+
+## DBSCAN uses two parameters.
+
+| Parameter   | Meaning                               |
+| ----------- | ------------------------------------- |
+| ε (epsilon) | Radius around a point                 |
+| MinPts      | Minimum points needed to form cluster |
+
+
+### How DBSCAN Works (Step-by-Step)
+
+Step 1 → Choose epsilon (ε)
+
+Step 2 → Choose minimum points (MinPts)
+
+Step 3 → Pick a random point
+
+Step 4 → Check neighbors within ε radius
+
+Step 5 → If neighbors ≥ MinPts → create cluster
+
+Step 6 → Expand cluster by adding neighbors
+
+
+Step 7 → Repeat for remaining points
+
+
+### Advantages of DBSCAN
+
+ Detects outliers automatically
+ 
+No need to specify number of clusters
+
+ Handles irregular cluster shapes
+
+### Limitations
+
+Sensitive to parameter choice
+
+Struggles with varying density datasets
+
+
+Slower on huge datasets
+
+### Applications of DBSCAN
+
+| Industry       | Use                       |
+| -------------- | ------------------------- |
+| Finance        | Fraud detection           |
+| Transportation | Traffic hotspot analysis  |
+| Astronomy      | Galaxy detection          |
+| Cybersecurity  | Network anomaly detection |
+
+
+### Workflow Summary
+
+Dataset
+
+   ↓
+   
+Choose ε and MinPts
+
+   ↓
+   
+Find neighbors
+
+   ↓
+   
+Create clusters
+
+   ↓
+   
+Expand clusters
+
+   ↓
+   
+Label noise points
+
+
+
+###  Quiz — DBSCAN Clustering (10 MCQs)
+
+DBSCAN stands for:
+
+A) Density Based Spatial Clustering of Applications with Noise
+
+B) Data Based Cluster Algorithm
+
+C) Dynamic Based Spatial Clustering
+
+D) Distributed Cluster Algorithm
+
+
+Answer: A
+
+DBSCAN belongs to:
+
+A) Supervised learning
+
+B) Unsupervised learning
+
+C) Reinforcement learning
+
+D) Deep learning
+
+Answer: B
+
+DBSCAN forms clusters based on:
+
+A) Distance from centroid
+
+B) Density of points
+
+C) Tree structure
+
+D) Feature importance
+
+ Answer: B
+
+
+ 
+ ε represents:
+
+A) Learning rate
+
+B) Cluster count
+
+C) Neighborhood radius
+
+D) Dataset size
+
+
+Answer: C
+
+MinPts represents:
+
+A) Minimum cluster count
+
+B) Minimum neighbors required for cluster
+
+C) Maximum neighbors
+
+D) Feature size
+
+Answer: B
+
+Points inside dense region are called:
+
+A) Core points
+
+B) Border points
+
+C) Noise points
+
+D) Random points
+
+
+Answer: A
+
+Outliers in DBSCAN are called:
+
+A) Core points
+
+B) Border points
+
+C) Noise points
+
+D) Centroids
+
+Answer: C
+
+DBSCAN can detect:
+
+A) Only circular clusters
+
+B) Any shape clusters
+
+C) Linear clusters only
+
+D) Tree clusters
+
+
+Answer: B
+
+DBSCAN requires specifying:
+
+A) Number of clusters
+
+B) ε and MinPts
+
+C) Tree depth
+
+D) Learning rate
+
+Answer: B
+
+
+DBSCAN is useful for detecting:
+
+A) Clusters only
+
+B) Outliers only
+
+C) Both clusters and outliers
+
+D) Features
+
+Answer: C
+
+
+
+### PCA (Principal Component Analysis)
+
+### Dimensionality Reduction in Unsupervised Learning
+
+
+###  What is Principal Component Analysis?
+
+Principal Component Analysis (PCA) is a powerful technique used in data analysis, particularly for reducing the dimensionality of datasets while preserving crucial information. It does this by transforming the original variables into a set of new, uncorrelated variables called principal components. Here’s a breakdown of PCA’s key aspects:
+
+Dimensionality Reduction:
+
+PCA helps manage high-dimensional datasets by extracting essential information and discarding less relevant features, simplifying analysis.
+
+Data Exploration and Visualization:
+
+It plays a significant role in data exploration and visualization, aiding in uncovering hidden patterns and insights.
+
+Linear Transformation: 
+PCA performs a linear transformation of data, seeking directions of maximum variance.
+
+Feature Selection:
+Principal components are ranked by the variance they explain, allowing for effective feature selection.
+
+Data Compression:
+PCA can compress data while preserving most of the original information.
+
+Clustering and Classification:
+It finds applications in clustering and classification tasks by reducing noise and highlighting underlying structure.
+
+Advantages:
+PCA offers linearity, computational efficiency, and scalability for large datasets.
+
+Limitations: 
+
+It assumes data normality and linearity and may lead to information loss.
+
+Matrix Requirements:
+PCA works with symmetric correlation or covariance matrices and requires numeric, standardized data.
+
+Eigenvalues and Eigenvectors:
+Eigenvalues represent variance magnitude, and eigenvectors indicate variance direction.
+
+
+Number of Components: 
+The number of principal components chosen determines the number of eigenvectors computed
+
+
+## PCA Example
+
+Let’s say we have a data set of dimension 300 (n) × 50 (p). n represents the number of observations, and p represents the number of 
+
+predictors. Since we have a large p = 50, there can be p(p-1)/2 scatter plots, i.e., more than 1000 plots possible to analyze the 
+
+variable relationship. Wouldn’t it be a tedious job to perform exploratory analysis on this data?
+
+In this case, it would be a lucid approach to select a subset of p (p << 50) predictor which captures so much information, followed by 
+
+plotting the observation in the resultant low-dimensional space.
+
+The image below shows the transformation of high-dimensional data (3 dimension) to low-dimensional data (2 dimension) using PCA. Not to
+
+forget, each resultant dimension is a linear combination of p features
+
+<img width="600" height="237" alt="image" src="https://github.com/user-attachments/assets/2a37cb9e-cb8c-4abf-9a3c-f30e54754571" />
+
+<img width="600" height="237" alt="image" src="https://github.com/user-attachments/assets/6eb588d7-c167-4a68-9057-868c814b3398" />
+
+### Technique	Description
+
+## PCA (Principal Component Analysis)
+
+Unsupervised dimension reduction technique. Reduces dimensions without considering class labels. Transforms correlated variables into linearly uncorrelated principal components that capture most of the data variance. Useful for data visualization and simplifying complex data.
+
+## LDA (Linear Discriminant Analysis)
+
+Supervised dimension reduction technique. Takes class labels into account to find a feature combination that maximizes class separation. Useful for classification tasks and finding discriminant features.
+
+## Factor Analysis	Used to identify underlying, unmeasured variables (factors) that explain the variability across observed variables. Focuses on understanding latent structures in the data. Useful for revealing relationships and reducing dimensions based on these latent factors.
+
+
+What are Principal Components?
+A principal component (PCA) is a normalized linear combination of the original features in a data set. In the image above, PC1 and PC2 are the principal components. Let’s say we have a set of predictors as X¹, X²...,Xp
+
+The PCA in Python can be written as:
+
+
+Z¹ = Φ¹¹X¹ + Φ²¹X² + Φ³¹X³ + .... +Φp¹Xp
+
+
+where,
+
+
+Z¹ is the first principal component
+
+Φp¹ is the loading vector comprising loadings (Φ¹, Φ²..) of the first principal component. The loadings are constrained to a sum of 
+
+squares equals to 1. This is because a large magnitude of loadings may lead to a large variance. It also defines the direction of the
+
+principal component (Z¹), along which data varies the most. It results in a line in p dimensional space, which is closest to the n 
+
+observations. Closeness is measured using average squared euclidean distance.
+
+X¹..Xp are normalized predictors. Normalized predictors have mean values equal to zero and standard deviations equal to one.
+
+
+## First Principal Component
+
+The first principal component is a linear combination of original predictor variables that captures the data set’s maximum variance. It determines the direction of highest variability in the data. Larger the variability captured in the first component, larger the information captured by component. No other component can have variability higher than first principal component.
+
+The first principal component results in a line that is closest to the data, i.e., it minimizes the sum of squared distance between a data point and the line.
+
+Similarly, we can compute the second principal component also.
+
+
+## Second Principal Component (Z²)
+
+The second principal component is also a linear combination of original predictors, which captures the remaining variance in the data set and is uncorrelated with Z¹. In other words, the correlation between first and second components should be zero. It can be represented as:
+
+
+
+Z² = Φ¹²X¹ + Φ²²X² + Φ³²X³ + .... + Φp2Xp
+
+If the two components are uncorrelated, their directions should be orthogonal (image below). This image is based on simulated data with 2 predictors. Notice the direction of the components; as expected, they are orthogonal. This suggests the correlation b/w these components is zero.
+
+<img width="600" height="335" alt="image" src="https://github.com/user-attachments/assets/c78b8c88-cbfc-4cbc-bc24-441f25371d03" />
+
+All succeeding principal component follows a similar concept, i.e., they capture the remaining variation without being correlated with the previous component. In general, for n × p dimensional data, min(n-1, p) principal component can be constructed.
+
+The directions of these components are identified unsupervised; i.e., the response variable(Y) is not used to determine the component direction. Therefore, it is an unsupervised approach.
+
+Note: Partial least square (PLS) is a supervised alternative to PCA. PLS assigns a higher weight to variables that are strongly related to response variable to determine principal components.
+
+
+### How Principal Component Analysis (PCA) Work ?
+
+Standardize the Data
+
+If the features of your dataset are on different scales, it’s essential to standardize them (subtract the mean and divide by the standard deviation).
+
+Compute the Covariance Matrix
+
+Calculate the covariance matrix for the standardized dataset.
+
+Compute Eigenvectors and Eigenvalues
+
+Find the eigenvectors and eigenvalues of the covariance matrix. The eigenvectors represent the directions of maximum variance, and the corresponding eigenvalues indicate the magnitude of variance along those directions.
+
+Sort Eigenvectors by Eigenvalues
+
+Sort the eigenvectors based on their corresponding eigenvalues in descending order.
+
+Choose Principal Components
+
+Select the top k eigenvectors (principal components) where k is the desired dimensionality of the reduced dataset.
+
+Transform the Data
+
+Multiply the original standardized data by the selected principal components to obtain the new, lower-dimensional representation of the data.
+
+## What is Dimensionality Reduction and why do we need it?
+
+
+Dimensionality Reduction is simply reducing the number of features (columns) while retaining maximum information. 
+Following are reasons for Dimensionality Reduction:
+
+Dimensionality Reduction helps in data compression, and hence reduced storage space.
+
+It reduces computation time.
+
+It also helps remove redundant features, if any.
+
+Removes Correlated Features.
+
+Reducing the dimensions of data to 2D or 3D may allow us to plot and visualize it precisely. You can then observe patterns more clearly.
+It is helpful in noise removal also and as a result of that, we can improve the performance of models.
+
+### How does Dimensionality Reduction works (using PCA)?
+
+Let’s first understand what is information in data. Consider the following imaginary data, which has Age, Weight, and Height of people.
+
+<img width="495" height="442" alt="image" src="https://github.com/user-attachments/assets/27872caf-ea38-4888-9d13-04e51e5f4c12" />
+
+## The information lies in the variance!
+
+As the ‘Height’ of all the people is the same i.e. the variance is 0 thus it’s not adding any information, so we can remove the ‘Height’ column without losing any information.
+Now we know that information is variance, let’s understand the working of PCA. In PCA, we find new dimensions (features) that capture maximum variance (i.e. information). To understand this we shall use the previous example. After removing ‘Height’, we are left with ‘Age’ and ‘Weight’. These two features are caring all the information. In other words, we can say that we require 2 features (Age and Height) to hold the information, and if we can find a new feature that alone can hold all the information, we can replace origination 2 features with a new single feature, achieving dimensionality reduction!
+
+<img width="843" height="678" alt="image" src="https://github.com/user-attachments/assets/7f6ba3e8-cbb0-4c17-932a-b0468eb48a11" />
+
+
+Now consider a line (blue dotted line) that is passing through all the points. The blue dotted line is capturing all the information so, we can replace ‘Age’ and ‘Weight’ (2 Dimensions) with the blue dotted line (1 Dimension) without losing any information, and in this way, we have done dimensionality reduction (2 dimensions to 1 dimension). The blue dotted line is called Principal Component.
+
+
+#### Difference between PCA, ICA, and t-SNE
+
+PCA can also be used for clustering. I have used the iris dataset for this purpose. The following image will show you the clustering 
+
+using PCA, ICA, and t-SNE.  
+
+<img width="720" height="288" alt="image" src="https://github.com/user-attachments/assets/26b8fdee-0ead-441e-9c6c-3e6e6628880b" />
+
+<img width="720" height="288" alt="image" src="https://github.com/user-attachments/assets/d6e0b95d-8ca9-41c0-93e2-4696810d9886" />
+
+<img width="720" height="288" alt="image" src="https://github.com/user-attachments/assets/1bd5cde9-7e3c-440f-bc6f-e6d0c9dd7efa" />
+
+
+In short, PCA does dimensionality reduction while capturing most of the variance. Now, you would be excited to apply PCA to your data but before that, I want to highlight some of the disadvantages of PCA:
+
+Independent variables become less interpretable
+
+Data standardization is a must before PCA
+
+Information Loss
+
+
+
+
+
+
+
 
 
 
