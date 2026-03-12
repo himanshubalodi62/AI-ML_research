@@ -11061,6 +11061,410 @@ Loss = 0.42
 It does not clearly tell how wrong the prediction is compared to MAE.
 
 
+### RMSE ( Root mean squerd error ) :
+
+RMSE (root mean squared error) is a commonly used accuracy evaluation metric in regression analysis that measures the average magnitude 
+
+of the errors in a regression model. Unlike R-squared, which quantifies explained variance, RMSE provides a direct measure of 
+
+prediction error in the same units as the response variable. This makes it especially useful when the goal is to minimize error
+
+magnitudes and interpret model performance in real-world terms.
+
+
+<img width="656" height="415" alt="image" src="https://github.com/user-attachments/assets/1264d7d9-7c88-4272-ba87-5f39f31b5465" />
+
+## RMSE (Root Mean Squared Error) tells us:
+
+On average, how far our predictions are from the real values.
+
+It measures the size of prediction errors in a regression model.
+
+Example uses:
+
+Predicting house prices
+
+Predicting sales revenue
+
+Predicting temperature
+
+Predicting stock prices
+
+RMSE helps us understand how accurate our model is.
+
+Lower RMSE = better predictions
+
+2. Simple Real-Life Example
+
+Imagine we predict house prices.
+
+| House | Actual Price | Predicted Price | Error |
+| ----- | ------------ | --------------- | ----- |
+| 1     | ₹50 lakh     | ₹48 lakh        | 2     |
+| 2     | ₹60 lakh     | ₹63 lakh        | 3     |
+| 3     | ₹70 lakh     | ₹68 lakh        | 2     |
+
+
+Steps RMSE follows:
+
+Find prediction errors
+
+Square the errors
+
+Take the average
+
+Take the square root
+
+After doing these steps we get RMSE value.
+
+Example result:
+
+RMSE = 2.38
+
+This means:
+
+On average the model is wrong by about ₹2.38 lakh.
+
+### Why RMSE Is Useful
+
+RMSE is useful because:
+
+It shows prediction error in real-world units
+
+Example:
+
+If predicting house prices in ₹ lakh, RMSE will also be in ₹ lakh.
+
+So it's easy to understand.
+
+Example:
+
+RMSE = 3 lakh
+
+Meaning: predictions are wrong by about 3 lakh on average.
+
+
+## Why Errors Are Squared
+
+Before averaging, RMSE squares the errors.
+
+Why?
+
+Because large mistakes should be punished more.
+
+Example:
+
+| Error | Squared Error |
+| ----- | ------------- |
+| 2     | 4             |
+| 10    | 100           |
+
+
+
+So very large errors become much bigger, forcing the model to avoid them.
+
+### Relationship Between RMSE and MSE
+
+RMSE is directly connected to MSE (Mean Squared Error).
+
+Simple rule:
+
+RMSE = Square Root of MSE
+
+So:
+
+MSE → square errors and average them
+
+RMSE → take square root of that average
+
+## How to Interpret RMSE
+
+RMSE shows:
+
+Average prediction error
+
+Example contexts:
+
+| Problem                | Good RMSE         |
+| ---------------------- | ----------------- |
+| Predicting temperature | 1–2°C             |
+| Predicting house price | maybe ₹1–5 lakh   |
+| Predicting stock price | depends on market |
+
+
+The meaning of RMSE depends on the problem.
+
+### When RMSE Is Useful
+
+RMSE works best when:
+
+We want accurate predictions
+
+Large errors must be avoided
+
+Errors follow normal distribution
+
+We want error measured in real-world units
+
+### Disadvantages of RMSE
+
+Sensitive to Outliers
+
+If one prediction is very wrong, RMSE increases a lot.
+
+Example:
+
+| Error            |
+| ---------------- |
+| 2                |
+| 3                |
+| 4                |
+| **50 (outlier)** |
+
+
+The large error dominates the RMSE value.
+
+### Cannot Compare Different Datasets
+
+Example:
+
+Dataset A → house price in ₹ lakh
+
+Dataset B → revenue in ₹ crore
+
+Their RMSE values cannot be compared directly.
+
+RMSE measures the average size of prediction errors in a regression model.
+
+Lower RMSE = better predictions
+
+| Metric | Meaning                              |
+| ------ | ------------------------------------ |
+| MAE    | Average error                        |
+| MSE    | Average squared error                |
+| RMSE   | Square root of average squared error |
+
+
+## Quick memory trick:
+
+RMSE = Error size in real units
+
+
+
+#### Bias-Variance Trade Off - Machine Learning
+
+It is important to understand prediction errors (bias and variance) when it comes to accuracy in any machine-learning algorithm. There 
+
+is a tradeoff between a model’s ability to minimize bias and variance which is referred to as the best solution for selecting a value 
+
+of Regularization constant. A proper understanding of these errors would help to avoid the overfitting and underfitting of a data set
+
+while training the algorithm. 
+
+
+#### What is Bias?
+
+The bias is known as the difference between the prediction of the values by the Machine Learning model and the correct value. Being 
+
+high in biasing gives a large error in training as well as testing data. It recommended that an algorithm should always be low-biased 
+
+to avoid the problem of underfitting. By high bias, the data predicted is in a straight line format, thus not fitting accurately in the
+
+data in the data set. Such fitting is known as the Underfitting of Data. This happens when the hypothesis is too simple or linear in 
+
+nature. Refer to the graph given below for an example of such a situation.
+
+
+
+<img width="418" height="304" alt="image" src="https://github.com/user-attachments/assets/145a3431-4a0a-4203-81c0-e5e4a1284cf5" />
+
+
+### Bias Variance Tradeoff
+
+If the algorithm is too simple (hypothesis with linear equation) then it may be on high bias and low variance condition and thus is
+
+error-prone. If algorithms fit too complex (hypothesis with high degree equation) then it may be on high variance and low bias. In the 
+
+latter condition, the new entries will not perform well. Well, there is something between both of these conditions, known as a Trade-
+
+off or Bias Variance Trade-off. This tradeoff in complexity is why there is a tradeoff between bias and variance. An algorithm can’t be
+
+more complex and less complex at the same time. For the graph, the perfect tradeoff will be like this.
+
+<img width="417" height="308" alt="image" src="https://github.com/user-attachments/assets/a2f0cac1-b36c-43f4-9796-d01525051760" />
+
+We try to optimize the value of the total error for the model by using the Bias-Variance Tradeoff.
+
+<img width="753" height="545" alt="image" src="https://github.com/user-attachments/assets/5623f4a4-5a94-4be4-bfa8-4f43116ae992" />
+
+
+
+The best fit will be given by the hypothesis on the tradeoff point. The error to complexity graph to show trade-off is given as - 
+
+
+## In simple term explanation
+
+In machine learning, we want our model to make accurate predictions.
+
+But two types of errors affect prediction:
+
+ Bias
+ 
+Variance
+
+There is always a balance (tradeoff) between these two.
+
+The goal is to find the right balance so the model predicts well.
+
+Simple Real-Life Example (Student Studying)
+
+Imagine a student preparing for an exam.
+
+Case 1: Student studies too little
+
+The student learns only basic concepts.
+
+Result:
+
+Cannot answer difficult questions
+
+Makes many mistakes
+
+This is like High Bias (Underfitting).
+
+Case 2: Student memorizes everything
+
+The student memorizes every practice question exactly.
+
+Result:
+
+Performs well on practice test
+
+Struggles with new questions
+
+This is like High Variance (Overfitting).
+
+Case 3: Student understands concepts properly
+
+The student:
+
+Learns concepts
+
+Practices enough
+
+Result:
+
+Performs well on both practice and real exam
+
+This is the Bias–Variance balance (best model).
+
+3. What Is Bias? (Simple Meaning)
+
+Bias means the model is too simple and cannot learn patterns in the data.
+
+Example:
+
+Suppose we want to predict house prices based on house size.
+
+Real data pattern might look like this:
+
+Actual pattern: curved relationship
+
+But the model predicts a straight line.
+
+This means:
+
+The model oversimplifies the problem.
+
+This causes Underfitting.
+
+Example of High Bias (Underfitting)
+
+| House Size | Actual Price | Model Prediction |
+| ---------- | ------------ | ---------------- |
+| 1000 sq ft | ₹40 lakh     | ₹50 lakh         |
+| 1500 sq ft | ₹60 lakh     | ₹55 lakh         |
+| 2000 sq ft | ₹90 lakh     | ₹60 lakh         |
+
+
+## What Is Variance? (Simple Meaning)
+
+Variance happens when the model is too complex.
+
+The model tries to fit every small detail in training data.
+
+Example:
+
+Instead of a smooth curve, the model creates a very wiggly curve that passes through every point.
+
+This causes Overfitting.
+
+Example of High Variance (Overfitting)
+
+The model:
+
+Works very well on training data
+
+Performs poorly on new data
+
+Example:
+
+| Training Accuracy | Test Accuracy |
+| ----------------- | ------------- |
+| 99%               | 65%           |
+
+
+This means the model memorized the training data instead of learning patterns.
+
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/1958d2f7-c210-40a8-b04e-37a9f80052c2" />
+
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e54704fc-d0e4-47e5-986e-0db95229ff8c" />
+
+<img width="1125" height="391" alt="image" src="https://github.com/user-attachments/assets/4dc2eae6-22fc-4559-9b67-5e957bc92431" />
+
+
+
+
+
+
+### What Is the Tradeoff?
+
+We need a balance between bias and variance.
+
+| Model Type  | Bias   | Variance | Result       |
+| ----------- | ------ | -------- | ------------ |
+| Too simple  | High   | Low      | Underfitting |
+| Too complex | Low    | High     | Overfitting  |
+| Balanced    | Medium | Medium   | Best Model   |
+
+
+This balance is called the Bias–Variance Tradeoff.
+
+## Very Simple Visual Idea
+
+Think of shooting arrows at a target.
+
+| Situation                          | Meaning       |
+| ---------------------------------- | ------------- |
+| Arrows far from center but grouped | High Bias     |
+| Arrows scattered everywhere        | High Variance |
+| Arrows close to center             | Good model    |
+
+Why This Concept Is Important
+
+Understanding bias and variance helps us:
+
+Avoid underfitting
+ 
+Avoid overfitting
+
+Build models that work on new unseen data
+
+
+
+
+
+
 
 
 
