@@ -1268,7 +1268,8 @@ Duplicates can create wrong analysis.
 Python example:
 
 df.drop_duplicates()
-4️⃣ Analyze Data Distribution
+
+# Analyze Data Distribution
 
 We check how values are distributed.
 
@@ -1287,6 +1288,7 @@ Density plot
 Example:
 
 import matplotlib.pyplot as plt
+
 df["salary"].hist()
 
 This helps us understand:
@@ -1295,7 +1297,7 @@ Common values
 
 Spread of data
 
-5️⃣ Detect Outliers
+#   Detect Outliers
 
 Outliers are extreme values.
 
@@ -1316,6 +1318,7 @@ Boxplot.
 Example:
 
 import seaborn as sns
+
 sns.boxplot(x=df["salary"])
 
 Outliers may need:
@@ -1326,7 +1329,7 @@ Transformation
 
 Investigation
 
-6️⃣ Analyze Relationships Between Variables
+### Analyze Relationships Between Variables
 
 Now we check how variables affect each other.
 
@@ -1353,6 +1356,7 @@ df.corr()
 This helps identify important features for modeling.
 
 ## EDA Workflow
+
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/f13549b3-9188-4790-9c1c-d65942269443" />
 
 
@@ -1422,17 +1426,21 @@ Different systems represent missing data differently:
 Missing data can happen because:
 
 1️⃣ Data not collected
+
 Example: A person didn't fill their age.
 
 2️⃣ Data entry error
+
 Example: Someone forgot to enter a value.
 
 3️⃣ System error
+
 Example: Sensor failed to record temperature.
 
 4️⃣ Data lost during processing
 
-Types of Missing Data (Important for Interviews)
+## Types of Missing Data (Important for Interviews)
+
 1. MCAR — Missing Completely At Random
 
 Missing values occur randomly.
@@ -1457,34 +1465,38 @@ Example:
 
 People with very high income refuse to answer salary.
 
-How Data Analysts Handle Missing Values
+## How Data Analysts Handle Missing Values
 
-1️⃣ Remove rows
+1. Remove rows
 
 If few rows have missing values.
 
 df.dropna()
 
-2️⃣ Fill with Mean / Median / Mode
+2.  Fill with Mean / Median / Mode
 
 df["Age"].fillna(df["Age"].mean())
 
-3️⃣ Fill with constant value
+3. Fill with constant value
 
 df.fillna(0)
 
-4️⃣ Forward / Backward fill (time series)
+4. Forward / Backward fill (time series)
 
 
 df.fillna(method="ffill")
 
 Simple Interview Definition (Best Answer)
 
-Missing values are data points that are not recorded or unavailable in a dataset. They are usually represented as NULL, NaN, or blank values and must be handled properly using techniques like deletion or imputation to avoid bias in analysis or machine learning models.
+Missing values are data points that are not recorded or unavailable in a dataset. They are usually represented as NULL, NaN, or blank 
+
+values and must be handled properly using techniques like deletion or imputation to avoid bias in analysis or machine learning models.
 
 ### 2. Wrong value
 
-A wrong value in a dataset means a value that is incorrect, unrealistic, or does not follow the expected format or range of the data. These values usually appear because of data entry errors, system issues, or incorrect data collection.
+A wrong value in a dataset means a value that is incorrect, unrealistic, or does not follow the expected format or range of the data. 
+
+These values usually appear because of data entry errors, system issues, or incorrect data collection.
 
 | Name  | Age    | Salary      |
 | ----- | ------ | ----------- |
@@ -1547,6 +1559,8 @@ Spelling mistakes create wrong values.
 Wrong values are incorrect or invalid data entries in a dataset that do not follow the expected format, range, or logic. These errors may occur due to data entry mistakes, system issues, or inconsistent formats and are usually detected using validation rules, summary statistics, and data cleaning techniques.
 
 ### 3. Duplicate Data 
+
+
 Duplicate data means the same record appears more than once in a dataset.
 
 In simple words:
@@ -1641,6 +1655,7 @@ df[df.duplicated()]
 ### How to Remove Duplicate Data
 
 Remove duplicates
+
 df.drop_duplicates()
 
 ### Remove duplicates permanently
@@ -1667,6 +1682,7 @@ Order 5001 appears twice.
 If we calculate total orders:
 
 Without removing duplicates → 3 orders
+
 Actual orders → 2 orders
 
 So duplicates create incorrect reports.
@@ -1725,7 +1741,9 @@ Rahul bought two different products.
 
 So we should not remove it.
 
-Duplicate data refers to repeated records in a dataset. It can lead to incorrect analysis and must be detected and removed using techniques like duplicate detection and data cleaning methods such as drop_duplicates().
+Duplicate data refers to repeated records in a dataset. It can lead to incorrect analysis and must be detected and removed using 
+
+techniques like duplicate detection and data cleaning methods such as drop_duplicates().
 
 
 ### Quick Quiz
@@ -1734,8 +1752,11 @@ Duplicate data refers to repeated records in a dataset. It can lead to incorrect
 Which function removes duplicate rows in Pandas?
 
 A) remove()
+
 B) drop_duplicates()
+
 C) delete_rows()
+
 D) clean_data()
 
  Answer: B
@@ -1894,14 +1915,17 @@ Compute IQR = Q3 − Q1
 Outlier rule:
 
 Lower limit = Q1 − 1.5 × IQR
+
 Upper limit = Q3 + 1.5 × IQR
 
 Q1 = df["salary"].quantile(0.25)
+
 Q3 = df["salary"].quantile(0.75)
 
 IQR = Q3 - Q1
 
 lower = Q1 - 1.5 * IQR
+
 upper = Q3 + 1.5 * IQR
 
 ### Z-Score Method
@@ -1934,9 +1958,14 @@ Replace extreme values with limits.
 Apply log transformation.
 
 import numpy as np
+
 df["salary"] = np.log(df["salary"])
 
-An outlier is a data point that significantly differs from other observations in a dataset. It may occur due to measurement errors, data entry mistakes, or rare events and can be detected using statistical methods such as IQR, Z-score, or visualization techniques like boxplots and scatter plots.
+An outlier is a data point that significantly differs from other observations in a dataset. It may occur due to measurement errors, 
+
+data entry mistakes, or rare events and can be detected using statistical methods such as IQR, Z-score, or visualization techniques 
+
+like boxplots and scatter plots.
 
 <img width="1350" height="759" alt="image" src="https://github.com/user-attachments/assets/79ada18f-0263-489a-bcec-a53f84ceb7b9" />
 
@@ -2448,19 +2477,138 @@ Answer: D
 
  # What is Feature Engineering
  
-Feature Engineering is the process of creating, selecting, or transforming variables (features) from raw data so that machine learning models can understand patterns better and make accurate predictions.
+Feature Engineering is the process of creating, selecting, or transforming variables (features) from raw data so that machine learning 
+
+models can understand patterns better and make accurate predictions.
+
+Feature engineering preprocesses raw data into a machine-readable format. It optimizes ML model performance by transforming and 
+
+selecting relevant features.
+
+Feature engineering is the process of transforming raw data into relevant information for use by machine learning models. In other 
+
+words, feature engineering is the process of creating predictive model features. A feature—also called a dimension—is an input variable
+
+used to generate model predictions. Because model performance largely rests on the quality of data used during training, feature
+
+engineering is a crucial preprocessing technique that requires selecting the most relevant aspects of raw training data for both the 
+
+predictive task and model type under consideration.
+
+Before proceeding, a quick note on terminology. Many sources use feature engineering and feature extraction interchangeably to denote 
+
+the processing of creating model variables. At times, sources also use feature extraction to refer to remapping an original feature 
+
+space onto a lower-dimensional feature space.3 Feature selection, by contrast, is a form of dimensionality reduction. Specifically, it
+
+is the processing of selecting a subset of variables in order to create a new model with the purpose of reducing multicollinearity, and 
+
+so maximize model generalizability and optimization.
+
 
 In simple words:
 
 ### Feature Engineering = Preparing and improving data features so the ML model can learn better.
 
 Think of it like preparing ingredients before cooking a meal.
+
 Good ingredients → Better dish
+
 Good features → Better ML model
 
-### What is a Feature?
+
+### Feature engineering process
+
+Given a model is only as good as the data on which it is based, data scientists spend a large portion of time on data preparation and
+
+feature creation in order to create high-quality models. Depending on the complexity of one’s raw data and the desired predictive
+
+model, feature engineering can require much trial and error.
+
+A handful of sources and online tutorials break feature engineering down into discrete steps, the number and names of which typically
+
+vary. These steps can include feature understanding, structuring or construction, transformation, evaluation, optimization and the list
+
+goes on.While such stratification can be useful for providing a general overview of the tasks involved in featuring engineering, it
+
+suggests that feature engineering is a linear process. In actual fact, feature engineering is an iterative process.
+
+Feature engineering is context-dependent. It requires substantial data analysis and domain knowledge. This is because effective 
+
+encoding for features can be determined by the type of model used, the relationship between predictors and output, as well as the 
+
+problem a model is intended to address. This is coupled by the fact that different kinds of datasets—for example text versus images—
+
+may be better suited for different feature engineering techniques. Thus, it can be difficult to make specific remarks on how to best
+
+implement feature engineering within a given machine learning algorithms.
+
+
+### What are  Feature?
 
 A feature is simply a column or variable in a dataset.
+
+A feature is a specific property or characteristic of data in a dataset.
+
+Features describe the information about each data point.
+
+In machine learning, features are also called variables.
+
+They are called variables because their values can change for different data points.
+
+Features are also sometimes called attributes.
+
+Attributes help describe or characterize the data in the dataset.
+
+Different features describe data in different ways.
+
+Some features can be independent variables.
+
+Independent variables are inputs that influence the model’s predictions.
+
+Some features are dependent variables.
+
+Dependent variables depend on other variables in the dataset.
+
+Sometimes features can be combined attributes created by combining other features.
+
+The purpose of feature selection is to find the most important features in the dataset.
+
+These important features help the model make accurate predictions.
+
+The model uses these features to predict a target variable.
+
+The target variable is the value the model wants to predict.
+
+The target variable is also known as the dependent variable.
+
+For example, consider a company employee database.
+
+Features in this database might include age, location, salary, job title, performance, and work duration.
+
+These features provide information about each employee.
+
+A company can use these features to predict whether an employee might leave the company.
+
+In this case, the target variable could be the likelihood of an employee leaving the job.
+
+With this information, the company can take steps to retain employees.
+
+Features are generally divided into two main types.
+
+The first type is numerical variables.
+
+Numerical variables are values that can be measured with numbers, such as age, length, salary, or duration.
+
+The second type is categorical variables.
+
+Categorical variables represent labels or categories, such as name, job title, or location.
+
+Before feature selection, the feature extraction process converts raw data into useful numerical features.
+
+Feature extraction helps simplify the data and reduce the computational cost for machine learning models.
+
+
 
 Example dataset:
 
@@ -2528,7 +2676,660 @@ This new feature helps better predict performance.
 This is Feature Engineering.
 
 
-Why Feature Engineering is Important in Machine Learning
+### Supervised feature selection methods
+
+
+Supervised learning feature selection uses the target variable to determine the most important features. Because the data features are
+
+already identified, the task is about identifying which input variables most directly affect the target variable. Correlation is the
+
+primary criterion when assessing the most important features. 
+
+Supervised feature selection methods include: 
+
+Filter methods
+
+Wrapper methods 
+
+Embedded methods
+
+Hybrid methods that combine two or more supervised feature selection methods are also possible.
+
+## Filter methods
+
+Filter methods are a type of feature selection technique.
+
+They focus only on the data, not on how the machine learning model performs.
+
+These methods check the relationship between input features and the target variable.
+
+Each feature is evaluated individually to see how useful it is.
+
+The goal is to find features that have the highest correlation with the target.
+
+When features are tested one by one, it is called univariate feature selection.
+
+Filter methods are commonly used in the data preprocessing stage.
+
+They help prepare the dataset before training the model.
+
+These methods are fast and computationally efficient.
+
+They help remove irrelevant features that do not contribute useful information.
+
+They also reduce redundant features that repeat similar information.
+
+Different statistical tests are used to measure feature importance.
+
+Each feature receives a score based on its correlation with the target variable.
+
+Features with higher scores are usually selected for the model.
+
+However, filter methods may not always give the best prediction performance compared to other feature selection methods.
+
+
+Available in popular machine learning libraries such as Scikit-Learn (Sklearn), some common filter methods are: 
+
+Information gain: Measures how important the presence or absence of a feature is in determining the target variable by the degree of
+
+entropy reduction. 
+
+Mutual information: Assesses the dependence between variables by measuring the information obtained about one through the other. 
+
+Chi-square test: Assesses the relationship between two categorical variables by comparing observed to expected values. 
+
+Fisher’s score: Uses derivatives to calculate the relative importance of each feature for classifying data. A higher score indicates 
+
+greater influence. 
+
+Pearson’s correlation coefficient: Quantifies the relationship between two continuous variables with a score ranging from -1 to 1. 
+
+Variance threshold: Removes all features that fall under a minimum degree of variance because features with more variances are likely 
+
+to contain more useful information. A related method is the mean absolute difference (MAD). 
+
+Missing value ratio: Calculates the percentages of instances in a dataset for which a certain feature is missing or has a null value.
+
+If too many instances are missing a feature, it is not likely to be useful. 
+
+Dispersion ratio: The ratio of variance to the mean value for a feature. Higher dispersion indicates more information. 
+
+ANOVA (analysis of variance): Determines whether different feature values affect the value of the target variable.
+
+
+## Wrapper methods
+
+Wrapper methods are a type of feature selection technique in machine learning.
+
+These methods train the model using different subsets of features.
+
+Features are added or removed step by step during the process.
+
+After each change, the model performance is tested.
+
+The goal is to find the best set of features for the model.
+
+The best feature set is the one that gives the highest model performance.
+
+Some wrapper methods test many different combinations of features.
+
+Methods that try all possible combinations are called greedy algorithms.
+
+These algorithms try to search for the best overall feature set.
+
+This process requires a lot of computation power.
+
+It also takes more time to complete.
+
+Because of this, wrapper methods are better for datasets with fewer features.
+
+Data scientists can control when the algorithm should stop.
+
+The process may stop if model performance starts decreasing.
+
+It can also stop when a specific number of features has been selected.
+
+## Wrapper methods include: 
+
+Forward selection: Starts with an empty feature set and gradually adds new features until the optimal set is found. Model selection
+
+takes place when the algorithm’s performance fails to improve after any specific iteration. 
+
+Backward selection: Trains a model with all the original features and iteratively removes the least important feature from the feature
+
+set. 
+
+Exhaustive feature selection: Tests every possible combination of features to find the overall best one by optimizing a specified
+
+performance metric. A logistic regression model that uses exhaustive feature selection tests every possible combination of every 
+
+possible number of features. 
+
+Recursive feature elimination (RFE): A type of backward selection that begins with an initial feature space and eliminates or adds
+
+features after each iteration based on their relative importance. 
+
+Recursive feature elimination with cross-validation: A variation of recursive elimination that uses cross-validation, which tests a 
+
+model on unseen data, to select the best-performing feature set. Cross-validation is a common large language model (LLM) evaluation
+
+technique.
+
+### Embedded methods
+
+Embedded methods are a type of feature selection technique in machine learning.
+
+In this method, feature selection happens during model training.
+
+The feature selection process is built into the learning algorithm.
+
+As the model trains, it evaluates the usefulness of each feature.
+
+Features that perform poorly are identified by the model.
+
+These weak features are removed from future training steps.
+
+This helps the model focus only on important features.
+
+Many embedded methods use a technique called regularization.
+
+Regularization penalizes less important features.
+
+A preset coefficient threshold decides how much penalty is applied.
+
+Features with higher penalties become less influential in the model.
+
+Sometimes the model sacrifices a little training accuracy.
+
+This trade-off helps the model become more precise and stable.
+
+It also helps the model avoid overfitting the training data.
+
+As a result, the model becomes more generalizable to new data.
+
+## Embedded methods include: 
+
+## LASSO regression (L1 regression) is a feature selection method.
+
+It adds a penalty to the loss function during model training.
+
+This penalty affects large and correlated coefficients.
+
+The penalty pushes these coefficients toward zero.
+
+When a coefficient becomes exactly zero, the feature is removed.
+
+This helps the model automatically select useful features.
+
+A stronger penalty means more features will be removed.
+
+The goal is to remove irrelevant features but keep important ones.
+
+Proper balance of the penalty is important for good results.
+
+### Random Forest importance measures feature importance using many decision trees.
+
+It builds hundreds of trees using random samples of data and features.
+
+Each decision tree splits the data based on different features.
+
+Trees that divide the data more accurately indicate important features.
+
+For classification models, importance is measured using Gini impurity or information gain.
+
+For regression models, variance reduction is used to measure importance.
+
+### Gradient Boosting is another ensemble learning technique.
+
+It builds models step by step in a sequence.
+
+Each new model tries to correct the errors of the previous model.
+
+Through this process, the algorithm learns which features improve predictions.
+
+Finally, it identifies the features that contribute most to optimal results.
+
+
+### Unsupervised feature selection methods
+
+In unsupervised learning, models learn patterns from data on their own.
+
+There is no target variable given to guide the learning process.
+
+Because of this, input variables cannot be matched with a known output.
+
+Unsupervised feature selection uses different techniques to simplify data.
+
+The goal is to reduce the number of features in the dataset.
+
+This helps make the dataset easier to analyze and process.
+
+One common method is Principal Component Analysis (PCA).
+
+PCA is used to reduce the dimensionality of large datasets.
+
+It transforms many correlated variables into fewer new variables.
+
+These new variables are called principal components.
+
+Principal components retain most of the important information.
+
+PCA helps solve the curse of dimensionality problem.
+
+It also helps reduce overfitting in machine learning models.
+
+Another method is Independent Component Analysis (ICA).
+
+ICA separates data into statistically independent components.
+
+Another technique used is autoencoders.
+
+Autoencoders are a type of neural network.
+
+They compress the data and then reconstruct it again.
+
+During this process, they find latent variables hidden in the data.
+
+These latent variables strongly influence how the data is distributed.
+
+
+### Choosing a feature selection method
+
+The type of feature selection used depends on the nature of the input and output variables. These also shape the nature of the machine
+
+learning challenge—whether it’s a classification problem or a regression task. 
+
+Numerical input, numerical output: When inputs and outputs are both numerical, this indicates a regression predictive problem. Linear
+
+models output for continuous numerical predictions—outputting a target variable that is a number within a range of possible values. In
+
+these cases, correlation coefficients, such as Pearson’s correlation coefficient, are an ideal feature selection method. 
+
+Numerical input, categorical output: Logistic regression models classify inputs into discrete categorical outputs. In this
+
+classification problem, correlation-based feature selection methods that support categorical target variables can be used. These 
+
+include ANOVA for linear regression models and Kendall’s coefficient of rank correlation for nonlinear tasks. 
+
+Categorical input, numerical output: This rare type of challenge can also be solved with correlation methods that support categorical 
+
+variables. 
+
+Categorical input, categorical output: Classification problems with categorical input and target variables lend themselves to the chi-
+
+squared method or information gain techniques. 
+
+Other factors to consider include the size of the dataset and feature space, feature complexity and model type. Filter methods can
+
+quickly eliminate a large portion of irrelevant features, but struggle with complex feature interactions. In these cases, wrapper and
+
+embedded methods might be more suitable.
+
+What makes features important?
+
+Knowing which features to focus on is the essential component of feature selection. Some features are highly desirable for modeling,
+
+while others can lead to subpar results. In addition to how they affect target variables, feature importance is determined by: 
+
+Ease of modeling: If a feature is easy to model, the overall machine learning process is simpler and faster, with fewer opportunities for error. 
+
+Easy to regularize: Features that take well to regularization will be more efficient to work with. 
+
+Disentangling causality: Disentangling causal factors from an observable feature means identifying the underlying factors that
+
+influence it.
+
+
+
+### Feature engineering techniques
+
+Feature engineering means creating useful input variables (features) from raw data so that machine learning models can learn better.
+
+There is no single best method for feature engineering that works for every problem.
+
+Different datasets and models may require different feature engineering techniques.
+
+Data scientists usually perform several common steps to create useful features from the data.
+
+These steps depend on the type of data such as text data, numerical data, or categorical data.
+
+Before applying feature engineering, it is important to analyze the dataset carefully.
+
+Data analysis helps identify which features are important for solving the problem.
+
+It also helps determine how many features should be used in the model.
+
+Too many unnecessary features may reduce model performance.
+
+Before creating features, we must clean the data properly.
+
+One common issue in data is missing values.
+
+Missing values can be handled using techniques like imputation, where missing values are replaced with estimated values.
+
+Another important step is data preprocessing, which prepares the dataset for modeling.
+
+We must also check for outliers, which are extreme values that are very different from other data points.
+
+Removing or handling these outliers is important because they can negatively affect the model’s predictions.
+
+###  Feature transformation
+
+Feature transformation is the process of converting one feature type into another, more readable form for a particular model. This 
+
+consists of transforming continuous into categorical data, or vice-versa.
+
+Feature transformation is a technique used in machine learning to change or convert existing data into a better format for model training.
+
+It helps improve the performance and accuracy of machine learning models.
+
+Sometimes raw data is not suitable for algorithms, so we transform the data into a more useful form.
+
+Feature transformation mainly focuses on modifying the values of existing features.
+
+It can change the scale, distribution, or representation of data.
+
+One common example is normalization, where values are scaled between 0 and 1.
+
+Another example is standardization, where data is transformed to have mean = 0 and standard deviation = 1.
+
+Feature transformation can also include log transformation, which reduces large value differences in data.
+
+This technique helps when data is skewed or not evenly distributed.
+
+Feature transformation makes data more consistent and easier for algorithms to process.
+
+It can also help reduce the effect of extreme values (outliers).
+
+Many machine learning algorithms perform better when features are properly transformed.
+
+It is commonly used in algorithms like linear regression, logistic regression, and neural networks.
+
+Feature transformation is an important step in data preprocessing and feature engineering.
+
+Overall, it helps make the dataset more suitable and efficient for machine learning models.
+
+### some common feature engineering technique.
+
+## Binning
+
+Binning is a feature engineering technique used in data preprocessing.
+
+It is used to convert continuous numerical values into categories.
+
+Continuous values are numbers that can take many different values, such as age, salary, or temperature.
+
+In binning, similar values are grouped together into ranges called bins.
+
+Each data value is compared with nearby values and then placed into the appropriate bin.
+
+This helps simplify the data and makes it easier for machine learning models to understand.
+
+A common example of binning is age grouping.
+
+Instead of using exact ages like 19, 21, or 23, we create age groups such as 18–25, 26–35, 36–45, etc.
+
+This converts detailed numerical data into categorical groups.
+
+After creating bins, we can apply a technique called smoothing.
+
+Smoothing helps reduce noise or small errors in the data.
+
+In smoothing, the values in each bin may be replaced with a single representative value.
+
+For example, we may replace all values in a bin with the average (mean) of that bin.
+
+Sometimes median or boundary values are also used for smoothing.
+
+Overall, binning helps simplify data, reduce noise, and improve model performance.
+
+## One-hot encoding
+
+One-hot encoding is a feature engineering technique used in machine learning.
+
+It converts categorical data into numerical form so that machine learning models can understand it.
+
+Many algorithms cannot work directly with text or category labels, so they need numbers.
+
+One-hot encoding solves this problem by turning each category into binary values (0 or 1).
+
+Each category is represented by a separate column in the dataset.
+
+If a data point belongs to a category, that column is marked 1, otherwise 0.
+
+This method creates binary features, which are also called dummy variables.
+
+One-hot encoding does not consider any order between categories.
+
+Because of this, it works best with nominal categories such as colors, cities, or product types.
+
+For example, if categories are Red, Blue, Green, each will have its own column.
+
+A value belonging to Red will be represented as 1,0,0.
+
+One-hot encoding is commonly used in Natural Language Processing (NLP) tasks.
+
+For example, Bag of Words models use one-hot encoding to represent words in text data.
+
+Another example is spam email detection.
+
+In spam filtering, Spam may be represented as 1 and Not Spam as 0.
+
+<img width="1536" height="864" alt="image" src="https://github.com/user-attachments/assets/c36fa114-c863-422c-9165-343aeb1013a0" />
+
+
+## Feature extraction and selection
+
+Feature extraction is a technique used in machine learning and data analysis.
+
+It creates new features (variables) by combining or transforming existing features.
+
+These new features help the model understand the data better.
+
+Feature extraction can also help reduce the number of dimensions in the dataset.
+
+A dataset with many features can make the model complex and difficult to train.
+
+By creating new useful features, we can represent the data in a simpler way.
+
+Feature selection, on the other hand, is different from feature extraction.
+
+Feature selection means choosing only the most important features from the dataset.
+
+Instead of creating new features, it removes unnecessary or less useful features.
+
+This helps the model focus only on relevant information.
+
+Both feature extraction and feature selection help reduce the number of features.
+
+This process is called dimensionality reduction.
+
+Dimensionality reduction helps make models faster and easier to train.
+
+These techniques are especially useful when a dataset has many features but only a small amount of data.
+
+They are commonly used in regression and other machine learning problems to improve model performance.
+
+## Principal Component Analysis 
+
+Principal Component Analysis (PCA) is a popular technique used in machine learning and data analysis.
+
+It is mainly used for feature extraction and dimensionality reduction.
+
+PCA works by transforming the original features of a dataset into new features.
+
+These new features are called principal components.
+
+Principal components are created by combining the original variables in the dataset.
+
+The goal of PCA is to reduce the number of features while keeping most of the important information.
+
+PCA focuses on keeping the maximum variance (important information) from the data.
+
+Variance means how much the data values differ from each other.
+
+PCA selects a small number of components that explain most of the variance in the dataset.
+
+These components represent the most important patterns in the data.
+
+After selecting these components, PCA transforms the data into a new coordinate system.
+
+In this new space, the data is represented using principal components instead of the original features.
+
+This reduces the complexity of the dataset.
+
+PCA helps improve model efficiency and reduces computation time.
+
+It is widely used when datasets have many features and need dimensionality reduction.
+
+
+
+## Linear Discriminant Analysis
+
+
+Linear Discriminant Analysis (LDA) is a technique used in machine learning.
+
+It is used for feature extraction and dimensionality reduction.
+
+LDA reduces the number of features in a dataset.
+
+It transforms the original data into a new lower-dimensional space.
+
+This means it creates new features from the original features.
+
+LDA is somewhat similar to Principal Component Analysis (PCA).
+
+Both methods reduce dimensions by projecting data into a new space.
+
+However, LDA focuses on classification problems.
+
+It keeps the class labels (categories) from the original dataset in mind.
+
+PCA mainly tries to maximize the variance in the data.
+
+In contrast, LDA tries to maximize the difference between different classes.
+
+This helps the model separate categories more clearly.
+
+For example, it can help distinguish between spam and not spam emails.
+
+LDA creates new variables that improve class separation.
+
+Because of this, LDA is commonly used for classification tasks in machine learning.
+
+
+## Feature scaling
+
+Feature scaling is a technique used in data preprocessing in machine learning.
+
+It is used to adjust the range of feature values in a dataset.
+
+Some features naturally have limited ranges, such as age or time.
+
+For example, age usually ranges between 0 and 100 years.
+
+However, many other features may have very large value ranges.
+
+For example, income might range from 1000 to 1,000,000.
+
+When feature values have very different ranges, it can negatively affect some machine learning models.
+
+Models may give more importance to features with larger values.
+
+To solve this problem, we use feature scaling.
+
+Feature scaling rescales feature values to a similar range.
+
+This helps the model treat all features more fairly.
+
+Feature scaling is sometimes called feature normalization.
+
+It adjusts the range and distribution of the data values.
+
+Unlike feature transformation, feature scaling does not change the data type.
+
+It simply resizes the values while keeping the original meaning of the data.
+
+## Min–Max Scaling
+
+Min–Max Scaling is a feature scaling technique used in machine learning.
+
+It is used to rescale numerical data values into a fixed range.
+
+The most common range used is 0 to 1.
+
+This technique adjusts all feature values so they fit within this range.
+
+It helps make different features comparable in size.
+
+In Min–Max scaling, each data value is represented as x.
+
+The smallest value in the dataset is called min(x).
+
+The largest value in the dataset is called max(x).
+
+Each data value is compared with these minimum and maximum values.
+
+A formula is used to calculate the new scaled value.
+
+The formula subtracts the minimum value from the original value.
+
+Then it divides the result by the difference between maximum and minimum values.
+
+This calculation produces a new scaled value (x̃).
+
+After scaling, all values will fall between 0 and 1.
+
+Min–Max scaling helps machine learning models work better when features have different value ranges.
+
+<img width="594" height="296" alt="image" src="https://github.com/user-attachments/assets/5882fbd9-8d75-4280-96d8-1dd7b850fe38" />
+
+### Z-Score Scaling (Standardization)
+
+Z-score scaling is a feature scaling technique used in machine learning.
+
+It is also called standardization or variance scaling.
+
+This method is used to standardize the values of features in a dataset.
+
+Unlike Min-Max scaling, it does not scale data between 0 and 1.
+
+Instead, it transforms the data so that the mean becomes 0.
+
+It also ensures the standard deviation becomes 1.
+
+The mean represents the average value of the dataset.
+
+Standard deviation measures how spread out the data values are.
+
+Z-score scaling converts each data value into a standardized value.
+
+
+<img width="370" height="264" alt="image" src="https://github.com/user-attachments/assets/1b747d8e-56fd-43b7-884b-f1e31f536f99" />
+
+<img width="660" height="912" alt="image" src="https://github.com/user-attachments/assets/62a61d8e-9221-4a32-bd06-7cd1a18ba35b" />
+
+<img width="1024" height="398" alt="image" src="https://github.com/user-attachments/assets/44008d97-163d-4d5a-90ca-440cc29c11ae" />
+
+
+In the formula, x represents the original data value.
+
+The mean(x) represents the average of all values in that feature.
+
+The variance var(x) shows how much the data varies.
+
+The square root of variance gives the standard deviation.
+
+The formula subtracts the mean from the original value.
+
+Then it divides the result by the standard deviation to get the standardized value.
+
+
+
+
+
+
+### Why Feature Engineering is Important in Machine Learning
 
 Feature engineering helps ML models:
 
@@ -2688,6 +3489,9 @@ Extract:
 This helps predict shopping behavior.
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/141137cf-59be-4a9a-a42c-636c13b4ff8d" />
+
+
+
 
 #### Quick Summary
 
