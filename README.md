@@ -11460,6 +11460,1608 @@ Avoid overfitting
 
 Build models that work on new unseen data
 
+#### Evaluation Metrics in Machine Learning
+
+
+
+When building machine learning models, it’s important to understand how well they perform. Evaluation metrics help us to measure the 
+
+effectiveness of our models. Whether we are solving a classification problem, predicting continuous values or clustering data, 
+
+selecting the right evaluation metric allows us to assess how well the model meets our goals. In this article, we will see commonly
+
+used evaluation metrics and discuss how to choose the right metric for our model.
+
+
+#### Accuracy, Precision, Recall and F1 Score
+
+
+#### Introduction
+
+‍
+
+In this  we will dig into four very common metrics for evaluating machine learning models and their performance. The metrics we will go 
+
+through are Accuracy, Precision, Recall and F1 Score. All of the steps needed to calculate these metrics are simple and easy to
+
+understand. However we are going to introduce a little bit of statistical lingo that can seem confusing but just take it slow and we
+
+will get through this like a breeze!
+
+‍
+
+### The Task
+
+You just landed a great job at Aarons Animal Classifiers inc. Your task is to evaluate four different animal image classification
+
+models. The metrics that have been asked to evaluate the different models with are Accuracy, Precision, Recall and F1 score. To test 
+
+the models you have been given six images that the AI models sometimes get confused by (inspiration comes from a meme we saw 
+
+somewhere). The models that we are looking at are so called binary classification models. This simply means that model can output two
+
+different answers, positive or negative (in our case animal or not animal)
+
+
+### Introducing the Animals and Not Animals
+
+Below we see the six images that we are going to work with today and their corresponding correct classification.
+
+<img width="522" height="496" alt="image" src="https://github.com/user-attachments/assets/cffc151a-9741-450e-a2b3-b34b0b4ac4bb" />
+
+
+Animals and things that look like animals
+
+
+### True/False, Positive/Negative.
+
+Before we start looking at the metrics we first need to establish some basics. A benefit of the six images(dataset) we have is that we
+
+know the associated category, animal or not animal for each image. If we put these into a table with predicted categories as columns 
+
+and actual categories as rows we have made ourselves a confusion matrix. 
+
+<img width="856" height="612" alt="image" src="https://github.com/user-attachments/assets/2b622dfe-a475-4d36-85bb-742d2d8fe593" />
+
+
+Confusion matrix
+
+The confusion matrix together with the terms in the cells (true positives/negatives and false positives/negatives) are super important 
+
+for understanding the metrics later. Luckily they are quite simple to understand when we populate them with examples.
+
+<img width="1180" height="598" alt="image" src="https://github.com/user-attachments/assets/fc11c518-4d4b-4d8b-a219-5c05f3cc1f92" />
+
+Above we see what the confusion matrix would look like if we populate it with the information we currently have. Since we already know 
+
+what image is of an animal and not we only get true positives and true negatives. If we instead would have predicted that the blueberry
+
+muffin was an animal, that would have been a false positive. If we would have predicted that the shepherd dog was a mop, that would 
+
+have been a false negative. 
+
+
+<img width="1190" height="618" alt="image" src="https://github.com/user-attachments/assets/6f581115-ee31-4c0e-ac63-9949f7f738bf" />
+
+Okay now that we have covered the concepts of the confusion matrix. Let us head into the metrics and how they work.
+
+‍
+
+
+
+
+
+
+
+## Classification Metrics
+
+
+Classification problems aim to predict discrete categories. To evaluate the performance of classification models, we use the following
+
+metrics:
+
+
+### 1. Accuracy
+
+Accuracy is a fundamental metric used for evaluating the performance of a classification model. It tells us the proportion of correct 
+
+predictions made by the model out of all predictions.
+
+
+Accuracy   = TotalNumber  of Predictions  / Number of  Correct Predictions
+
+While accuracy provides a quick snapshot, it can be misleading in cases of imbalanced datasets. For example, in a dataset with 90% 
+
+class A and 10% class B, a model predicting only class A will still achieve 90% accuracy but it will fail to identify any class B 
+
+instances.
+
+Accuracy is good but it gives a False Positive sense of achieving high accuracy. The problem arises due to the possibility of 
+
+misclassification of minor class samples being very high.
+
+
+## In simple words :
+
+
+Accuracy is the most common metric to be used in everyday talk. Accuracy answers the question “Out of all the predictions we made, how 
+
+many were true?”
+
+### Simple Real-Life Example (Email Spam Detection)
+
+Imagine we build a machine learning model to detect spam emails.
+
+Suppose the system checks 100 emails.
+
+| Prediction Result            | Number |
+| ---------------------------- | ------ |
+| Correctly predicted spam     | 40     |
+| Correctly predicted not spam | 50     |
+| Wrong predictions            | 10     |
+
+
+Total correct predictions:
+
+40 + 50 = 90
+
+Total emails:
+
+100
+
+Accuracy:
+
+Accuracy = 90 / 100 = 0.90
+
+Accuracy = 90%
+
+Meaning:
+
+The model correctly predicted 90% of the emails.
+
+
+### Why Accuracy Can Sometimes Be Misleading
+
+Imagine a medical test for a rare disease.
+
+Dataset:
+
+| Class   | Percentage |
+| ------- | ---------- |
+| Healthy | 90%        |
+| Disease | 10%        |
+
+
+Now suppose a model predicts:
+
+### Everyone is healthy
+
+Accuracy calculation:
+
+90 correct / 100 = 90% accuracy
+
+But the model fails to detect any sick patient.
+
+So even though accuracy is 90%, the model is actually very bad.
+
+This problem happens in imbalanced datasets.
+
+
+### Where Accuracy Is Used (Real-World Applications)
+
+### Accuracy is commonly used in:
+
+Email spam detection
+
+Image classification
+
+Sentiment analysis
+
+Fraud detection
+
+Medical diagnosis systems
+
+
+
+
+
+
+
+
+### 2. Precision
+
+It measures how many of the positive predictions made by the model are actually correct. It's useful when the cost of false positives
+
+is high such as in medical diagnoses where predicting a disease when it’s not present can have serious consequences.
+
+
+Precision = TP + FP  / TP
+
+Where:
+
+TP = True Positives
+
+FP = False Positives
+
+Precision helps ensure that when the model predicts a positive outcome, it’s likely to be correct.
+
+## In simple words
+
+Precision is a metric that gives you the proportion of true positives to the amount of total positives that the model predicts. It 
+
+answers the question “Out of all the positive predictions we made, how many were true?”
+
+### Simple Real-Life Example (COVID Test)
+
+Imagine a machine learning system that detects COVID infection.
+
+The system tested 100 people.
+
+| Prediction Type                           | Number |
+| ----------------------------------------- | ------ |
+| Correctly predicted COVID (TP)            | 30     |
+| Predicted COVID but actually healthy (FP) | 10     |
+
+
+Total positive predictions:
+
+30 + 10 = 40
+
+Precision calculation:
+
+Precision = 30 / 40
+
+Precision = 0.75
+
+Precision = 75%
+
+Meaning:
+
+When the model says someone has COVID, it is correct 75% of the time.
+
+### Another Real-Life Example (Spam Email Detection)
+
+Suppose an email filter marks emails as Spam.
+
+| Prediction                                   | Result |
+| -------------------------------------------- | ------ |
+| Correct spam detection (TP)                  | 45     |
+| Important emails wrongly marked as spam (FP) | 5      |
+
+Total spam predictions:
+
+45 + 5 = 50
+
+Precision:
+
+Precision = 45 / 50
+
+Precision = 90%
+
+Meaning:
+
+When the model says “This email is spam”, it is correct 90% of the time.
+
+
+### Why Precision Is Important
+
+Precision is important when False Positives are dangerous.
+
+Examples:
+
+| Application       | Why Precision Matters                     |
+| ----------------- | ----------------------------------------- |
+| Medical diagnosis | Wrong disease prediction can cause stress |
+| Spam filtering    | Important emails may go to spam           |
+| Fraud detection   | Honest users may get blocked              |
+| Loan approval     | Wrong rejection harms customers           |
+
+
+### 3. Recall
+
+Recall or Sensitivity measures how many of the actual positive cases were correctly identified by the model. It is important when
+
+missing a positive case (false negative) is more costly than false positives.
+
+
+Recall  = T P + F N / TP
+
+
+Where:
+
+F N = False Negatives
+
+
+In scenarios where catching all positive cases is important (like disease detection), recall is a key metric.
+
+## In simple words:
+
+Recall  focuses on how good the model is at finding all the positives. Recall is also called true positive rate and answers the 
+
+question “Out of all the data points that should be predicted as true, how many did we correctly predict as true?”
+
+<img width="754" height="425" alt="image" src="https://github.com/user-attachments/assets/27bc0765-1263-46a2-81e9-5801bae75be0" />
+
+## Simple Real-Life Example (Disease Detection)
+
+Imagine a machine learning model that detects cancer.
+
+Suppose 100 patients actually have cancer.
+
+The model predicts:
+
+| Prediction Result              | Number |
+| ------------------------------ | ------ |
+| Correctly detected cancer (TP) | 90     |
+| Missed cancer cases (FN)       | 10     |
+
+
+Recall calculation:
+
+Recall = 90 / (90 + 10)
+
+Recall = 90 / 100
+
+Recall = 90%
+
+Meaning:
+
+The model detected 90% of the actual cancer cases.
+
+
+| Application            | Why Recall Matters              |
+| ---------------------- | ------------------------------- |
+| Disease detection      | Missing sick patients is risky  |
+| Fraud detection        | Missed fraud leads to loss      |
+| Security systems       | Missed threats can be dangerous |
+| Fire detection systems | Missing fire alarms is risky    |
+
+### Simple Way to Understand Recall
+
+Imagine a doctor checking patients for a disease.
+
+If there are 100 sick patients and the doctor correctly identifies 95 of them, the doctor has high recall.
+
+
+### 4. F1 Score
+
+The F1 Score is the harmonic mean of precision and recall. It is useful when we need a balance between precision and recall as it
+
+combines both into a single number. A high F1 score means the model performs well on both metrics. Its range is [0,1].
+
+Lower recall and higher precision gives us great accuracy but then it misses a large number of instances. More the F1 score better will 
+
+be performance. It can be expressed mathematically in this way:
+
+
+
+F1    Score    =    2 × Precision   +  Recall   /  Precision ×   Recall
+
+| Value | Meaning         |
+| ----- | --------------- |
+| 0     | Very poor model |
+| 1     | Perfect model   |
+
+<img width="733" height="510" alt="image" src="https://github.com/user-attachments/assets/3de8a300-ab03-478c-92c4-7bfaf51cf710" />
+
+<img width="667" height="566" alt="image" src="https://github.com/user-attachments/assets/2ee382e5-b53f-4518-9635-4c16c7228f92" />
+
+
+
+## In simple words:
+
+F1 Score is a measure that combines recall and precision. As we have seen there is a trade-off between precision and recall, F1 can 
+
+therefore be used to measure how effectively our models make that trade-off.
+
+Higher F1 Score = better model performance.
+
+
+
+## Simple Real-Life Example (Disease Detection)
+
+Imagine a machine learning system detecting cancer.
+
+Suppose the system results are:
+
+| Metric    | Value |
+| --------- | ----- |
+| Precision | 0.80  |
+| Recall    | 0.60  |
+
+
+### When F1 Score Is Useful
+
+F1 Score is useful when:
+
+| Situation           | Reason                                               |
+| ------------------- | ---------------------------------------------------- |
+| Imbalanced datasets | Accuracy becomes misleading                          |
+| Fraud detection     | Both catching fraud and avoiding false alarms matter |
+| Medical diagnosis   | Need balance between precision and recall            |
+| Spam detection      | Avoid missing spam and avoid blocking real emails    |
+
+
+### 5. Logarithmic Loss (Log Loss)
+
+Log loss measures the uncertainty of the model’s predictions. It is calculated by penalizing the model for assigning low probabilities
+
+to the correct classes. This metric is used in multi-class classification and is helpful when we want to assess a model’s confidence in
+
+its predictions. If there are N  samples belonging to the M class, then we calculate the Log loss in this way:
+
+### simple words :
+
+Log Loss measures how confident and correct a model’s predictions are.
+
+It checks whether the model gives high probability to the correct answer.
+
+In simple words:
+
+Log Loss tells us how wrong the model is when predicting probabilities.
+
+Lower Log Loss = Better model
+
+Higher Log Loss = Worse model
+
+## Simple Way to Understand
+
+Machine learning models often predict probabilities, not just answers.
+
+Example prediction:
+
+| Prediction | Probability |
+| ---------- | ----------- |
+| Spam       | 90%         |
+| Not Spam   | 10%         |
+
+
+If the email is actually Spam, the model is very confident and correct.
+
+So the Log Loss will be very low.
+
+But if the model predicts:
+
+| Prediction | Probability |
+| ---------- | ----------- |
+| Spam       | 10%         |
+| Not Spam   | 90%         |
+
+
+### Simple Real-Life Example (Weather Prediction)
+
+Imagine a weather prediction system.
+
+Actual result: Rain
+
+Case 1 — Good Prediction
+
+Model predicts:
+
+Rain = 90%
+
+
+No Rain = 10%
+
+This is a good prediction, so Log Loss is low.
+
+Case 2 — Bad Prediction
+
+Model predicts:
+
+Rain = 20%
+
+No Rain = 80%
+
+But it actually rains.
+
+The model was very confident but wrong.
+
+So Log Loss becomes high.
+
+
+### Why Log Loss Is Important
+
+Log Loss is useful because it checks:
+
+| Factor                | Why Important                    |
+| --------------------- | -------------------------------- |
+| Prediction accuracy   | Correct predictions              |
+| Prediction confidence | How confident the model is       |
+| Probability quality   | Whether probabilities make sense |
+
+
+### When Log Loss Is Used
+
+Log Loss is commonly used in:
+
+| Application            | Example           |
+| ---------------------- | ----------------- |
+| Spam detection         | Email spam filter |
+| Disease prediction     | Medical diagnosis |
+| Weather forecasting    | Rain prediction   |
+| Recommendation systems | Movie suggestions |
+
+
+#### ROC Curve and AUC Score (Machine Learning Evaluation Metrics)
+
+
+ROC Curve (Receiver Operating Characteristic Curve) is a graphical method used to evaluate the performance of a classification model.
+
+It shows how well a model distinguishes between two classes (for example: disease vs no disease, spam vs not spam). The ROC curve plots
+
+the True Positive Rate (TPR) on the Y-axis and the False Positive Rate (FPR) on the X-axis at different classification thresholds. By
+
+adjusting the threshold, the model may produce different rates of correct and incorrect predictions. The ROC curve helps visualize the
+
+trade-off between sensitivity (recall) and false alarms. A model that performs better will have a curve closer to the top-left corner
+
+of the graph.
+
+<img width="798" height="519" alt="image" src="https://github.com/user-attachments/assets/71d1a9b8-2840-4fea-9faa-ce57a3ca9ffb" />
+
+
+
+### AUC (Area Under the Curve)
+
+measures the total area under the ROC curve. It summarizes the model’s ability to distinguish between classes in a single number 
+
+between 0 and 1. A value close to 1 indicates a very good model, while a value close to 0.5 suggests the model performs no better than 
+
+random guessing. If AUC equals 1, the model perfectly separates the classes. Therefore, ROC-AUC is widely used to compare 
+
+classification models.
+
+### The ROC curve helps us understand how well a classification model separates positive and negative classes.
+
+It compares:
+
+| Metric                    | Meaning                                          |
+| ------------------------- | ------------------------------------------------ |
+| True Positive Rate (TPR)  | Correctly identified positive cases              |
+| False Positive Rate (FPR) | Negative cases incorrectly predicted as positive |
+
+
+The ROC graph shows how these values change when the prediction threshold changes.
+
+<img width="1919" height="1080" alt="image" src="https://github.com/user-attachments/assets/ff977bd6-89d7-4a25-a0b5-f8808f2290df" />
+
+<img width="1919" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f275aae-e231-4420-8f29-5e69372b0d9b" />
+
+<img width="1920" height="1920" alt="image" src="https://github.com/user-attachments/assets/4668e141-9caf-4176-be98-765a3007575b" />
+
+
+### Where Is It Used (Real-World Applications)?
+
+ROC-AUC is commonly used in many industries:
+
+| Application       | Example                             |
+| ----------------- | ----------------------------------- |
+| Medical diagnosis | Detecting cancer or diseases        |
+| Fraud detection   | Identifying fraudulent transactions |
+| Spam filtering    | Classifying emails as spam or not   |
+| Credit scoring    | Predicting loan default risk        |
+| Cybersecurity     | Detecting malicious activity        |
+
+
+Example:
+
+A fraud detection model must detect fraud transactions while minimizing false alarms. ROC helps measure this balance.
+
+
+### How Does It Work?
+
+The ROC curve is created by changing the classification threshold.
+
+Steps:
+
+The model predicts probabilities (e.g., fraud probability = 0.8).
+
+Different thresholds are tested (0.1, 0.2, 0.3, etc.).
+
+For each threshold, calculate:
+
+True Positive Rate
+
+False Positive Rate
+
+Plot these values on the graph.
+
+The curve shows the model's performance.
+
+AUC is then calculated as the area under this curve.
+
+
+####  Advantages and Disadvantages
+
+### Advantages
+
+Works well with imbalanced datasets
+
+Allows comparison between models
+
+Evaluates performance at all thresholds
+
+Provides clear visual interpretation
+
+### Disadvantages
+
+Harder for beginners to understand
+
+May not reflect real-world cost of errors
+
+Less informative when classes are extremely imbalanced
+
+### Real-World Example
+
+Example: Disease Detection System
+
+Suppose a hospital develops a model to detect heart disease.
+
+The model predicts probability of disease.
+
+| Patient   | Model Prediction | Actual Result |
+| --------- | ---------------- | ------------- |
+| Patient 1 | 0.90             | Disease       |
+| Patient 2 | 0.70             | Disease       |
+| Patient 3 | 0.40             | No Disease    |
+| Patient 4 | 0.30             | No Disease    |
+
+
+If we set threshold = 0.5:
+
+Patients with probability > 0.5 are predicted as disease.
+
+By testing multiple thresholds, we create a ROC curve.
+
+The AUC score then shows how well the model separates healthy and sick patients.
+
+### 6. Area Under Curve (AUC) and ROC Curve
+
+It is useful for binary classification tasks. The AUC value represents the probability that the model will rank a randomly chosen 
+
+positive example higher than a randomly chosen negative example. AUC ranges from 0 to 1 with higher values showing better model 
+
+performance.
+
+#### Interpretation of AUC Score
+
+| AUC Value   | Model Performance |
+| ----------- | ----------------- |
+| 0.50        | Random guessing   |
+| 0.60 – 0.70 | Poor model        |
+| 0.70 – 0.80 | Fair model        |
+| 0.80 – 0.90 | Good model        |
+| 0.90 – 1.00 | Excellent model   |
+
+
+
+## 1. True Positive Rate(TPR)
+
+Also known as sensitivity or recall, the True Positive Rate measures how many actual positive instances were correctly identified by 
+
+the model. It answers the question: "Out of all the actual positive cases, how many did the model correctly identify?"
+
+Formula:
+
+TPR = T P + F N / T P
+
+Where:
+
+T P = True Positives (correctly predicted positive cases)
+
+
+F N  = False Negatives (actual positive cases incorrectly predicted as negative)
+
+### 2. True Negative Rate(TNR)
+
+Also called specificity, the True Negative Rate measures how many actual negative instances were correctly identified by the model. It 
+
+answers the question: "Out of all the actual negative cases, how many did the model correctly identify as negative?"
+
+Formula:
+
+T N R = T N + F P / T N
+
+## Where:
+
+TN = True Negatives (correctly predicted negative cases)
+
+
+FP = False Positives (actual negative cases incorrectly predicted as positive)
+
+### 3. False Positive Rate(FPR)
+
+It measures how many actual negative instances were incorrectly classified as positive. It’s a key metric when the cost of false
+
+positives is high such as in fraud detection.
+
+Formula:
+
+F P R = F P + T N / F P
+
+
+Where:
+
+F P = False Positives (incorrectly predicted positive cases)
+
+T N = True Negatives (correctly predicted negative cases)
+
+
+### 4. False Negative Rate(FNR)
+
+It measures how many actual positive instances were incorrectly classified as negative. It answers: "Out of all the actual positive
+
+cases, how many were misclassified as negative?"
+
+Formula:
+
+F N R= F N + T P / F N
+
+Where:
+
+F N = False Negatives (incorrectly predicted negative cases)
+
+T P = True Positives (correctly predicted positive cases)
+
+
+​
+ 
+### Confusion Matrix in Machine Learning
+
+Confusion matrix is a simple table used to measure how well a classification model is performing. It compares the predictions made by
+
+the model with the actual results and shows where the model was right or wrong. This helps you understand where the model is making 
+
+mistakes so you can improve it. It breaks down the predictions into four categories:
+
+True Positive (TP): The model correctly predicted a positive outcome i.e the actual outcome was positive.
+
+
+True Negative (TN): The model correctly predicted a negative outcome i.e the actual outcome was negative.
+
+
+False Positive (FP): The model incorrectly predicted a positive outcome i.e the actual outcome was negative. It is also known as a Type I error.
+
+
+False Negative (FN): The model incorrectly predicted a negative outcome i.e the actual outcome was positive. It is also known as a Type II error.
+
+
+<img width="695" height="230" alt="image" src="https://github.com/user-attachments/assets/c696c622-d654-4dca-9731-4c5dea6f17d9" />
+
+It also helps calculate key measures like accuracy, precision and recall which give a better idea of performance especially when the 
+
+data is imbalanced.
+
+### Confusion Matrix For Binary Classification
+
+A 2x2 Confusion matrix is shown below for the image recognition having a Dog image or Not Dog image:
+
+
+<img width="428" height="188" alt="image" src="https://github.com/user-attachments/assets/508d3697-fbb2-4899-b519-8bcca20ff6d0" />
+
+True Positive (TP): It is the total counts having both predicted and actual values are Dog.
+
+
+True Negative (TN): It is the total counts having both predicted and actual values are Not Dog.
+
+
+False Positive (FP): It is the total counts having prediction is Dog while actually Not Dog.
+
+
+False Negative (FN): It is the total counts having prediction is Not Dog while actually, it is Dog.
+
+### Example: Confusion Matrix for Dog Image Recognition with Numbers
+
+
+<img width="744" height="332" alt="image" src="https://github.com/user-attachments/assets/19b07bd7-6add-4981-8edb-22844166ce6a" />
+
+Actual Dog Counts = 6 
+
+Actual Not Dog Counts = 4
+
+True Positive Counts = 5
+
+False Positive Counts = 1
+
+True Negative Counts = 3
+
+False Negative Counts = 1
+
+<img width="723" height="324" alt="image" src="https://github.com/user-attachments/assets/2962436b-6e6d-4f6d-a6d3-2e9c44d7acd5" />
+
+## Implementation of Confusion Matrix for Binary classification using Python
+
+Step 1: Import the necessary libraries
+
+import numpy as np
+
+from sklearn.metrics import confusion_matrix,classification_report
+
+import seaborn as sns
+
+import matplotlib.pyplot as plt
+
+Step 2: Create the NumPy array for actual and predicted labels
+
+actual: represents the true labels or the actual classification of the items. In this case it's a list of 10 items where each entry is
+
+either 'Dog' or 'Not Dog'.
+
+
+predicted: represents the predicted labels or the classification made by the model.
+
+
+actual    = np.array(
+
+  ['Dog','Dog','Dog','Not Dog','Dog','Not Dog','Dog','Dog','Not Dog','Not Dog'])
+  
+predicted = np.array(
+
+  ['Dog','Not Dog','Dog','Not Dog','Dog','Dog','Dog','Dog','Not Dog','Not Dog'])
+
+
+  Step 3: Compute the confusion matrix
+
+confusion_matrix: This function from sklearn.metrics computes the confusion matrix which is a table used to evaluate the performance of
+
+a classification algorithm. It compares actual and predicted to generate a matrix.
+
+cm = confusion_matrix(actual,predicted)
+
+
+### Step 4: Plot the confusion matrix with the help of the seaborn heatmap
+
+sns.heatmap: This function from Seaborn is used to create a heatmap of the confusion matrix.
+
+
+annot=True: Display the numerical values in each cell of the heatmap.
+
+sns.heatmap(cm, 
+
+            annot=True,
+			
+            fmt='g', 
+			
+            xticklabels=['Dog','Not Dog'],
+			
+            yticklabels=['Dog','Not Dog'])
+			
+plt.ylabel('Actual', fontsize=13)
+
+plt.title('Confusion Matrix', fontsize=17, pad=20)
+
+plt.gca().xaxis.set_label_position('top') 
+
+plt.xlabel('Prediction', fontsize=13)
+
+plt.gca().xaxis.tick_top()
+
+plt.gca().figure.subplots_adjust(bottom=0.2)
+
+plt.gca().figure.text(0.5, 0.05, 'Prediction', ha='center', fontsize=13)
+
+plt.show()
+
+<img width="605" height="474" alt="image" src="https://github.com/user-attachments/assets/a725af68-8f3b-4f8a-a26e-ae07ed5b7d0b" />
+
+
+
+Step 5: Classifications Report based on Confusion Metrics
+
+<img width="553" height="234" alt="image" src="https://github.com/user-attachments/assets/c20999b2-1fb6-4747-9771-dd7a5b9206a3" />
+
+### Confusion Matrix For Multi-class Classification
+
+In multi-class classification the confusion matrix is expanded to account for multiple classes.
+
+Rows represent the actual classes (ground truth).
+
+Columns represent the predicted classes.
+
+Each cell in the matrix shows how often a specific actual class was predicted as another class.
+
+For example in a 3-class problem the confusion matrix would be a 3x3 table where each row and column corresponds to one of the classes.
+
+It summarizes the model's performance across all classes in a compact format. Lets consider the below example:
+
+Example: Confusion Matrix for Image Classification (Cat, Dog, Horse)
+
+<img width="655" height="260" alt="image" src="https://github.com/user-attachments/assets/89b34240-d204-4a9c-a6ee-fb3741e4251d" />
+
+For a given class, a misclassified instance acts as a False Negative (FN) for the actual class and a False Positive (FP) for the 
+
+predicted class. Therefore, FP and FN are defined per class, not per cell.
+
+
+### Example with Numbers:
+
+When evaluating one class at a time (one-vs-rest), the confusion matrix metrics such as TP, FP, FN and TN are calculated separately for 
+
+each class. Let's consider the scenario where the model processed 30 images:
+
+<img width="619" height="250" alt="image" src="https://github.com/user-attachments/assets/4bca401d-d68c-4892-b5e3-cebecf2e2cf1" />
+
+## In this scenario:
+
+Cats: 8 were correctly identified, 1 was misidentified as a dog and 1 was misidentified as a horse.
+
+Dogs: 10 were correctly identified, 2 were misidentified as cats.
+
+Horses: 8 were correctly identified, 2 were misidentified as dogs.
+
+To calculate true negatives, we need to know the total number of images that were NOT cats, dogs or horses. Let's assume there were 10
+
+such images and the model correctly classified all of them as "not cat," "not dog," and "not horse." Therefore:
+
+True Negative (TN) Counts: 10 for each class as the model correctly identified each non-cat/dog/horse image as not belonging to that class
+
+### Implementation of Confusion Matrix for Multi-Class classification using Python
+
+Step 1: Import the necessary libraries
+
+import numpy as np
+
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
+
+import matplotlib.pyplot as plt
+
+Step 2: Create the NumPy array for actual and predicted labels
+
+y_true: List of true labels.
+
+y_pred: List of predicted labels by the model.
+
+classes: A list of class names: 'Cat', 'Dog' and 'Horse'
+
+
+y_true = ['Cat'] * 10 + ['Dog'] * 12 + ['Horse'] * 10
+
+y_pred = ['Cat'] * 8 + ['Dog'] + ['Horse'] + ['Cat'] * 2 + ['Dog'] * 10 + ['Horse'] * 8 + ['Dog'] * 2
+
+classes = ['Cat', 'Dog', 'Horse']
+
+Step 3: Generate and Visualize the Confusion Matrix
+
+ConfusionMatrixDisplay: Creates a display object for the confusion matrix.
+
+
+confusion_matrix=cm: Passes the confusion matrix (cm) to display.
+
+
+display_labels=classes: Sets the labels (['Cat' , 'Dog' , 'Horse']) or the confusion matrix.
+
+cm = confusion_matrix(y_true, y_pred, labels=classes)
+
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes)
+
+disp.plot(cmap=plt.cm.Blues)
+
+plt.title('Confusion Matrix', fontsize=15, pad=20)
+
+plt.xlabel('Prediction', fontsize=11)
+
+plt.ylabel('Actual', fontsize=11)
+
+plt.gca().xaxis.set_label_position('top')
+
+plt.gca().xaxis.tick_top()
+
+plt.gca().figure.subplots_adjust(bottom=0.2)
+
+plt.gca().figure.text(0.5, 0.05, 'Prediction', ha='center', fontsize=13)
+
+plt.show()
+
+<img width="639" height="421" alt="image" src="https://github.com/user-attachments/assets/ce8c72c3-3351-4d59-93e7-1f8e54ed2570" />
+
+Step 4: Print the Classification Report
+
+print(classification_report(y_true, y_pred, target_names=classes))
+
+<img width="573" height="260" alt="image" src="https://github.com/user-attachments/assets/10bf7130-0599-452f-9276-536167641ba6" />
+
+Confusion matrix provides clear insights into important metrics like accuracy, precision and recall by analyzing correct and incorrect predictions.
+
+
+## summary 
+
+A Confusion Matrix is a table used to evaluate the performance of a classification model.
+
+It shows how many predictions are correct and incorrect by comparing the actual values with the predicted values.
+
+It is called a confusion matrix because it shows where the model gets confused between classes.
+
+The confusion matrix is the foundation for calculating important metrics like:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+## Structure of a Confusion Matrix
+
+A confusion matrix contains four possible outcomes:
+
+| Term                | Meaning                                       |
+| ------------------- | --------------------------------------------- |
+| True Positive (TP)  | Model correctly predicts the positive class   |
+| True Negative (TN)  | Model correctly predicts the negative class   |
+| False Positive (FP) | Model predicts positive but actually negative |
+| False Negative (FN) | Model predicts negative but actually positive |
+
+
+### Real-Life Example (Disease Detection)
+
+Imagine a machine learning model used to detect COVID-19.
+
+Suppose 100 patients were tested.
+
+Actual situation:
+
+40 patients have the disease
+
+60 patients do not have the disease
+
+Model prediction results:
+
+
+| Actual / Predicted | Disease | No Disease |
+| ------------------ | ------- | ---------- |
+| Disease            | 35      | 5          |
+| No Disease         | 10      | 50         |
+
+
+Now we interpret this:
+
+| Type                | Meaning                        | Value |
+| ------------------- | ------------------------------ | ----- |
+| True Positive (TP)  | Correctly detected disease     | 35    |
+| False Negative (FN) | Sick patient predicted healthy | 5     |
+| False Positive (FP) | Healthy patient predicted sick | 10    |
+| True Negative (TN)  | Correctly detected healthy     | 50    |
+
+
+1. What does a Confusion Matrix represent?
+
+A. Model training time
+
+B. Comparison between predicted and actual values
+
+C. Feature selection
+
+D. Data preprocessing
+
+Answer: B
+
+2. In a confusion matrix, what does TP stand for?
+
+A. True Prediction
+
+B. Total Prediction
+
+C. True Positive
+
+D. Total Positive
+
+Answer: C
+
+3. False Positive means:
+
+A. Correct positive prediction
+
+B. Incorrect negative prediction
+
+C. Predicting positive when the actual class is negative
+
+D. Predicting negative when the actual class is positive
+
+Answer: C
+
+4. False Negative means:
+
+A. Predicting negative when the actual class is positive
+
+B. Predicting positive when actual is negative
+
+C. Correct negative prediction
+
+D. Correct positive prediction
+
+Answer: A
+
+5. True Negative represents:
+
+A. Correctly predicted negative cases
+
+B. Incorrectly predicted positive cases
+
+C. Incorrectly predicted negative cases
+
+D. Correctly predicted positive cases
+
+Answer: A
+
+6. Confusion Matrix is mainly used for:
+
+A. Clustering problems
+
+B. Regression problems
+
+C. Classification problems
+
+D. Data cleaning
+
+Answer: C
+
+7. How many outcomes exist in a binary confusion matrix?
+
+A. 2
+
+B. 3
+
+C. 4
+
+D. 5
+
+Answer: C
+
+## Section 2: Accuracy
+
+8. Accuracy measures:
+
+A. Correct predictions out of all predictions
+
+B. Only positive predictions
+
+C. Only negative predictions
+
+D. Model complexity
+
+Answer: A
+
+9. Accuracy formula is:
+
+A. TP / (TP + FP)
+
+B. TP / (TP + FN)
+
+C. (TP + TN) / Total Predictions
+
+D. FP / (FP + FN)
+
+Answer: C
+
+10. Accuracy becomes misleading when:
+
+A. Dataset is small
+
+B. Dataset is balanced
+
+C. Dataset is imbalanced
+
+D. Model is simple
+
+Answer: C
+
+11. If a dataset has 95% negative class, predicting all negative gives:
+
+A. Low accuracy
+
+B. High accuracy but poor model
+
+C. Perfect model
+
+D. Balanced model
+
+Answer: B
+
+12. Accuracy ranges between:
+
+A. 0 and 10
+
+B. 0 and 1
+
+C. -1 and 1
+
+D. 1 and 100
+
+Answer: B
+
+## Section 3: Precision
+
+13. Precision measures:
+
+A. Correct negative predictions
+
+B. Correct positive predictions out of predicted positives
+
+C. All predictions
+
+D. Model training accuracy
+
+Answer: B
+
+14. Precision formula is:
+
+A. TP / (TP + FP)
+
+B. TP / (TP + FN)
+
+C. TN / (TN + FP)
+
+D. FP / (TP + TN)
+
+Answer: A
+
+15. Precision is important when:
+
+A. False negatives are costly
+
+B. False positives are costly
+
+C. Dataset is small
+
+D. Dataset is balanced
+
+Answer: B
+
+16. High precision means:
+
+A. Few false positives
+
+B. Few false negatives
+
+C. Many true negatives
+
+D. Many predictions
+
+Answer: A
+
+17. Which application needs high precision?
+
+A. Spam detection
+
+B. Weather prediction
+
+C. Image resizing
+
+D. Clustering
+
+Answer: A
+
+## Section 4: Recall
+
+18. Recall is also called:
+
+A. Specificity
+
+B. Sensitivity
+
+C. Accuracy
+
+D. Error Rate
+
+Answer: B
+
+19. Recall formula is:
+
+A. TP / (TP + FP)
+
+B. TP / (TP + FN)
+
+C. TN / (TN + FP)
+
+D. FP / (FP + FN)
+
+Answer: B
+
+20. Recall measures:
+
+A. Correct positives out of predicted positives
+
+B. Correct positives out of actual positives
+
+C. Correct negatives out of total negatives
+
+D. Total predictions
+
+Answer: B
+
+21. High recall means:
+
+A. Few false negatives
+
+B. Few false positives
+
+C. Many predictions
+
+D. Few true positives
+
+Answer: A
+
+22. Which application requires high recall?
+
+A. Fraud detection
+
+B. Image compression
+
+C. Database design
+
+D. File storage
+
+Answer: A
+
+## Section 5: F1 Score
+
+23. F1 Score is the harmonic mean of:
+
+A. Accuracy and Recall
+
+B. Precision and Recall
+
+C. Accuracy and Precision
+
+D. Recall and Specificity
+
+Answer: B
+
+24. F1 Score formula is:
+
+A. (Precision + Recall)/2
+
+B. 2 × (Precision × Recall) / (Precision + Recall)
+
+C. Precision × Recall
+
+D. Precision – Recall
+
+Answer: B
+
+25. F1 Score ranges between:
+
+A. 0 and 1
+
+B. 1 and 10
+
+C. -1 and 1
+
+D. 0 and 100
+
+Answer: A
+
+26. F1 Score is useful when:
+
+A. Dataset is balanced
+
+B. Precision and Recall both matter
+
+C. Model training is slow
+
+D. Dataset is large
+
+Answer: B
+
+27. High F1 Score means:
+
+A. Good balance of precision and recall
+
+B. High training accuracy
+
+C. Good regression model
+
+D. Low error rate
+
+Answer: A
+
+### Section 6: ROC Curve
+
+28. ROC stands for:
+
+A. Receiver Operating Characteristic
+
+B. Random Output Curve
+
+C. Regression Output Curve
+
+D. Result Operating Curve
+
+Answer: A
+
+29. ROC curve plots:
+
+A. Precision vs Recall
+
+B. True Positive Rate vs False Positive Rate
+
+C. Accuracy vs Error
+
+D. Recall vs Accuracy
+
+Answer: B
+
+30. The Y-axis of ROC curve represents:
+
+A. Precision
+
+B. Recall (True Positive Rate)
+
+C. Accuracy
+
+D. Error Rate
+
+Answer: B
+
+31. The X-axis of ROC curve represents:
+
+A. False Positive Rate
+
+B. Accuracy
+
+C. Recall
+
+D. Precision
+
+Answer: A
+
+32. The best ROC curve is closest to:
+
+A. Bottom right corner
+
+B. Top left corner
+
+C. Center
+
+D. Bottom left corner
+
+Answer: B
+
+## Section 7: AUC Score
+
+33. AUC stands for:
+
+A. Area Under Curve
+
+B. Average Unit Curve
+
+C. Accuracy Unit Curve
+
+D. Area Utility Curve
+
+Answer: A
+
+34. AUC value ranges between:
+
+A. 0 and 1
+
+B. 0 and 100
+
+C. -1 and 1
+
+D. 1 and 10
+
+Answer: A
+
+35. AUC = 0.5 means:
+
+A. Perfect model
+
+B. Random guessing
+
+C. Bad model
+
+D. Excellent model
+
+Answer: B
+
+36. AUC close to 1 means:
+
+
+A. Poor model
+
+B. Random model
+
+C. Excellent model
+
+D. Weak model
+
+Answer: C
+
+37. AUC measures:
+
+A. Model training speed
+
+B. Model's ability to separate classes
+
+C. Dataset size
+
+D. Model parameters
+
+Answer: B
+
+38. ROC-AUC is useful when:
+
+A. Dataset is imbalanced
+
+B. Dataset is small
+
+C. Regression problems
+
+D. Clustering problems
+
+Answer: A
+
+39. Which metric combines Precision and Recall?
+
+A. Accuracy
+
+B. ROC
+
+C. F1 Score
+
+D. AUC
+
+Answer: C
+
+40. Which metric evaluates classification threshold performance?
+
+A. ROC Curve
+
+B. Accuracy
+
+C. Recall
+
+D. Precision
+
+Answer: A
+
+
+
+
+
+
+
+
+
+
+
+​
+ 
+
+
+​
+ 
+​
+   
+
+
+
+
+
+
+
+
+
+
+
+​
+
+
+
+
+
+
+
+‍
+
+
+
+
+​
+
 
 
 
