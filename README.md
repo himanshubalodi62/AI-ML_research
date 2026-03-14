@@ -197,22 +197,50 @@ Transformers
 
 ## Data representation and manipulation
 
-At its most basic level, linear algebra gives the tools to represent and work with data in structured forms. Most machine learning workflows start by organizing data into numerical formats, and each structure—scalar, vector, matrix and tensor—serves a different purpose.
+At its most basic level, linear algebra gives the tools to represent and work with data in structured forms. Most machine learning
+
+workflows start by organizing data into numerical formats, and each structure—scalar, vector, matrix and tensor—serves a different
+
+purpose.
 
 <img width="1440" height="810" alt="image" src="https://github.com/user-attachments/assets/617c9e6d-48cf-4aca-9c3c-59d74891ab30" />
 
 
 
-A scalar is the simplest building block, which is a single numerical value, like 5 or 2.3. Scalars often represent parameters, scaling factors or single measurements.
+A scalar is the simplest building block, which is a single numerical value, like 5 or 2.3. Scalars often represent parameters, scaling
 
-A vector is an ordered array of numbers, usually written as a column or row. Vectors can represent anything from a list of features describing a single data point to the coordinates of a position in space. For example, the vector [3,5,7] might represent the number of visits, purchases and returns for a customer.
+factors or single measurements.
 
-A matrix is a two-dimensional array of numbers arranged in rows and columns. A dataset where each row is a data point and each column is a feature naturally forms a matrix. Matrices are central to linear algebra because they allow for efficient storage of data. Operations like scalar multiplication (multiplying every element of a matrix by a constant number) and matrix multiplication (combining two matrices to apply a transformation or compute relationships) are pervasive in algorithms.
+A vector is an ordered array of numbers, usually written as a column or row. Vectors can represent anything from a list of features 
 
-A tensor is a generalization of scalars, vectors and matrices to higher dimensions. For instance, a color image might be stored as a 3D tensor where height, width and color channels form three separate axes. In deep learning, tensors are the standard data structure for feeding information into neural networks.
-The dot product is a way to multiply two vectors to produce a single scalar. It is widely used to calculate similarities between vectors, which is a crucial step in many recommendation systems. The transpose of a matrix, which flips its rows and columns, is another fundamental operation that enables one to align dimensions for multiplication and uncover structural patterns in data.
+describing a single data point to the coordinates of a position in space. For example, the vector [3,5,7] might represent the number of
 
-Linear algebra enables the expression of complex datasets in a way that algorithms can understand and process, therefore allowing the construction of complex models using a plethora of data collected from the real world. 
+visits, purchases and returns for a customer.
+
+A matrix is a two-dimensional array of numbers arranged in rows and columns. A dataset where each row is a data point and each column 
+
+is a feature naturally forms a matrix. Matrices are central to linear algebra because they allow for efficient storage of data.
+
+Operations like scalar multiplication (multiplying every element of a matrix by a constant number) and matrix multiplication (combining
+
+two matrices to apply a transformation or compute relationships) are pervasive in algorithms.
+
+A tensor is a generalization of scalars, vectors and matrices to higher dimensions. For instance, a color image might be stored as a 3D
+
+tensor where height, width and color channels form three separate axes. In deep learning, tensors are the standard data structure for 
+
+feeding information into neural networks.
+
+
+The dot product is a way to multiply two vectors to produce a single scalar. It is widely used to calculate similarities between
+
+vectors, which is a crucial step in many recommendation systems. The transpose of a matrix, which flips its rows and columns, is 
+
+another fundamental operation that enables one to align dimensions for multiplication and uncover structural patterns in data.
+
+Linear algebra enables the expression of complex datasets in a way that algorithms can understand and process, therefore allowing the
+
+construction of complex models using a plethora of data collected from the real world. 
 
 <img width="1536" height="597" alt="image" src="https://github.com/user-attachments/assets/edb2d774-0465-4b8c-9667-053e66faf96e" />
 
@@ -288,8 +316,11 @@ Linear algebra enables the expression of complex datasets in a way that algorith
 1. What is a vector in ML?
 
 A) A single number
+
 B) A list of numbers
+
 C) A graph
+
 D) A function
 
 Answer: B
@@ -297,8 +328,11 @@ Answer: B
 2. Dot product is mainly used to:
 
 A) Store data
+
 B) Measure similarity
+
 C) Delete features
+
 D) Normalize data
 
 Answer: B
@@ -306,8 +340,11 @@ Answer: B
 3. In ML, a dataset is usually represented as:
 
 A) Scalar
+
 B) Vector
+
 C) Matrix
+
 D) Function
 
 Answer: C
@@ -315,29 +352,37 @@ Answer: C
 4. Which concept is used in PCA?
 
 A) Norm
+
 B) Gradient
+
 C) Eigenvalues
+
 D) Bias
 
 Answer: C
 
 ##  Section B: True / False
 
-Neural networks rely on matrix multiplication.
+Neural networks rely on matrix multiplication
+.
 Answer: True
 
 Eigenvectors are used in linear regression.
+
 Answer: False
 
 Gradient descent updates weights using vector operations.
+
 Answer: True
 
 A matrix is a 1D structure.
+
 Answer: False
 
 ## Section C: Short Answer (Detailed but Simple)
 
 ## What is the dot product?
+
 Simple Definition:
 
 The dot product is a mathematical operation that multiplies two vectors and adds the results to give a single number.
@@ -346,6 +391,7 @@ The dot product is a mathematical operation that multiplies two vectors and adds
 
 If
 A = [a₁, a₂, a₃]
+
 B = [b₁, b₂, b₃]
 
 Then:
@@ -355,6 +401,7 @@ A · B = (a₁×b₁) + (a₂×b₂) + (a₃×b₃)
 Example:
 
 A = [1, 2, 3]
+
 B = [4, 5, 6]
 
 Dot Product = (1×4) + (2×5) + (3×6)
@@ -370,14 +417,16 @@ Used in neural networks
 Used to measure similarity between data points
 
 In simple words:
+
 Dot product helps the model calculate predictions.
 
 2️⃣ Why is matrix multiplication important in deep learning?
+
 Simple Answer:
 
 Matrix multiplication allows neural networks to process large amounts of data efficiently.
 
-✅ Explanation:
+# Explanation:
 
 In deep learning, each layer performs this operation:
 
@@ -469,7 +518,7 @@ Notation:
 If matrix is A
 Transpose is Aᵀ
 
-✅ Why Used in ML?
+### Why Used in ML?
 
 Used in linear regression formula
 
@@ -480,6 +529,7 @@ Used to align dimensions for multiplication
  Transpose helps fix dimension mismatch.
 
 ##  Why do we use norms in ML?
+
 ## Simple Definition:
 
 A norm measures the size or length of a vector.
@@ -659,14 +709,22 @@ Without linear algebra, neural networks cannot compute anything.
 
 📝 Exam-Ready Answer
 
-Linear algebra is fundamental to neural networks because all computations are performed using vectors and matrices. Inputs are represented as vectors, weights are stored as matrices, and outputs are calculated using matrix multiplication. Each layer performs a linear transformation followed by a non-linear activation function. Backpropagation also uses matrix operations to compute gradients and update weights efficiently. Thus, neural networks are essentially layered matrix computations optimized using linear algebra.
+Linear algebra is fundamental to neural networks because all computations are performed using vectors and matrices. Inputs are 
+
+represented as vectors, weights are stored as matrices, and outputs are calculated using matrix multiplication. Each layer performs a
+
+linear transformation followed by a non-linear activation function. Backpropagation also uses matrix operations to compute gradients
+
+and update weights efficiently. Thus, neural networks are essentially layered matrix computations optimized using linear algebra.
 
 ### Why is Vectorization Faster Than Loops in Python?
+
 ## Simple Explanation
 
 Vectorization uses optimized C-level operations in libraries like NumPy instead of slow Python loops.
 
 ## Detailed Explanation
+
 Loop Example (Slow):
 for i in range(n):
     result[i] = a[i] * b[i]
@@ -737,6 +795,7 @@ Shows how features vary together.
 Step 3: Compute Eigenvalues & Eigenvectors
 
 Eigenvectors → Direction of maximum variance
+
 Eigenvalues → Amount of variance in that direction
 
 ### Why Important?
@@ -816,13 +875,24 @@ Use Regularization (Ridge)
 Use Pseudo-inverse
  Exam Answer
 
-If a matrix is not invertible, it means its determinant is zero and it does not have a unique inverse. In machine learning, this usually occurs when features are linearly dependent. This causes problems in methods like linear regression where the inverse of XᵀX is required. To handle this issue, techniques such as feature selection, regularization, or pseudo-inverse methods are used to ensure stable model computation.
+If a matrix is not invertible, it means its determinant is zero and it does not have a unique inverse. In machine learning, this
+
+usually occurs when features are linearly dependent. This causes problems in methods like linear regression where the inverse of XᵀX is 
+
+required. To handle this issue, techniques such as feature selection, regularization, or pseudo-inverse methods are used to ensure
+
+stable model computation.
 
 Final Conceptual Summary
+
 Concept	Why Important
+
 Neural networks	Built on matrix multiplication
+
 Vectorization	Enables fast computation
+
 Eigenvalues	Power dimensionality reduction
+
 Non-invertible matrix	Causes instability in models
 
 ### Critical Thinking Questions.
@@ -866,11 +936,14 @@ This problem is called:
 
  Multicollinearity
 
-What Problems Does It Cause?
+## What Problems Does It Cause?
 
 1️ No unique solution in linear regression
+
 2️⃣ Model coefficients become unstable
+
 3️⃣ Small data change → large weight change
+
 4️⃣ Interpretation becomes unreliable
 
 Real Example
@@ -911,12 +984,18 @@ This is called:
 Curse of Dimensionality
  Deeper Explanation
 
-When dimensions increase:
+### When dimensions increase:
 
-1️⃣ Data points become far apart
-2️⃣ Distance metrics become unreliable
-3️⃣ Model needs exponentially more data
-4️⃣ Noise increases
+ Data points become far apart
+
+
+Distance metrics become unreliable
+
+
+Model needs exponentially more data
+
+
+Noise increases
 
  Example
 
@@ -953,9 +1032,11 @@ Collect more data
 High dimensionality causes the curse of dimensionality, where data becomes sparse and distance measures lose meaning. Models require significantly more data to generalize properly and are more prone to overfitting. Dimensionality reduction techniques such as PCA help mitigate this issue.
 
  Why Are GPUs Good for Deep Learning?
+ 
  Simple Explanation
 
 Deep learning = matrix multiplication
+
 GPUs are designed for massive parallel computation
 
 So they process matrix operations much faster than CPUs.
@@ -1009,9 +1090,13 @@ GPU accelerates all.
 GPUs are highly efficient for deep learning because neural networks rely heavily on matrix multiplication, which can be parallelized. GPUs contain thousands of cores designed for simultaneous arithmetic operations, allowing faster computation compared to CPUs, which are optimized for sequential tasks.
 
  Final Deep Understanding
+ 
 Concept	Core Problem	ML Impact
+
 Perfect correlation	Linear dependency	Unstable models
+
 High dimensionality	Data sparsity	Overfitting
+
 GPUs	Parallelism	Faster training
 
 
@@ -1019,9 +1104,13 @@ GPUs	Parallelism	Faster training
 Week 3 – Data Handling & EDA
 
 ● Data cleaning (missing values, duplicates)
+
 ● Data preprocessing & scaling
+
 ● Feature engineering basics
+
 ● Exploratory Data Analysis (EDA)
+
 ● Data visualization (Matplotlib, Seaborn)
 
 ### 1. What is Exploratory Data Analysis (EDA)?
@@ -1390,6 +1479,7 @@ Data cleaning ensures the dataset is accurate and reliable.
 ## Missing value 
 
 Missing values are data points that are not recorded or are empty in a dataset.
+
 In simple words, it means some information is not available for certain rows or columns.
 
 
@@ -3327,21 +3417,19 @@ Then it divides the result by the standard deviation to get the standardized val
 
 
 
-
-
 ### Why Feature Engineering is Important in Machine Learning
 
 Feature engineering helps ML models:
 
-1️⃣ Improve prediction accuracy
+Improve prediction accuracy
 
-2️⃣ Discover hidden patterns
+Discover hidden patterns
 
-3️⃣ Reduce noise in data
+Reduce noise in data
 
-4️⃣ Make models learn faster
+Make models learn faster
 
-5️⃣ Improve model performance
+Improve model performance
 
 
 ### Important concept:
@@ -3491,6 +3579,1467 @@ This helps predict shopping behavior.
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/141137cf-59be-4a9a-a42c-636c13b4ff8d" />
 
 
+### Feature extraction
+
+
+### What is feature extraction?
+
+Feature extraction is a technique that reduces the dimensionality or complexity of data to improve the performance and efficiency of 
+
+machine learning (ML) algorithms. This process facilitates ML tasks and improves data analysis by simplifying the dataset to include
+
+only its significant variables or attributes.  
+
+The performance of an AI model depends on the quality of its training data.
+
+Good quality data helps the model learn better patterns.
+
+Before training, the data usually goes through data preprocessing.
+
+Preprocessing prepares the data in a suitable format for machine learning.
+
+This process improves model training and performance.
+
+Feature extraction is an important step in preprocessing.
+
+It helps identify useful information from raw data.
+
+During feature extraction, unstructured data is converted into structured data.
+
+Structured data is easier for machine learning models to understand.
+
+This process improves data quality.
+
+It also improves model interpretability.
+
+Feature extraction is a part of feature engineering.
+
+Feature engineering is a broader process in machine learning.
+
+It involves creating, modifying, and selecting features from raw data.
+
+The goal is to improve model performance.
+
+In early research, pattern recognition methods were used to extract features.
+
+Researchers studied different techniques to find useful features.
+
+Some of these techniques used heuristic approaches.
+
+The aim was to identify the most relevant features in the dataset.
+
+Over time, more advanced methods were developed.
+
+Autoencoders became popular for feature learning.
+
+Autoencoders are a type of neural network.
+
+They are often used for dimensionality reduction.
+
+Dimensionality reduction means reducing the number of features.
+
+Sometimes datasets contain many features but fewer data points.
+
+This type of dataset is called high-dimensional data.
+
+High-dimensional data is difficult to analyze and process.
+
+Machine learning models may struggle with too many features.
+
+Feature extraction helps reduce the number of features.
+
+Therefore, it is considered a dimensionality reduction technique.
+
+This is very important when working with large datasets.
+
+It is also important for datasets with multiple data types (modalities).
+
+Examples of modalities include text, images, and audio.
+
+If a model has too many features, performance may decrease.
+
+Managing many features can make the model less efficient.
+
+Reducing features helps the model work faster and better.
+
+Feature extraction is widely used in image processing.
+
+It is also used in natural language processing (NLP).
+
+Another application area is signal processing.
+
+Efficient feature extraction helps these systems perform more accurately and effectively.
+
+### How does feature extraction work?
+
+Dimensionality reduction is a data science technique used in the preprocessing step in machine learning.6 During this process, irrelevant and redundant data is removed while retaining the original dataset’s relevant information.
+
+Features can be thought of as the attributes of a data object. For example, in a dataset of animals, you would expect some numerical
+
+features (age, height, weight) and categorical features (color, species, breed). Feature extraction is part of the model’s neural 
+
+network architecture, such as a convolutional neural network (CNN).
+
+Redundant or repeated information is also removed.
+
+The goal is to keep only the useful and important information.
+
+This makes the dataset simpler and easier to process.
+
+Features can be understood as attributes of an object in the data.
+
+These attributes describe the properties of each data item.
+
+For example, consider a dataset of animals.
+
+In this dataset, animals have different characteristics.
+
+Some features are numerical values.
+
+Examples of numerical features are age, height, and weight.
+
+These values can be measured using numbers.
+
+Some features are categorical values.
+
+Examples include color, species, and breed.
+
+Categorical features describe categories instead of numbers.
+
+Feature extraction is often used in neural network models.
+
+One example is a Convolutional Neural Network (CNN).
+
+CNN models automatically detect useful patterns from input data.
+
+First, the model receives input data.
+
+This input data can be images, text, or numerical information.
+
+Next, the feature extractor processes this data.
+
+The extractor converts the data into a numerical format.
+
+This numerical format is easier for the machine learning model to understand.
+
+These numerical representations are stored in feature vectors.
+
+A feature vector is a list of numerical values describing the data.
+
+These vectors help the model perform machine learning algorithms.
+
+Algorithms then perform data reduction and learning tasks.
+
+After feature extraction, the data may still need standardization.
+
+Standardization means adjusting the scale of the data.
+
+This is done using a method called feature normalization.
+
+Some algorithms are sensitive to the size or scale of numbers.
+
+Examples include gradient descent algorithms and K-means clustering.
+
+Normalization ensures that all features are on a similar scale.
+
+Different feature extraction methods are used depending on the task.
+
+All methods try to simplify the dataset while keeping important information.
+
+Modern AI systems often perform feature extraction automatically, but understanding the concept is still important.
+
+
+### Real-Life Example: Face Recognition in Smartphones
+
+## Situation:
+
+When you unlock your phone using Face Unlock, the system uses feature extraction.
+
+Step-by-step explanation:
+
+You look at your phone’s camera.
+
+The camera captures an image of your face.
+
+The system does not store the full image directly.
+
+Instead, it extracts important features from your face.
+
+These features may include distance between eyes, nose shape, jawline, and face outline.
+
+These characteristics become numerical values.
+
+These numbers are stored in something called a feature vector.
+
+When you try to unlock the phone again, the camera captures your face again.
+
+The system again extracts facial features from the new image.
+
+Then it compares the new features with the stored features.
+
+If the features match, the phone unlocks successfully.
+
+If the features do not match, the phone remains locked.
+
+## In Simple Words
+
+Feature extraction means taking the most important information from raw data and ignoring unnecessary details.
+
+### Simple Analogy
+
+Imagine a teacher identifying students not by remembering every detail but by remembering key features like height, hairstyle, or 
+
+glasses.
+
+That is similar to how feature extraction works in machine learning.
+
+## Here are a few common feature extraction methods used for dimension:
+
+1. PCA
+
+PCA is a technique used to reduce the number of features in large datasets.
+
+It converts many original variables into new variables called principal components.
+
+These new components still keep most of the important information.
+
+PCA creates features that are uncorrelated (independent) from each other.
+
+This removes redundant or repeated information in the dataset.
+
+Because of this, PCA helps reduce overfitting in machine learning models.
+
+The reduced features are then used by the model classifier for prediction tasks.
+
+## Real-Time Example
+
+In image recognition, an image may contain thousands of pixels (features).
+
+PCA reduces these pixels into important components so the model can recognize faces faster.
+
+
+ 2.Linear Discriminant Analysis (LDA)
+
+LDA is used in supervised machine learning.
+
+It helps separate different classes in the dataset.
+
+The goal is to improve classification performance.
+
+It finds the best boundaries between different categories.
+
+LDA transforms data into a new space where classes are easier to separate.
+
+It often uses Bayesian statistics to model data distribution.
+
+This helps the model classify new data points correctly.
+
+## Real-Time Example
+
+In email spam detection, LDA can separate spam emails and normal emails based on their features.
+
+3. T-Distributed Stochastic Neighbor Embedding (t-SNE)
+
+t-SNE is a machine learning technique used for data visualization.
+
+It converts high-dimensional data into 2D or 3D space.
+
+This helps people see patterns and clusters in data.
+
+It is commonly used in deep learning feature visualization.
+
+t-SNE keeps similar data points close together.
+
+Because it is nonlinear, the computation is expensive.
+
+Therefore, it is mostly used only for visualization tasks.
+
+## Real-Time Example
+
+In customer segmentation, t-SNE can visualize customers in 2D clusters showing groups with similar buying behavior.
+
+
+4. Term Frequency – Inverse Document Frequency (TF-IDF)
+
+TF-IDF is a statistical technique used in text analysis.
+
+It measures how important a word is in a document.
+
+Words that appear many times in one document get higher importance.
+
+Words that appear in many documents get lower importance.
+
+This helps identify important keywords in a document.
+
+TF-IDF is widely used in Natural Language Processing (NLP).
+
+It is used for text classification, clustering, and information retrieval.
+
+## Real-Time Example
+
+In search engines like Google, TF-IDF helps determine which web pages are most relevant to your search query.
+
+5. Bag of Words (BoW)
+
+Bag of Words is a simple text representation method.
+
+It counts how many times each word appears in a document.
+
+It does not consider the importance or meaning of words.
+
+Every word is treated equally.
+
+It only focuses on word frequency.
+
+It is often used in basic NLP tasks.
+
+## Real-Time Example
+
+In movie review sentiment analysis, BoW counts words like “good”, “bad”, “excellent” to classify reviews as positive or negative.
+
+##  summary
+
+PCA → Reduces features while keeping important information.
+
+LDA → Separates classes for better classification.
+
+t-SNE → Visualizes complex data in 2D/3D.
+
+TF-IDF → Finds important words in text.
+
+BoW → Counts word frequency without importance.
+
+
+## Use cases of feature extraction
+
+1. Image Processing and Computer Vision
+
+Feature extraction is used to identify important patterns in images and videos.
+
+Raw image data is made of pixels, which machines cannot easily understand.
+
+Feature extraction converts these pixels into useful features.
+
+These features help the model detect objects or patterns in images.
+
+Algorithms then classify or recognize objects based on these features.
+
+One popular technique is Histogram of Oriented Gradients.
+
+HOG detects edges and shapes in images to identify objects.
+
+## Real-Time Example
+
+In self-driving cars, cameras capture road images and feature extraction helps the system detect pedestrians, vehicles, and traffic
+
+signs.
+
+2. Natural Language Processing (NLP)
+
+In Natural Language Processing, feature extraction converts raw text into structured data.
+
+Machines cannot understand raw sentences directly.
+
+Feature extraction converts text into numbers or vectors.
+
+These features help the model analyze text data.
+
+It is used in tasks like text classification.
+
+It is also used for sentiment analysis (detecting positive or negative opinions).
+
+Another use is Named Entity Recognition, which finds names of people, places, or organizations.
+
+This technique is used in chat systems and healthcare applications.
+
+It can also help monitor emotions or mental health from text and speech.
+
+## Real-Time Example
+
+In customer support chatbots, feature extraction helps the system understand user messages and respond correctly.
+
+3. Signal Processing
+
+Feature extraction is also used in Signal Processing.
+
+It analyzes raw signal data such as audio, images, or time-series data.
+
+The goal is to extract meaningful patterns from signals.
+
+These patterns help models classify, detect, or predict events.
+
+Signal processing is often used in speech recognition and audio analysis.
+
+It is also used in image analysis systems.
+
+The technique can be applied in many industries.
+
+In healthcare, signals like Electrocardiogram readings are analyzed.
+
+Doctors use these signals to detect heart problems and health trends.
+
+## Real-Time Example
+
+In smartwatches, ECG sensors analyze heart signals to detect irregular heartbeats or heart disease risks.
+
+
+## What is vector embedding?
+
+Vector embeddings are numerical representations of data points that express different types of data, including nonmathematical data 
+
+such as words or images, as an array of numbers that machine learning (ML) models can process.
+
+
+Artificial Intelligence models work using mathematics and algorithms.
+
+AI models include simple models like linear regression.
+
+They also include complex models like deep learning neural networks.
+
+These models can only process numerical data.
+
+Therefore, all types of data must be converted into numbers.
+
+This includes text, audio, and images.
+
+These types of data are called unstructured data.
+
+Unstructured data cannot be used directly by AI models.
+
+So it must first be converted into a numerical format.
+
+One method to do this is called vector embedding.
+
+Vector embedding converts data into arrays of numbers.
+
+These arrays are called vectors.
+
+Even after conversion, the vector still keeps the original meaning of the data.
+
+AI models are trained to produce vector representations of data.
+
+These vectors represent real-world features of the data.
+
+Similar data points should have similar vector embeddings.
+
+This means their numerical vectors will be close to each other.
+
+For example, similar words or images will have similar vectors.
+
+If two data points share common features, their vectors will reflect that.
+
+This helps models understand relationships between data points.
+
+On the other hand, very different data points will have different vectors.
+
+Their embeddings will be far apart in vector space.
+
+These assumptions help models compare and analyze data.
+
+Vector embeddings can be used as inputs for machine learning models.
+
+Models perform mathematical operations on these vectors.
+
+They may compare vectors to measure similarity.
+
+They may transform vectors to create new representations.
+
+Models can also combine multiple vectors together.
+
+They can sort vectors based on similarity.
+
+These operations help solve real-world tasks.
+
+Representing data as vectors makes different types of data compatible.
+
+It allows different data formats to work in the same system.
+
+Vector embeddings act like a common language for data.
+
+This common format allows text, images, and audio to be processed together.
+
+For example, smartphone assistants use this technique.
+
+Voice assistants convert user speech into vector embeddings.
+
+The audio signal is transformed into numerical vectors.
+
+These vectors are then processed using natural language processing.
+
+The system then understands the user’s request.
+
+After understanding, the assistant generates a response.
+
+Vector embeddings are therefore very important in AI systems.
+
+They are used in many machine learning applications.
+
+They play a key role in natural language processing.
+
+They are also used in computer vision systems.
+
+Computer vision models analyze images using vector embeddings.
+
+Modern AI systems depend heavily on vector representations of data.
+
+These embeddings help models understand patterns and relationships.
+
+They are essential for training advanced AI models.
+
+They are also important for generative AI technologies.
+
+Therefore, vector embeddings are a fundamental building block of modern AI.
+
+### What is a vector?
+
+A vector is a type of data structure used in machine learning.
+
+Vectors belong to a larger category called tensors.
+
+In machine learning, a tensor is an array of numbers.
+
+A tensor can also be an array of arrays of numbers.
+
+Tensors can exist in multiple dimensions (n-dimensional space).
+
+They help store and organize data in mathematical form.
+
+In machine learning, tensors act like a data container for numbers.
+
+Some words have different meanings in machine learning compared to other fields.
+
+For example, the word vector has a different meaning in physics.
+
+In physics, a vector usually means a quantity with magnitude and direction.
+
+In machine learning, a vector simply means a list or array of numbers.
+
+The word dimension also has different meanings in machine learning.
+
+When talking about tensors, dimension means how many arrays the tensor contains.
+
+When talking about vectors, dimension means how many numbers the vector has.
+
+Other terms like order or degree can also be used to avoid confusion.
+
+-- A scalar is the simplest type of tensor.
+
+It is called a zero-dimensional tensor.
+
+A scalar contains only one number.
+
+It represents a single value of data.
+
+Scalars are often used to represent individual measurements.
+
+Example: A weather system may record the daily high temperature.
+
+The temperature may be 33 degrees Celsius.
+
+In scalar form, it is written as 33.
+
+-> A vector is a one-dimensional tensor.
+
+A vector contains multiple numbers together.
+
+All numbers in a vector are usually of the same type of data.
+
+These numbers are called scalar components.
+
+Each component represents one feature of the data.
+
+These features are also called dimensions.
+
+Example: Weather data may include low, average, and high temperature.
+
+This can be written as a vector (25, 30, 33).
+
+Each value represents one temperature measurement.
+
+So each value is a feature of that day’s weather.
+
+-> A tuple is another type of data structure.
+
+A tuple can contain different types of data.
+
+It is still considered a first-order structure.
+
+Example: A person's information can be stored in a tuple.
+
+For example (Jane, Smith, 31, 65).
+
+This represents first name, last name, age, and height.
+
+Each element in the tuple can be a different data type.
+
+-> A matrix is a two-dimensional tensor.
+
+It contains multiple vectors arranged together.
+
+A matrix looks like a table or grid of numbers.
+
+It has rows and columns.
+
+Each row or column can represent a vector.
+
+Matrices help organize larger datasets.
+
+Example: Weather data can be stored for an entire month.
+
+Suppose the data includes low, average, and high temperatures.
+
+Each day will have three temperature values.
+
+These three values form a feature vector for that day.
+
+If the month has 30 days, we store 30 vectors.
+
+This can be arranged as a 3 × 30 matrix.
+
+Each column or row represents daily weather information.
+
+This matrix contains all weather data for June.
+
+Tensors can also have more than two dimensions.
+
+These are called multidimensional tensors.
+
+They may have three or more dimensions.
+
+These are also called N-dimensional tensors.
+
+N means the tensor can have any number of dimensions.
+
+These structures are used in advanced machine learning models.
+
+For example, color images use 3-dimensional tensors.
+
+The three dimensions often represent height, width, and color channels.
+
+Color channels may include red, green, and blue values.
+
+Computer vision models use these tensors to analyze images.
+
+Therefore, scalars, vectors, matrices, and tensors are important ways to represent data in machine learning.
+
+Various straightforward transformations can also be applied to matrices or other n-dimensional tensors to represent the data they 
+
+contain in vector form. For example, a 4x4 matrix can be flattened into a 16-dimensional vector; a 3-dimensional tensor of a 4x4 pixel
+
+image can be flattened into a 48-dimensional vector. embeddings predominately take the form of vectors in modern ML.
+
+## Vectors versus embeddings:
+
+In machine learning, the terms vector and embedding are often used together.
+
+Sometimes people use them interchangeably.
+
+However, they are not exactly the same thing.
+
+An embedding is a numerical representation of data.
+
+It converts data into numbers that machines can understand.
+
+Embeddings capture the important features of the data.
+
+This allows machine learning algorithms to process the data easily.
+
+In embeddings, the data is placed in n-dimensional space.
+
+Each dimension represents a feature of the data.
+
+In theory, embeddings do not always have to be vectors.
+
+Some data could be represented as tuples or other structures.
+
+But in most machine learning systems, embeddings are represented as vectors.
+
+Therefore, vector embeddings are very common in modern machine learning.
+
+A vector simply means a list of numbers.
+
+Vectors can also be used outside machine learning.
+
+For example, vectors are used in physics and mathematics.
+
+In physics, vectors usually represent magnitude and direction.
+
+These vectors are not necessarily embeddings.
+
+But in machine learning, vectors are usually used to represent embeddings.
+
+So in ML, embeddings are usually vectors, and vectors often represent embeddings.
+
+
+### How does vector embedding work?
+
+A vector embedding transforms a data point, such as a word, sentence or image, into an n-dimensional array of numbers representing that 
+
+data point’s characteristics—its features. This is achieved by training an embedding model on a large data set relevant to the task at
+
+hand or by using a pretrained model.
+
+To understand vector embeddings requires the explanation of a few key concepts:
+
+1. How vector embeddings represent data.
+
+ 2. How vector embeddings can be compared.
+
+3. How models can be used to generate vector embeddings.
+
+## 1. How vector embeddings represent data.
+
+In machine learning, the word dimension has a different meaning.
+
+It does not refer to physical space dimensions like length or height.
+
+Instead, each dimension represents a feature of the data.
+
+A vector space contains many dimensions representing different features.
+
+Each feature describes a specific property of the data.
+
+This is similar to physical objects having length, width, and depth.
+
+But in machine learning, features may represent data characteristics.
+
+Vector embeddings often work with high-dimensional data.
+
+High-dimensional data means data with many features.
+
+Most real-world data is high-dimensional.
+
+For example, images contain many pixels.
+
+Each pixel represents one dimension of data.
+
+Consider a small image of size 28 × 28 pixels.
+
+This image contains 784 pixels in total.
+
+Each pixel has a grayscale value.
+
+The value may range from 0 to 1.
+
+0 represents black color.
+
+1 represents white color.
+
+Therefore, the image can be represented as a 784-dimensional vector.
+
+Each dimension corresponds to one pixel value.
+
+However, not every dimension contains useful information.
+
+Some parts of the image may be empty background.
+
+Background pixels are often considered noise.
+
+Noise does not help the model understand the main object.
+
+In handwritten digit images, the digit covers only a small area.
+
+Most pixels contain blank space.
+
+Therefore, not all 784 dimensions are important features.
+
+The vector actually represents a version of the image in 784-dimensional space.
+
+Some dimensions contain useful information.
+
+Others contain irrelevant information.
+
+To improve efficiency, models often use dimensionality reduction.
+
+Dimensionality reduction means reducing the number of dimensions.
+
+This removes irrelevant or repeated information.
+
+The data is compressed into a smaller feature space.
+
+This process helps the model focus on important features.
+
+Smaller vectors require less computation power.
+
+This makes the model faster and more efficient.
+
+However, reducing dimensions may cause a small loss of accuracy.
+
+This is because some information may be removed.
+
+But the trade-off often improves overall performance.
+
+Dimensionality reduction can also reduce overfitting.
+
+Overfitting happens when a model memorizes training data too closely.
+
+Reducing features helps the model generalize better.
+
+Different techniques are used for dimensionality reduction.
+
+One method is autoencoders.
+
+Another method is convolution operations.
+
+Principal Component Analysis (PCA) is also widely used.
+
+Another method is t-SNE for visualization.
+
+Different methods work better for different types of data.
+
+Image data features are usually clear and objective.
+
+Each pixel clearly represents a part of the image.
+
+But language data is more complex.
+
+Language features involve meaning and context.
+
+These features are often abstract.
+
+Therefore, it is harder to define them directly.
+
+Sometimes engineers manually design features.
+
+This process is called feature engineering.
+
+In deep learning, models often learn features automatically.
+
+The model learns features during training.
+
+These learned features help the model make accurate predictions.
+
+
+## Real-Time Examples
+
+1. Image Recognition Example
+
+A handwritten digit recognition system (like reading postal codes).
+
+A small image of a digit is 28×28 pixels.
+
+The image becomes a 784-dimensional vector.
+
+Most pixels are blank background.
+
+Dimensionality reduction removes unnecessary pixels.
+
+The model focuses only on important digit shapes.
+
+## Example use:
+
+Bank cheque reading systems
+
+Postal code recognition
+
+2. Voice Assistant Example
+
+Smart assistants like Amazon Alexa, Google Assistant, and Apple Siri.
+
+Process:
+
+User speaks a command.
+
+Audio is converted into vector embeddings.
+
+The model extracts important sound features.
+
+Noise is removed using dimensionality reduction.
+
+The system understands the user’s request.
+
+Example command:
+
+“Play music” or “Set an alarm”.
+
+3. Language Understanding Example
+
+In search engines:
+
+Words are converted into vector embeddings.
+
+Similar words have similar vectors.
+
+Example:
+
+Query:
+
+“Best restaurants near me”
+
+The system understands:
+
+restaurant
+
+food places
+
+dining
+
+All these meanings are captured through vector features.
+
+## Simple idea
+
+Vector embeddings:
+
+Convert complex data → numbers
+
+Use high-dimensional space
+
+Remove unnecessary features with dimensionality reduction
+
+Help models learn patterns and make predictions
+
+### How to compare vector embeddings
+
+The core logic of vector embeddings is that n-dimensional embeddings of similar data points should be grouped closely together in n-
+
+dimensional space. However, embeddings can have dozens, hundreds or even thousands of dimensions. This goes well beyond the 2- or 3-
+
+dimensional spaces in which our minds can intuitively visualize things being "close" to one another.
+
+Vector embeddings represent data as numbers in multi-dimensional space.
+
+Similar data points should be close to each other in that space.
+
+Different data points should be far apart.
+
+This idea helps machines measure similarity between data.
+
+However, embeddings can have many dimensions.
+
+Some embeddings may have hundreds of dimensions.
+
+Others may have thousands of dimensions.
+
+Humans can easily imagine 2D or 3D space.
+
+But it is hard to imagine 100 or 1000 dimensions.
+
+Therefore, machines use mathematical formulas to compare vectors.
+
+## Example:
+
+. In a movie recommendation system, similar movies have similar vectors.
+
+There are different methods to compare vector embeddings.
+
+Each method measures similarity in a different way.
+
+The best method depends on the type of data.
+
+It also depends on what the model wants to measure.
+
+Example:
+
+In search engines, similarity methods help find related documents.
+
+## Euclidean Distance
+
+One method is Euclidean Distance.
+
+It measures the straight-line distance between two vectors.
+
+If the distance is small, the vectors are similar.
+
+If the distance is large, the vectors are different.
+
+The formula calculates differences between vector components.
+
+First, subtract each component of the vectors.
+
+Then square each difference.
+
+After that, add all the squared values.
+
+Finally, take the square root of the sum.
+
+The result is the Euclidean distance.
+
+Example:
+
+In image recognition, two similar images will have small Euclidean distance.
+
+Example:
+
+In face recognition, similar faces produce close vectors.
+
+Euclidean distance is sensitive to vector magnitude.
+
+Magnitude means how large the numbers are.
+
+This makes it useful for data involving size or counts.
+
+Example:
+
+ In sales analysis, product sales numbers can be compared using Euclidean distance.
+
+Euclidean distance values range from 0 to infinity.
+
+A value of 0 means vectors are identical.
+
+Example:
+
+Two identical images would have distance 0.
+
+## Cosine Similarity
+
+Another method is Cosine Similarity.
+
+It measures the angle between two vectors.
+
+Instead of distance, it checks direction similarity.
+
+If the angle is small, the vectors are similar.
+
+If the angle is large, the vectors are different.
+
+Cosine similarity values range from -1 to 1.
+
+A value of 1 means vectors are identical.
+
+A value of 0 means vectors are unrelated.
+
+A value of -1 means vectors are opposite.
+
+Example:
+
+ In document search, similar articles have high cosine similarity.
+
+Example:
+
+ In chatbots, similar questions produce similar vectors.
+
+Cosine similarity ignores vector magnitude differences.
+
+It focuses mainly on vector direction.
+
+This makes it useful for text data.
+
+Example:
+
+In email spam detection, messages with similar wording have high cosine similarity.
+
+That is why cosine similarity is widely used in NLP tasks.
+
+Example:
+
+ Systems like Google Search use similar vector comparison ideas.
+
+### Dot Product
+
+Another comparison method is the Dot Product.
+
+The dot product multiplies corresponding vector components.
+
+After multiplication, all results are added together.
+
+The final value represents vector similarity.
+
+Example:
+57. In recommendation systems, dot product helps match users with products.
+
+Geometrically, dot product is related to cosine similarity.
+
+But it is not normalized.
+
+This means magnitude also affects the result.
+
+Example:
+
+ In music recommendation apps, frequent listening increases vector magnitude.
+
+Larger magnitude may mean stronger user preference.
+
+Example:
+
+Platforms like Spotify use vector similarity ideas.
+
+<img width="1536" height="864" alt="image" src="https://github.com/user-attachments/assets/112618cc-6ea6-485f-b40f-d063d6f80369" />
+
+Vector comparison helps models find similar data.
+
+Different formulas measure different aspects of similarity.
+
+Euclidean distance measures straight-line distance.
+
+Cosine similarity measures angle similarity.
+
+Dot product measures combined similarity and magnitude.
+
+These techniques are essential in modern machine learning.
+
+They power applications like search engines, recommendation systems, NLP, and computer vision.
+
+### Embedding models
+
+Embedding models convert data into numerical vectors.
+
+These vectors represent important features of the data.
+
+Embedding models can be pretrained or custom trained.
+
+Example:
+
+A chatbot converts user messages into vector embeddings.
+
+In some scenarios, the embedding process is an integrated part of a larger neural network. For example, in the encoder-decoder
+
+convolutional neural networks (CNNs) used for tasks such as image segmentation, the act of optimizing the entire network to make
+
+accurate predictions entails training the encoder layers to output effective vector embeddings of input images.
+
+Some embedding models are trained from scratch.
+
+Others are already trained and reused.
+
+Different types of data need different neural network architectures.
+
+Example:
+
+Images often use convolutional neural networks.
+
+Choosing a specific algorithm is often a best practice.
+
+But it is not always a strict rule.
+
+Example:
+
+ A company may choose a model that works best for its data.
+
+In some cases, embedding is part of a larger neural network.
+
+The embedding process happens inside the model.
+
+The network learns embeddings during training.
+
+Example:
+
+ Image segmentation models learn features of objects in images.
+
+Encoder–decoder neural networks are often used for image tasks.
+
+These models analyze images and extract features.
+
+The encoder converts the image into vector embeddings.
+
+The decoder uses those embeddings to make predictions.
+
+Example:
+
+Medical imaging systems detect tumors in X-ray images.
+
+## Pretrained Models
+
+Many developers use pretrained embedding models.
+
+These models are already trained on large datasets.
+
+They can be reused for different machine learning tasks.
+
+Example:
+
+A startup may use pretrained embeddings for product recommendations.
+
+Pretrained embeddings can be stored in vector databases.
+
+These embeddings help systems search and compare data quickly.
+
+Example:
+
+An e-commerce website finds similar products using embeddings.
+
+Pretrained models are trained on very large datasets.
+
+These datasets include text, images, and other information.
+
+Large datasets help models learn general patterns.
+
+Example:
+
+ A translation system learns many languages from large text datasets.
+
+Pretrained models are useful for few-shot learning.
+
+Few-shot learning means learning from very small datasets.
+
+Example:
+
+ A chatbot learns a new customer support task with only a few examples.
+
+They are also useful for zero-shot learning.
+
+Zero-shot learning means solving tasks without direct training.
+
+Example:
+
+ A model identifies a new object it has never seen before.
+
+Text Embedding Models
+
+Some embedding models are designed for text data.
+
+These models convert words into vectors.
+
+Example:
+
+ The word “king” and “queen” have similar embeddings.
+
+One popular model is Word2Vec.
+
+It learns relationships between words in sentences.
+
+Example:
+
+“Paris” is close to “France” in embedding space.
+
+Another model is GloVe.
+
+It captures word relationships using statistics from text.
+
+Example:
+
+“Doctor” and “hospital” appear close in embeddings.
+
+Large language models also produce embeddings.
+
+One example is BERT.
+
+These models are trained on huge text datasets.
+
+Example:
+
+Search engines use BERT to understand user queries.
+
+Computer Vision Embeddings
+
+For image tasks, special models are used.
+
+These models classify objects in images.
+
+Example:
+
+Detecting cats, cars, or trees in photos.
+
+Some popular vision models include ResNet.
+
+Another model is VGG.
+
+These models are trained on large image datasets.
+
+Example:
+
+Photo apps use them for face recognition.
+
+These models can be modified to produce embeddings.
+
+Developers remove the final prediction layer.
+
+Example:
+
+A photo search system finds similar images using embeddings.
+
+Custom Embedding Models
+
+Some tasks need custom embedding models.
+
+This happens when data is very specialized.
+
+Example:
+
+Legal document analysis requires legal terminology understanding.
+
+Medical data is another example.
+
+Medical terms and images are very specialized.
+
+Example:
+
+ A hospital system detects disease patterns in MRI scans.
+
+In these cases, pretrained models can be fine-tuned.
+
+Fine-tuning means training the model on new domain data.
+
+Example:
+
+ A healthcare AI learns medical vocabulary from hospital records.
+
+Fine-tuning improves the quality of embeddings.
+
+The model becomes more accurate for specific tasks.
+
+Example:
+
+ A legal AI better understands contract clauses.
+
+Some organizations build completely custom models.
+
+They may design their own neural network architecture.
+
+Example:
+
+Large tech companies build models for advanced AI systems.
+
+However, building models from scratch is expensive.
+
+It requires large datasets and powerful hardware.
+
+It also requires experienced AI engineers.
+
+Example:
+
+ Research labs train large models using supercomputers.
+
+Therefore, many organizations prefer pretrained models with fine-tuning.
+
+### Vector embedding for images
+
+Image embeddings convert visual information into numerical vectors by using an image’s pixel values to correspond to vector components. 
+
+They usually rely on CNNs, though recent years have increasingly seen computer vision models utilizing transformer-based neural
+
+networks.
+
+Images with a typical RGB color scheme are numerically represented as a three-dimensional matrix, in which those three matrices
+
+correspond to the respective red, green and blue values of each pixel. RGB images are usually 8-bit, meaning each color value for a 
+
+pixel can range from 0 to 256 (or 28). As described earlier, black-and-white images are numerically represented as a two-dimensional
+
+matrix of pixels wherein each pixel has a value between 0 and 1.
+
+<img width="1536" height="864" alt="image" src="https://github.com/user-attachments/assets/ecb835e0-03f3-4e57-952f-cc60f607f882" />
+
+<img width="1536" height="864" alt="image" src="https://github.com/user-attachments/assets/d03073e2-cb26-4ee9-a102-d200abd4ca91" />
+
+Convolutions use 2-dimensional numerical filters, called kernels, to extract features from the image. The weights of the kernels most
+
+conducive to extracting relevant features are themselves a learnable parameter during model training. These convolutions yield a
+
+feature map of the image.
+
+When necessary, padding is used to maintain the original size of the input by adding extra layers of zeros to the outer rows and
+
+columns of the array. Conversely, pooling, which essentially summarizes visual features by taking only their minimum, maximum or
+
+average values, can be used for further dimensionality reduction.
+
+Finally, the compressed representation is then flattened into a vector.
+
+
+### Image generation
+
+
+Another important application for image embedding is image generation: the creation of new images.
+
+Image embedding is used in image search systems.
+
+Image embeddings convert images into numerical vectors.
+
+These vectors represent important visual features of images.
+
+Similar images will have similar vector embeddings.
+
+Image search systems compare these vectors to find similar images.
+
+Example:
+
+A plant identification app takes a photo of a plant.
+
+The system finds similar plant images in the database.
+ 
+Then it identifies the plant species.
+
+In basic image search, the input is an image.
+
+The output is other similar images.
+
+The system compares vector embeddings of images.
+
+The closer the vectors, the more similar the images.
+
+Example:
+
+ A user uploads a shoe image on a shopping app.
+
+ The app shows similar shoes available for purchase.
+
+ A more advanced system is multimodal image search.
+
+Multimodal means using different types of data together.
+
+For example, using text and images together.
+
+In multimodal search, the input may be text instead of an image.
+
+The system then returns images related to that text.
+
+Example:
+
+A user searches “red sports car”.
+
+ The system returns images of red sports cars.
+
+This cannot be done using separate models independently.
+
+A text model and image model must work together.
+
+They must be trained to understand each other’s embeddings.
+
+This allows text and images to exist in the same embedding space.
+
+Example:
+
+A search system understands that “dog” text relates to dog images.
+
+One famous model used for this task is CLIP.
+
+CLIP learns relationships between images and text descriptions.
+
+It was trained on very large datasets.
+
+The dataset contained over 400 million image-caption pairs.
+
+Example:
+
+ An image of a cat with caption “cute cat sitting” helps the model learn the connection.
+
+CLIP uses two encoders during training.
+
+One encoder processes images.
+
+The other encoder processes text.
+
+Both encoders produce vector embeddings.
+
+Example:
+
+The caption “sunset beach” and an image of a sunset beach produce similar vectors.
+
+The model uses contrastive learning during training.
+
+It increases similarity between correct image-caption pairs.
+
+It decreases similarity between incorrect pairs.
+
+Example:
+
+The caption “dog” should be closer to dog images than cat images.
+
+## Simple idea:
+
+Image embeddings allow systems to search, compare, and understand images and text together, powering apps like image search, shopping 
+
+recommendations, and visual AI systems.
+
+
+
+
+
+
+
+
+
+
 
 
 #### Quick Summary
@@ -3510,6 +5059,8 @@ Improve model accuracy
 Help ML algorithms learn patterns
 
 Make predictions better
+
+
 
 
 ### Feature Engineering Quiz
@@ -3868,7 +5419,9 @@ Goal: To put data into specific categories or "buckets." It answers "Yes/No" or 
 
 Non-Technical Example: 
 
-Imagine you are sorting a basket of fruit. You look at a fruit and decide: "Is this an Apple or an Orange?" You aren't measuring it; you are labeling it.
+Imagine you are sorting a basket of fruit. You look at a fruit and decide: "Is this an Apple or an Orange?" You aren't measuring it;
+
+you are labeling it.
 
 Regression
 
