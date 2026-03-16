@@ -14513,7 +14513,9 @@ respective Classes. The width of this highway is the Margin.
 
 ## What Happens if the data is not linearly classifiable?
 
-When a linear hyperplane is not possible, the input data is transformed into a higher-dimensional feature space, where it may be easier to find a linear decision boundary that separates the classes.
+When a linear hyperplane is not possible, the input data is transformed into a higher-dimensional feature space, where it may be easier 
+
+to find a linear decision boundary that separates the classes.
 
 What is transformation or addition of a new feature?
 
@@ -15532,6 +15534,222 @@ A decision tree is a non-parametric supervised learning algorithm, which is util
 has a hierarchical, tree structure, which consists of a root node, branches, internal nodes and leaf nodes.
 
 
+Decision tree is one of the most popular machine learning algorithms used all along, This story  so let’s get started!!!
+
+Decision trees are used for both classification and regression problems, this story we talk about classification.
+
+
+Why Decision trees?
+
+We have couple of other algorithms there, so why do we have to choose Decision trees??
+
+well, there might be many reasons but I believe a few which are
+
+Decision tress often mimic the human level thinking so its so simple to understand the data and make some good interpretations.
+Decision trees actually make you see the logic for the data to interpret(not like black box algorithms like SVM,NN,etc..)
+
+
+A decision tree is a non-parametric supervised learning algorithm. It has a hierarchical, tree structure, which consists of a root node, branches, internal nodes and leaf nodes.
+
+Decision Trees are the foundation for many classical machine learning algorithms like Random Forests, Bagging, and Boosted Decision Trees. His idea was to represent data as a tree where each internal node denotes a test on an attribute (basically a condition), each branch represents an outcome of the test, and each leaf node (terminal node) holds a class label.
+
+Types of Decision Trees
+
+CART (Classification and Regression Trees) → uses Gini Index(Classification) as metric.
+
+ID3 (Iterative Dichotomiser 3) → uses Entropy function and Information gain as metrics.
+
+Before learning more about decision trees let’s get familiar with some of the terminologies.
+
+Root Nodes — It is the node present at the beginning of a decision tree from this node the population starts dividing according to 
+
+various features.
+
+Decision Nodes — the nodes we get after splitting the root nodes are called Decision Node
+
+
+Leaf Nodes — the nodes where further splitting is not possible are called leaf nodes or terminal nodes
+
+Branch/Sub-tree — just like a small portion of a graph is called sub-graph similarly a sub-section of this decision tree is called sub-tree.
+
+Pruning — is nothing but cutting down some nodes to stop overfitting.
+
+
+## Why Use Decision Trees?
+
+There are various algorithms in Machine learning. Below are the two reasons for using the Decision tree:
+
+
+Decision Trees usually mimic human thinking ability while making a decision, so it is easy to understand.
+
+The logic behind the decision tree can be easily understood because it shows a tree-like structure.
+
+Example of a decision tree
+
+Let’s understand decision trees with the help of an example.
+
+Decision tree builds classification or regression models in the form of a tree structure. It breaks down a dataset into smaller and 
+
+smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision
+
+nodes and leaf nodes. A decision node (e.g., Outlook) has two or more branches (e.g., Sunny, Overcast and Rainy). Leaf node (e.g., 
+
+Play) represents a classification or decision. The topmost decision node in a tree which corresponds to the best predictor called root
+
+node. Decision trees can handle both categorical and numerical data.
+
+
+Decision trees are upside down which means the root is at the top and then this root is split into various several nodes. Decision
+
+trees are nothing but a bunch of if-else statements in layman terms. It checks if the condition is true and if it is then it goes to 
+
+the next node attached to that decision.
+
+## Entropy
+Entropy is a metric to measure the impurity in a given attribute. It specifies randomness in data.
+
+Entropy comes from information theory. The higher the entropy the more the information content.
+
+ID3 algorithm uses entropy to calculate the homogeneity of a sample. If the sample is completely homogeneous the entropy is zero and if the sample is an equally divided it has entropy of one.
+
+H(X)  =  — Σ ( pi * log2 pi )
+
+
+Where,
+
+X = Total number of samples
+
+pi is the probability of class i
+
+
+Gini Index:
+
+Gini index is a measure of impurity or purity used while creating a decision tree in the CART(Classification and Regression Tree) 
+
+algorithm.
+
+An attribute with the low Gini index should be preferred as compared to the high Gini index.
+
+It only creates binary splits, and the CART algorithm uses the Gini index to create binary splits.
+
+Gini index can be calculated using the below formula:
+
+
+Gini = 1 − i = 1 ∑ n​ ( pi​ ) 2
+
+
+Where,
+
+pi is the probability of a particular element belonging to a specific class.
+
+To build a decision tree, we need to calculate two types of entropy using frequency tables as follows:
+a) Entropy using the frequency table of one attribute:
+
+b) Entropy using the frequency table of two attributes:
+
+## Information Gain
+
+We want to determine which attribute in a given set of training feature vectors is most useful for discriminating between the classes 
+
+to be learned.
+Information gain tells us how important a given attribute of the feature vectors is.
+
+
+We will use it to decide the ordering of attributes in the nodes of a decision tree.
+
+Information Gain = entropy ( parent) — [average entropy ( children)]
+
+
+Step 1: Calculate entropy of the target.
+
+Step 2: The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added 
+
+proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result 
+
+is the Information Gain, or decrease in entropy.
+
+Step 3: Choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.
+
+
+Step 4a : A branch with entropy of 0 is a leaf node.
+
+Step 4b : A branch with entropy more than 0 needs further splitting.
+
+Step 5: The ID3 algorithm is run recursively on the non-leaf branches, until all data is classified.
+
+Points to remember:
+
+A leaf node is the one that has no entropy, or when the entropy is zero. No further splitting is done on a leaf node.
+Only the branch that needs further splitting, i.e. when the entropy > 0 (when there’s impurity) needs to undergo this splitting process.
+
+
+Pruning: Getting an Optimal Decision tree
+
+Pruning is a process of deleting the unnecessary nodes from a tree in order to get the optimal decision tree.
+
+
+A too-large tree increases the risk of overfitting, and a small tree may not capture all the important features of the dataset. Therefore, a technique that decreases the size of the learning tree without reducing accuracy is known as Pruning. There are mainly two types of tree pruning technology used:
+
+Cost Complexity Pruning
+
+Reduced Error Pruning.
+
+
+## Applications of Decision Trees
+
+Decision Tree is one of the basic and widely-used algorithms in the fields of Machine Learning. It’s put into use across different 
+
+areas in classification and regression modeling. Due to its ability to depict visualized output, one can easily draw insights from the 
+
+modeling process flow. Here are a few examples wherein Decision Tree could be used,
+
+Business Management
+
+Customer Relationship Management
+
+Fraudulent Statement Detection
+
+Energy Consumption
+
+Healthcare Management
+
+Fault Diagnosis
+
+
+Advantages:
+
+Compared to other algorithms decision trees requires less effort for data preparation during pre-processing.
+
+A decision tree does not require normalization of data.
+
+A decision tree does not require scaling of data as well.
+
+Missing values in the data also do NOT affect the process of building a decision tree to any considerable extent.
+
+A Decision tree model is very intuitive and easy to explain to technical teams as well as stakeholders.
+
+Disadvantage:
+
+A small change in the data can cause a large change in the structure of the decision tree causing instability.
+
+The decision tree contains lots of layers, which makes it complex.
+
+Decision tree often involves higher time to train the model.
+
+It may have an overfitting issue, which can be resolved using the Random Forest algorithm.
+
+Decoding the Hyperparameters
+
+Scikit-learn provides some functionalities or parameters that are to be used with a Decision Tree classifier to enhance the model’s
+
+accuracy in accordance with the given data.
+
+criterion: This parameter is used to measure the quality of the split. The default value for this parameter is set to “Gini”. If you want the measure to be calculated by entropy gain, you can change this parameter to “entropy”.
+splitter: This parameter is used to choose the split at each node. If you want the sub-trees to have the best split, you can set this parameter to “best”. We can also have a random split for which the value “random” is set.
+max-depth: This is an integer parameter through which we can limit the depth of the tree. The default value for this parameter is set to None.
+min_samples_split: This parameter is used to define the minimum number of samples required to split an internal node.
+max_leaf_nodes: The default value of max_leaf_nodes is set to None. This parameter is used to grow a tree with max_leaf_nodes in best-first fashion.
+
 
 A decision tree contains several components.
 
@@ -15956,6 +16174,102 @@ Deep trees become complex
 | Finance    | Loan approval          |
 | Marketing  | Customer segmentation  |
 | E-commerce | Product recommendation |
+
+
+## Python Implementation of Decision Tree
+
+Step 1: Importing the Modules
+
+The first and foremost step in building our decision tree model is to import the necessary packages and modules.
+
+from sklearn.datasets import *
+
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+
+import dtreeviz
+
+import graphviz.backend as be
+
+from IPython.display import Image, display_svg, SVG
+
+import matplotlib.pyplot as plt
+
+from sklearn.tree import plot_tree
+
+import numpy as np
+
+import warnings
+
+warnings.filterwarnings('ignore')
+
+%matplotlib inline
+
+Step 2: Exploring the data
+
+Next, we make our data ready by loading it from the datasets package using the load_iris() method.
+
+iris = load_iris()
+
+X_train = iris.data
+
+y_train = iris.target
+
+clas.fit(X_train, y_train)
+
+
+Step 3: Create a decision tree classifier object & Fitting the Model
+
+Here, we load the DecisionTreeClassifier in a variable named model, which was imported earlier from the sklearn package.This method is
+
+to fit the data by training the model on features and target.
+
+decisiontree = DecisionTreeClassifier(  )
+
+clas.fit(X_train, y_train)
+
+Step 4: Making the Predictions
+
+
+In this step, we take a sample observation and make a prediction. We create a new list comprising the flower sepal and petal
+
+dimensions. Further,
+
+observation = [[ 5, 4, 3, 2]] # Predict observation's class
+
+clas.predict(observation)
+
+clas.predict_proba(observation)
+
+Step 5: Plot Graph
+
+plot_tree(clas)
+
+Step 6: Drawing the Graph
+
+In the last step, we visualize the decision tree using an Image class that is to be imported from the dtreeviz package.
+
+viz = dtreeviz.model(clas, X_train, y_train, feature_names=iris.feature_names, 
+
+               class_names=["setosa", "versicolor", "virginica"])
+viz
+
+viz.view(scale=1)
+
+To change the visualization, you can pass parameters, such as changing the orientation to left-to-right:
+
+viz.view(orientation="LR")
+
+
+Without Any graphs
+
+To visualize larger trees, you can reduce the amount of detail by turning off the fancy view:
+
+viz.view(fancy=False)
+
+
+
+
+
 
 
 ### Mathematical Intuition Behind Decision Trees (Step-by-Step, Simple Explanation)
@@ -17649,6 +17963,20 @@ Support Vector Regression (SVR) is a supervised machine learning algorithm used 
 
 It is a variation of Support Vector Machine (SVM) but used for regression problems instead of classification.
 
+Support Vector Regression (SVR) is a machine learning technique used for regression tasks. It is a variant of Support Vector Machines (SVM) and is designed to predict continuous numeric values, making it suitable for tasks like time series forecasting, stock price prediction, and more.
+
+Key points about SVR:
+
+Objective: SVR aims to find a function that predicts a continuous target variable while maximizing the margin between the predicted values and the actual data points.
+Margin: SVR identifies a “margin” around the predicted regression line, and its goal is to fit the line within this margin while minimizing the prediction error.
+Support Vectors: In SVR, data points that are closest to the regression line and define the margin are known as “support vectors.” These points play a crucial role in determining the regression model.
+Kernel Trick: SVR can use various kernel functions (e.g., linear, polynomial, radial basis function) to transform the feature space, making it possible to model non-linear relationships between input features and the target variable.
+Hyperparameters: SVR requires tuning hyperparameters, such as the regularization parameter (c ) and kernel parameters, to achieve the best model performance.
+Loss Function: SVR typically uses an epsilon-insensitive loss function that allows for some errors within a defined range (epsilon), and it penalizes errors outside this range more heavily.
+Complexity Control: The regularization parameter (c ) in SVR controls the trade-off between maximizing the margin and minimizing the prediction error. A smaller C leads to a wider margin with more errors allowed, while a larger C results in a narrower margin with fewer errors allowed.
+Robustness: SVR is robust to outliers, as it primarily focuses on the data points close to the margin (support vectors) and doesn’t heavily rely on all data points.
+In summary, SVR is a regression technique that seeks to find a regression model with a margin around the predicted values, allowing for a balance between fitting the data and avoiding overfitting. It is particularly useful when dealing with non-linear relationships and can be adapted to various problem domains through the choice of kernel functions.
+
 in simple words:
 
 SVR tries to fit a line that predicts values while keeping errors within an acceptable range.
@@ -17899,7 +18227,75 @@ Harder to interpret compared to linear regression
 | Finance  | Stock price prediction         |
 | Energy   | Electricity demand forecasting |
 | Retail   | Sales forecasting              |
-| Weather  | Temperature prediction         |
+| Weather  | Temperature prediction         
+
+
+Basic implementation of Support Vector Regression (SVR) in Python using the popular machine learning library, scikit-learn. We’ll use a synthetic dataset for demonstration:
+
+import numpy as np
+
+from sklearn.svm import SVR
+
+import matplotlib.pyplot as plt
+
+
+# Generate synthetic data
+
+np.random.seed(0)
+
+X = np.sort(5 * np.random.rand(80, 1), axis=0)
+
+y = np.sin(X).ravel()
+
+
+# Fit the SVR model
+
+svr_rbf = SVR(kernel='rbf', C=100, gamma=0.1)
+
+svr_rbf.fit(X, y)
+
+
+# Predict on new data points
+
+X_test = np.linspace(0, 5, 100)[:, np.newaxis]
+
+y_pred = svr_rbf.predict(X_test)
+
+
+# Plot the results
+
+plt.scatter(X, y, color='darkorange', label='data')
+
+plt.plot(X_test, y_pred, color='navy', lw=2, label='RBF model')
+
+plt.xlabel('Data')
+
+plt.ylabel('Target')
+
+plt.title('Support Vector Regression')
+
+plt.legend()
+
+plt.show()
+
+In this code:
+
+We generate a synthetic dataset with a sine wave relationship between X and y.
+
+We create an SVR model with a radial basis function (RBF) kernel, set the regularization parameter (c ) to 100, and the kernel
+
+coefficient (gamma) to 0.1.
+
+We fit the SVR model to the data.
+
+We generate new data points (X_test) for prediction and use the trained SVR model to make predictions.
+
+Finally, we visualize the original data points and the SVR model’s predictions.
+
+
+
+
+
 
 
 ## Quiz: Support Vector Regression (10 MCQs)
@@ -18817,6 +19213,96 @@ It builds many small decision trees sequentially, where:
 Each new tree learns from the mistakes of the previous tree.
 
 So the model gradually improves prediction accuracy.
+
+
+“XGBoost, short for “Extreme Gradient Boosting,” is a popular and powerful machine learning algorithm that falls under the category of 
+
+gradient boosting techniques. It is widely used for both classification and regression tasks. XGBoost enhances the traditional gradient 
+
+boosting approach by incorporating various optimizations and regularization techniques, resulting in improved accuracy and efficiency.”
+
+XGBoost is a versatile machine learning algorithm that finds applications in a wide range of domains. Some of its common uses and applications:
+
+Classification: XGBoost is often employed for classification tasks, such as spam detection, image recognition, fraud detection, and sentiment analysis. Its ability to handle complex relationships and high-dimensional data makes it well-suited for these tasks.
+
+Regression: XGBoost can also be used for regression problems, such as predicting housing prices, stock prices, or other continuous variables. It excels in capturing nonlinear relationships between input features and target variables.
+
+Ranking: XGBoost can be used to create ranking models, where the goal is to order items according to their relevance. This is useful in search engines, recommendation systems, and personalized marketing.
+
+Anomaly Detection: XGBoost can identify unusual patterns in data, making it useful for anomaly detection in areas like cybersecurity, network monitoring, and fraud detection.
+
+Time Series Forecasting: XGBoost’s ability to capture temporal dependencies makes it suitable for time series forecasting, such as predicting stock prices, weather conditions, or demand for products.
+
+Natural Language Processing (NLP): XGBoost can be applied to NLP tasks, including text classification, sentiment analysis, and named entity recognition.
+
+Biomedical Research: XGBoost has been used in bioinformatics and medical research for tasks like disease classification, drug discovery, and identifying biomarkers.
+
+Image Segmentation: In computer vision, XGBoost can assist in tasks like image segmentation, where the goal is to partition an image into meaningful regions.
+
+Customer Churn Prediction: XGBoost can help businesses predict customer churn by analyzing customer behavior patterns and predicting whether a customer is likely to stop using a product or service.
+
+Energy Consumption Prediction: XGBoost can be used to predict energy consumption based on factors like weather conditions, time of day, and historical data.
+
+Financial Analysis: XGBoost is used in financial analysis for credit scoring, risk assessment, and fraud detection.
+Environmental Monitoring: XGBoost can analyze environmental data to predict pollution levels, water quality, and other environmental factors.
+
+Overall, XGBoost’s adaptability, accuracy, and efficiency have made it a popular choice across a wide range of industries and domains for solving complex predictive modeling and decision-making problem.
+
+
+Now lets check out the steps involved in XGBoost Algorithm
+
+At its core, XGBoost is an ensemble learning algorithm that combines the predictions of multiple weak learners, usually decision trees, to create a strong predictive model. The intuition behind XGBoost involves optimization through gradient descent and boosting.
+
+
+Simplified mathematical intuition of how XGBoost works:
+
+Gradient Boosting: In boosting, each new model is built to correct the errors of the previous models. It’s a step-by-step approach to improve the model’s performance iteratively.
+Loss function: XGBoost minimizes a loss function that measures the difference between predicted and actual values. Common loss functions include mean squared error (for regression) and log loss (for classification).
+Gradient Descent: XGBoost uses gradient descent to minimize the loss function. It calculates the gradient of the loss with respect to the current model’s predictions.
+Additive Learning: At each boosting iteration, a new decision tree (weak learner) is added to the ensemble. This tree is designed to minimize the residual errors of the previous trees.
+Weighted Updates: XGBoost assigns weights to the data points. Data points that are harder to predict (with higher residual errors) are given greater weights, so the next model focuses on correcting those errors.
+Regularization: XGBoost includes regularization terms (L1 and L2) to prevent overfitting. These terms penalize complex models and encourage simplicity.
+Learning Rate: It introduces a “learning rate” parameter that controls the step size of each iteration. A smaller learning rate slows down the learning process, allowing for finer adjustments.
+Feature Importance: XGBoost calculates feature importance scores by evaluating how much each feature contributes to reducing the loss function across all trees.
+Stopping Criteria: It stops adding trees when a predefined stopping criterion is met, such as reaching a certain number of trees or when the improvement in the loss function becomes negligible.
+Prediction: To make predictions, XGBoost combines the predictions of all the weak learners, each multiplied by a “shrinkage” factor (learning rate).
+In summary, XGBoost builds an ensemble of decision trees that iteratively correct the errors of the previous trees. It does so by calculating gradients and using gradient descent to update the model’s parameters.
+
+Using XGBoost comes with several advantages and disadvantages
+
+Now lets discuss the Pros and Cons:
+
+Pros
+
+High Accuracy: XGBoost is known for its exceptional predictive accuracy. It often outperforms other machine learning algorithms on a wide range of tasks.
+Handling Nonlinearity: XGBoost can capture complex relationships and interactions between features, making it suitable for datasets with nonlinear patterns.
+Feature Importance: XGBoost provides insights into feature importance, helping us understand which features contribute the most to predictions.
+Regularization: It includes built-in L1 (Lasso) and L2 (Ridge) regularization, which can help prevent overfitting and improve generalization.
+Missing Data Handling: XGBoost can handle missing values in the data without requiring imputation.
+Parallel Processing: It supports parallel and distributed computing, making it efficient for large datasets and boosting the training speed.
+7. Performance: XGBoost is optimized for performance and memory usage, making it suitable for real-world applications and competitions.
+
+Cons:
+
+Complexity: Configuring XGBoost can be challenging due to its numerous hyperparameters. Choosing the right parameters requires
+
+experimentation and tuning.
+
+Computationally Intensive: While parallel processing helps, training XGBoost can still be computationally intensive, especially for
+
+deep trees or large datasets.
+
+Overfitting Risk: If not properly tuned, XGBoost can overfit the training data, especially when using deep trees and high learning rates.
+
+Black-Box Model: Like most ensemble methods, the final prediction of XGBoost comes from a combination of multiple models, which can 
+
+make the model interpretation complex.
+
+
+
+
+
+
 
 ## Simple Idea
 
@@ -19780,7 +20266,145 @@ Answer: A
 
 Unsupervised Learning is a type of machine learning where the algorithm learns patterns from data without labeled outputs.
 
+
+Unsupervised machine learning is a type of machine learning where an algorithm learns patterns, relationships or structures in data without actually defining any instructions or stating labels . In simpler terms, we are asking it to find patterns or make sense of the data on its own by giving a bunch of data. Thus, the goal of unsupervised learning is to find the principal structure of a given dataset, group that data according to similarities and represent that dataset in a squeezed format.
+
+## HOW DOES IT WORK?
+
+Suppose the unsupervised learning algorithm is given an input dataset containing images of different types of cars. The algorithm is 
+
+never trained upon the given dataset, which means it does not have any idea about the features of the dataset. The task of the 
+
+unsupervised learning algorithm is to identify the image features on their own. An unsupervised learning algorithm will perform this
+
+task by clustering the image dataset into groups according to similarities between images and then segregating it. There is no need for
+
+any manual supervision.
+
+
+## CLASSIFICATION OF UNSUPERVISED MACHINE LEARNING
+
+CLUSTERING
+
+Clustering is a technique where the algorithm groups similar data points together based on their built-in similarities or patterns. Without any prior knowledge of those clusters it aims to discover natural clusters within the data. There are subcategories of clustering in unsupervised machine learning including K-means clustering, hierarchical clustering, density-based clustering and Expectation-Maximization (EM) clustering.
+
+
+a. K-means clustering:
+
+It is a commonly used clustering algorithm that aims to partition the data into K clusters, where K is a predefined number chosen by the user. Here’s how it works:
+
+Initialization: Randomly select K points from the dataset as initial cluster centroids.
+
+Assignment: Assign each data point to the nearest centroid, creating K clusters.
+
+Update: Recalculate the centroids by taking the mean of the data points within each cluster.
+
+Iteration: Repeat the assignment and update steps until convergence (when the centroids no longer change significantly) or after a
+
+fixed number of iterations.
+
+
+b. Hierarchical clustering:
+
+Hierarchical clustering creates a hierarchy of clusters, also known as a dendrogram, by recursively merging or splitting clusters based on the similarity between data points. It doesn’t require the number of clusters to be predefined. There are two main types of hierarchical clustering:
+
+Agglomerative (Bottom-Up): Starts with each data point as a separate cluster and iteratively merges the most similar clusters until reaching a desired number of clusters or a termination criterion.
+Divisive (Top-Down): Starts with all data points in one cluster and recursively splits it into smaller clusters based on dissimilarity measures until each cluster contains a single data point.
+
+
+c. Density-based clustering:
+
+Density-based clustering identifies clusters based on the density of data points in the feature space. It aims to discover regions of high-density separated by regions of low-density. One popular density-based clustering algorithm is DBSCAN (Density-Based Spatial Clustering of Applications with Noise). Here are the main steps of DBSCAN:
+
+Core Points: Identify core points that have a sufficient number of neighboring points within a specified radius.
+Density-Reachable: Expand the cluster by iteratively adding density-reachable points within the neighborhood.
+Noise Points: Assign data points that are not density-reachable from any cluster as noise points or outliers.
+DBSCAN can find clusters of arbitrary shape, is robust to noise, and doesn’t require specifying the number of clusters in advance.
+
+
+d. EM(Expectation -Maximization) clustering:
+
+EM clustering is a probabilistic approach that assumes data points are generated from a mixture of probability distributions. It is 
+
+commonly used for Gaussian Mixture Models (GMMs), where each cluster is modeled as a Gaussian distribution. Here are the working steps 
+
+involved in EM clustering :
+
+Initialization: Randomly initialize the parameters of the Gaussian distributions (e.g., means and covariances).
+
+E-step (Expectation): Calculate the probability of each data point belonging to each cluster based on the current parameter estimates.
+
+M-step (Maximization): Update the parameters of the Gaussian distributions by maximizing the likelihood function.
+
+Iteration: Repeat the E-step and M-step until convergence or after a fixed number of iterations.
+
+
+2.ASSOCIATION:
+
+Association rule learning is a subcategory of unsupervised machine learning that focuses on discovering interesting relationships or associations among items in a dataset. It aims to identify frequent item sets and generate rules that describe the co-occurrence or dependency between items. Here are two commonly used algorithms within association rule learning:
+
+a. Apriori Algorithm:
+
+The Apriori algorithm is a popular approach for mining association rules. It follows a “bottom-up” strategy to discover frequent item-sets in a dataset. The algorithm works as follows:
+
+Find frequent 1-itemsets: Scan the dataset to identify individual items that meet a minimum support threshold.
+Generate candidate item-sets: Use the frequent 1-itemsets to generate candidate item-sets of size 2 by combining pairs of items.
+Prune candidate item-sets: Remove candidate item-sets that contain subsets that are not frequent. This is known as the “downward closure property.”
+Calculate support for candidate item-sets: Scan the dataset again to count the occurrences of each candidate itemset.
+Repeat Steps 2–4: Continue generating and pruning candidate item-sets of larger sizes until no more frequent item-sets can be found.
+2. FP-Growth Algorithm:
+
+The FP-Growth algorithm is an alternative approach to mining association rules. It employs a “divide-and-conquer” strategy by constructing a compact data structure called an FP-tree. The algorithm proceeds as follows:
+
+
+Build the FP-tree: Scan the dataset to construct the FP-tree, which represents the frequency of item-sets in a compressed manner.
+
+Mine frequent item-sets: Traverse the FP-tree to extract frequent item-sets by recursively combining item-sets and their conditional
+patterns.
+
+Generate association rules: Similar to the Apriori algorithm, association rules can be derived from the frequent item-sets by applying
+
+support, confidence, and lift thresholds.
+
+## PROS OF UNSUPERVISED MACHINE LEARNING:
+
+Unsupervised learning offers several advantages that make it a powerful tool in data analysis and problem-solving. This allows businesses to tap into vast amounts of untapped information and uncover hidden relationships that may not be apparent through manual inspection. Some of the advantages are as follows:
+
+a. Market basket analysis: Unsupervised learning algorithms, such as association rules mining, enable businesses to understand the relationships between products frequently purchased together. It allows businesses to optimize inventory management, create personalized bundles, and improve overall sales performance.
+
+b. Recommendation systems: Unsupervised learning techniques analyzes user behavior and item characteristics and suggest relevant products, services, or content to users. This helps businesses enhance customer experience, drive sales, and increase user engagement.
+
+c. Fraud detection: By learning from normal behavior and identifying deviations, unsupervised learning algorithms can detect fraudulent activities or unusual patterns or outliers in transactional data. Thus it flags suspicious transactions, potentially saving businesses from financial losses and reputational damage.
+
+d. Network analysis: Unsupervised learning algorithms can analyze complex networks, such as social networks or transportation networks, to uncover hidden structures and communities. This information can be utilized for targeted marketing, influencer identification, or optimizing supply chain networks.
+
+In conclusion, the vast advantages of unsupervised learning across diverse domains make it an indispensable tool for businesses seeking to extract meaningful insights and unlock the hidden potential within their data. Also its versatility and applicability make it a valuable tool across other fields such as healthcare, finance, academia, social sciences, and more.
+
+LIMITATIONS OF UNSUPERVISED LEARNING:
+Unsupervised learning has several limitations that are important to consider:
+
+a. Difficulty in Generalization: Unsupervised learning algorithms focus on finding patterns within the observed data. However, they may struggle to generalize these patterns to new, unseen data points. This limits the applicability of unsupervised models when it comes to making predictions or classifying new instances.
+
+b. Sensitivity to Data Quality and Preprocessing: Unsupervised learning algorithms can be sensitive to noise, outliers, and irrelevant features in the data. If the data contains inconsistencies or outliers, they can have a significant impact on the learned patterns or clusters. It becomes crucial to preprocess and clean the data appropriately.
+
+c. Difficulty in Assessing Performance: Evaluating the effectiveness of unsupervised models can be subjective and dependent on domain knowledge, making it challenging to compare different approaches or determine the optimal solution.
+
+d. Biased Results: Unsupervised learning algorithms can unintentionally reinforce or amplify existing biases present in the data. If the input data contains biased or unrepresentative samples, the learned patterns or clusters may also reflect those biases, leading to biased results.
+
+Despite these limitations, unsupervised learning remains a valuable tool for exploratory data analysis, pattern discovery, and data preprocessing. It complements supervised learning approaches and can provide insights into the structure and relationships within data when labeled examples are not available.
+
+
+
+
+
+
+
+
+
+
+
 In simple terms:
+
 
 The machine tries to discover hidden patterns or groups in data by itself.
 
@@ -20847,7 +21471,7 @@ B) Unlabeled data
 C) Images only
 
 
-D) Text only
+D) Text only 
 
 Answer: B
 
@@ -20902,7 +21526,37 @@ groups (like K-Means), it creates a tree-like structure that shows the relations
 
 Tree for your data.The Two Main Approaches
 
+Hierarchical clustering is a widely used technique in machine learning and data analysis that aims to group similar data points into clusters based on their similarities. It belongs to the family of unsupervised learning algorithms, where the goal is to uncover patterns and structures within a dataset without the need for predefined labels or categories. Hierarchical clustering provides a hierarchical arrangement of data points, visualized often as a dendrogram, which represents the grouping of data in a tree-like structure.
+
+The process of hierarchical clustering involves the following key steps:
+
+1. **Distance Measurement:** The first step is to measure the similarity or dissimilarity between data points. Common distance metrics include Euclidean distance, Manhattan distance, and Pearson correlation, depending on the type of data being clustered.
+
+2. **Initial Cluster Creation:** Each data point starts as its own individual cluster. These individual clusters are then iteratively merged based on their similarity scores.
+
+3. **Merging Clusters:** The next step involves merging clusters that are most similar to each other. The similarity between clusters is often defined by linkage criteria, which can include “single linkage,” “complete linkage,” “average linkage,” and more. Single linkage considers the shortest distance between any two points in the clusters, complete linkage considers the longest distance, and average linkage calculates the average distance.
+
+4. **Dendrogram Construction:** As clusters are merged, a dendrogram is constructed. A dendrogram is a tree-like diagram that shows the order in which clusters are merged and the distances between them. It provides a visual representation of the hierarchy of data points and clusters.
+
+5. **Stopping Criteria:** The hierarchical clustering process continues until all data points are part of a single cluster or until a predefined number of clusters is reached. Alternatively, clustering can be stopped when a certain level of dissimilarity is reached.
+
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/a0c7f790-bc06-4b5e-bf2c-44141cce3997" />
+
+Hierarchical clustering offers advantages in various scenarios:
+
+- **No Prespecified Number of Clusters:** Unlike some clustering algorithms that require a predefined number of clusters, hierarchical clustering doesn’t require this information upfront. The dendrogram can be “cut” at various levels to determine the desired number of clusters.
+
+- **Hierarchy Exploration:** The dendrogram provides insight into the hierarchy of data, revealing clusters at different levels of granularity. This can be useful when understanding the relationships between subclusters and superclusters.
+
+- **Small to Medium-Sized Datasets:** Hierarchical clustering is suitable for smaller datasets where the computational cost of building the dendrogram remains manageable.
+
+However, there are also limitations to hierarchical clustering:
+
+- **Computational Complexity:** Hierarchical clustering can become computationally expensive as the dataset size increases, making it less suitable for very large datasets.
+
+- **Sensitivity to Noise:** The hierarchical nature of the algorithm can cause noise and outliers to propagate through the hierarchy, affecting the final clusters.
+
+- **Lack of Scalability:** While agglomerative hierarchical clustering is commonly used, it doesn’t scale well to large datasets due to its quadratic time complexity.
 
 
 
@@ -21095,9 +21749,13 @@ Repeat merging until the desired number of clusters or one cluster remains.
 The dendrogram visualizes these merges as a tree, showing cluster relationships and distances.
 
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 from sklearn.cluster import AgglomerativeClustering
+
 from scipy.cluster.hierarchy import dendrogram
+
 from sklearn.datasets import make_blobs
 
 X, _ = make_blobs(n_samples=30, centers=3, cluster_std=10, random_state=42)
@@ -21198,24 +21856,35 @@ Gradually split into smaller clusters.
 Big cluster   →   Split   →   Smaller clusters
 
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 from sklearn.cluster import KMeans
+
 from sklearn.datasets import make_blobs
+
 from scipy.cluster.hierarchy import dendrogram, linkage
 
 X, _ = make_blobs(n_samples=30, centers=5, cluster_std=10, random_state=42)
 
 
 def divisive_clustering(data, max_clusters=3):
+
     while len(clusters) < max_clusters:
+	
         cluster_to_split = max(clusters, key=lambda x: len(x))
+		
         clusters.remove(cluster_to_split)
+		
 
         kmeans = KMeans(n_clusters=2, random_state=42).fit(cluster_to_split)
+		
         cluster1 = cluster_to_split[kmeans.labels_ == 0]
+		
         cluster2 = cluster_to_split[kmeans.labels_ == 1]
 
         clusters.extend([cluster1, cluster2])
+		
     return clusters
 
 
@@ -21224,21 +21893,33 @@ clusters = divisive_clustering(X, max_clusters=3)
 plt.figure(figsize=(12, 5))
 
 plt.subplot(1, 2, 1)
+
 colors = ['r', 'g', 'b', 'c', 'm', 'y']
+
 for i, cluster in enumerate(clusters):
+
     plt.scatter(cluster[:, 0], cluster[:, 1], s=50,
+	
                 c=colors[i], label=f'Cluster {i+1}')
+				
 plt.title('Divisive Clustering Result')
+
 plt.legend()
 
 linked = linkage(X, method='ward')
 
+
 plt.subplot(1, 2, 2)
+
 dendrogram(linked, orientation='top',
+
            distance_sort='descending', show_leaf_counts=True)
+		   
 plt.title('Hierarchical Clustering Dendrogram')
 
+
 plt.tight_layout()
+
 plt.show()
 
 <img width="1000" height="412" alt="image" src="https://github.com/user-attachments/assets/b51ac6d1-1aba-4984-8128-6fff849359bb" />
@@ -24939,6 +25620,326 @@ C. Recall
 D. Precision
 
 Answer: A
+
+
+## Hyperparameter Tuning
+
+Hyperparameter tuning is the process of selecting the optimal values for a machine learning model's hyperparameters. These are
+
+typically set before the actual training process begins and control aspects of the learning process itself.
+
+Effective tuning helps the model learn better patterns, avoid overfitting or underfitting and achieve higher accuracy on unseen data.
+
+## Techniques for Hyperparameter Tuning
+
+Models can have many hyperparameters and finding the best combination of parameters can be treated as a search problem. The two best
+
+strategies for Hyperparameter tuning are:
+
+1. GridSearchCV 
+
+GridSearchCV is a brute-force technique for hyperparameter tuning. It trains the model using all possible combinations of specified hyperparameter values to find the best-performing setup. It is slow and uses a lot of computer power which makes it hard to use with big datasets or many settings. It works using below steps:
+
+Create a grid of potential values for each hyperparameter.
+Train the model for every combination in the grid.
+Evaluate each model using cross-validation.
+Select the combination that gives the highest score.
+For example if we want to tune two hyperparameters C and Alpha for a Logistic Regression Classifier model with the following sets of values:
+C = [0.1, 0.2, 0.3, 0.4, 0.5]
+
+Alpha = [0.01, 0.1, 0.5, 1.0]
+
+The grid search technique will construct multiple versions of the model with all possible combinations of C and Alpha, resulting in a total of 5 * 4 = 20 different models. The best-performing combination is then chosen.
+
+Example: Tuning Logistic Regression with GridSearchCV
+The following code illustrates how to use GridSearchCV . In this below code:
+
+We generate sample data using make_classification.
+We define a range of C values using logarithmic scale.
+GridSearchCV tries all combinations from param_grid and uses 5-fold cross-validation.
+It returns the best hyperparameter (C) and its corresponding validation score
+
+from sklearn.linear_model import LogisticRegression
+
+from sklearn.model_selection import GridSearchCV
+
+import numpy as np
+
+from sklearn.datasets import make_classification
+
+
+X, y = make_classification(
+
+    n_samples=1000, n_features=20, n_informative=10, n_classes=2, random_state=42)
+	
+
+c_space = np.logspace(-5, 8, 15)
+
+param_grid = {'C': c_space}
+
+
+logreg = LogisticRegression()
+
+logreg_cv = GridSearchCV(logreg, param_grid, cv=5)
+
+logreg_cv.fit(X, y)
+
+
+print("Tuned Logistic Regression Parameters: {}".format(logreg_cv.best_params_))
+
+print("Best score is {}".format(logreg_cv.best_score_))
+
+This represents the highest accuracy achieved by the model using the hyperparameter combination C = 0.0061. The best score of 0.853 means the model achieved 85.3% accuracy on the validation data during the grid search process.
+
+2. RandomizedSearchCV 
+
+As the name suggests RandomizedSearchCV picks random combinations of hyperparameters from the given ranges instead of checking every single combination like GridSearchCV.
+
+In each iteration it tries a new random combination of hyperparameter values.
+
+It records the model’s performance for each combination.
+
+After several attempts it selects the best-performing set.
+
+Example: Tuning Decision Tree with RandomizedSearchCV
+
+The following code illustrates how to use RandomizedSearchCV. In this example:
+
+
+We define a range of values for each hyperparameter e.g, max_depth, min_samples_leaf etc.
+
+Random combinations are picked and evaluated using 5-fold cross-validation.
+
+The best combination and score are printed.
+
+import numpy as np
+
+from sklearn.datasets import make_classification
+
+X, y = make_classification(n_samples=1000, n_features=20, n_informative=10, n_classes=2, random_state=42)
+
+from scipy.stats import randint
+
+from sklearn.tree import DecisionTreeClassifier
+
+from sklearn.model_selection import RandomizedSearchCV
+
+
+param_dist = {
+
+    "max_depth": [3, None],
+	
+    "max_features": randint(1, 9),
+	
+    "min_samples_leaf": randint(1, 9),
+	
+    "criterion": ["gini", "entropy"]
+}
+
+tree = DecisionTreeClassifier()
+
+tree_cv = RandomizedSearchCV(tree, param_dist, cv=5)
+
+tree_cv.fit(X, y)
+
+print("Tuned Decision Tree Parameters: {}".format(tree_cv.best_params_))
+
+print("Best score is {}".format(tree_cv.best_score_))
+
+
+A score of 0.842 means the model performed with an accuracy of 84.2% on the validation set with following hyperparameters.
+
+3. Bayesian Optimization
+Grid Search and Random Search can be inefficient because they blindly try many hyperparameter combinations, even if some are clearly not useful. Bayesian Optimization takes a smarter approach. It treats hyperparameter tuning like a mathematical optimization problem and learns from past results to decide what to try next.
+
+Build a probabilistic model (surrogate function) that predicts performance based on hyperparameters.
+Update this model after each evaluation.
+Use the model to choose the next best set to try.
+Repeat until the optimal combination is found. 
+
+
+Here the surrogate function models the relationship between hyperparameters 
+x
+x and the score 
+y
+y. By updating this model iteratively with each new evaluation Bayesian optimization makes more informed decisions. Common surrogate models used in Bayesian optimization include:
+
+Gaussian Processes
+
+Random Forest Regression
+
+Tree-structured Parzen Estimators (TPE)
+
+## Advantages of Hyperparameter tuning
+
+Improved Model Performance: Finding the optimal combination of hyperparameters can significantly boost model accuracy and robustness.
+Reduced Overfitting and Underfitting: Tuning helps to prevent both overfitting and underfitting resulting in a well-balanced model.
+Enhanced Model Generalizability: By selecting hyperparameters that optimize performance on validation data the model is more likely to generalize well to unseen data.
+
+Optimized Resource Utilization: With careful tuning resources such as computation time and memory can be used more efficiently avoiding unnecessary work.
+
+Improved Model Interpretability: Properly tuned hyperparameters can make the model simpler and easier to interpret.
+Challenges
+
+Dealing with High-Dimensional Hyperparameter Spaces: The larger the hyperparameter space the more combinations need to be explored.
+
+This makes the search process computationally expensive and time-consuming especially for complex models with many hyperparameters.
+
+Incorporating Domain Knowledge: It can help guide the hyperparameter search, narrowing down the search space and making the process
+
+more efficient. Using insights from the problem context can improve both the efficiency and effectiveness of tuning.
+
+Developing Adaptive Hyperparameter Tuning Methods: Dynamic adjustment of hyperparameters during training such as learning rate 
+
+schedules or early stopping can lead to better model performance.
+
+ ## Hyperparameter mcq
+
+ 1. What is a hyperparameter in machine learning?
+ 
+
+A. A parameter learned from training data
+
+B. A parameter set before training the model
+
+C. A parameter used only during testing
+
+D. A parameter that changes automatically during prediction
+
+ Answer: B
+ 
+Explanation: Hyperparameters are values set before training and control the learning process.
+
+
+2. Which of the following is an example of a hyperparameter?
+
+A. Model weights
+
+B. Bias values
+
+C. Learning rate
+
+D. Predicted output
+
+Answer: C
+
+Explanation: The learning rate is chosen before training and controls how fast the model learns.
+
+3. In a Decision Tree, which of the following is a hyperparameter?
+
+A. Number of training samples
+
+B. Maximum tree depth
+
+C. Output label
+
+D. Feature value
+
+Answer: B
+
+Explanation: Max depth controls how deep the tree can grow.
+
+4. Which technique is commonly used to find the best hyperparameters?
+
+A. Linear Regression
+
+B. Grid Search
+
+C. Clustering
+
+D. Normalization
+
+
+Answer: B
+
+Explanation: Grid Search tests multiple combinations of hyperparameters to find the best one.
+
+5. In Neural Networks, what does the learning rate control?
+
+A. Number of layers
+
+B. Speed of model learning
+
+C. Size of dataset
+
+D. Output classes
+
+Answer: B
+
+Explanation: The learning rate determines how big the update steps are during training.
+
+6. Which of the following is NOT a hyperparameter?
+
+A. Batch size
+
+B. Number of epochs
+
+C. Model weights
+
+D. Learning rate
+
+Answer: C
+
+Explanation: Model weights are learned during training, so they are parameters, not hyperparameters.
+
+7. What happens if the learning rate is too high?
+
+A. Training becomes slow
+
+B. Model may fail to converge
+
+C. Model accuracy always increases
+
+D. No effect on training
+
+
+Answer: B
+
+Explanation: A high learning rate may cause the model to overshoot the optimal solution.
+
+8. What is the purpose of hyperparameter tuning?
+
+A. To reduce dataset size
+
+B. To improve model performance
+
+C. To remove features
+
+D. To generate labels
+
+
+Answer: B
+
+Explanation: Hyperparameter tuning helps optimize the model for better accuracy and performance.
+
+9. Which hyperparameter controls how many training examples are used in one iteration?
+
+A. Learning rate
+
+B. Batch size
+
+C. Epochs
+
+D. Feature size
+
+Answer: B
+
+Explanation: Batch size determines the number of samples processed before updating the model.
+
+10. In Support Vector Machine (SVM), which is a hyperparameter?
+
+A. Kernel type
+
+B. Training label
+
+C. Feature value
+
+D. Output prediction
+
+
+Answer: A
+
+Explanation: Kernel type (linear, polynomial, RBF) is a hyperparameter chosen before training.
 
 
 
