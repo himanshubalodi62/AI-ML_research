@@ -1,6 +1,103 @@
 # AI-ML_research
 Easy &amp; Simple way to explain AI/ML 
 
+Here is s a structured view of how AI, ML, DL and GI fit together and build on each other, with uses case examples.
+
+
+
+### How does AI, ML, DL, GI fit together?
+
+1.     Data Analytics (DA):
+
+Data analytics is the process of examining, cleaning, transforming, and interpreting data to discover useful insights and support decision-making.
+
+Example: Analyzing customer purchase data to identify which products are the most popular among customers, leading to targeted marketing strategies.
+
+ 
+
+2.     Artificial Intelligence (AI):
+
+Artificial Intelligence encompasses various techniques, including machine learning and deep learning, to create systems that mimic human-like intelligence, reasoning, and problem-solving.
+
+Example: In the field of healthcare, AI-powered chatbots are used to provide instant medical advice to patients. These chatbots analyze symptoms and medical history to offer preliminary diagnoses and recommend appropriate actions, improving access to healthcare information.
+
+
+
+3.     Machine Learning (ML):
+
+Machine learning is a subset of artificial intelligence that involves the use of algorithms to enable computers to learn from data and make predictions or decisions. It can be categorized into three main types:
+
+ a. Supervised Machine Learning (SML):
+
+In supervised learning, the algorithm is trained on a labeled dataset, where each example has both input and corresponding output data. The goal is to learn a mapping from inputs to outputs.
+
+Example: Training a model to predict patient readmission in healthcare based on historical patient data and diagnosis codes, helping hospitals allocate resources effectively.
+
+ b. Unsupervised Machine Learning (UML):
+
+Unsupervised learning deals with unlabelled data, and the algorithm tries to find patterns or structures within the data without any predefined outputs. Example: Clustering news articles based on their content to automatically group similar articles together for easier content organization and recommendation.
+
+ c. Reinforcement Machine Learning (RML):
+
+Reinforcement learning involves an agent that learns to make sequences of decisions by interacting with an environment. The agent receives feedback in the form of rewards or penalties for its actions.
+
+Example: Training a robot to navigate a maze autonomously, where it learns to avoid obstacles and reach a target location by receiving rewards for successful navigation.
+
+ 
+
+4.     Deep Learning (DL):
+
+Deep learning is a subfield of machine learning that focuses on neural networks with many layers (deep neural networks). It excels at tasks involving unstructured data like images, audio, and natural language.
+
+a. Artificial Neural Networks (ANNs):
+
+ANNs are a fundamental component of deep learning. They are composed of interconnected nodes, mimicking the structure of the human brain. Deep neural networks consist of many layers, enabling them to capture complex patterns in data.
+
+Example: Using a deep neural network for image recognition to detect and classify diseases in medical images, aiding in early diagnosis and treatment.
+
+b. Convolutional Neural Networks (CNNs):
+
+CNNs are a specialized type of deep neural network designed for image and spatial data. They use convolutional layers to automatically learn features from images.
+
+Example: Training a CNN for autonomous driving to detect pedestrians, traffic signs, and other vehicles in real-time, ensuring safe navigation.
+
+c. Recurrent Neural Networks (RNNs):
+
+RNNs are used for sequential data and have connections that loop back on themselves, allowing them to maintain information about previous inputs. They are often used in tasks like natural language processing and time series analysis.
+
+Example: Implementing an RNN-based chatbot that can understand and generate human-like responses in customer support interactions.
+
+ 
+
+5.     Generative Intelligence (GI):
+
+Generative Intelligence is a specialized field within AI that focuses on creating systems capable of generating new and creative content, such as text, images, or music, in a human-like manner.
+
+ a. Generative Adversarial Networks (GANs):
+
+GANs consist of two neural networks, a generator, and a discriminator, that compete. GANs are widely used for tasks like image generation and style transfer.
+
+Example: Using GANs to create realistic, high-resolution artwork or to generate synthetic data for training machine learning models when real data is scarce.
+
+ b. Variational Autoencoders (VAEs):
+
+VAEs are used for generating data by learning a probabilistic distribution of the data. They are often used in applications like image generation and data compression.
+
+Example: Employing VAEs to generate unique, personalized fashion designs for a virtual clothing try-on app, enhancing the user experience.
+
+ c. Transformers:
+
+Transformers are a class of models that excel in tasks involving sequences, such as language translation and text generation. They have become a fundamental architecture in natural language processing.
+
+Example: Training a transformer-based language model for automatic
+
+language translation, enabling real-time translation of spoken conversations during international business meetings.
+
+ To fully understand how the above technologies can be of use to you, it will be helpful for the users to imagine the use case they are trying to solve for and work backwards to figure out the technology that may be more useful for them.
+
+
+
+
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/2f4efe86-7823-4bf0-b835-0c7a04e7871d" />
 
 
@@ -10,6 +107,11 @@ Easy &amp; Simple way to explain AI/ML
 Have you ever wondered how Netflix knows exactly what show you'll want to binge-watch next? Or how your phone can unlock with just a look at your face? This isn't magic; it's the result of two of the most significant technological advancements of our time: Artificial Intelligence (AI) and Machine Learning (ML).
 
 These concepts might sound complicated, but at their heart, they are actually very simple to understand. Think of it like this: AI is the destination, and ML is the car that gets us there. Let's take a closer look at what that means.
+
+
+
+
+
 
 ## What is Artificial Intelligence (AI)?
 
@@ -3012,6 +3114,7 @@ X = outcome of coin flip
 Then:
 
 X = 1 → Heads (success)
+
 X = 0 → Tails (failure)
 
 This means the variable X can only take two values: 0 or 1.
@@ -3608,6 +3711,7 @@ Example:
 Person data:
 
 [Age, Salary, Experience]
+
 [25, 40000, 2]
 
 That’s a vector.
@@ -3881,7 +3985,7 @@ In simple words:
 
 Dot product helps the model calculate predictions.
 
-2️⃣ Why is matrix multiplication important in deep learning?
+## Why is matrix multiplication important in deep learning?
 
 Simple Answer:
 
@@ -4038,13 +4142,8 @@ Neural networks use matrix multiplication and vector operations to process input
 
 Every layer performs:
 
-𝑍
-=
-𝑊
-𝑋
-+
-𝑏
-Z=WX+b
+𝑍  = 𝑊 𝑋  + 𝑏
+Z = W X + b
 
 Where:
 
@@ -4072,40 +4171,7 @@ Step 2: Weights as Matrix
 
 Each neuron has weights.
 
-For example:
 
-W =
-
-[
-0.2
-	
-0.4
-	
-0.1
-
-
-0.5
-	
-0.3
-	
-0.6
-]
-[
-0.2
-0.5
-	​
-
-0.4
-0.3
-	​
-
-0.1
-0.6
-	​
-
-]
-
-Weights are arranged as a matrix.
 
 Step 3: Matrix Multiplication
 
@@ -4123,22 +4189,9 @@ Step 4: Activation Function
 
 After matrix multiplication:
 
-𝐴
-=
-𝑎
-𝑐
-𝑡
-𝑖
-𝑣
-𝑎
-𝑡
-𝑖
-𝑜
-𝑛
-(
-𝑍
-)
-A=activation(Z)
+
+
+A = activation(Z)
 
 Activation adds non-linearity.
 
@@ -4148,13 +4201,7 @@ Gradients are computed as vectors and matrices.
 
 Weights are updated using:
 
-𝑊
-=
-𝑊
-−
-𝛼
-∇
-𝐽
+𝑊 = 𝑊 − 𝛼 ∇ 𝐽
 W=W−α∇J
 
 Again, vector subtraction.
@@ -4164,11 +4211,12 @@ Again, vector subtraction.
 Neural networks are just:
 
  Stacked linear transformations
+ 
  Followed by non-linear activation
 
 Without linear algebra, neural networks cannot compute anything.
 
-📝 Exam-Ready Answer
+##   Answer
 
 Linear algebra is fundamental to neural networks because all computations are performed using vectors and matrices. Inputs are 
 
@@ -4235,7 +4283,7 @@ One big matrix multiplication.
 
 That’s why deep learning works efficiently.
 
-📝 Exam Answer
+## Answer
 
 Vectorization is faster than loops in Python because it uses optimized low-level implementations in libraries such as NumPy. These implementations are written in C and make use of parallel computation and efficient memory handling. In machine learning, vectorization allows batch processing of data using matrix multiplication, which significantly improves computational speed compared to iterative loops.
 
@@ -4245,6 +4293,7 @@ Vectorization is faster than loops in Python because it uses optimized low-level
 Eigenvalues help us find the most important directions in data.
 
 ### Step-by-Step PCA Logic
+
 Step 1: Center Data
 
 Subtract mean.
@@ -4283,11 +4332,18 @@ Why?
 
 Because they explain most variance.
 
-📝 Exam-Ready Answer
+## Exam-Ready Answer
 
-Eigenvalues in PCA represent the amount of variance captured by their corresponding eigenvectors. PCA computes the covariance matrix of the data and finds its eigenvalues and eigenvectors. Eigenvectors define the direction of maximum variance, while eigenvalues indicate the magnitude of variance in those directions. By selecting the eigenvectors with the highest eigenvalues, PCA reduces dimensionality while retaining most of the information in the dataset.
+Eigenvalues in PCA represent the amount of variance captured by their corresponding eigenvectors. PCA computes the covariance matrix of
+
+the data and finds its eigenvalues and eigenvectors. Eigenvectors define the direction of maximum variance, while eigenvalues indicate 
+
+the magnitude of variance in those directions. By selecting the eigenvectors with the highest eigenvalues, PCA reduces dimensionality 
+
+while retaining most of the information in the dataset.
 
  What Happens if a Matrix is Not Invertible?
+ 
  Simple Meaning
 
 A matrix is not invertible if its determinant is zero.
@@ -4399,24 +4455,28 @@ This problem is called:
 
 ## What Problems Does It Cause?
 
-1️ No unique solution in linear regression
+ No unique solution in linear regression
 
-2️⃣ Model coefficients become unstable
+Model coefficients become unstable
 
-3️⃣ Small data change → large weight change
+Small data change → large weight change
 
-4️⃣ Interpretation becomes unreliable
+Interpretation becomes unreliable
 
 Real Example
 
 Suppose dataset:
 
 Income	Savings
+
 50000	10000
+
 60000	12000
 
 If Savings = 0.2 × Income exactly
+
 Then model cannot decide which feature is important.
+
  Solutions
 
 Remove one feature
@@ -4532,6 +4592,7 @@ If matrix is 1000×1000
 That’s 1 million multiplications.
 
 CPU → sequential
+
 GPU → parallel
 
  Why This Matters in Deep Learning
@@ -4548,7 +4609,11 @@ GPU accelerates all.
 
  Interview Answer
 
-GPUs are highly efficient for deep learning because neural networks rely heavily on matrix multiplication, which can be parallelized. GPUs contain thousands of cores designed for simultaneous arithmetic operations, allowing faster computation compared to CPUs, which are optimized for sequential tasks.
+GPUs are highly efficient for deep learning because neural networks rely heavily on matrix multiplication, which can be parallelized. 
+
+GPUs contain thousands of cores designed for simultaneous arithmetic operations, allowing faster computation compared to CPUs, which 
+
+are optimized for sequential tasks.
 
  Final Deep Understanding
  
@@ -4578,6 +4643,12 @@ Week 3 – Data Handling & EDA
 
 Definition
 
+Exploratory Data Analysis (EDA) is an important step in data science and data analytics as it visualizes data to understand its main
+
+features, find patterns and discover how different parts of the data are connected.
+
+Simple meaning
+
 Exploratory Data Analysis (EDA) is the process of understanding, summarizing, and visualizing a dataset before applying machine learning or statistical models.
 
 It helps us answer questions like:
@@ -4593,6 +4664,8 @@ How are variables related?
 EDA helps analysts detect mistakes, patterns, and insights in data.
 
 
+
+
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/69fb57fa-5df9-45f2-ac57-5c46379e2909" />
 
 
@@ -4606,6 +4679,22 @@ EDA helps analysts detect mistakes, patterns, and insights in data.
 | Find Patterns           | Discover trends and correlations             |
 | Improve Models          | Good EDA leads to better feature engineering |
 | Avoid Wrong Conclusions | Prevent misleading models                    |
+
+
+Helps to understand the dataset by showing how many features it has, what type of data each feature contains and how the data is 
+
+distributed.
+
+Helps to identify hidden patterns and relationships between different data points which help us in and model building.
+
+Allows to identify errors or unusual data points (outliers) that could affect our results.
+
+
+The insights gained from EDA help us to identify most important features for building models and guide us on how to prepare them for 
+
+better performance.
+
+By understanding the data it helps us in choosing best modeling techniques and adjusting them for better results.
 
 
 ## Why We Use EDA ?
@@ -4743,9 +4832,381 @@ Teacher is exploring the data before making decisions.
 <img width="977" height="550" alt="image" src="https://github.com/user-attachments/assets/b319e493-d48f-43c6-beca-32957c22e0bc" />
 
 
+## Exploratory Data Analysis (EDA) Tools
+
+Before building a machine learning model, it is very important to understand the data.
+
+Data in the real world is often messy and complex.
+
+It may contain:
+
+Missing values
+
+Errors
+
+Outliers
+
+Unexpected patterns
+
+To understand and explore the dataset, data scientists use a process called Exploratory Data Analysis.
+
+EDA helps us analyze, summarize, and visualize data before applying machine learning algorithms.
+
+## Common Statistical Techniques Used in EDA
+
+EDA tools allow us to perform several important statistical tasks.
+
+Some of the most useful techniques include:
+
+Clustering and dimensionality reduction
+
+Univariate analysis
+
+Bivariate analysis
+
+Multivariate analysis
+
+Predictive modeling
+
+Let’s understand each one in simple terms.
+
+## Clustering and Dimensionality Reduction
+
+Modern datasets may contain many variables (features).
+
+For example:
+
+A customer dataset might contain:
+
+Age
+
+Income
+
+Location
+
+Purchase history
+
+Product preferences
+
+Website activity
+
+When many variables exist, it becomes difficult to visualize the data.
+
+Clustering and dimensionality reduction help simplify the dataset.
+
+## Predictive Models in EDA
+
+Sometimes EDA includes simple predictive models to identify patterns.
+
+A common example is Linear Regression.
+
+Linear regression helps predict relationships between variables.
+
+Example: House Price Prediction
+
+A dataset may contain:
+
+House size
+
+Location
+
+Number of bedrooms
+
+Using regression, we can estimate house prices based on these features.
+
+This helps understand how variables influence the target value.
+
+1. Univariate Non-Graphical Analysis
+
+This is the simplest type of data analysis.
+
+The word univariate means one variable.
+
+In this analysis, we study only one variable at a time.
+
+The goal is to describe the data.
+
+We do not study relationships between variables.
+
+Example
+
+Suppose we analyze the ages of customers.
+
+We may calculate:
+
+Mean age
+
+Median age
+
+Minimum age
+
+Maximum age
+
+This helps summarize the data.
+
+But it does not explain relationships with other variables.
+
+2. Univariate Graphical Analysis
+
+Non-graphical summaries sometimes fail to show the full picture.
+
+Graphs help visualize patterns more clearly.
+
+Common graphical tools include:
+
+Histograms
+
+Box plots
+
+Stem-and-leaf plots
+
+Histogram
+
+A histogram is a type of bar chart.
+
+Each bar shows how many data points fall within a specific range.
+
+Example:
+
+Exam scores distribution
+
+Score Range     Students
+
+50–60           ███
+
+60–70           ███████
+
+70–80           ██████████
+
+80–90           █████
+
+90–100          ██
+
+Histograms help visualize the distribution of data.
+
+Box Plot
+
+A box plot summarizes the dataset using five important values.
+
+These are:
+
+Minimum
+
+First quartile (Q1)
+
+Median
+
+Third quartile (Q3)
+
+Maximum
+
+Box plots also help identify outliers.
+
+Stem-and-Leaf Plot
+
+A stem-and-leaf plot shows:
+
+Actual values
+
+Distribution shape
+
+Example:
+
+Stem | Leaf
+16   | 2 5 8
+17   | 0 3 6 9
+18   | 1 4
+
+It is useful for smaller datasets.
+
+3. Multivariate Non-Graphical Analysis
+
+Multivariate analysis studies multiple variables together.
+
+Instead of looking at one variable, we analyze relationships between variables.
+
+This can be done using statistics such as:
+
+Correlation
+
+Cross-tabulation
+
+Example
+
+Suppose we analyze:
+
+Customer income vs purchase amount.
+
+We might find:
+
+Higher income customers spend more money.
+
+This helps understand relationships in the dataset.
+
+4. Multivariate Graphical Analysis
+
+Graphs can also help visualize relationships between multiple variables.
+
+These visualizations make patterns easier to understand.
+
+Common multivariate graphs include:
+
+Scatter plots
+
+Grouped bar charts
+
+Heat maps
+
+Bubble charts
+
+Run charts
+
+Scatter Plot
+
+A scatter plot shows the relationship between two variables.
+
+Each point represents one observation.
+
+Example:
+
+House size vs price
+
+Price ↑
+      •
+   •
+      •
+ •
+----------------------→ House Size
 
 
-Steps to Perform EDA
+Grouped Bar Chart
+
+Grouped bar charts compare categories across different groups.
+
+Example:
+
+Sales of products across different regions.
+
+Each group represents a region.
+
+Each bar represents product sales.
+
+Run Chart
+
+A run chart is a line graph that shows how data changes over time.
+
+Example:
+
+Daily website visitors.
+
+
+Visitors
+  |
+  |   /\        /\
+  |  /  \      /  \
+  | /    \    /    \
+  ------------------------
+           Time
+
+
+Bubble Chart
+
+A bubble chart is similar to a scatter plot.
+
+But it includes a third variable represented by bubble size.
+
+Example:
+
+X-axis → Age
+
+Y-axis → Income
+
+Bubble size → Spending
+
+This allows analysis of multiple variables in a single graph.
+
+Heat Map
+
+A heat map uses colors to represent values.
+
+Higher values may appear as darker colors.
+
+Example:
+
+Website activity across days and hours.
+
+Heat maps help identify patterns quickly.
+
+Companies like Netflix analyze viewing activity using similar visualizations.
+
+
+
+
+## Types of Exploratory Data Analysis
+
+There are various types of EDA based on nature of records. Depending on the number of columns we are analyzing we can divide EDA into 
+
+three types:
+
+## 1. Univariate Analysis
+
+Univariate analysis focuses on studying one variable to understand its characteristics. It helps to describe data and find patterns
+
+within a single feature. Various common methods like histograms are used to show data distribution, box plots to detect outliers and
+
+understand data spread and bar charts for categorical data. Summary statistics like mean, median, mode, variance and standard deviation 
+
+helps in describing the central tendency and spread of the data.
+
+
+## 2. Bivariate Analysis
+
+Bivariate Analysis focuses on identifying relationship between two variables to find connections, correlations and dependencies. It
+
+helps to understand how two variables interact with each other. Some key techniques include:
+
+Scatter plots which visualize the relationship between two continuous variables.
+
+
+Correlation coefficient measures how strongly two variables are related which commonly use Pearson's correlation for linear 
+
+relationships.
+
+
+Cross-tabulation or contingency tables shows the frequency distribution of two categorical variables and help to understand their
+
+relationship.
+
+
+Line graphs are useful for comparing two variables over time in time series data to identify trends or patterns.
+
+
+Covariance measures how two variables change together but it is paired with the correlation coefficient for a clearer and more
+
+standardized understanding of the relationship.
+
+## 3. Multivariate Analysis
+
+Multivariate Analysis identify relationships between two or more variables in the dataset and aims to understand how variables interact
+
+with one another which is important for statistical modeling techniques. It include techniques like:
+
+Pair plots which shows the relationships between multiple variables at once and helps in understanding how they interact.
+
+
+Another technique is Principal Component Analysis (PCA) which reduces the complexity of large datasets by simplifying them while 
+
+keeping the most important information.
+
+Spatial Analysis is used for geographical data by using maps and spatial plotting to understand the geographical distribution of 
+
+variables.
+
+Time Series Analysis is used for datasets that involve time-based data and it involves understanding and modeling patterns and trends 
+
+over time. Common techniques include line plots, autocorrelation analysis, moving averages and ARIMA models.
+
+## Steps to Perform EDA
 
 There are 6 simple steps most data analysts follow.
 
@@ -4854,9 +5315,13 @@ Outliers are extreme values.
 Example:
 
 Salary
+
 30000
+
 35000
+
 40000
+
 9000000
 
 9000000 is likely incorrect.
@@ -4910,7 +5375,153 @@ This helps identify important features for modeling.
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/f13549b3-9188-4790-9c1c-d65942269443" />
 
 
-EDA is the process of exploring and analyzing datasets using statistics and visualizations to understand patterns, detect anomalies, and prepare data for machine learning models.
+EDA is the process of exploring and analyzing datasets using statistics and visualizations to understand patterns, detect anomalies,
+
+and prepare data for machine learning models.
+
+
+## 1. What is the main purpose of Exploratory Data Analysis (EDA)?
+
+A. To deploy machine learning models
+B. To understand and summarize the dataset
+C. To remove programming errors
+D. To build neural networks
+
+Correct Answer: B
+
+Explanation: EDA helps understand the structure, patterns, and relationships in data.
+
+2. Which of the following is commonly used to visualize the distribution of a single variable?
+
+A. Heat Map
+
+B. Histogram
+
+C. Bubble Chart
+
+D. Scatter Plot
+
+Correct Answer: B
+
+Explanation: A histogram shows how frequently data values appear in ranges.
+
+3. Univariate analysis means analyzing:
+
+A. Two variables
+
+B. Three variables
+
+C. One variable
+
+D. Multiple variables
+
+Correct Answer: C
+
+Explanation: Univariate analysis studies only one variable at a time.
+
+4. Which of the following plots shows the relationship between two variables?
+
+A. Scatter Plot
+
+B. Histogram
+
+C. Stem-and-leaf Plot
+
+D. Box Plot
+
+Correct Answer: A
+
+Explanation: Scatter plots display relationships between two variables.
+
+5. Which technique groups similar data points together?
+
+A. Regression
+
+B. Clustering
+
+C. Classification
+
+D. Normalization
+
+Correct Answer: B
+
+Explanation: Clustering organizes similar data points into groups.
+
+Example: K-Means Clustering.
+
+6. What type of EDA uses graphical visualization for a single variable?
+
+A. Multivariate graphical
+
+B. Univariate graphical
+
+C. Multivariate non-graphical
+
+D. Bivariate statistical
+
+Correct Answer: B
+
+7. Which visualization technique uses colors to represent data values?
+
+A. Scatter Plot
+
+B. Heat Map
+
+C. Box Plot
+
+D. Run Chart
+
+Correct Answer: B
+
+Explanation: Heat maps display values using color intensity.
+
+8. Which of the following is used to show data changes over time?
+
+A. Run Chart
+
+B. Histogram
+
+C. Bubble Chart
+
+D. Box Plot
+
+Correct Answer: A
+
+Explanation: Run charts display trends over time.
+
+9. Which model predicts outcomes based on relationships between variables?
+
+A. Clustering
+
+B. Regression
+
+C. Classification Tree
+
+D. Data Cleaning
+
+ Correct Answer: B
+ 
+Example: Linear Regression
+
+10. Which EDA type analyzes relationships between multiple variables?
+
+A. Univariate
+
+B. Multivariate
+
+C. Binary
+
+D. Random
+
+Correct Answer: B
+
+Explanation: Multivariate analysis studies interactions among several variables.
+
+
+
+
+
+
 
 
 ### 2. Data Cleaning & preprocessing
@@ -4933,7 +5544,519 @@ Outliers
 
 Data cleaning ensures the dataset is accurate and reliable.
 
+
+
+Data cleaning, also called data cleansing or data scrubbing, is the process of identifying and correcting errors and inconsistencies in 
+
+raw data sets to improve data quality.
+
+The goal of data cleaning is to help ensure that data is accurate, complete, consistent and usable for analysis or decision-making. 
+
+Data cleaning processes work to address common data quality issues such as duplicates, missing values, inconsistencies, syntax errors, 
+
+irrelevant data and structural errors.
+
+Data cleaning is also a core component of effective data management, which helps ensure that data remains accurate, secure and 
+
+accessible at every stage of its lifecycle.
+
+High-quality or “clean” data is crucial for effectively adopting artificial intelligence (AI) and automation tools. Organizations can 
+
+also use AI to help streamline the data cleaning process.
+
 <img width="1728" height="1176" alt="image" src="https://github.com/user-attachments/assets/fb083d95-2ffd-4820-9542-f6dcde6736a5" />
+
+## Benefits of Data Cleaning
+
+Before using data for analysis or machine learning, it must be clean and reliable.
+
+Raw data collected from different sources often contains problems such as:
+
+Missing values
+
+Duplicate records
+
+Typing mistakes
+
+Incorrect formats
+
+Inconsistent information
+
+The process of fixing these issues is called Data Cleaning.
+
+Data cleaning improves the quality and usefulness of data so that organizations can make better decisions.
+
+Below are the main benefits of data cleaning explained in simple terms.
+
+
+## 1. Informed Decision-Making
+
+When businesses make decisions, they rely heavily on data.
+
+If the data is clean and accurate, decisions are more likely to be correct.
+
+But if the data is incorrect or messy, the decisions may also be wrong.
+
+Clean data helps managers understand the real situation and make better choices.
+
+Example
+
+Imagine a company analyzing customer purchases.
+
+If the database contains duplicate records, the company may think:
+
+A product is selling twice as much as it actually is
+
+Because of this mistake, the company may order too much inventory.
+
+But after cleaning the data and removing duplicates, the company can clearly see the true sales numbers.
+
+This helps them make smarter business decisions.
+
+## 2. Improved Productivity
+
+When data is messy, employees must spend extra time:
+
+Fixing errors
+
+Removing duplicates
+
+Checking incorrect entries
+
+This wastes valuable time.
+
+Clean data allows teams to work faster and focus on analysis instead of fixing problems.
+
+Example
+
+Suppose a marketing team is preparing a report on customer behavior.
+
+If the dataset contains many errors, they may spend hours correcting the data.
+
+But if the data is already clean, they can directly start analyzing it and finding useful insights.
+
+This increases productivity.
+
+
+## 3. Cost Efficiency
+
+Poor data quality can lead to expensive mistakes.
+
+Errors in data may cause companies to make decisions that waste money.
+
+Data cleaning helps prevent these costly problems.
+
+Example
+
+Imagine an online store tracking its inventory.
+
+If the dataset contains duplicate product records, the system may believe:
+
+There are more orders than actual demand
+
+The company may then produce or purchase extra stock.
+
+This leads to:
+
+Increased storage costs
+
+Unsold products
+
+Financial loss
+
+Cleaning the data helps avoid such errors and saves money.
+
+
+##4. Data Compliance and Security
+
+Organizations must follow data protection rules and regulations.
+
+One well-known regulation is General Data Protection Regulation.
+
+These laws require companies to:
+
+Maintain accurate data
+
+Remove unnecessary information
+
+Protect sensitive user details
+
+Data cleaning helps organizations stay compliant with these regulations.
+
+It also reduces the risk of storing unnecessary or sensitive data.
+
+Example
+
+A company storing customer information must ensure that:
+
+Old or outdated records are removed
+
+Personal information is accurate
+
+If unnecessary data is stored, it could increase the risk of data breaches.
+
+Cleaning the data helps protect customer privacy.
+
+## 5. Enhanced Machine Learning Model Performance
+
+In machine learning, models learn patterns from data.
+
+If the data contains errors, the model will learn incorrect patterns.
+
+This leads to poor predictions.
+
+Clean data helps machine learning algorithms perform better.
+
+For example, algorithms like Linear Regression or classification models depend on accurate training data.
+
+Example
+
+Suppose we build a model to predict house prices.
+
+If the dataset contains mistakes like:
+
+A house price written as $10 instead of $100,000
+
+The model may learn wrong relationships.
+
+After cleaning the dataset, the model receives accurate information and produces better predictions.
+
+### 6. Improved Data Consistency
+
+Data often comes from multiple sources, such as:
+
+Websites
+
+Databases
+
+Mobile applications
+
+Surveys
+
+These sources may store information in different formats.
+
+For example:
+
+One dataset may write dates as DD/MM/YYYY
+
+Another may write them as MM/DD/YYYY
+
+This inconsistency creates problems when combining datasets.
+
+Data cleaning standardizes the format so that all systems can understand the data.
+
+Example
+
+Imagine a company collecting customer data from:
+
+Website registrations
+
+Mobile apps
+
+In-store purchases
+
+If each system records information differently, it becomes difficult to combine them.
+
+Data cleaning ensures the information is consistent and usable across systems.
+
+## Why Data Cleaning Is So Important
+
+Data cleaning may seem like a small step, but it plays a critical role in data analysis and machine learning.
+
+Without clean data:
+
+Reports may be incorrect
+
+Decisions may be misleading
+
+Models may produce poor predictions
+
+Clean data helps organizations:
+
+Understand their customers
+
+Improve operations
+
+Make accurate predictions
+
+
+## Data Cleaning Techniques
+
+After collecting data, the next important step is cleaning the data.
+Raw data often contains errors, missing values, duplicates, or inconsistent formats.
+
+Before fixing these problems, data professionals first analyze the dataset to identify issues.
+This process is called Data Profiling.
+
+Data profiling helps answer questions like:
+
+Are there missing values in the dataset?
+
+Are some records duplicated?
+
+Are there unusual or incorrect values?
+
+Are formats consistent across the dataset?
+
+Once problems are identified, several data cleaning techniques can be applied.
+
+## 1. Standardization
+
+Sometimes the same type of data is stored in different formats.
+
+This creates inconsistencies and makes analysis difficult.
+
+Standardization means converting data into a consistent format.
+
+Example
+
+Suppose a dataset stores dates like this:
+
+05-10-2024
+
+10/05/2024
+
+2024-10-05
+
+Although these values represent the same date, the format is different.
+
+After standardization, all dates may be converted to a single format such as:
+
+YYYY-MM-DD
+
+This makes the dataset easier to analyze.
+
+Real-Life Example
+
+Imagine a company collecting customer phone numbers:
+
+9876543210
+
++91-9876543210
+
+(987) 654-3210
+
+Standardization converts them into a consistent format like:
+
++91 9876543210
+
+This improves data quality and prevents confusion.
+
+##  2. Addressing Outliers
+
+Outliers are values that are very different from the rest of the data.
+
+These unusual values can occur because of:
+
+Data entry mistakes
+
+Measurement errors
+
+Rare but real events
+
+Outliers can distort analysis because they affect averages and trends.
+
+Example
+
+Suppose a dataset contains student ages:
+
+18, 19, 20, 21, 22, 120
+
+The value 120 is clearly unrealistic.
+
+This may be caused by a typing mistake.
+
+Data professionals may:
+
+Remove the value
+
+Correct it
+
+Investigate the error
+
+Real-Life Example
+
+Imagine a store tracking product prices.
+
+Most products cost between $10 and $100, but one entry shows $10,000.
+
+This extreme value may affect average price calculations.
+
+After investigating, analysts may correct or remove the value.
+
+## 3. Deduplication
+
+Sometimes the same record appears multiple times in a dataset.
+
+This is called duplicate data.
+
+Removing duplicates is known as Data Deduplication.
+
+Duplicates often occur because of:
+
+Manual data entry errors
+
+System integration issues
+
+Software bugs
+
+## Example
+
+Customer dataset:
+
+| Name  | Email                                     |
+| ----- | ----------------------------------------- |
+| Rahul | [rahul@email.com](mailto:rahul@email.com) |
+| Rahul | [rahul@email.com](mailto:rahul@email.com) |
+| Priya | [priya@email.com](mailto:priya@email.com) |
+
+
+The first two records are identical.
+
+Keeping duplicates can create incorrect results during analysis.
+
+After deduplication, the duplicate entry is removed.
+
+Real-Life Example
+
+An online shopping company might accidentally store the same order twice.
+
+If duplicates are not removed, the company may believe sales are higher than they actually are.
+
+Deduplication prevents such errors.
+
+## 4. Addressing Missing Values
+
+Sometimes data is incomplete.
+
+Some fields may have no value because:
+
+A user skipped a form field
+
+A system error occurred
+
+Data collection failed
+
+Missing values reduce the usefulness of the dataset.
+
+Data professionals must decide how to handle them.
+
+Common Solutions
+
+They may:
+
+Replace missing values with estimated values
+
+Remove incomplete records
+
+Leave them as missing but mark them clearly
+
+Example
+
+Customer dataset:
+
+| Name   | Age       |
+| ------ | --------- |
+| Ravi   | 25        |
+| Anjali | (missing) |
+| Mohan  | 30        |
+
+Possible solutions:
+
+Replace missing value with the average age
+
+Remove the incomplete record
+
+Investigate the missing data
+
+## Real-Life Example
+
+Suppose a hospital dataset contains patient records.
+
+If the blood pressure field is missing, doctors may need to:
+
+Recheck patient records
+
+Collect the missing information
+
+Missing values must be handled carefully because they can affect analysis.
+
+## 5. Validation
+
+After cleaning the dataset, a final review is performed.
+
+This step ensures that the data is:
+
+Correct
+
+Consistent
+
+Ready for analysis
+
+This process is called Data Validation.
+
+##   How Validation Works
+
+Validation checks whether:
+
+Data values are within expected ranges
+
+Formats are correct
+
+Missing values are handled
+
+Duplicates are removed
+
+This step can be done:
+
+Manually by data analysts
+
+Automatically using software tools
+
+Example
+
+Suppose a dataset records employee ages.
+
+Validation rules might include:
+
+Age must be between 18 and 65
+
+Salary cannot be negative
+
+Email addresses must follow the correct format
+
+If any value violates these rules, it is flagged for correction.
+
+## Real-Life Example of the Entire Data Cleaning Process
+
+Imagine a company collecting customer information from its website.
+
+The raw dataset may contain:
+
+Duplicate customer accounts
+
+Missing phone numbers
+
+Incorrect email formats
+
+Different date formats
+
+Using data cleaning techniques, the company can:
+
+Standardize formats
+
+Remove duplicate entries
+
+Handle missing data
+
+Identify unusual values
+
+Validate the dataset
+
+After cleaning, the dataset becomes reliable and ready for analysis.
+
+
+
 
 
 
@@ -4976,19 +6099,19 @@ Different systems represent missing data differently:
 
 Missing data can happen because:
 
-1️⃣ Data not collected
+Data not collected
 
 Example: A person didn't fill their age.
 
-2️⃣ Data entry error
+Data entry error
 
 Example: Someone forgot to enter a value.
 
-3️⃣ System error
+System error
 
 Example: Sensor failed to record temperature.
 
-4️⃣ Data lost during processing
+Data lost during processing
 
 ## Types of Missing Data (Important for Interviews)
 
@@ -5162,6 +6285,7 @@ If duplicates exist, a company may think more customers exist than reality.
 ### Types of Duplicate Data
 
 There are mainly two types of duplicates.
+
 Exact Duplicate
 
 When all column values are identical.
@@ -6021,6 +7145,1080 @@ C) Capping values
 D) All of the above
 
 Answer: D
+
+
+### Data Visualisation in Python using Matplotlib and Seaborn
+
+Data visualization is an easier way of presenting the data, however complex it is, to analyze trends and relationships amongst 
+
+variables with the help of pictorial representation.
+
+It may sometimes seem easier to go through a set of data points and build insights from it but usually this process may not yield good
+
+results. There could be a lot of things left undiscovered as a result of this process. Additionally, most of the data sets used in real
+
+life are too big to do any analysis manually. This is essentially where data visualization steps in.
+
+Easier representation of compels data
+
+Highlights good and bad performing areas
+
+Explores relationship between data points
+
+Identifies data patterns even for larger data points
+
+While building visualization, it is always a good practice to keep some below mentioned points in mind
+
+Ensure appropriate usage of shapes, colors, and size while building visualization
+
+Plots/graphs using a co-ordinate system are more pronounced
+
+Knowledge of suitable plot with respect to the data types brings more clarity to the information
+
+Usage of labels, titles, legends and pointers passes seamless information the wider audience
+
+
+## Advantages of Data Visualization
+
+
+When working with data, it may seem easy to simply read numbers and try to understand patterns.
+
+However, this method often does not work well.
+
+Real-world datasets are usually very large and complex.
+
+They may contain thousands or even millions of rows. Because of this, it becomes difficult to discover patterns by just reading the data.
+
+This is where Data Visualization becomes useful.
+
+Data visualization means presenting data in visual forms such as charts, graphs, or maps.
+
+These visuals help people quickly understand trends, relationships, and patterns in the data.
+
+Instead of reading long tables of numbers, we can look at a simple graph and easily understand the information.
+
+Below are the main advantages of data visualization.
+
+## 1. Easy to Understand Complex Data
+
+Large datasets can be difficult to understand when presented as tables.
+
+Data visualization converts numbers into simple charts or graphs, making them easier to interpret.
+
+Example
+
+Imagine a spreadsheet containing 10,000 rows of sales data.
+
+Reading each row would take a lot of time.
+
+But if we create a bar chart, we can quickly see:
+
+Which product sells the most
+
+Which product sells the least
+
+A visual chart helps us understand the data faster.
+
+## 2. Helps Identify Patterns and Trends
+
+Visualizations make it easier to notice patterns that might be hidden in raw data.
+
+For example, trends over time become very clear in line charts.
+
+Example
+
+Suppose a company tracks its monthly revenue.
+
+If the data is shown in a table, it may be hard to notice the trend.
+
+But if we create a Line Chart, we can quickly see whether revenue is:
+
+Increasing
+
+Decreasing
+
+Remaining stable
+
+This helps businesses understand their performance.
+
+
+## 3. Helps Detect Outliers and Errors
+
+Sometimes datasets contain unusual values or mistakes.
+
+Visualization helps identify these outliers quickly.
+
+Example
+
+Imagine a dataset of employee salaries.
+
+Most salaries are between $30,000 and $80,000, but one entry shows $900,000.
+
+When displayed in a Box Plot, this extreme value becomes immediately visible.
+
+This helps analysts detect errors in the dataset.
+
+## 4. Improves Decision Making
+
+Businesses rely on data to make decisions.
+
+Data visualization helps managers understand information quickly and make informed decisions.
+
+Example
+
+A retail company may use visual dashboards to monitor:
+
+Sales performance
+
+Customer behavior
+
+Inventory levels
+
+By looking at visual charts, managers can quickly decide:
+
+Which products to promote
+
+Which products need restocking
+
+## 5. Makes Data Communication Easier
+
+Explaining complex data to others can be difficult.
+
+Visualizations make it easier to communicate insights clearly.
+
+Instead of showing a long spreadsheet, analysts can present a simple chart.
+
+Example
+
+If a data analyst wants to explain customer growth, they may use a Bar Chart.
+
+The chart allows everyone to quickly understand the information, even if they are not technical experts.
+
+6. Helps Discover Relationships Between Variables
+
+Data visualization helps analysts understand how different variables are related.
+
+For example, it can show how one factor affects another.
+
+Example
+
+Suppose a company wants to know whether advertising spending increases sales.
+
+They may use a Scatter Plot.
+
+If the points form an upward pattern, it indicates that higher advertising spending leads to higher sales.
+
+## Real-Life Example of Data Visualization
+
+Imagine a fitness app collecting data from users.
+
+The dataset may include:
+
+Daily steps
+
+Calories burned
+
+Exercise time
+
+If this information is displayed in a table, it may be hard to interpret.
+
+But if the app displays charts, users can easily see:
+
+Their daily activity trends
+
+Progress over time
+
+Areas where improvement is needed
+
+This makes the data much more useful.
+
+## There are a lot of python libraries which could be used to build visualization like
+
+## Matplotlib
+
+It is an amazing visualization library in Python for 2D plots of arrays, It is a multi-platform data visualization library built on 
+
+NumPy arrays and designed to work with the broader SciPy stack. It was introduced by John Hunter in the year 2002. Let's try to 
+
+understand some of the benefits and features of matplotlib
+
+It's fast, efficient as it is based on numpy and also easier to build
+
+Has undergone a lot of improvements from the open source community since inception and hence a better library having advanced features
+
+as well
+
+Well maintained visualization output with high quality graphics draws a lot of users to it
+
+Basic as well as advanced charts could be very easily built
+
+From the users/developers point of view, since it has a large community support, resolving issues and debugging becomes much easier
+
+## In simple words
+
+Matplotlib is one of the most popular libraries in Python used for data visualization.
+
+It helps programmers and data analysts create graphs, charts, and plots to understand data more easily.
+
+Matplotlib is mainly used for creating 2D visualizations such as:
+
+Line charts
+
+Bar charts
+
+Histograms
+
+Scatter plots
+
+Pie charts
+
+It works closely with NumPy, which is used for handling numerical data in Python.
+
+Matplotlib was created by John Hunter in 2002.
+Since then, it has become one of the most widely used visualization tools in the Python data science ecosystem.
+
+## Why Matplotlib Is Important
+
+When working with data, numbers in tables can be difficult to understand.
+
+Matplotlib helps convert those numbers into visual charts, making patterns and trends easier to see.
+
+For example:
+
+Instead of reading thousands of rows of sales data, a simple line chart can quickly show whether sales are increasing or decreasing.
+
+## Key Features and Benefits of Matplotlib
+
+1. Fast and Efficient
+
+Matplotlib works efficiently because it is built on NumPy arrays.
+
+NumPy allows fast mathematical operations on large datasets.
+
+This makes Matplotlib suitable for working with large datasets without slowing down the program.
+
+2. Easy to Use
+
+Matplotlib provides simple commands to create graphs.
+
+Even beginners can create charts with just a few lines of Python code.
+
+Example (Simple Line Plot)
+
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4]
+
+y = [10,20,25,30]
+
+plt.plot(x,y)
+
+plt.title("Sales Growth")
+
+plt.show()
+
+
+3. Open Source with Continuous Improvements
+
+Matplotlib is an open-source library.
+
+This means developers around the world contribute to improving it.
+
+Because of this large community, the library has:
+
+Many advanced features
+
+Regular updates
+
+Bug fixes and improvements
+
+4. High-Quality Graphics
+
+Matplotlib produces clear and professional-looking charts.
+
+These charts can be used in:
+
+Research papers
+
+Business reports
+
+Presentations
+
+Dashboards
+
+Many data scientists prefer Matplotlib because it generates high-quality visual outputs.
+
+5. Supports Both Basic and Advanced Charts
+
+Matplotlib can create both simple and complex visualizations.
+
+Basic Charts
+
+Line chart
+
+Bar chart
+
+Pie chart
+
+Histogram
+
+Advanced Charts
+
+Multiple plots in one figure
+
+Custom styling
+
+3D plots
+
+Statistical graphs
+
+This flexibility makes Matplotlib suitable for many different applications.
+
+Real-Life Example
+
+Imagine a company tracking monthly sales data.
+
+Instead of reviewing a spreadsheet, a data analyst can create a graph showing sales over time.
+
+Using Matplotlib, the analyst can easily create a sales trend chart.
+
+This helps managers quickly understand:
+
+Which months had the highest sales
+
+Whether sales are increasing or decreasing
+
+Seasonal trends in customer demand
+
+Community Support
+
+Matplotlib has a large developer community.
+
+Because many people use it, it is easy to:
+
+Find tutorials
+
+Solve problems
+
+Debug errors
+
+If someone encounters an issue, they can quickly find solutions from the community.
+
+## Matplotlib Quiz
+
+1. What is Matplotlib mainly used for?
+
+
+A. Database management
+
+B. Data visualization and plotting graphs
+
+C. Web development
+
+D. Game development
+
+Correct Answer: B
+
+Explanation: Matplotlib is used to create charts and graphs to visualize data.
+
+2. Matplotlib was introduced by which person?
+
+A. Guido van Rossum
+
+B. Andrew Ng
+
+C. John Hunter
+
+D. Elon Musk
+
+
+Correct Answer: C
+
+Explanation: Matplotlib was created by John Hunter in 2002.
+
+3. Matplotlib works closely with which Python library?
+
+A. TensorFlow
+
+B. NumPy
+
+C. Django
+
+D. Flask
+
+Correct Answer: B
+
+Explanation: Matplotlib works with NumPy to handle numerical data efficiently.
+
+4. Which module of Matplotlib is commonly used for plotting graphs?
+
+A. matplotlib.graph
+
+B. matplotlib.visual
+
+C. matplotlib.pyplot
+
+D. matplotlib.chart
+
+Correct Answer: C
+
+Explanation: matplotlib.pyplot is the most commonly used module for creating plots.
+
+5. Which of the following charts can be created using Matplotlib?
+
+A. Line chart
+
+B. Bar chart
+
+C. Histogram
+
+D. All of the above
+
+Correct Answer: D
+
+Explanation: Matplotlib supports many chart types including line, bar, histogram, scatter, and more.
+
+6. Which function is used to display a plot in Matplotlib?
+
+A. plot()
+
+B. draw()
+
+C. show()
+
+D. graph()
+
+Correct Answer: C
+
+Explanation: plt.show() displays the graph on the screen.
+
+7. What type of visualizations does Matplotlib primarily support?
+
+A. 2D plots
+
+B. 4D plots
+
+C. Audio plots
+
+D. Video plots
+
+Correct Answer: A
+
+Explanation: Matplotlib is mainly used for 2D data visualization.
+
+8. Which function is used to create a line plot in Matplotlib?
+
+A. line()
+
+B. plot()
+
+C. graph()
+
+D. draw()
+
+Correct Answer: B
+
+Explanation: plt.plot() is used to create line graphs.
+
+9. What command is used to add a title to a Matplotlib graph?
+
+A. plt.heading()
+
+B. plt.title()
+
+C. plt.name()
+
+D. plt.caption()
+
+
+Correct Answer: B
+
+Explanation: plt.title() adds a title to the plot.
+
+10. Why is Matplotlib widely used in data science?
+
+A. It creates visual representations of data
+
+B. It replaces machine learning algorithms
+
+C. It stores data in databases
+
+D. It builds mobile apps
+
+Correct Answer: A
+
+Explanation: Matplotlib helps visualize patterns, trends, and relationships in data.
+
+## Seaborn
+
+Seaborn is a powerful Python library used for data visualization.
+
+It is built on top of Matplotlib, which means it uses Matplotlib in the background but provides simpler and more attractive
+
+visualizations.
+
+Seaborn was originally developed at Stanford University.
+
+It is widely used in data science, statistics, and machine learning to visualize relationships and patterns in datasets.
+
+##  Why Seaborn Is Useful
+
+While Matplotlib can create many types of charts, sometimes the code can become complex.
+
+Seaborn simplifies this process and automatically creates beautiful and informative graphs.
+
+It is especially useful when working with statistical data analysis.
+
+## Advantages of Seaborn
+
+1. Built-in Themes for Better Visualization
+
+Seaborn provides predefined themes and styles.
+
+These themes automatically improve the appearance of graphs without requiring extra code.
+
+This makes charts look clean, modern, and professional.
+
+Example
+
+If a data analyst wants to create a graph for a business report, Seaborn automatically applies a better design compared to default Matplotlib charts.
+
+
+2. Statistical Functions for Better Insights
+
+Seaborn includes built-in statistical functions.
+
+These functions help users understand data relationships more clearly.
+
+For example, Seaborn can automatically calculate and display:
+
+Trend lines
+
+Confidence intervals
+
+Data distributions
+
+Example
+
+If we want to see whether advertising spending affects sales, Seaborn can create a regression plot that shows the relationship between the two variables.
+
+This helps analysts understand patterns in the data.
+
+3. Better Aesthetics and Attractive Graphs
+
+One of the biggest advantages of Seaborn is its visual quality.
+
+Charts created with Seaborn look:
+
+More colorful
+
+More readable
+
+More professional
+
+This makes it easier to present results to managers or stakeholders.
+
+Example
+
+Suppose a company wants to show customer purchase behavior.
+
+Using Seaborn, the analyst can create clear visualizations like:
+
+Heatmaps
+
+Distribution plots
+
+Pair plots
+
+These charts make the insights easy to understand.
+
+4. Built-in Advanced Plots
+
+Seaborn provides several ready-to-use statistical plots.
+
+Some popular examples include:
+
+Heatmaps
+
+Pair plots
+
+Distribution plots
+
+Violin plots
+
+Box plots
+
+These plots help analyze data more effectively.
+
+Example
+
+A heatmap can be used to visualize correlations between variables in a dataset.
+
+This helps analysts understand which variables are strongly related.
+
+5. Helpful Documentation and Examples
+
+Seaborn has well-written documentation and tutorials.
+
+Because of this, beginners can easily learn how to create visualizations.
+
+Many examples are available online, which makes problem-solving easier.
+
+Real-Life Example
+
+Imagine a data analyst working for an online shopping company.
+
+The analyst wants to understand:
+
+Which products sell together
+
+Which customers spend the most
+
+Which months have the highest sales
+
+Using Seaborn visualizations such as heatmaps and distribution plots, the analyst can quickly identify patterns in customer behavior.
+
+This helps the company make better business decisions.
+
+## Key Idea to Remember
+
+Seaborn is a powerful visualization library that improves the visual appearance and statistical capability of charts created in Python.
+
+Main advantages include:
+
+Built-in themes for better design
+
+Statistical visualization tools
+
+Attractive and professional charts
+
+Ready-to-use advanced plots
+
+Helpful documentation and examples
+
+Because of these features, Seaborn is widely used in data analysis, machine learning, and research projects.
+
+## Seaborn Quiz
+
+1. What is Seaborn mainly used for?
+
+A. Web development
+
+B. Data visualization
+
+C. Game development
+
+D. Database management
+
+Correct Answer: B
+
+Explanation: Seaborn is used to create statistical data visualizations and charts.
+
+2. Seaborn is built on top of which Python visualization library?
+
+A. TensorFlow
+
+B. NumPy
+
+C. Matplotlib
+
+D. Pandas
+
+Correct Answer: C
+
+Explanation: Seaborn is built on top of Matplotlib and improves its visualization features.
+
+3. Seaborn was originally developed at which university?
+
+A. MIT
+
+B. Stanford University
+
+C. Harvard University
+
+D. Oxford University
+
+Correct Answer: B
+
+Explanation: Seaborn was originally developed at Stanford University.
+
+4. Which of the following is a feature of Seaborn?
+
+A. Built-in themes
+
+B. Statistical visualization functions
+
+C. Attractive charts
+
+D. All of the above
+
+Correct Answer: D
+
+Explanation: Seaborn provides built-in themes, statistical plots, and attractive chart designs.
+
+5. Which plot is commonly used in Seaborn to show correlation between variables?
+
+A. Heatmap
+
+B. Histogram
+
+C. Pie chart
+
+D. Tree plot
+
+Correct Answer: A
+
+Explanation: A heatmap is used to show correlations between variables using color.
+
+6. Which function is used to set the style or theme in Seaborn?
+
+A. set_style()
+
+B. style()
+
+C. theme()
+
+D. design()
+
+Correct Answer: A
+
+Explanation: set_style() helps apply different visual themes to charts.
+
+7. Which type of plots are easily created using Seaborn?
+
+A. Distribution plots
+
+B. Box plots
+
+C. Violin plots
+
+D. All of the above
+
+Correct Answer: D
+
+Explanation: Seaborn provides many statistical plots such as distribution, box, and violin plots.
+
+8. Which library is often used together with Seaborn for data manipulation?
+
+A. Pandas
+
+B. Flask
+
+C. Django
+
+D. Keras
+
+Correct Answer: A
+
+Explanation: Seaborn works very well with Pandas datasets.
+
+9. Why do data scientists prefer Seaborn over basic Matplotlib in many cases?
+
+A. It produces more attractive and informative visualizations
+
+B. It replaces Python programming
+
+C. It stores data in databases
+
+D. It trains machine learning models
+
+Correct Answer: A
+
+
+10. Which plot is used in Seaborn to visualize relationships between multiple variables?
+
+A. Pair Plot
+
+B. Pie Chart
+
+C. Run Chart
+
+D. Tree Chart
+
+Correct Answer: A
+
+Explanation: A pair plot shows relationships between multiple variables in a dataset.
+
+## Nature of Data Visualization
+
+Depending on the number of variables used for plotting the visualization and the type of variables, there could be different types of 
+
+charts which we could use to understand the relationship. Based on the count of variables, we could have
+
+Univariate plot(involves only one variable)
+
+Bivariate plot(more than one variable in required)
+
+In simple words:
+
+In Data Visualization, charts and graphs are used to understand patterns, trends, and relationships in data.
+
+The type of visualization we choose depends mainly on how many variables are involved.
+
+## Types of Visualization Based on Variables
+1. Univariate Plot
+
+A Univariate Analysis involves only one variable.
+
+Purpose:
+
+Understand the distribution of data
+
+See frequency or spread of values
+
+Example
+
+If we analyze student marks, we may want to see how marks are distributed.
+
+Common univariate plots:
+
+Histogram
+
+Box plot
+
+Pie chart
+
+2. Bivariate Plot
+
+A Bivariate Analysis involves two variables.
+
+Purpose:
+
+Understand relationship between variables
+
+Identify correlation or patterns
+
+Example
+
+Studying the relationship between:
+
+Study hours
+
+Exam marks
+
+Common bivariate plots:
+
+Scatter plot
+
+Line chart
+
+Count plot
+
+## Important Visualization Charts
+
+1. Box Plot
+
+A Box Plot shows how data is distributed.
+
+It displays five important values:
+
+Minimum value
+
+First quartile (Q1)
+
+Median
+
+Third quartile (Q3)
+
+Maximum value
+
+Why Box Plots Are Useful
+
+Identify outliers
+
+Understand spread of data
+
+Compare distributions across categories
+
+Example
+
+A company analyzing employee salaries can use a box plot to see:
+
+Average salary
+
+Highest and lowest salaries
+
+Unusual salary values
+
+Syntax: seaborn.boxplot(x=None, y=None, hue=None, data=None, order=None, hue_order=None, orient=None, color=None, palette=None, 
+
+saturation=0.75, width=0.8, dodge=True, fliersize=5, linewidth=None, whis=1.5, ax=None, **kwargs)
+
+
+
+Parameters: 
+
+x, y, hue: Inputs for plotting long-form data. 
+
+data: Dataset for plotting. If x and y are absent, this is interpreted as wide-form.
+
+color: Color for all of the elements.
+
+Returns: It returns the Axes object with the plot drawn onto it. 
+
+2. Scatter Plot
+
+A Scatter Plot displays points representing data values.
+
+Each point represents one observation.
+
+Purpose
+
+Show relationship between two variables
+
+Identify correlation
+
+Detect clusters in data
+
+Example
+
+A scatter plot can show the relationship between:
+
+Advertising budget
+
+Product sales
+
+If points move upward, it indicates positive correlation.
+
+Scatter plots can also be:
+
+2D scatter plots
+
+3D scatter plots
+
+
+3. Histogram
+
+A Histogram shows how data values are distributed.
+
+It divides data into ranges called bins.
+
+Each bin represents the frequency of values within that range.
+
+Example
+
+A histogram of student exam scores might show:
+
+Most students scoring between 60–80
+
+Few students scoring below 40
+
+Histograms help determine whether data follows a normal distribution.
+
+4. Count Plot
+
+A Count Plot shows how often each category appears in the dataset.
+
+It is similar to a bar chart.
+
+Example
+
+A count plot could show:
+
+Number of customers by gender:
+
+Male = 500
+
+Female = 450
+
+This makes it easy to understand category frequency.
+
+5. Correlation Plot
+
+A Correlation measures how strongly two variables are related.
+
+Correlation values range from:
+
++1 → Strong positive relationship
+
+0 → No relationship
+
+−1 → Strong negative relationship
+
+Example
+
+If exercise time increases and weight decreases, this indicates negative correlation.
+
+Correlation is often visualized using heatmaps.
+
+6. Heat Map
+
+A Heat Map uses color intensity to represent values.
+
+Darker or brighter colors represent stronger relationships.
+
+Example
+
+A heatmap can show correlations between features in a dataset such as:
+
+Age
+
+Salary
+
+Education
+
+Work experience
+
+This helps analysts quickly identify important variables.
+
+7. Pie Chart
+
+A Pie Chart shows data as percentage slices of a circle.
+
+Each slice represents a portion of the total.
+
+Example
+
+Market share of car companies:
+
+Tesla → 30%
+
+BMW → 20%
+
+Ford → 25%
+
+Audi → 25%
+
+Advantages
+
+Easy to understand percentages
+
+Simple comparison of categories
+
+8. Error Bars
+
+An Error Bar shows the possible error or uncertainty in data values.
+
+Error bars help visualize variation or deviation.
+
+Example
+
+If the average temperature is 25°C ± 2°C, the error bar shows the possible range.
+
+Benefits:
+
+Shows variability in data
+
+Helps detect measurement uncertainty
+
+Useful in scientific experiments
+
+## Key Idea to Remember
+
+Different visualization techniques help analyze data from different perspectives.
+
+ | Chart        | Purpose                              |
+| ------------ | ------------------------------------ |
+| Box Plot     | Shows distribution and outliers      |
+| Scatter Plot | Shows relationship between variables |
+| Histogram    | Shows frequency distribution         |
+| Count Plot   | Shows category frequency             |
+| Heat Map     | Shows correlations using colors      |
+| Pie Chart    | Shows percentage distribution        |
+| Error Bars   | Shows uncertainty or variation       |
+
+
+
 
 
 
@@ -8496,13 +10694,6 @@ recommendations, and visual AI systems.
 
 
 
-
-
-
-
-
-
-
 #### Quick Summary
 
 Feature Engineering means:
@@ -8758,8 +10949,11 @@ On the back of the card is the word "Apple" or "Banana" (the Label).
 Labeled data is simply data that already has the answer key attached to it. If I show you 100 cards and tell you, "This round red thing is an Apple," and "This long yellow thing is a Banana," I am giving you labeled data. You are looking at the features (color, shape) and connecting them to the name (the label).
 
 The Data (The Picture),The Label (The Answer),"The ""Supervised"" Result"
+
 "An email containing the words ""Winner,"" ""Cash,"" and ""Free.""","""Spam""",Your inbox automatically hides junk mail.
+
 A photo of a mole on someone's skin.,"""Cancerous"" or ""Healthy""",An app that helps doctors spot skin issues.
+
 A history of a person's spending habits.,"""Fraud"" or ""Safe""",Your bank calling you because someone stole your card.
 
 Why do we need it?
@@ -9163,6 +11357,14 @@ D) Reinforcement and Unsupervised
 
 ## Linear Regression (Supervised Machine Learning) —
 
+## Understanding Linear Regression
+
+Linear regression is a fundamental concept in statistics and machine learning that’s used for predicting a numerical outcome (a 
+
+dependent variable) based on one or more input features (independent variables). It’s like drawing a straight line through a set of 
+
+data points to model the relationship between the variables
+
 Linear Regression is a supervised machine learning algorithm used to predict a numerical value based on the relationship between variables.
 
 In simple words:
@@ -9174,6 +11376,8 @@ It tries to answer questions like:
 If study hours increase, how will exam score change?
 
 If house size increases, how will price change?
+
+
 
 ## Basic Idea of Linear Regression
 
@@ -9276,13 +11480,363 @@ More water → Taller plant.
 
 Linear regression finds this growth pattern.
 
+
+## Simple Linear Regression
+
+Simple linear regression is a basic form of linear regression that deals with predicting a numerical outcome (dependent variable) based
+
+on a single input feature (independent variable). It’s a straightforward way to model and understand the relationship between two 
+
+variables.
+
+Variables: In simple linear regression, you have two main variables:
+
+Dependent Variable (Y): This is the variable you want to predict or explain. It’s the outcome you’re interested in.
+Independent Variable (X): This is the single feature or input variable that you believe has an influence on the dependent variable.
+The Equation: The linear regression model can be represented by a linear equation of the form:  
+
+## Multiple Linear Regression
+
+Multiple linear regression is an extension of simple linear regression, and it’s used when you want to predict a numerical outcome 
+
+(dependent variable) based on two or more input features (independent variables). In simple linear regression, you have one independent 
+
+variable, but in multiple linear regression, you can consider the combined effects of several independent variables on the dependent
+
+variable.
+
+Variables: In multiple linear regression, you have:
+
+Dependent Variable (Y): This is the variable you want to predict or explain.
+
+Independent Variables (X1, X2, X3, …): These are the input features that you believe influence the dependent variable. You can have as
+
+many independent variables as needed.   
+
+
+## Assumptions of Linear Regression
+
+Linear regression, like any statistical model, relies on a set of assumptions to be valid and provide accurate results. Here are the
+
+key assumptions of linear regression in machine learning:
+
+
+Linearity: 
+
+The relationship between the independent variables and the dependent variable should be linear. This means that the change in the dependent variable is directly proportional to changes in the independent variables. You can check this assumption by visualizing the data and looking for a roughly straight-line pattern in a scatterplot.
+
+Independence of Errors: 
+The errors (residuals) should be independent of each other, meaning that the error associated with one data point should not be related to the error of another data point. This assumption ensures that there is no hidden pattern left in the residuals.
+
+Homoscedasticity (Constant Variance): 
+The variance of the errors should be constant across all levels of the independent variables. In simpler terms, the spread of the 
+
+residuals should remain roughly the same throughout the entire range of the independent variables. You can check for this by plotting
+
+the residuals against the predicted values and looking for a consistent scatter of points.
+
+Normality of Errors: 
+
+The residuals should be normally distributed. This means that if you were to plot a histogram of the residuals, it should resemble a
+
+bell-shaped curve. Deviations from normality can sometimes be addressed by transforming the data or using robust regression techniques.
+
+No or Little Multicollinearity: In multiple linear regression (when you have more than one independent variable), the independent
+
+variables should not be highly correlated with each other. High multicollinearity can make it difficult to separate the individual
+
+effects of the variables on the dependent variable.
+
+No Perfect Multicollinearity: There should be no perfect linear relationship between the independent variables. Perfect 
+
+multicollinearity occurs when one independent variable can be perfectly predicted from the others. This makes it impossible to estimate
+
+the individual coefficients accurately.
+
+No Endogeneity: Endogeneity occurs when one or more of the independent variables are correlated with the error term. This can lead to
+
+biased and inefficient coefficient estimates.
+
+No Autocorrelation: 
+
+Autocorrelation (serial correlation) happens when the residuals are correlated with each other over time or across 
+
+observations. It is more relevant in time series data and can lead to incorrect standard errors and biased coefficient estimates.
+
+## How to check Assumptions of Linear Regression using Python
+
+You can check the assumptions of linear regression using Python by employing various libraries and techniques for diagnostic analysis.
+
+Here’s a step-by-step guide on how to check these assumptions:
+
+1. Import Libraries and Load Data:
+
+Start by importing necessary libraries like NumPy, pandas, and statsmodels or scikit-learn for linear regression.
+Load your dataset into a DataFrame.
+
+2. Fit a Linear Regression Model:
+
+Use a library like scikit-learn or statsmodels to fit a linear regression model to your data.
+
+import pandas as pd
+
+from sklearn.linear_model import LinearRegression
+
+# Load data into a DataFrame
+
+data = pd.read_csv('your_dataset.csv')
+
+# Define independent and dependent variables
+
+X = data[['X1', 'X2', 'X3']]
+
+y = data['Y']
+
+# Initialize and fit the linear regression model
+
+model = LinearRegression()
+
+model.fit(X, y)
+
+3. Residual Analysis:
+
+Calculate the residuals (the differences between actual and predicted values) using your fitted model.
+
+# Calculate residuals
+
+residuals = y - model.predict(X)
+
+4. Visualize Residuals:
+
+Create residual plots and histograms to check for the assumptions visually
+
+import matplotlib.pyplot as plt
+
+import seaborn as sns
+
+# Residual plot
+
+plt.scatter(model.predict(X), residuals)
+
+plt.xlabel("Predicted Values")
+
+plt.ylabel("Residuals")
+
+plt.axhline(y=0, color='r', linestyle='--')
+
+plt.title("Residual Plot")
+
+plt.show()
+
+# Histogram of residuals
+
+sns.histplot(residuals, kde=True)
+
+plt.xlabel("Residuals")
+
+plt.ylabel("Frequency")
+
+plt.title("Residual Distribution")
+
+plt.show()
+
+5. Check Assumptions:
+
+Linearity: Inspect the residual plot to see if there’s a clear pattern. It should resemble a random scatter around the zero line.
+
+Independence of Errors: Examine the residuals for any temporal or spatial patterns, especially if you’re working with time series or 
+
+spatial data.
+
+Homoscedasticity (Constant Variance): In the residual plot, check if the spread of residuals is roughly consistent across the range of predicted values. Use statistical tests like the Breusch-Pagan test or White test for formal heteroscedasticity tests.
+
+Normality of Errors: Plot a histogram of residuals and use statistical tests like the Shapiro-Wilk test or Q-Q plots to assess normality. The residuals should roughly follow a normal distribution.
+
+Multicollinearity: Calculate the Variance Inflation Factor (VIF) for each independent variable to check for multicollinearity. High VIF values (>5 or 10) indicate potential multicollinearity issues.
+
+## How to deal with the Violation of any of the Assumption Evaluation
+
+Dealing with violations of the assumptions in linear regression is an important step in improving the reliability of your model’s 
+
+results. Here are some strategies to address violations of these assumptions:
+
+Linearity:
+
+Transformation: If the relationship between the independent and dependent variables is not linear, you can try applying mathematical transformations to one or both variables. Common transformations include logarithmic, square root, or inverse transformations.
+Polynomial Regression: Consider using polynomial regression if the relationship appears to be quadratic or higher-order instead of linear. This involves adding squared, cubed, or higher-order terms of the independent variable(s) to the model.
+Independence of Errors:
+
+Time-Series Data: If you’re dealing with time-series data, consider using time-series techniques that account for autocorrelation. These techniques may involve lagged variables or autoregressive models.
+Residual Plots: Examine residual plots to check for patterns or trends in the residuals. If you detect any, try to identify and address the source of the correlation between errors.
+Homoscedasticity (Constant Variance):
+
+Heteroscedasticity-robust Standard Errors: When heteroscedasticity is present, you can use heteroscedasticity-robust standard errors to adjust your coefficient estimates and inferential statistics.
+Data Transformation: If heteroscedasticity is severe, consider transforming the dependent variable or using weighted least squares regression, where different weights are assigned to observations to account for varying variances.
+Normality of Errors:
+
+Data Transformation: If the residuals are not normally distributed, consider transforming the dependent variable or applying a suitable transformation to the residuals.
+Robust Regression: Robust regression techniques, such as robust standard errors or robust regression algorithms, can be used when the normality assumption is violated.
+
+
+ Multicollinearity:
+
+Feature Selection: Identify and remove highly correlated independent variables from the model, keeping only those that are most relevant for the prediction task.
+Principal Component Analysis (PCA): In some cases, PCA can be used to reduce multicollinearity by creating a set of uncorrelated variables (principal components).
+Endogeneity:
+
+Instrumental Variables: In cases of endogeneity, you may need to use instrumental variables to correct for the bias. Instrumental variables are external variables that are correlated with the independent variable of interest but not with the error term.
+Causality Analysis: Carefully examine the causal relationships between variables and consider conducting experiments or observational studies to mitigate endogeneity.
+Autocorrelation:
+
+Autoregressive Models: For time-series data, autoregressive models like ARIMA can be used to account for autocorrelation.
+Adding Lagged Variables: Include lagged versions of the dependent variable or relevant independent variables to account for autocorrelation.
+
+## Metrics for Regression Analysis
+
+In regression analysis, there are several metrics used to evaluate the performance of a predictive model. These metrics help assess how
+
+well the model’s predictions align with the actual values. Here are some common regression metrics and how to interpret them in the 
+
+context of machine learning:
+
+
+ ## Mean Absolute Error (MAE):
+
+MAE measures the average absolute difference between the predicted values and the actual values.
+
+Interpretation: A lower MAE indicates better model performance. It represents the average magnitude of errors, with lower values indicating smaller errors on average.
+
+from sklearn.metrics import mean_absolute_error
+
+mae = mean_absolute_error(y_true, y_pred)
+
+print(f"MAE: {mae}")
+
+
+##  Mean Squared Error (MSE):
+
+MSE measures the average of the squared differences between predicted and actual values.
+
+Interpretation: A lower MSE means the model’s predictions are closer to the actual values. Squaring the errors gives more weight to
+
+larger errors.
+
+from sklearn.metrics import mean_squared_error
+
+mse = mean_squared_error(y_true, y_pred)
+
+print(f"MSE: {mse}")
+
+## Root Mean Squared Error (RMSE):
+
+RMSE is the square root of MSE and is expressed in the same units as the dependent variable.
+
+Interpretation: Like MSE, a lower RMSE indicates better model performance. It is easier to interpret because it’s in the same units as the target variable.
+
+import numpy as np
+
+rmse = np.sqrt(mse)
+
+print(f"RMSE: {rmse}")
+
+
+## R-squared (R²):
+
+R-squared measures the proportion of the variance in the dependent variable that is explained by the independent variables in the model.
+
+Interpretation: R-squared values range from 0 to 1. A higher R² indicates a better fit of the model to the data. For instance, an R² of 0.75 means that 75% of the variance in the dependent variable is explained by the independent variables.
+
+from sklearn.metrics import r2_score
+
+r_squared = r2_score(y_true, y_pred)
+
+print(f"R²: {r_squared}")
+
+## Adjusted R-squared:
+
+Adjusted R-squared is similar to R-squared but adjusts for the number of predictors in the model.
+
+Interpretation: Higher adjusted R-squared values indicate better model fit while penalizing the addition of unnecessary variables. It 
+
+helps prevent overfitting.
+
+You need to calculate this manually based on R² and the number of predictors (features). Suppose you have n predictors
+
+adjusted_r_squared = 1 - (1 - r_squared) * (len(y_true) - 1) / (len(y_true) - n - 1)
+
+print(f"Adjusted R²: {adjusted_r_squared}")
+
+## Mean Absolute Percentage Error (MAPE):
+
+MAPE calculates the percentage difference between predicted and actual values, taking into account the magnitude of the error.
+
+Interpretation: A lower MAPE indicates better model performance. It measures the average percentage by which the model’s predictions deviate from the actual values.
+
+mape = np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+
+print(f"MAPE: {mape}%")
+
+## Coefficient of Determination (COD):
+
+COD is another way to express the goodness of fit and is equal to 1 — (MSE / Variance of the dependent variable).
+
+Interpretation: A higher COD indicates a better fit, similar to R-squared.
+
+cod = 1 - (mse / np.var(y_true))
+
+print(f"COD: {cod}")
+
+## Mean Bias Deviation (MBD):
+
+MBD measures the average bias of the model’s predictions, indicating whether the model tends to overestimate or underestimate the target values.
+
+Interpretation: A positive MBD suggests the model overestimates, while a negative MBD suggests underestimation. Ideally, MBD should be close to zero.
+
+mbd = np.mean(y_pred - y_true)
+
+print(f"MBD: {mbd}")
+
+
+## Median Absolute Error (MedAE):
+
+MedAE is the median of the absolute differences between predicted and actual values.
+
+Interpretation: MedAE is less sensitive to outliers compared to MAE. It’s useful when dealing with datasets that contain extreme values.
+
+from sklearn.metrics import median_absolute_error
+
+medae = median_absolute_error(y_true, y_pred)
+
+print(f"MedAE: {medae}")
+
+ ## Coefficient of Variation (CV):
+
+CV measures the ratio of the standard deviation to the mean of the residuals.
+
+Interpretation: A lower CV indicates better model performance, as it implies that the residuals are relatively small compared to the
+
+mean value.
+
+cv = np.std(y_pred - y_true) / np.mean(y_true)
+
+print(f"CV: {cv}")
+
+These Python code snippets use common libraries like scikit-learn and NumPy to calculate regression metrics. Make sure to replace y_true and y_pred with your actual and predicted values, respectively, before running the code.
+
+
+
+
 ### Why Linear Regression is Important
 
 Linear regression helps us:
 
-✔ Understand relationships between variables
-✔ Predict future values
-✔ Analyze trends in data
+Understand relationships between variables
+
+Predict future values
+
+Analyze trends in data
+
+
 
 Used in many industries:
 
@@ -9366,12 +11920,15 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 
 X = np.array([[1],[2],[3],[4]])
+
 y = np.array([40,50,60,70])
 
 model = LinearRegression()
+
 model.fit(X,y)
 
 prediction = model.predict([[5]])
+
 print(prediction)
 
 This predicts the score for 5 study hours.
@@ -9620,6 +12177,14 @@ Price = b0 + b1(Size) + b2(Bedrooms)
 
 Gradient Descent is an optimization algorithm used in machine learning to find the best model parameters that minimize the error (loss).
 
+Gradient Descent is an optimisation algorithm used to minimize a model’s error by iteratively adjusting its parameters. By moving step‑by‑step in the direction of the steepest decrease in the loss function, it helps machine learning models learn the best possible weights for better predictions.
+
+Essential for training neural networks and regression models
+
+Works by updating parameters based on calculated gradients
+
+Variants include Batch, Stochastic and Mini‑Batch Gradient Descent
+
 In simple terms:
 
 Gradient Descent helps the model find the lowest error by moving step-by-step toward the best solution.
@@ -9652,6 +12217,454 @@ This is exactly what Gradient Descent does mathematically.
 | Minimum Loss  | Bottom of valley   |
 | Gradient      | Direction of slope |
 | Step size     | Walking step       |
+
+
+
+## The Gradient Descent Algorithm and the Intuition Behind It
+
+
+INTRODUCING SOME KEY DEFINITIONS
+
+Within optimization methods, and in the first order algorithm type, one has certainly heard of the one known as Gradient Descent. It is
+
+of the first-order optimization type as it requires the first-order derivative, namely the gradient. By optimizing, gradient descent
+
+aims to minimize the difference between the "actual" output and the predicted output of the model as measured by the objective 
+
+function, namely a cost function. The gradient, or slope, is defined as the direction of the line drawn by such function (curved or
+
+straight) at a given point of such line. Iteratively, gradient descent aims to differentiate the cost function at different points of
+
+the line so to derive the degree of change in direction at these points and hence take steps towards the steepest descent, namely the
+
+local minimum. As its name indicates, the gradient is used as the direction towards the steepest descent in search for the local 
+
+minimum where the parameters’ values of the cost function being optimized are minimized hence at its lowest values.
+
+
+Gradient Descent is mostly used (among others) to train machine learning models and deep learning models, the latter based on a neural
+
+network architectural type. From linear regression and logistic regression to neural networks, gradient descent aims to calculate the
+
+function’s best parameters values. In its simplest form, gradient descent aims to minimize the error term of the below linear
+
+regression by deriving the optimal values of the parameters for the independent variables. This is,
+
+y = β0 + β1 X1 + … βk Xk + Ɛ
+
+where,
+
+y is the dependent variable
+
+k number of independent variables
+
+X independent variable
+
+β parameter
+
+Ɛ error term component
+
+In its more complex form, gradient descent is most frequently defined as the optimizer when training a deep learning model,
+
+specifically on the compiling phase. Deep learning is based on an interconnected network to learn and improve continuously, namely a
+
+neural network. Inspired by the human brain, a neural network is a highly complex network represented by artificial neurons, known as 
+
+nodes. At the top level, the nodes have the important role to process and analyse the data from a node in the previous layer and pass
+
+it to another node in the next layer. In a neural network, a weight, namely the parameters of interest for optimization, are the link 
+
+between nodes. They are the link between inputs/features and hidden layers hence they represent the importance of a given feature in 
+
+predicting the final output. Finding the optimal value of a single weight depends on the value of many weights. And this optimization
+
+is taking placing for many weights at once, which in a deep neural network can be substantially large even in millions. Here is where 
+
+gradient descent is found to perform highly efficiently on the large number of calculations involved, these based on the three main 
+
+layers of a neural network: 1) Input Layer 2) Hidden Layer and 3) Output Layer.
+
+
+There are numerous papers that properly detail and expand on methods such deep learning and methods that estimates the value of a 
+
+function’s parameters hence expand on the difference between gradient descent and Ordinary Least Square (OLS), in the case of linear
+
+regression for example. As this is not the focus of this paper, the reader is prompted to investigate further and expand for a good 
+
+understanding on such methodologies.
+
+2. TIME FOR SOME CALCULUS!
+
+For a good understanding of gradient descent, we need to expand on the definition of a differentiable function. A function, explicitly 
+
+ƒ(x), is differentiable when the derivative can be defined at any point of the curved line derived by such function. This is, for all
+
+points in the domain of the function ƒ(x). Here, two concepts reinforce this definition: first-order derivative and second order
+
+derivative. The first-order derivative formula is defined as follow:
+
+Linear Regression Formula
+
+One simple model where gradient descent is used is linear regression.
+
+y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \varepsilon
+
+Where:
+
+y = dependent variable (output we want to predict)
+
+X₁, X₂ … Xk = independent variables (input features)
+
+β₀, β₁ … βk = model parameters or weights
+
+Ɛ (epsilon) = error term
+
+The objective of gradient descent is to find the best values of β (parameters) so that the model predicts values of y with minimum 
+
+error.
+
+## Role of Gradient Descent
+
+In simple terms, Gradient Descent works like walking downhill to reach the lowest point of a valley.
+
+The lowest point represents the minimum error of the model.
+
+The algorithm works by:
+
+Starting with random parameter values
+
+Calculating the error of the model
+
+Measuring the slope (gradient) of the error function
+
+Updating the parameters in the opposite direction of the slope
+
+Repeating the process until the error becomes very small
+
+This process helps the model learn the best parameters automatically.
+
+Gradient Descent in Deep Learning
+
+Gradient Descent is extremely important in deep learning models.
+
+Deep learning models are based on Artificial Neural Network.
+
+A neural network is inspired by the human brain and consists of interconnected processing units called neurons (nodes).
+
+A neural network usually has three main layers:
+
+Input Layer – receives the input data
+
+Hidden Layer – processes information
+
+Output Layer – produces the final prediction
+
+Each connection between neurons has a weight. These weights determine how important each input feature is for making predictions.
+
+In large neural networks, there may be thousands or even millions of weights. Gradient Descent helps efficiently update these weights during training.
+
+## Why Optimization is Needed
+
+When training a neural network, the goal is to minimize a function called the loss function or cost function.
+
+The loss function measures how far the predicted value is from the actual value.
+
+Gradient Descent repeatedly adjusts the weights to reduce this loss until the model reaches the minimum error point.
+
+## Understanding Gradient Descent Using Calculus
+
+To understand gradient descent deeply, we need some basic concepts from calculus.
+
+Differentiable Function
+
+A function is called differentiable if we can calculate its derivative.
+
+A derivative tells us how the function changes at a specific point.
+
+First-Order Derivative
+
+The first derivative measures the slope of the function.
+
+f'(x) = \frac{df(x)}{dx}
+
+Interpretation:
+
+If the slope is positive, the function is increasing
+
+If the slope is negative, the function is decreasing
+
+Gradient Descent uses this slope information to decide which direction to move to reduce the error.
+
+Second-Order Derivative
+
+The second derivative helps understand the shape of the function.
+
+f''(x) = \frac{d^2 f(x)}{dx^2}
+
+It tells us whether the function is:
+
+Convex (curving upward) → Minimum point
+
+Concave (curving downward) → Maximum point
+
+Important cases:
+
+If
+
+f ′′ ( x ) > 0
+
+the function is convex, meaning it has a minimum point.
+
+If
+
+f ′′ ( x ) < 0
+
+the function is concave, meaning it has a maximum point.
+
+If
+
+f ′ ′( x ) = 0
+
+the function is at an inflection point, where the curve changes direction.
+
+## Multivariable Functions
+
+In real-world machine learning problems, models usually depend on multiple variables.
+
+Instead of a simple function:
+
+y = f ( x )
+
+## 3. THE GRADIENT DESCENT ALGORITHM AT WORK
+
+The larger the absolute value of the slope, the further we can step, and/or we can keep taking steps towards the steepest descent, 
+
+namely the local minimum. As we approach the lowest/minimum point, the slope diminishes so one can take smaller steps until reaching a
+
+flat surface where the slope is equal to zero (0), ƒ'(x) = 0, this is lowest value of βi as pointed by the red arrow in the graph 
+
+below. This is where the local minimum of the curved line is, and optimum values of the function’s parameters are derived.
+
+
+Thus, if a function is strictly convex (concave), there will only be one critical point. Now, there is also the case where there are
+
+multiple local minima. In this case, the search is for the single lowest value the function can achieve. This is known as Global
+
+Minimum.
+
+
+## Gradient Descent – Direction and Step Size
+
+Gradient Descent is widely used in models such as Linear Regression, Logistic Regression, and Neural Networks.
+
+While using Gradient Descent, two very important questions arise:
+
+In which direction should the algorithm move?
+
+How large should the step be?
+
+These two questions determine how efficiently the algorithm reaches the minimum error point.
+
+Direction of the Step
+
+The direction in which Gradient Descent moves depends on the gradient (slope) of the function.
+
+To understand this, we use the concept of derivatives.
+
+Derivative tells us how a function changes at a particular point.
+
+If the derivative is:
+
+Positive → the function is increasing
+
+Negative → the function is decreasing
+
+Since Gradient Descent tries to reduce the error, it always moves in the opposite direction of the gradient.
+
+This means the algorithm moves downhill toward the minimum point of the error function.
+
+## Understanding the Gradient
+
+The gradient represents the direction of the steepest increase in a function.
+
+In Gradient Descent, we move in the opposite direction of the gradient to reach the steepest decrease, which leads to the minimum error.
+
+When the gradient is large:
+
+The slope of the curve is steep
+
+The algorithm takes larger steps
+
+When the gradient is small:
+
+The slope is flatter
+
+The algorithm takes smaller steps
+
+As the algorithm approaches the minimum point, the steps become smaller and smaller.
+
+This helps the algorithm stabilize around the optimal parameter values.
+
+Step Size and Learning Rate
+
+The size of the step taken by Gradient Descent is controlled by a parameter called the learning rate.
+
+The learning rate determines how quickly the algorithm moves toward the minimum error point.
+
+If the learning rate is:
+
+Very Large
+
+The algorithm may overshoot the minimum
+
+It might miss the optimal solution
+
+Very Small
+
+The algorithm will move very slowly
+
+Training may take too much time
+
+Therefore, choosing the right learning rate is very important.
+
+The learning rate is considered a hyperparameter, meaning it must be selected carefully during model training.
+
+## Cost Function
+
+The cost function measures how far the model’s predictions are from the actual values.
+
+The objective of Gradient Descent is to minimize this cost function.
+
+When the cost function stops decreasing during training, the algorithm has reached convergence.
+
+Convergence means the model has reached the best parameter values it can find.
+
+Gradient of the Cost Function
+
+In machine learning models, we calculate the partial derivative of the cost function with respect to each parameter.
+
+This helps determine how each parameter affects the error.
+
+The gradient of the cost function can be written as:
+
+\frac{\partial f}{\partial \beta}
+
+Where:
+
+f = cost function
+
+β = model parameter (weight)
+
+This derivative tells us how the cost function changes when the parameter changes.
+
+## Gradient in Multivariable Functions
+
+Most real-world machine learning models use multiple variables.
+
+Instead of a single derivative, we calculate a gradient vector.
+
+\nabla f = \left(\frac{\partial f}{\partial \beta_1},\frac{\partial f}{\partial \beta_2},...,\frac{\partial f}{\partial \beta_k}\right)
+
+Where:
+
+∇f represents the gradient vector
+
+Each component shows the partial derivative of the cost function with respect to each parameter
+
+The gradient vector tells the algorithm which direction will reduce the error fastest.
+
+## Updating Model Parameters
+
+Gradient Descent updates model parameters step by step using the following rule:
+
+\beta_{new} = \beta_{old} - \eta \nabla f
+
+Where:
+
+βₙₑw = updated parameter value
+
+βₒld = previous parameter value
+
+η (eta) = learning rate
+
+∇f = gradient of the cost function
+
+This formula means:
+
+Calculate the gradient
+
+Multiply it by the learning rate
+
+Subtract the result from the current parameter
+
+This moves the parameter toward the minimum error point.
+
+## Variables in the Cost Function
+
+Some additional variables used in gradient calculations include:
+
+m → number of training data points
+
+yᵢ → actual value of the target variable
+
+ŷᵢ → predicted value from the model
+
+xᵢ → input feature value
+
+These values are used to compute the prediction error.
+
+Iterative Process of Gradient Descent
+
+Gradient Descent works through repeated steps called iterations.
+
+Each iteration includes:
+
+Predict output values
+
+Calculate error using the cost function
+
+Compute the gradient
+
+Update model parameters
+
+Repeat until the error stops decreasing
+
+Through this process, the algorithm slowly moves toward the optimal parameter values.
+
+4. LIMITATIONS OF GRADIENT DESCENT
+
+One of the limitations of gradient descent is related to one of the criteria mentioned above where the function must be differentiable
+
+at every point of its domain. When this is not the case and the algorithm finds a point that is undefined, (i.e., non-continuous) then 
+
+it fails.
+
+Another limitation is related to the size of the steps, namely the learning rate (n), taken towards the steepest descent. If too large 
+
+it is likely to miss the local minimum or even not reach converge at all. If too small, it will take much longer to converge. If the
+
+number of inputs is large, this becomes even more problematic.
+
+Finally, gradient descent might never find the global minimum. The algorithm is not able to distinguish between a local and global 
+
+minimum. As it descent in search of the local minimum, once it converges it will then stop. The local minimum will corner the algorithm
+
+in the local minimum own valley preventing the step to be large enough to exit.
+
+5. CONCLUSIONS
+
+In summary, gradient descent is:
+
+1) An iterative, first-order optimization algorithm type
+
+2) Within each iteration, the parameters of the differentiable function are updated, and the cost function is minimized.
+
+3) Thus, convergence is reached on the local minimum.
+
+Based on the limitations of the gradient descent, there are motivations to explore different and more advanced type of gradient descent
+
+methods or even other types of algorithms in the realm of optimization such as the second-order type.
+
 
 
 ## Why Gradient Descent is Used
@@ -9818,9 +12831,132 @@ Step 3 → Even lower
 Step 4 → Minimum error
 
 
-​
+Gradient Descent – Quiz
+
+1. What is the main purpose of Gradient Descent?
+
+A. Increase model complexity
+
+B. Minimize the error or loss function
+
+C. Increase the number of features
+
+D. Reduce dataset size
+
+Correct Answer: B
+
+Explanation: Gradient Descent minimizes the error (loss function) by adjusting model parameters.
+
+2. Gradient Descent is commonly used to train which types of models?
+
+A. Web servers
+
+B. Machine learning and deep learning models
+
+C. Databases
+
+D. Operating systems
+
+ Correct Answer: B
+
+3. In the linear regression equation
+
+𝑦 = 𝛽0 + 𝛽1𝑋1 +… +𝛽 𝑘 𝑋 𝑘  + Ɛ y = β 0 + β 1 X 1 + … + β k X k + Ɛ
 
 
+what does β (beta) represent?
+
+A. Input variable
+
+B. Error value
+
+C. Model parameter or weight
+
+D. Output variable
+
+Correct Answer: C
+
+Explanation: β represents parameters (weights) that determine the influence of each feature.
+
+4. What does Ɛ (epsilon) represent in the regression equation?
+
+A. Feature value
+
+B. Error term
+
+C. Gradient value
+
+D. Weight parameter
+
+Correct Answer: B
+
+5. Which type of model architecture heavily relies on Gradient Descent?
+
+A. Decision trees
+
+B. Neural networks
+
+C. Rule-based systems
+
+D. Database queries
+
+Correct Answer: B
+
+6. In a neural network, what connects one neuron (node) to another?
+
+A. Activation functions
+
+B. Weights
+
+C. Bias values
+
+D. Layers
+
+Correct Answer: B
+
+Explanation: Weights connect neurons and represent the importance of inputs.
+
+7. What does the first-order derivative represent in calculus?
+
+A. Area under curve
+
+B. Slope of the function
+
+C. Maximum value
+
+D. Error term
+
+Correct Answer: B
+
+Explanation: The first derivative represents the slope of the function.
+
+8. What does the second-order derivative help determine?
+
+A. Dataset size
+
+B. Shape of the function (convex or concave)
+
+C. Learning rate
+
+D. Input variables
+
+Correct Answer: B
+
+
+
+9. What is the role of partial derivatives in Gradient Descent?
+
+A. Remove data points
+
+B. Measure change of the cost function with respect to each variable
+
+C. Increase model accuracy directly
+
+D. Remove noise from data
+
+Correct Answer: B
+
+Explanation: Partial derivatives help calculate how much each parameter should change to reduce the cost function.​
 
 
 
@@ -10351,6 +13487,2038 @@ D) KNN
 Answer: B) Polynomial Regression
 
 
+## Lasso Regression
+
+In machine learning, models are trained using data to make predictions. Sometimes a model becomes too complex and learns the training data too well. This problem is called Overfitting. When overfitting happens, the model performs well on training data but poorly on new or unseen data.
+
+To solve this problem, data scientists use a technique called regularization. Regularization helps control the complexity of a model and reduces overfitting.
+
+One popular regularization method is Lasso Regression.
+
+## What is Lasso Regression?
+
+Lasso Regression is a technique used to improve the accuracy of regression models by adding a penalty term to the model.
+
+It is mainly used with Linear Regression models.
+
+Lasso regression is also called L1 Regularization because it uses the L1 penalty on model coefficients.
+
+The word LASSO stands for:
+
+Least Absolute Shrinkage and Selection Operator
+
+This method helps the model become simpler and more accurate.
+
+## Lasso Regression Formula
+
+The idea of Lasso regression can be represented with the following formula:
+
+\hat{w} = \arg\min_w  \ left ( MSE (w) +  \lambda  ||w|| _1\right)
+
+Where:
+
+MSE(w) = Mean Squared Error (prediction error of the model)
+
+||w||₁ = L1 penalty (sum of absolute values of coefficients)
+
+λ (lambda) = regularization parameter that controls the penalty strength
+
+w = model coefficients
+
+The goal of the formula is to minimize both the prediction error and the size of the coefficients.
+
+History of Lasso Regression
+
+The concept behind Lasso regression started from a 1986 geophysics research paper by David Santosa and William W. Symes.
+
+Later, in 1996, statistician Robert Tibshirani introduced and popularized the term LASSO.
+
+How Lasso Regression Works
+
+In normal linear regression, the model tries to minimize only the prediction error.
+
+However, Lasso regression adds a penalty to large coefficients.
+
+Because of this penalty:
+
+Some coefficients become very small
+
+Some coefficients become exactly zero
+
+When a coefficient becomes zero, that feature is removed from the model automatically.
+
+This process is called automatic feature selection.
+
+Role of the Lambda (λ) Parameter
+
+The lambda parameter (λ) controls the strength of the penalty.
+
+If λ is large
+
+Strong penalty is applied
+
+More coefficients shrink to zero
+
+Fewer features remain in the model
+
+If λ is small
+
+Weak penalty is applied
+
+Most features remain in the model
+
+Choosing the right lambda value is important for building a good model.
+
+Why Lasso Regression is Useful
+
+Lasso regression provides several benefits:
+
+1 Feature Selection
+
+It automatically removes unimportant features by making their coefficients zero.
+
+2 Prevents Overfitting
+
+By reducing model complexity, it helps the model perform better on new data.
+
+3 Handles High-Dimensional Data
+
+It works well when datasets contain many features.
+
+4 Improves Model Interpretability
+
+With fewer features, the model becomes easier to understand.
+
+Multicollinearity Problem
+
+In datasets, sometimes multiple independent variables are highly correlated with each other.
+
+This problem is called Multicollinearity.
+
+Multicollinearity can make regression models unstable.
+
+Lasso regression helps solve this problem by removing unnecessary variables.
+
+Comparison with Ridge Regression
+
+Another regularization method is Ridge Regression.
+
+The difference between them is:
+
+| Method           | Feature Removal                                 |
+| ---------------- | ----------------------------------------------- |
+| Ridge Regression | Reduces coefficients but rarely makes them zero |
+| Lasso Regression | Can reduce coefficients to zero                 |
+
+
+
+## Bias–Variance Tradeoff in Regression
+
+In machine learning, when we build predictive models, we want them to perform well not only on training data but also on new unseen data. However, achieving this balance is difficult because of a concept known as the bias–variance tradeoff.
+
+The bias–variance tradeoff explains the relationship between model simplicity and prediction accuracy.
+
+If a model is too simple, it may not learn the patterns in the data properly.
+If a model is too complex, it may memorize the training data and fail on new data.
+
+Regularization techniques such as Lasso Regression help manage this problem.
+
+## What is Bias?
+
+Bias measures the difference between the true values and the predicted values produced by the model.
+
+A model with high bias:
+
+Makes strong assumptions about the data
+
+Is usually too simple
+
+Performs poorly even on training data
+
+This situation is called underfitting.
+
+Example:
+
+Trying to fit a straight line to data that clearly follows a curved pattern.
+
+## What is Variance?
+
+Variance measures how much the model’s predictions change when trained on different datasets.
+
+A model with high variance:
+
+Fits the training data very closely
+
+Captures noise in the data
+
+Performs poorly on new data
+
+This situation is called overfitting.
+
+Bias–Variance Tradeoff
+
+The challenge in machine learning is that bias and variance cannot both be minimized at the same time.
+
+If we decrease bias:
+
+Model complexity increases
+
+Variance increases
+
+If we decrease variance:
+
+Model becomes simpler
+
+Bias increases
+
+Therefore, the goal is to find a balance between bias and variance to build a model that generalizes well.
+
+This balance is known as the bias–variance tradeoff.
+
+Role of Regularization
+
+To control model complexity, we use regularization techniques.
+
+Regularization adds a penalty to the model coefficients to prevent the model from becoming too complex.
+
+One of the most commonly used regularization techniques is Lasso Regression.
+
+Lasso Regression and Lambda (λ)
+
+In Lasso regression, the regularization parameter λ (lambda) controls the strength of the penalty.
+
+The objective function of Lasso regression is:
+
+MSE + \lambda \sum |\beta|
+
+Where:
+
+MSE = Mean Squared Error
+
+β = regression coefficients
+
+λ (lambda) = regularization parameter
+
+The model tries to minimize both the prediction error and the size of the coefficients.
+
+Effect of Lambda on Bias and Variance
+When λ increases
+
+Stronger penalty applied
+
+Coefficients shrink toward zero
+
+Model becomes simpler
+
+Bias increases
+
+Variance decreases
+
+When λ decreases
+
+Weak penalty applied
+
+More coefficients remain in the model
+
+Model becomes more complex
+
+Variance increases
+
+Bias decreases
+
+When λ = 0
+
+The model becomes a normal Ordinary Least Squares regression with no regularization.
+
+#Steps to Apply Lasso Regression
+
+1. Exploratory Data Analysis (EDA)
+
+Before building a model, it is important to analyze the dataset.
+
+During this stage, we check:
+
+Missing data
+
+Number of features
+
+Distribution of variables
+
+Correlation between variables
+
+Datasets with many features or correlated variables can cause overfitting.
+
+2. Split the Dataset
+
+The data is divided into:
+
+Training set → used to train the model
+
+Test set → used to evaluate performance
+
+This helps test how well the model performs on new data.
+
+
+3. Feature Scaling
+
+In regression models, features must be scaled so that they have similar ranges.
+
+A common method is Z-score scaling.
+
+The formula for Z-score scaling is:
+
+z = x  − μ / σ
+
+Where:
+
+x = original value
+
+μ = mean of the feature
+
+σ = standard deviation
+
+After scaling, the data has:
+
+Mean = 0
+
+Standard deviation = 1
+
+## Model Training
+
+After preparing the data:
+
+Fit the Lasso regression model on training data
+
+Choose an appropriate value of λ
+
+Minimize the Mean Squared Error (MSE)
+
+The MSE formula is:
+
+MSE =  \ frac { 1 }  { n }  \ sum  ( y _ i  -  \ hat { y _ i } )^2
+
+Where:
+
+yi = actual value
+
+ŷi = predicted value
+
+n = number of observations
+
+The goal is to make the MSE as small as possible.
+
+## Choosing the Best Lambda Value
+
+To find the best λ value, we use cross-validation.
+
+A popular method is k-fold cross-validation.
+
+In this method:
+
+The dataset is divided into k smaller groups
+
+The model is trained and tested multiple times
+
+The λ value that gives the lowest MSE is selected.
+
+## Evaluating Model Performance
+
+Two common metrics are used:
+
+Mean Squared Error (MSE)
+
+Measures the average squared difference between actual and predicted values.
+
+R² Score
+
+Measures how much variance in the dependent variable is explained by the model.
+
+Higher R² means better performance.
+
+## When to Use Lasso Regression
+
+Lasso regression is useful when:
+
+1. High-Dimensional Data
+
+Datasets with many features compared to the number of observations.
+
+2. Feature Selection
+
+Lasso automatically removes unimportant variables.
+
+3. Simplifying Models
+
+By shrinking coefficients to zero, the model becomes easier to interpret.
+
+## Limitations of Lasso Regression
+
+Although Lasso is powerful, it has some limitations.
+
+If features are highly correlated, Lasso may randomly select one variable and remove others.
+
+In such cases, another regularization technique called Elastic Net Regularization may work better.
+
+
+## Ridge Regression
+
+In machine learning and statistics, we often use linear regression models to predict values.
+
+However, sometimes these models perform very well on training data but perform poorly on new data.
+
+This problem is called overfitting.
+
+To solve this issue, we use a technique called regularization.
+
+One of the most important regularization techniques is Ridge Regression.
+
+Ridge regression helps improve model performance by reducing overfitting and controlling large coefficients.
+
+## What is Ridge Regression?
+
+Ridge regression is a statistical method used to improve linear regression models.
+
+It works by adding a penalty term to the regression equation.
+
+This penalty prevents the model from assigning very large weights to predictor variables.
+
+Because of this, ridge regression:
+
+Reduces overfitting
+
+Improves model stability
+
+Handles correlated variables better
+
+Ridge regression is also known as L2 Regularization.
+
+The reason it is called L2 regularization is because it uses the square of the coefficients in its penalty term.
+
+ Why Do We Need Ridge Regression?
+
+Before understanding ridge regression, we must understand a major problem in regression models called multicollinearity.
+
+ What is Multicollinearity?
+
+Multicollinearity happens when two or more independent variables are highly correlated with each other.
+
+This means that one predictor variable can almost be predicted from another.
+
+When this happens, the regression model becomes unstable.
+
+The model cannot determine which variable is actually responsible for predicting the output.
+
+Example of Multicollinearity
+
+Imagine a supply chain delivery dataset.
+
+We are trying to predict delivery performance using:
+
+Delivery distance
+
+Number of items delivered
+
+Suppose the dataset shows:
+
+Long-distance deliveries always contain many items
+
+Short-distance deliveries always contain few items
+
+In this case:
+
+Distance and item quantity become highly correlated.
+
+Because of this, the model struggles to determine which variable affects the prediction.
+
+This creates multicollinearity.
+
+## Problems Caused by Multicollinearity
+
+Multicollinearity causes several issues in regression models:
+
+Regression coefficients become very large
+
+Model predictions become unstable
+
+Small changes in input cause large changes in output
+
+Model becomes sensitive to noise
+
+Overfitting occurs
+
+To solve these problems, ridge regression is used.
+
+# 5. Linear Regression Model
+
+A basic Linear Regression equation looks like this:
+
+Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_nX_n
+
+Where:
+
+Y = predicted output (dependent variable)
+
+X₁, X₂ … Xn = independent variables (predictors)
+
+β₀ = intercept
+
+β₁, β₂ … βn = regression coefficients
+
+These coefficients determine how strongly each feature affects the prediction.
+
+6. Ordinary Least Squares (OLS)
+
+In normal linear regression, we calculate coefficients using a method called:
+
+Ordinary Least Squares
+
+The goal of OLS is to find the best-fitting line by minimizing the prediction error.
+
+This error is measured using the Residual Sum of Squares (RSS).
+
+7. Residual Sum of Squares (RSS)
+
+Residual Sum of Squares measures the difference between:
+
+Actual values
+
+Predicted values
+
+The formula is:
+
+RSS = \sum (y_i - \hat{y_i})^2
+
+Where:
+
+yi = actual value
+
+ŷi = predicted value
+
+If RSS = 0, the predictions are perfect.
+
+However, a perfect fit is often a sign of overfitting.
+
+8. Problem with OLS in Multicollinearity
+
+When predictor variables are highly correlated:
+
+OLS may produce very large coefficient values.
+
+Large coefficients make the model unstable.
+
+Even small changes in input data can change predictions drastically.
+
+This is why OLS does not work well with multicollinearity.
+
+9. Ridge Regression Solution
+
+Ridge regression modifies the OLS method by adding a penalty term.
+
+This penalty term reduces large coefficient values.
+
+This process is called coefficient shrinkage.
+
+10. Ridge Regression Formula
+
+The ridge regression equation adds an L2 penalty term.
+
+RSS + \ lambda  \ sum  \ beta ^ 2
+
+Where:
+
+RSS = Residual Sum of Squares
+
+β² = squared coefficients
+
+λ (lambda) = regularization parameter
+
+The goal is to minimize both:
+
+Prediction error
+
+Size of coefficients
+
+11. Role of Lambda (λ)
+
+The parameter λ (lambda) controls the strength of the penalty.
+
+When λ = 0
+
+The model becomes normal linear regression.
+
+When λ increases
+
+Penalty increases
+
+Coefficients shrink
+
+Model becomes simpler
+
+Overfitting decreases
+
+When λ becomes very large
+
+Coefficients become very small
+
+Model becomes overly simple
+
+12. Coefficient Shrinkage
+
+Ridge regression reduces coefficient values.
+
+But it does not reduce them to zero.
+
+Instead, it shrinks them toward zero.
+
+This is called coefficient shrinkage.
+
+Important point:
+
+Large coefficients shrink more than small ones.
+
+
+## Effect of Ridge Regression
+
+Ridge regression improves models in several ways:
+
+Reduces overfitting
+
+Handles multicollinearity
+
+Stabilizes regression coefficients
+
+Improves generalization to new data
+
+Ridge Regression vs Lasso Regression
+
+Another regularization technique is Lasso Regression.
+
+Both ridge and lasso reduce model complexity, but they work differently.
+
+Ridge Regression (L2)
+
+Shrinks coefficients toward zero
+
+Does NOT remove variables
+
+All features remain in the model
+
+Lasso Regression (L1)
+
+Shrinks coefficients to zero
+
+Removes unimportant variables
+
+Performs feature selection
+
+## Ridge Regression Limitations
+
+Although ridge regression is powerful, it has some limitations.
+
+It cannot remove irrelevant variables
+
+All predictors remain in the model
+
+It may struggle when multicollinearity is extremely severe
+
+Alternative Regularization Methods
+
+Other regularization methods include:
+
+Elastic Net
+
+Elastic Net Regularization
+
+Elastic Net combines:
+
+L1 penalty (lasso)
+
+L2 penalty (ridge)
+
+This method benefits from both techniques.
+
+17. When to Use Ridge Regression
+
+Ridge regression is useful when:
+
+Dataset contains many features
+
+Independent variables are correlated
+
+Model coefficients become too large
+
+Overfitting occurs.
+
+## Elastic Net Regularization
+
+In machine learning, regression models can sometimes become too complex.
+When a model learns the training data too well and performs poorly on new data, this problem is called overfitting.
+
+To solve this problem, we use a technique called regularization.
+
+Regularization adds a penalty term to the regression model so that the model becomes simpler and avoids overfitting.
+
+Two common regularization methods are:
+
+Ridge Regression
+
+Lasso Regression
+
+However, both methods have some limitations.
+
+To combine the advantages of both techniques, we use Elastic Net Regularization.
+
+Elastic Net uses both L1 and L2 penalties together.
+
+## Why Elastic Net is Needed
+
+Before Elastic Net was introduced, people used Ridge or Lasso separately.
+
+But both methods had weaknesses.
+
+Ridge Regression Problem
+
+It shrinks coefficients but never removes features.
+
+All variables remain in the model.
+
+Lasso Regression Problem
+
+It removes features but struggles when predictors are highly correlated.
+
+Elastic Net solves both problems by combining the strengths of both techniques.
+
+# Elastic Net Formula
+
+Elastic Net adds two penalty terms to the regression model.
+
+The Elastic Net objective function is:
+
+MSE + \ lambda _ 1  \ sum  | \ beta | + \ lambda _ 2 \ sum \ beta ^ 2
+
+Where:
+
+MSE → prediction error
+
+|β| → absolute value of coefficients (L1 penalty)
+
+β² → squared coefficients (L2 penalty)
+
+λ1 → Lasso penalty strength
+
+λ2 → Ridge penalty strength
+
+Elastic Net minimizes both:
+
+prediction error
+
+coefficient size.
+
+How Elastic Net Works
+
+Elastic Net works in three main ways.
+
+Step 1: Shrinks coefficients
+
+Large coefficient values are reduced.
+
+This prevents the model from overfitting.
+
+Step 2: Performs feature selection
+
+Some coefficients become exactly zero.
+
+This removes unimportant features.
+
+Step 3: Handles correlated features
+
+If several variables are correlated, Elastic Net tends to keep them together instead of selecting only one.
+
+This is better than Lasso in many cases.
+
+## Hyperparameters in Elastic Net
+
+Elastic Net has two important hyperparameters.
+
+1. Lambda (λ)
+
+Controls the overall strength of regularization.
+
+Higher λ → stronger penalty
+
+Lower λ → weaker penalty
+
+2. Alpha (α)
+
+Controls the balance between Ridge and Lasso.
+
+If:
+
+α = 1 → behaves like Lasso
+
+α = 0 → behaves like Ridge
+
+0 < α < 1 → Elastic Net combination
+
+
+## Elastic Net Cost Function (Alternative Form)
+
+Another common form of Elastic Net is:
+
+MSE  +  \ lambda  [\alpha \sum |\beta| + (1-\alpha) \sum \beta^2]
+
+Where:
+
+λ controls regularization strength
+
+α controls the mix between L1 and L2 penalties
+
+Steps to Apply Elastic Net
+Step 1 — Data Preparation
+
+Handle missing values
+
+Understand feature distribution
+
+Identify correlated features
+
+Step 2 — Feature Scaling
+
+Regularization methods require feature scaling.
+
+Step 3 — Split Dataset
+
+Divide dataset into:
+
+Training data
+
+Test data
+
+Step 4 — Train Elastic Net Model
+
+Train model using training dataset.
+
+Choose values of:
+
+λ
+
+α
+
+Step 5 — Hyperparameter Tuning
+
+Use cross-validation to find the best values.
+
+Common technique:
+
+K-fold cross validation
+
+Step 6 — Evaluate Model
+
+Evaluate using metrics such as:
+
+MSE
+
+R² score
+
+RMSE
+
+## Real-World Example (Real Time Example)
+
+House Price Prediction
+
+Suppose we want to predict house prices.
+
+Dataset features include:
+
+house size
+
+number of rooms
+
+location score
+
+distance from city center
+
+property age
+
+number of nearby schools
+
+Many of these variables are correlated.
+
+Example:
+
+House size and number of rooms are correlated.
+
+Location score and distance from city center are correlated.
+
+If we use normal linear regression:
+
+coefficients may become very large
+
+model may overfit
+
+Using Elastic Net:
+
+unimportant variables may be removed
+
+correlated variables are handled better
+
+coefficients shrink
+
+prediction becomes more stable
+
+Result:
+
+The model predicts house prices more accurately on new data.
+
+Advantages of Elastic Net
+
+Elastic Net has several advantages.
+
+Combines Ridge and Lasso benefits
+
+Handles correlated variables well
+
+Performs automatic feature selection
+
+Reduces overfitting
+
+Works well with high-dimensional data
+
+12. Limitations of Elastic Net
+
+Some limitations include:
+
+Requires hyperparameter tuning
+
+Slightly more complex than ridge or lasso
+
+Needs feature scaling
+
+13. When to Use Elastic Net
+
+Elastic Net is ideal when:
+
+dataset has many features
+
+predictors are correlated
+
+feature selection is needed
+
+model overfitting occurs
+
+It is widely used in:
+
+finance prediction
+
+medical research
+
+marketing analytics
+
+recommendation systems
+
+## Simple Comparison
+
+| Method      | Penalty Type | Feature Selection |
+| ----------- | ------------ | ----------------- |
+| Ridge       | L2           | No                |
+| Lasso       | L1           | Yes               |
+| Elastic Net | L1 + L2      | Yes               |
+
+
+## Support Vector Machines 
+
+Support Vector Machines (SVMs) are a type of supervised machine learning algorithm used for classification and regression tasks. They
+
+are widely used in various fields, including pattern recognition, image analysis, and natural language processing.
+
+SVMs work by finding the optimal hyperplane that separates data points into different classes.
+
+## Key Terms
+
+Hyperplane
+
+A hyperplane is a decision boundary that separates data points into different classes in a high-dimensional space. In two-dimensional 
+
+space, a hyperplane is simply a line that separates the data points into two classes. In three-dimensional space, a hyperplane is a
+
+plane that separates the data points into two classes. Similarly, in N-dimensional space, a hyperplane has (N-1)-dimensions.
+
+It can be used to make predictions on new data points by evaluating which side of the hyperplane they fall on. Data points on one side of the hyperplane are classified as belonging to one class, while data points on the other side of the hyperplane are classified as belonging to another class.
+
+## Margin
+
+A margin is the distance between the decision boundary (hyperplane) and the closest data points from each class. The goal of SVMs is to
+
+maximize this margin while minimizing classification errors. A larger margin indicates a greater degree of confidence in the 
+
+classification, as it means that there is a larger gap between the decision boundary and the closest data points from each class. The
+
+margin is a measure of how well-separated the classes are in feature space. SVMs are designed to find the hyperplane that maximizes
+
+this margin, which is why they are sometimes referred to as maximum-margin classifiers.
+
+Press enter or click to view image in full size
+
+## Support Vectors
+
+They are the data points that lie closest to the decision boundary (hyperplane) in a Support Vector Machine (SVM). These data points
+
+are important because they determine the position and orientation of the hyperplane, and thus have a significant impact on the 
+
+classification accuracy of the SVM. In fact, SVMs are named after these support vectors because they “support” or define the decision 
+
+boundary. The support vectors are used to calculate the margin, which is the distance between the hyperplane and the closest data
+
+points from each class. The goal of SVMs is to maximize this margin while minimizing classification errors.
+
+Understanding SVM with an example dataset
+
+
+We have a famous dataset called ‘Iris’. There are four features (columns or independent variables) in this dataset but for simplicity purposes, we shall on look at two which are: ‘Petal length’ and ‘Petal Width’. These points are then plotted on a 2D plane.
+
+Lighter points represent the species ‘Iris Setosa’ and darker ones represent ‘Iris versicolor’.
+
+We can simply classify this by plotting lines, using linear classifiers.
+
+The dark and light lines accurately classify the test data set but may fail on new data due to the closeness of the boundary from the respective classes. Whereas, the dotted line classifier is entirely trash and misclassified many points.
+
+What we want is the best classifier. A classifier which stays farthest from the overall class, that is where SVM comes in.
+
+We can think of SVM as fitting the widest possible path (represented by parallel dashed lines) between the classes.
+
+This is termed “Large Margin Classification”.
+
+Note. In theory, the hyperplane is exactly between the support vectors. But here it is slightly closer to the dark class. Why? This will be discussed later in the regularization part.
+
+## Understanding by an Analogy (You can skip if you understood :)
+
+You can think of SVM as a construction company. The 2D plane is a map and the 2 classes are 2 cities. The data points are analogous to 
+
+buildings. You are the government and your goal is to create the best highway to minimise traffic which passes through both the cities,
+
+but you are constrained by the area available to you.
+
+We are considering the road to be “straight” for now. (We will explore non-linear models later in the article)
+
+
+You give the contract to SVM construction company. What SVM does to minimise traffic is it wants to maximise the width of the road. It
+
+looks at the widest stretch of land between the 2 cities. The buildings at the end of the road are called “Support Vectors” since they 
+
+are constraining or “Supporting” the model. The highway is angled such that there is equal space for the cities to expand along it.
+
+This central line dividing the highway represents the Decision Boundary (Hyperplane) and the edges represent Hyperplanes for the 
+
+respective Classes. The width of this highway is the Margin.
+
+## What Happens if the data is not linearly classifiable?
+
+When a linear hyperplane is not possible, the input data is transformed into a higher-dimensional feature space, where it may be easier to find a linear decision boundary that separates the classes.
+
+What is transformation or addition of a new feature?
+
+We have two features X and Y, and the data which not linearly classifiable. What we need to do is add another dimension in which if the data is plotted it becomes linearly separable.
+
+Values of a point in the dimensions are nothing but column values of the point. To add another dimension we have to create another column (or feature).
+
+Here we have two features X and Y, a third feature is needed which will be a function of the original features i.e. X and Y, which will be enough to classify the data linearly in three dimensions.
+
+We take the third feature Z = f(x,y); f representing a function on X and Y. Here the Radial Basis Function(RBF) (measuring Euclidean distance) from the origin is enough.
+
+Z  = ( X ² +  Y ²) ^ ( 1 / 2 )
+
+Here the hyperplane was as simple as creating a plane parallel to the X-Y plane at a certain height.
+
+## Problems with this method
+
+The main problem here is the heavy load of the calculations to be performed.
+
+Here we took points centred on origin in a concentric manner. Suppose the points were not concentric but could be separated by the RBF. So we would need to take each point in the dataset as a reference each time and find the distance of all other points with respect to that point.
+
+So we would need to calculate n*(n-1)/2 distances. (n-1 other points with respect to each n points, but once the distance of 1–2 is calculated the distance of 2–1 does need to be calculated)
+
+## Time Complexity
+
+The time complexity of a square root is O(log(n)) and for power, addition is O(1). Thus to do n*(n-1)/2 total calculations we would need O(n²log(n)) time complexity.
+
+But as our goal is to separate the classes and not find the distance, we can do away with the square root. (Z = X²+ Y²)
+
+In that case, we would get a time complexity of O(n²).
+
+But this was not even the problem, the problem starts now
+
+Here we knew which function was to be used. But there could be many functions with just the degree limited to 2 (X, Y, XY, X² and Y²).
+
+We can use these 5 as 3 dimensions in ⁵C₃ ways = 10 ways. Not to mention, the infinite possibility of their linear combinations (Z = 4X² + 7XY + 13Y², Z= 8XY +17X², and so on…).
+
+And this was only for 2-degree polynomials. If we started using 3-degree polynomials then X³, Y³, X²Y, XY² will also come in the picture.
+
+Not all of these are good enough to be our additional feature.
+
+All the calculations and computations that went into this plot were in vain.
+
+Now we have to use another function as the feature and try again.
+
+I saw that earlier data and noticed that it wasn't linearly separable since yellow was in between the red points.
+
+Since the two yellow beaks met at the centre and one of them was going in the negative X and negative Y direction, I decided to square X and Y so that a new set of values begin from 0 forming only a single separation region between the beak and the bird’s face as compared to two earlier.
+
+This plot is linearly separable, in this way, we can reuse the XY calculations and plot smartly to get the desired features to separate the data.
+
+But even this has limitations, such as using only one or two feature datasets so we get a plot in 3-d and not more dimensions, also our brain's capacity to look for patterns to identify the next set of features and what if the first plot had no pattern so we had to again take a guess for a feature and start from scratch.
+
+If we got the desired feature set in only two steps as we got above, even then this method is slower than the one we actually use.
+
+What we use is called the Kernel Trick.
+
+
+## The Kernel Trick
+
+A Kernel Trick instead of adding another dimension/feature, finds the similarity of the points.
+
+
+Instead of finding f(x,y) directly, it computes the similarity of the image of these points. In other words, instead of finding 
+
+f(x1,y1) and f(x2,y2) we take the points (x1,y1) and (x2,y2) and compute how similar would their outputs be using a function f(x,y); 
+
+where f can be any function on x,y.
+
+Thus we don’t need to find a suitable set of features here. We find similarity in such a way that it is valid for all sets of features.
+
+To calculate the similarity we use the Gaussian function.
+
+f(x) = ae^(-(x-b)²/2c²)
+
+a : represents the height of the peak of the curve
+
+b : represents the position of the centre of the peak
+
+c : is the standard deviation of the data
+
+For RBF Kernel we use:
+
+K ( X ,X’) = e^-γ(|X-X’|²) = (1/ e^|X-X’|²) γ
+
+γ : is a hyperparameter which represents the linearlity of the model (γ ∝ 1/c²)
+
+X,X’ :represents the position vectors of the two points
+
+A small γ (tending to 0) means a more linear model and a large γ means a more non-linear model.
+
+Here we have 2 models (left with γ = 1 and right with γ = 0.01, much more linear in nature).
+
+So why not let gamma be a very high value? What is the use of a low γ?
+
+Large values of gamma may lead to overfitting as well and thus we need to find appropriate gamma values.
+
+## Time Complexity
+
+Since we need to find the similarity of each point with respect to all other points we need a total of n*(n-1)/2 calculations.
+
+Exponent has a time complexity of O(1) and thus we get a total time complexity of O(n²).
+
+We do not need to plot points, check feature sets, take combinations, etc. This makes this method way more efficient.
+
+What we do have here is the usage of different Kernels for this.
+
+We have Kernels such as:
+
+Polynomial Kernel
+
+Gaussian Kernel
+
+Gaussian RBF Kernel
+
+Laplace RBF Kernel
+
+Hyperbolic Tangent Kernel
+
+Sigmoid Kernel
+
+Bessel function of first kind Kernel
+
+ANOVA radial basis Kernel
+
+Linear Splines Kernel
+
+Whichever one we use, we get results in lesser computations than the original method.
+
+To further optimise our calculations we use the “Gram Matrix”.
+
+The Gram Matrix is a matrix which can be easily stored and manipulated in the memory and is highly efficient to use.
+
+## Regularization and Soft Margin SVM
+
+If we strictly impose that all points must be off the street on the correct side then this is called Hard Margin Classification.
+
+There are two issues with this method. First, it would only work with linearly separable data and not for non-linearly separable data
+
+A soft margin is a type of margin that allows for some misclassification errors in the training data.
+
+margin allows for some misclassification errors by allowing some data points to be on the wrong side of the decision boundary.
+
+Even though there is a misclassification in the training data set and worse performance with respect to the previous model, the general performance would be much better during testing, as a result of how far it is from both classes.
+
+But we can solve the problem of outliers by removing them using data preprocessing and data cleaning right? Then why Soft Margins?
+
+They are used mainly when the data is not linearly separable, meaning that it is not possible to find a hyperplane that perfectly 
+
+separates the classes without any errors and to avoid outliers .
+
+## How are Soft Margins working?
+
+Soft margins are implemented by introducing a slack variable for each data point, which allows the SVM to tolerate some degree of misclassification error. The amount of tolerance is controlled by a parameter called the regularization hyperparameter C, which determines how much weight should be given to minimizing classification errors versus maximizing the margin.
+
+It controls how much tolerance is allowed for misclassification errors, with larger values of C leading to a harder margin (less tolerance for errors) and smaller values of C leading to a softer margin (more tolerance for errors).
+
+Basically through our analogy, instead of creating a very small road (for the outlier case) when it was not possible to create a large road through the middle of the two cities we create a larger road by moving out some people.
+
+It may be bad for the people moving out (the outlier getting misclassified) but overall the highway (our model) would be way larger (more accurate) and better.
+
+In the case above where no road could be created, we ask some people to move out and create a narrow road. A wider road though better for transport would cause problems for a large number of people (many points getting misclassified).
+
+The regularization hyperparameter ‘C’ controls how many people can be moved out (how many points can be misclassified or tolerance) for the construction of the project.
+
+A high value of C means the model is harder in nature (less tolerant to misclassifications). Whereas a low value of C means that the model is softer in nature (more tolerant to misclassifications).
+
+
+## Regression using SVM
+
+SVMs, although generally used for classification can be used for both regression and classification. Support Vector Regression (SVR) is
+
+a machine learning algorithm used for regression analysis. It is different from traditional linear regression methods as it finds a
+
+hyperplane that best fits the data points in a continuous space, instead of fitting a line to the data points.
+
+SVR in contrast to SVM tries to maximise the number of points in the street (margin), the width is controlled by a hyperparameter ε 
+
+(epsilon).
+
+An analogy of this could be passing a flyover or a bridge over buildings or houses where we want to give shade to the most number of houses keeping the bridge thinnest.
+
+SVR wants to include the whole data into its reach while trying to minimise the margin, basically trying to encompass the points. Whereas linear regression wants to pass a line such that the sum of distances of the points from the line is minimum.
+
+The advantages of SVR over normal regression are:
+
+Non-linearity: SVR can capture non-linear relationships between input features and the target variable. It achieves this by using the kernel trick. In contrast, Linear Regression assumes a linear relationship between the input features and the target variable and Non-Linear Regression would require a lot of computation.
+
+Robustness to outliers: SVR is more robust to outliers compared to Linear Regression. SVR aims to minimize the errors within a certain margin around the predicted values, known as the epsilon-insensitive zone. This characteristic makes SVR less influenced by outliers that fall outside the margin, leading to more stable predictions.
+
+Sparsity of support vectors: SVR typically relies on a subset of training instances called support vectors to construct the regression model. These support vectors have the most significant impact on the model and represent the critical data points for determining the decision boundary. This sparsity property allows SVR to be more memory-efficient and computationally faster than Linear Regression, especially for large datasets. Also, an advantage is that after the addition of new training points the model does not change if they lie in the margin.
+
+Control over model complexity: SVR provides control over model complexity through hyperparameters such as the regularization parameter C and the kernel parameters. By adjusting these parameters, you can control the trade-off between model complexity and generalization ability this level of flexibility is not offered by linear regression.
+
+## Applications and Uses of SVM
+
+Support Vector Machines (SVMs) have been successfully applied to various real-world problems across different domains. Here are some notable applications of SVMs:
+
+Image Classification: SVMs have been widely used for image object recognition, handwritten digit recognition and optical character recognition (OCR). They have been employed in systems like filtering image-based spam and face detection systems used for security, surveillance, and biometric identification.
+
+Text Classification: SVMs are effective for text categorization tasks, such as sentiment analysis, spam detection, and topic classification.
+
+Bioinformatics: SVMs have been applied in bioinformatics for tasks such as protein structure prediction, gene expression analysis, and DNA classification.
+
+Financial Forecasting: SVMs have been used in financial applications for tasks such as stock market prediction, credit scoring, and fraud detection.
+
+Medical Diagnosis: SVMs have been utilized in medical diagnosis and decision-making systems. They can assist in diagnosing diseases, predicting patient outcomes, or identifying abnormal patterns in medical images.
+
+SVMs have also been applied in other domains such as geosciences, marketing, computer vision, and more, showcasing their versatility and effectiveness in various problem domains.
+
+## SVM python implementation
+
+1. Install Required Libraries
+
+pip install numpy pandas matplotlib scikit-learn
+
+3. Import Libraries
+
+import numpy as np
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+from sklearn import datasets
+
+from sklearn.model_selection import train_test_split
+
+from sklearn.preprocessing import StandardScaler
+
+from sklearn.svm import SVC
+
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+
+4. Load Real Dataset
+
+We will use the famous Iris Dataset.
+
+It contains flower measurements used to classify flower species.
+
+iris = datasets.load_iris()
+
+X = iris.data
+
+y = iris.target
+
+print("Features shape:", X.shape)
+
+print("Target shape:", y.shape)
+
+Features:
+
+sepal length
+
+sepal width
+
+petal length
+
+petal width
+
+Target classes:
+
+Setosa
+
+Versicolor
+
+Virginica
+
+5. Split Dataset (Train/Test)
+
+X_train, X_test, y_train, y_test = train_test_split(
+
+    X, y, test_size=0.2, random_state=42
+)
+
+80% training data
+
+20% testing data
+
+6. Feature Scaling
+
+SVM works better when features are scaled.
+
+scaler = StandardScaler()
+
+X_train = scaler.fit_transform(X_train)
+
+X_test = scaler.transform(X_test)
+
+
+
+7. Train the SVM Model
+
+We use SVC (Support Vector Classifier).
+
+model = SVC(kernel='linear')
+
+model.fit(X_train, y_train)
+
+Common kernels:
+
+linear
+
+rbf
+
+polynomial
+
+sigmoid
+
+8. Make Predictions
+
+y_pred = model.predict(X_test)
+
+print(y_pred)
+
+9. Evaluate Model Performance
+
+Accuracy
+accuracy = accuracy_score(y_test, y_pred)
+
+print("Accuracy:", accuracy)
+
+Confusion Matrix
+
+
+cm = confusion_matrix(y_test, y_pred)
+
+print("Confusion Matrix")
+
+print(cm)
+
+Classification Report
+
+report = classification_report(y_test, y_pred)
+
+print(report)
+
+This shows:
+
+precision
+
+recall
+
+f1-score
+
+10. Visualize Decision Boundary (2 Features)
+
+For visualization we use only two features.
+
+from sklearn.svm import SVC
+
+X = iris.data[:, :2]
+
+y = iris.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+
+model = SVC(kernel='linear')
+
+model.fit(X_train, y_train)
+
+
+plt.scatter(X[:,0], X[:,1], c=y)
+
+
+plt.xlabel("Sepal Length")
+
+plt.ylabel("Sepal Width")
+
+plt.title("SVM Classification")
+
+plt.show()
+
+This plot shows how SVM separates classes.
+
+11. Using RBF Kernel (Most Popular)
+
+The RBF kernel handles non-linear data.
+
+model = SVC(kernel='rbf', C=1, gamma='scale')
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+print("Accuracy:", accuracy_score(y_test, y_pred))
+
+12. Hyperparameters in SVM
+
+Important parameters:
+
+C (Regularization parameter)
+
+Large C → fewer errors but risk of overfitting
+
+Small C → wider margin
+
+
+
+
+ ## Time series model
+
+ A time series model is a machine learning model that can analyze sequential time series data and predict future values. Time series 
+ 
+ datasets consist of data values ordered over time, with time as the independent variable. Time series analysis allows for the
+ 
+ forecasting of future data values based on previous values in the sequence. 
+
+ A Time Series Modeling model is used to analyze data that changes over time and predict future values.
+
+In time series data:
+
+Data points are arranged in time order.
+
+Each observation has a timestamp such as day, month, or year.
+
+The past values influence future values.
+
+Example:
+
+| Day       | Website Visitors |
+| --------- | ---------------- |
+| Monday    | 500              |
+| Tuesday   | 550              |
+| Wednesday | 600              |
+
+
+Here, visitor numbers change over time.
+
+A time series model can analyze this pattern and predict how many visitors might come tomorrow.
+
+What is Time Series Modeling?
+
+Time series modeling means using statistical methods or machine learning algorithms to study data collected over time.
+
+The goal is usually to:
+
+understand patterns in the data
+
+identify trends
+
+detect unusual behavior
+
+predict future values
+
+Organizations use time series modeling to make data-driven decisions.
+
+Examples include predicting:
+
+sales next month
+
+stock prices
+
+electricity demand
+
+weather conditions
+
+# How Time Series Data is Different From Other Data
+
+Many datasets contain independent observations.
+
+Example:
+
+| Student | Score |
+| ------- | ----- |
+| A       | 85    |
+| B       | 78    |
+| C       | 90    |
+
+
+Each student's score does not depend on another student’s score.
+
+But time series data is different.
+
+In time series data, observations depend on previous values.
+
+Example:
+
+| Day       | Temperature |
+| --------- | ----------- |
+| Monday    | 25°C        |
+| Tuesday   | 26°C        |
+| Wednesday | 27°C        |
+
+
+Tuesday’s temperature is usually related to Monday’s temperature.
+
+This relationship between values is called dependency.
+
+
+## Types of Time Series Models
+
+There are two main types of time series modeling.
+
+1. Univariate Time Series
+
+In univariate time series, the model uses only one variable.
+
+The only independent variable is time.
+
+Example:
+
+Predicting daily stock price using only past stock prices.
+
+2. Multivariate Time Series
+
+In multivariate time series, the model uses multiple variables.
+
+These variables may influence the predictions.
+
+Example:
+
+Predicting crop yield using:
+
+rainfall
+
+temperature
+
+soil moisture
+
+time
+
+5. Key Concepts in Time Series Modeling
+
+Several important ideas help us understand time series data.
+
+These include:
+
+autocorrelation
+
+seasonality
+
+stationarity
+
+6. Autocorrelation
+
+Autocorrelation measures how strongly current data values are related to past values.
+
+If the value today is similar to the value yesterday, autocorrelation is high.
+
+Example:
+
+Daily electricity usage.
+
+If people use a similar amount of electricity every day, the pattern shows strong autocorrelation.
+
+Autocorrelation can be:
+
+Positive autocorrelation
+
+High values follow high values.
+
+Example:
+
+High sales yesterday → high sales today.
+
+Negative autocorrelation
+
+High values follow low values.
+
+Example:
+
+Hot day → cool day → hot day.
+
+7. Seasonality
+
+Seasonality refers to patterns that repeat over fixed time periods.
+
+These patterns occur because of seasonal or cyclical factors.
+
+Example:
+
+An online store might sell:
+
+more sunglasses in summer
+
+more jackets in winter
+
+Another example:
+
+Electricity usage is usually higher during daytime than nighttime.
+
+Seasonality helps forecasting models predict future behavior.
+
+Graphs of seasonal data often look like repeating waves.
+
+8. Trend
+
+A trend shows the long-term increase or decrease in data values.
+
+Example:
+
+If a company’s sales increase every year, the dataset shows an upward trend.
+
+Example:
+
+| Year | Sales |
+| ---- | ----- |
+| 2021 | 1M    |
+| 2022 | 1.3M  |
+| 2023 | 1.6M  |
+
+
+9. Noise
+
+Noise refers to random variations in data that do not follow a pattern.
+
+Noise can occur due to:
+
+measurement errors
+
+unexpected events
+
+data collection problems
+
+Example:
+
+A sudden drop in website traffic due to server downtime.
+
+Noise makes prediction more difficult.
+
+10. Stationarity
+
+Stationarity means that the statistical properties of a dataset do not change over time.
+
+These properties include:
+
+mean
+
+variance
+
+correlation
+
+In stationary data:
+
+values fluctuate
+
+but overall pattern stays stable
+
+Example:
+
+Daily temperature in a region might fluctuate but stay around an average.
+
+Non-stationary Data
+
+If the data shows a strong upward or downward trend, it is non-stationary.
+
+Example:
+
+Global temperature increasing due to climate change.
+
+Many time series models require the data to be stationary.
+
+11. Making Data Stationary
+
+If the data is not stationary, it can be transformed.
+
+One common technique is differencing.
+
+Differencing calculates the difference between consecutive observations.
+
+Example:
+
+| Day  | Sales | Difference |
+| ---- | ----- | ---------- |
+| Day1 | 100   | —          |
+| Day2 | 110   | 10         |
+| Day3 | 120   | 10         |
+
+## Time Series Models
+
+Several models are used for time series forecasting.
+
+Common models include:
+
+ARIMA
+
+Exponential Smoothing
+
+GARCH
+
+Long Short-Term Memory
+
+These models learn patterns from historical data and generate predictions.
+
+13. ARIMA Model
+
+The ARIMA model is one of the most widely used statistical time series models.
+
+ARIMA stands for:
+
+AR – Autoregression
+
+I – Integrated (differencing)
+
+MA – Moving Average
+
+It predicts future values based on:
+
+past observations
+
+past prediction errors
+
+ARIMA works best with stationary data.
+
+Other Time Series Models
+
+Other models used in forecasting include:
+
+Meta’s Prophet
+
+Amazon’s DeepAR
+
+Machine learning models like:
+
+XGBoost
+
+Random Forest
+
+can also be adapted for time series tasks.
+
+Evaluation Metrics for Time Series Models
+
+To measure how well a time series model performs, we use evaluation metrics.
+
+Common metrics include:
+
+Mean Squared Error (MSE)
+
+Measures the average squared difference between predicted and actual values.
+
+Root Mean Squared Error (RMSE)
+
+Square root of MSE.
+It measures prediction accuracy.
+
+Mean Absolute Error (MAE)
+
+Measures the average absolute difference between predictions and actual values.
+
+Mean Absolute Percentage Error (MAPE)
+
+Shows prediction error as a percentage.
+
+MAPE is widely used in forecasting problems.
+
+16. Real-World Applications of Time Series Models
+
+Time series models are used in many industries.
+
+1. Sales Forecasting
+
+Companies predict future sales using past sales data.
+
+2. Weather Prediction
+
+Meteorologists analyze historical weather data to forecast future conditions.
+
+3. Stock Market Analysis
+
+Financial analysts study stock prices over time to predict future market movements.
+
+4. Electricity Demand Prediction
+
+Power companies forecast electricity demand to manage supply efficiently.
+
+5. Anomaly Detection
+
+Time series models can detect unusual patterns.
+
+Example:
+
+Sudden drop in website traffic may indicate a technical issue.
+
+## Time Series Modeling model using a real dataset.
+
+
+We will use the Airline Passengers dataset (a classic real-world time series dataset) and build an ARIMA forecasting model.
+
+This example shows the full ML pipeline:
+
+Load real data
+
+Visualize data
+
+Check stationarity
+
+Transform data
+
+Train model
+
+Forecast future values
+
+Evaluate model
+
+## 1. Install Required Libraries
+
+pip install pandas numpy matplotlib statsmodels scikit-learn
+
+## 2. Import Libraries
+
+import pandas as pd
+
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+
+from statsmodels.tsa.stattools import adfuller
+
+from statsmodels.tsa.arima.model import ARIMA
+
+from sklearn.metrics import mean_squared_error
+
+## 3. Load Real Time Series Dataset
+
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/airline-passengers.csv"
+
+data = pd.read_csv(url)
+
+print(data.head())
+
+Month       Passengers
+
+1949-01     112
+
+1949-02     118
+
+1949-03     132
+
+## 4. Convert Date Column
+
+data['Month'] = pd.to_datetime(data['Month'])
+
+data.set_index('Month', inplace=True)
+
+print(data.head())
+
+## 5. Visualize the Time Series Data
+
+plt.figure(figsize=(10,5))
+
+plt.plot(data)
+
+plt.title("Airline Passenger Data")
+
+plt.xlabel("Year")
+
+plt.ylabel("Passengers")
+
+plt.show()
+
+This graph shows:
+
+trend
+
+seasonal patterns
+
+## 6. Check Stationarity
+
+Many time series models require Stationarity.
+
+We check this using the ADF test.
+
+result = adfuller(data['Passengers'])
+
+print("ADF Statistic:", result[0])
+
+print("p-value:", result[1])
+
+p-value < 0.05 → data is stationary
+
+p-value > 0.05 → data is not stationary
+
+## 7. Make Data Stationary (Differencing)
+
+data_diff = data.diff().dropna()
+
+plt.figure(figsize=(10,5))
+
+plt.plot(data_diff)
+
+plt.title("Differenced Time Series")
+
+plt.show()
+
+## 8. Train/Test Split
+
+train_size = int(len(data) * 0.8)
+
+train = data[:train_size]
+
+test = data[train_size:]
+
+## 9. Train ARIMA Model
+
+ARIMA model parameters:
+
+p → autoregression
+
+d → differencing
+
+q → moving average
+
+model = ARIMA(train, order=(2,1,2))
+
+model_fit = model.fit()
+
+print(model_fit.summary())
+
+## 10. Forecast Future Values
+
+forecast = model_fit.forecast(steps=len(test))
+
+print(forecast)
+
+## 11. Plot Predictions
+
+plt.figure(figsize=(10,5))
+
+
+plt.plot(train, label="Train")
+
+plt.plot(test, label="Test")
+
+plt.plot(test.index, forecast, label="Forecast")
+
+plt.legend()
+
+plt.title("Time Series Forecast")
+
+plt.show()
+
+## 12. Evaluate Model Performance
+
+We calculate Mean Squared Error (MSE).
+
+mse = mean_squared_error(test, forecast)
+
+print("MSE:", mse)
+
+## 13. Predict Future 12 Months
+
+future_forecast = model_fit.forecast(steps=12)
+
+print("Next 12 Months Forecast")
+
+print(future_forecast)
+
+## 14. Plot Future Predictions
+
+plt.figure(figsize=(10,5))
+
+
+plt.plot(data, label="Original Data")
+
+plt.plot(future_forecast, label="Future Forecast")
+
+plt.legend()
+
+plt.title("Future Passenger Prediction")
+
+plt.show()
+
+## 15. Real-World Use Case Example
+
+Time series ML models are used in many real applications:
+
+Sales Forecasting
+
+Companies predict future product demand.
+
+Example:
+
+Amazon forecasting product sales.
+
+Stock Market Prediction
+
+Predict future stock prices based on historical data.
+
+Weather Forecasting
+
+Predict rainfall, temperature, wind patterns.
+
+Electricity Demand
+
+Power companies predict electricity usage.
+
+
+## 16. Alternative ML Time Series Models
+
+Other popular models include:
+
+Long Short-Term Memory
+
+Prophet
+
+Random Forest
+
+XGBoost
+
+
+
 ### Decision Tree in Supervised Machine Learning
 
 ### What is a Decision Tree?
@@ -10359,12 +15527,63 @@ A Decision Tree is a supervised machine learning algorithm that makes prediction
 
 It works like a flowchart or tree structure.
 
+A decision tree is a non-parametric supervised learning algorithm, which is utilized for both classification and regression tasks. It
+
+has a hierarchical, tree structure, which consists of a root node, branches, internal nodes and leaf nodes.
+
+
+
+A decision tree contains several components.
+
+## Root Node
+
+The root node is the starting point of the tree.
+
+It represents the entire dataset.
+
+It splits the data based on the most important feature.
+
+Example:
+
+Is weather sunny?
+
+## Branch
+
+Branches connect nodes and represent the result of a decision rule.
+
+Example:
+
+Yes → go to next condition
+
+No → go to another condition
+
+Internal Node (Decision Node)
+
+Internal nodes represent questions about features.
+
+Example:
+
+Is temperature > 25°C?
+
+These nodes split the dataset into smaller groups.
+
+## Leaf Node
+
+Leaf nodes represent the final decision or prediction.
+
+Example:
+
+Go surfing
+
+Do not go surfing
+
+Leaf nodes are also called terminal nodes.
+
 <img width="1400" height="773" alt="image" src="https://github.com/user-attachments/assets/0afce489-5565-47c8-9d38-db75fd29014a" />
 
 <img width="600" height="1109" alt="image" src="https://github.com/user-attachments/assets/c76489c1-20ea-4854-9b81-c367086d0713" />
 
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/d3e81445-bdbd-40b9-bd97-f15e8b6479e2" />
-
 
 
 
@@ -10568,6 +15787,128 @@ Repeat Until Pure Data
       ↓
 Make Prediction
 
+
+
+How Decision Trees Work
+
+Decision trees follow a divide-and-conquer strategy.
+
+This means the algorithm repeatedly splits the dataset into smaller parts.
+
+Process:
+
+Start with the full dataset.
+
+Find the best feature to split the data.
+
+Divide the data into subsets.
+
+Repeat the process for each subset.
+
+Stop when predictions become clear.
+
+This process continues until the data is classified into groups.
+
+5. Greedy Search in Decision Trees
+
+Decision trees use a greedy algorithm.
+
+A greedy algorithm chooses the best option at each step.
+
+At every split, the algorithm selects the feature that gives the best separation of data.
+
+However, greedy algorithms do not always find the global best solution, but they work efficiently in practice.
+
+6. Homogeneous Data (Pure Nodes)
+
+The goal of splitting is to create pure or homogeneous groups.
+
+A pure node contains data points from only one class.
+
+Example:
+
+Leaf Node → All customers bought the product
+
+Pure nodes improve prediction accuracy.
+
+7. Problem: Overfitting
+
+When a decision tree becomes too large, it can memorize the training data.
+
+This problem is called overfitting.
+
+Overfitting means:
+
+The model works well on training data
+
+But performs poorly on new data
+
+Large trees often create very specific rules that do not generalize well.
+
+8. Data Fragmentation
+
+As trees grow deeper:
+
+Data gets divided into very small groups.
+
+Each node may contain very little data.
+
+This is called data fragmentation.
+
+When fragmentation occurs, predictions become unreliable.
+
+9. Occam’s Razor Principle
+
+Decision trees follow the principle of Occam's Razor.
+
+This principle says:
+
+The simplest solution is usually the best.
+
+In machine learning this means:
+
+Avoid overly complex models
+
+Use the simplest model that explains the data well
+
+10. Pruning in Decision Trees
+
+To prevent overfitting, we use pruning.
+
+Pruning removes unnecessary branches from the tree.
+
+Branches that contribute little to prediction accuracy are removed.
+
+Benefits of pruning:
+
+simpler model
+
+better generalization
+
+reduced overfitting
+
+11. Model Evaluation
+
+After training a decision tree, we evaluate it using cross-validation.
+
+Cross Validation helps measure how well the model performs on unseen data.
+
+This ensures the model is reliable.
+
+12. Ensemble Method: Random Forest
+
+Decision trees can also be combined into a stronger model called Random Forest.
+
+Random forest builds many decision trees and combines their predictions.
+
+Advantages:
+
+higher accuracy
+
+reduced overfitting
+
+better generalization
+
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/20330711-65e6-4eb6-8f03-1f60e13a6562" />
 
 ## Python Example
@@ -10577,9 +15918,11 @@ Simple implementation using Scikit-Learn.
 from sklearn.tree import DecisionTreeClassifier
 
 X = [[2,1],[3,1],[6,2],[8,2]]
+
 y = ["Fail","Fail","Pass","Pass"]
 
 model = DecisionTreeClassifier()
+
 model.fit(X,y)
 
 prediction = model.predict([[7,2]])
@@ -10867,6 +16210,28 @@ Step 5: Choose best split
 
 Step 6: Repeat until dataset is pure
 
+## Types of decision trees
+
+Hunt’s algorithm, which was developed in the 1960s to model human learning in Psychology, forms the foundation of many popular decision 
+
+tree algorithms, such as the following:
+
+- ID3: Ross Quinlan is credited within the development of ID3, which is shorthand for “Iterative Dichotomiser 3.” This algorithm 
+
+leverages entropy and information gain as metrics to evaluate candidate splits.
+
+- C4.5: This algorithm is considered a later iteration of ID3, which was also developed by Quinlan. It can use information gain or gain
+
+ratios to evaluate split points within the decision trees.
+
+- CART: The term, CART, is an abbreviation for “classification and regression trees” and was introduced by Leo Breiman. This algorithm
+
+typically utilizes Gini impurity to identify the ideal attribute to split on. Gini impurity measures how often a randomly chosen
+
+attribute is misclassified. When evaluating using Gini impurity, a lower value is more ideal.
+
+
+
 ### Simple Layman Example
 
 Imagine you are sorting fruits.
@@ -10899,6 +16264,30 @@ Then ask next question:
 Taste sweet?
 
 That’s how a decision tree works.
+
+Real-World Applications
+
+Decision trees are widely used in many industries.
+
+Examples include:
+
+Medical Diagnosis
+
+Doctors use decision trees to identify diseases based on symptoms.
+
+Credit Risk Analysis
+
+Banks evaluate whether a customer should receive a loan.
+
+Marketing
+
+Companies predict whether a customer will buy a product.
+
+Fraud Detection
+
+Financial institutions detect suspicious transactions.
+
+
 
 ## Quiz: Decision Tree (10 MCQs)
 
@@ -11057,9 +16446,32 @@ Random Forest is a supervised machine learning algorithm that combines many deci
 
 Instead of relying on one decision tree, it uses many trees (a forest) and combines their results.
 
+A Random Forest is an ensemble machine learning model that combines multiple decision trees. Each tree in the forest is trained on a 
+
+random sample of the data (bootstrap sampling) and considers only a random subset of features when making splits (feature 
+
+randomization).
+
+For classification tasks, the forest predicts by majority voting among trees, while for regression tasks, it averages the predictions. 
+
+The model’s strength comes from its “wisdom of crowds” approach — while individual trees might make errors, the collective decision-
+
+making process tends to average out these mistakes and arrive at more reliable predictions.
+
+
 In simple words:
 
 Random Forest = Many decision trees working together to make a better decision.
+
+we’ll focus on the classic golf dataset as an example for classification. While Random Forests can handle both classification and 
+
+regression tasks equally well, we’ll concentrate on the classification part — predicting whether someone will play golf based on
+
+weather conditions. The concepts we’ll explore can be easily adapted to regression problems (like predicting number of player) using 
+
+the same principles.
+
+
 
 ## Why Random Forest is Needed
 
@@ -11109,8 +16521,427 @@ Step 5: Combine predictions (voting or averaging)
 
 This process is called Ensemble Learning.
 
+import pandas as pd
+
+import numpy as np
+
+from sklearn.model_selection import train_test_split
+
+
+# Create and prepare dataset
+
+dataset_dict = {
+
+    'Outlook': ['sunny', 'sunny', 'overcast', 'rainy', 'rainy', 'rainy', 'overcast', 
+                'sunny', 'sunny', 'rainy', 'sunny', 'overcast', 'overcast', 'rainy',
+                'sunny', 'overcast', 'rainy', 'sunny', 'sunny', 'rainy', 'overcast',
+                'rainy', 'sunny', 'overcast', 'sunny', 'overcast', 'rainy', 'overcast'],
+				
+    'Temperature': [85.0, 80.0, 83.0, 70.0, 68.0, 65.0, 64.0, 72.0, 69.0, 75.0, 75.0,
+	
+                   72.0, 81.0, 71.0, 81.0, 74.0, 76.0, 78.0, 82.0, 67.0, 85.0, 73.0,
+				   
+                   88.0, 77.0, 79.0, 80.0, 66.0, 84.0],
+				   
+    'Humidity': [85.0, 90.0, 78.0, 96.0, 80.0, 70.0, 65.0, 95.0, 70.0, 80.0, 70.0,
+	
+                 90.0, 75.0, 80.0, 88.0, 92.0, 85.0, 75.0, 92.0, 90.0, 85.0, 88.0,
+				 
+                 65.0, 70.0, 60.0, 95.0, 70.0, 78.0],
+				 
+    'Wind': [False, True, False, False, False, True, True, False, False, False, True,
+	
+             True, False, True, True, False, False, True, False, True, True, False,
+			 
+             True, False, False, True, False, False],
+			 
+    'Play': ['No', 'No', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'No', 'Yes', 'Yes', 'Yes',
+	
+             'Yes', 'Yes', 'No', 'No', 'Yes', 'Yes', 'No', 'No', 'No', 'Yes', 'Yes'
+			 ,
+             'Yes', 'Yes', 'Yes', 'Yes', 'No', 'Yes']
+}
+
+# Prepare data
+
+df = pd.DataFrame(dataset_dict)
+
+df = pd.get_dummies(df, columns=['Outlook'], prefix='', prefix_sep='', dtype=int)
+
+df['Wind'] = df['Wind'].astype(int)
+
+df['Play'] = (df['Play'] == 'Yes').astype(int)
+
+
+# Rearrange columns
+
+column_order = ['sunny', 'overcast', 'rainy', 'Temperature', 'Humidity', 'Wind', 'Play']
+
+df = df[column_order]
+
+# Prepare features and target
+
+X,y = df.drop('Play', axis=1), df['Play']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.5, shuffle=False)
+
+## Main Mechanism
+
+Here’s how Random Forest works:
+
+Bootstrap Sampling: Each tree gets its own unique training set, created by randomly sampling from the original data with replacement.
+
+This means some data points may appear multiple times while others aren’t used.
+
+Random Feature Selection: When making a split, each tree only considers a random subset of features (typically square root of total
+
+features).
+
+Growing Trees: Each tree grows using only its bootstrap sample and selected features, making splits until it reaches a stopping point 
+
+(like pure groups or minimum sample size).
+
+Final Prediction: All trees vote together for the final prediction. For classification, take the majority vote of class predictions;
+
+for regression, average the predicted values from all trees.
+
+## Training Steps
+
+The Random Forest algorithm constructs multiple decision trees and combines them. Here’s how it works:
+
+Step 1: Bootstrap Sample Creation
+
+1.0. Set the number of trees (default = 100)
+
+1.1. For each tree in the forest:
+
+a. Create new training set by random sampling original data with replacement until reaching original dataset size. This is called
+
+bootstrap sampling.
+
+b. Mark and set aside non-selected samples as out-of-bag (OOB) samples for later error estimation
+
+Press enter or click to view image in full size
+
+# Generate 100 bootstrap samples
+
+n_samples = len(X_train)
+
+n_bootstraps = 100
+
+all_bootstrap_indices = []
+
+all_oob_indices = []
+
+np.random.seed(42)  # For reproducibility
+
+for i in range(n_bootstraps):
+
+    # Generate bootstrap sample indices
+	
+    bootstrap_indices = np.random.choice(n_samples, size=n_samples, replace=True)
+	
+    
+    # Find OOB indices
+	
+    oob_indices = list(set(range(n_samples)) - set(bootstrap_indices))
+	
+    
+    all_bootstrap_indices.append(bootstrap_indices)
+	
+    all_oob_indices.append(oob_indices)
+
+# Print details for samples 1, 2, and 100
+
+samples_to_show = [0, 1, 99]
+
+for i in samples_to_show:
+
+    print(f"\nBootstrap Sample {i+1}:")
+	
+    print(f"Chosen indices: {sorted(all_bootstrap_indices[i])}")
+	
+    print(f"Number of unique chosen indices: {len(set(all_bootstrap_indices[i]))}")
+	
+    print(f"OOB indices: {sorted(all_oob_indices[i])}")
+	
+    print(f"Number of OOB samples: {len(all_oob_indices[i])}")
+	
+    print(f"Percentage of OOB: {len(all_oob_indices[i])/n_samples*100:.1f}%")
+
+
+## Key Parameters
+
+The key Random Forest parameters (especially in scikit-learn) include all Decision Tree parameters, plus some unique ones.
+
+Random Forest-specific parameters
+
+oob_score
+
+This uses leftover data (out-of-bag samples) to check how well the model works. This gives you a way to test your model without setting 
+
+aside separate test data. It’s especially helpful with small datasets.
+
+
+n_estimators
+
+This parameter controls how many trees to build (default is 100).
+
+To find the optimal number of trees, track the OOB error rate as you add more trees to the forest. The error typically drops quickly at 
+
+first, then levels off. The point where it stabilizes suggests the optimal number — adding more trees after this gives minimal 
+
+improvement while increasing computation time.
+
+bootstrap
+
+This decides whether each tree learns from a random sample of data (True) or uses all data ( False). The default (True) helps create 
+
+different kinds of trees, which is key to how Random Forests work. Only consider setting it to False when you have very little data and 
+
+can’t afford to skip any samples.
+
+
+n_jobs
+
+This controls how many processor cores to use during training. Setting it to -1 uses all available cores, making training faster but
+
+using more memory. With big datasets, you might need to use fewer cores to avoid running out of memory.
+
+Shared parameters with Decision Trees
+
+The following parameters works the same way as in Decision Tree.
+
+max_depth: Maximum tree depth
+
+min_samples_split: Minimum samples needed to split a node
+
+min_samples_leaf: Minimum samples required at leaf node
+
+Compared to Decision Tree, here are key differences in parameter importance:
+
+max_depth
+
+This matters less in Random Forests because combining many trees helps prevent overfitting, even with deeper trees. You can usually let
+trees grow deeper to catch complex patterns in your data.
+
+min_samples_split and min_samples_leaf
+
+These are less important in Random Forests because using many trees naturally helps avoid overfitting. You can usually set these to 
+
+smaller numbers than you would with a single decision tree.
+
+Pros & Cons
+
+Pros:
+
+Strong and Reliable: Random Forests give accurate results and are less likely to overfit than single decision trees. By using random 
+
+sampling and mixing up which features each tree considers at each node, they work well across many problems without needing much 
+
+adjustment.
+
+Feature Importance: The model can tell you which features matter most in making predictions by measuring how much each feature helps 
+
+across all trees. This helps you understand what drives your predictions.
+
+
+Minimal Preprocessing: Random Forests handle both numerical and categorical variables well without much preparation. They work well 
+
+with missing values and outliers, and can find complex relationships in your data automatically.
+
+Cons:
+
+Computational Cost: Training and using the model takes more time as you add more trees or make them deeper. While you can speed up 
+
+training by using multiple processors, it still needs substantial computing power for big datasets.
+
+Limited Interpretability: While you can see which features are important overall, it’s harder to understand exactly why the model made
+
+a specific prediction, unlike with single decision trees. This can be a problem when you need to explain each decision.
+
+
+Prediction Speed: To make a prediction, data must go through all trees and then combine their answers. This makes Random Forests slower
+
+than simpler models, which might be an issue for real-time applications.
+
+
+##  Random Forest Classifier Code Summarized
+
+import pandas as pd
+
+import numpy as np
+
+from sklearn.model_selection import train_test_split
+
+from sklearn.metrics import accuracy_score
+
+from sklearn.ensemble import RandomForestClassifier
+
+# Create dataset
+
+dataset_dict = {
+
+    'Outlook': ['sunny', 'sunny', 'overcast', 'rainy', 'rainy', 'rainy', 'overcast',
+	
+                'sunny', 'sunny', 'rainy', 'sunny', 'overcast', 'overcast', 'rainy',
+				
+                'sunny', 'overcast', 'rainy', 'sunny', 'sunny', 'rainy', 'overcast',
+				
+                'rainy', 'sunny', 'overcast', 'sunny', 'overcast', 'rainy', 'overcast'],
+				
+    'Temperature': [85.0, 80.0, 83.0, 70.0, 68.0, 65.0, 64.0, 72.0, 69.0, 75.0, 75.0,
+	
+                   72.0, 81.0, 71.0, 81.0, 74.0, 76.0, 78.0, 82.0, 67.0, 85.0, 73.0,
+				   
+                   88.0, 77.0, 79.0, 80.0, 66.0, 84.0],
+				   
+    'Humidity': [85.0, 90.0, 78.0, 96.0, 80.0, 70.0, 65.0, 95.0, 70.0, 80.0, 70.0,
+	
+                 90.0, 75.0, 80.0, 88.0, 92.0, 85.0, 75.0, 92.0, 90.0, 85.0, 88.0,
+				 
+                 65.0, 70.0, 60.0, 95.0, 70.0, 78.0],
+				 
+    'Wind': [False, True, False, False, False, True, True, False, False, False, True,
+	
+             True, False, True, True, False, False, True, False, True, True, False,
+			 
+             True, False, False, True, False, False],
+			 
+    'Play': ['No', 'No', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'No', 'Yes', 'Yes', 'Yes',
+	
+             'Yes', 'Yes', 'No', 'No', 'Yes', 'Yes', 'No', 'No', 'No', 'Yes', 'Yes',
+			 
+             'Yes', 'Yes', 'Yes', 'Yes', 'No', 'Yes']
+}
+
+# Prepare data
+
+df = pd.DataFrame(dataset_dict)
+
+df = pd.get_dummies(df, columns=['Outlook'], prefix='', prefix_sep='', dtype=int)
+
+df['Wind'] = df['Wind'].astype(int)
+
+df['Play'] = (df['Play'] == 'Yes').astype(int)
+
+
+# Rearrange columns
+
+column_order = ['sunny', 'overcast', 'rainy', 'Temperature', 'Humidity', 'Wind', 'Play']
+
+df = df[column_order]
+
+
+# Split features and target
+
+X, y = df.drop('Play', axis=1), df['Play']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.5, shuffle=False)
+
+# Train Random Forest
+
+rf = RandomForestClassifier(n_estimators=100, max_features='sqrt', random_state=42)
+
+rf.fit(X_train, y_train)
+
+
+# Predict and evaluate
+
+y_pred = rf.predict(X_test)
+
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
+
+
+## Random Forest Regressor Code Summarized
+
+import pandas as pd
+
+import numpy as np
+
+from sklearn.model_selection import train_test_split
+
+from sklearn.metrics import root_mean_squared_error
+
+from sklearn.ensemble import RandomForestRegressor
+
+
+# Create dataset
+
+dataset_dict = {
+
+    'Outlook': ['sunny', 'sunny', 'overcast', 'rain', 'rain', 'rain', 'overcast',
+	
+                'sunny', 'sunny', 'rain', 'sunny', 'overcast', 'overcast', 'rain',
+				
+                'sunny', 'overcast', 'rain', 'sunny', 'sunny', 'rain', 'overcast',
+				
+                'rain', 'sunny', 'overcast', 'sunny', 'overcast', 'rain', 'overcast'],
+				
+    'Temp.': [85.0, 80.0, 83.0, 70.0, 68.0, 65.0, 64.0, 72.0, 69.0, 75.0, 75.0,
+	
+              72.0, 81.0, 71.0, 81.0, 74.0, 76.0, 78.0, 82.0, 67.0, 85.0, 73.0,
+			  
+              88.0, 77.0, 79.0, 80.0, 66.0, 84.0],
+			  
+    'Humid.': [85.0, 90.0, 78.0, 96.0, 80.0, 70.0, 65.0, 95.0, 70.0, 80.0, 70.0,
+	
+               90.0, 75.0, 80.0, 88.0, 92.0, 85.0, 75.0, 92.0, 90.0, 85.0, 88.0,
+			   
+               65.0, 70.0, 60.0, 95.0, 70.0, 78.0],
+			   
+    'Wind': [False, True, False, False, False, True, True, False, False, False, True,
+	
+             True, False, True, True, False, False, True, False, True, True, False,
+			 
+             True, False, False, True, False, False],
+			 
+    'Num_Players': [52, 39, 43, 37, 28, 19, 43, 47, 56, 33, 49, 23, 42, 13, 33, 29,
+	
+                    25, 51, 41, 14, 34, 29, 49, 36, 57, 21, 23, 41]
+					
+}
+
+
+# Prepare data
+
+df = pd.DataFrame(dataset_dict)
+
+df = pd.get_dummies(df, columns=['Outlook'], prefix='', prefix_sep='')
+
+df['Wind'] = df['Wind'].astype(int)
+
+# Split features and target
+
+X, y = df.drop('Num_Players', axis=1), df['Num_Players']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.5, shuffle=False)
+
+# Train Random Forest
+
+rf = RandomForestRegressor(n_estimators=100, max_features='sqrt', random_state=42)
+
+rf.fit(X_train, y_train)
+
+
+# Predict and evaluate
+
+y_pred = rf.predict(X_test)
+
+rmse = root_mean_squared_error(y_test, y_pred)
+
+
+print(f"Root Mean Squared Error: {rmse:.2f}")
+
+
+
+
+
+
 
 ### Bootstrapping (Sampling Technique)
+
+
 
 Random Forest creates different datasets using bootstrapping.
 
@@ -11450,6 +17281,54 @@ C) It uses networks
 D) It uses layers
 
  Answer: A
+ 
+## What is Bootstrapping in Machine learning ?
+
+Most of statistics deals with comparing two things and determining if they are different in reality or if it’s just that we randomly observed a difference in the sample we gathered but in reality there is no difference. This is what makes statistics so exiting. For example is iphone13’s performance really better than iphone10’s ? Or is the machine learning model that I have built really better than the existing system in place ?
+
+For the iphone example how would you go about it ? Suppose you measure performance based on the milliseconds it takes to open Uber App. So you would open the app a bunch of times and note the time taken each time for both the phones.
+
+
+iphone13 = [120,100,110,90,115,123,114,103,111,107,103,118,113,112,121,110,117,115,119,108,124,111,112,113,113,11,112,110,109,109]
+
+iphone10 = [123,119,115,112,100,121,125,122,125,123,128,122,119,118,112,130,122,128,112,118,112,126,122,123,127,122,123,119,129,122]
+
+Suppose this is what you observed and now wanted to find out if there is an actual difference between the performance.
+
+Naive Approach
+One naive approach would be to just take the means and compare
+
+iphone13_mean =108.43
+
+iphone10_mean =120.63
+
+now you could conclude right here that iphone13 performs better.
+
+BUT can you be sure that this difference would be observed again if you took another set of measurements ? Can you safely go and tell you manager that yes there is a difference in performance ? What if they conduct their own experiment and find that both models are actually very similar ?
+
+How can you be sure ?
+
+Traditional Approach
+Second approach that comes in is a traditional statistical test
+
+In this approach you
+
+Compute the t-statistic
+
+Look up the theoretical distribution which is in the t-table
+
+If you find that the probability of observed value of T is in the upper 5% (quite arbitrary threshold) of the theoretical distribution
+, then you conclude that the observed difference is not because of random chance
+
+Now for people who have just been introduced to statistical tests, these tests feel arbitrary and that is because they usually act as 
+
+black boxes and use poorly explained thresholds like 5%
+
+Question comes : can we do better?
+
+
+
+
 
 
  ### Bagging vs Boosting in Machine Learning
@@ -11461,7 +17340,20 @@ Ensemble learning means combining multiple models to create a stronger model.
 
 Think of it like a team solving a problem together instead of one person solving it alone.
 
+
 ### What is Bagging?
+
+A high variance for a model is not good, suggesting its performance is
+
+sensitive to the training data provided (low generalization power). So
+,
+even if more training data is provided, the model may still perform poorly.
+
+And, this may not even reduce the variance of our model.
+
+➢ Solution: BAGGING, a shorthand for the combination of
+
+Bootstrapping and aggregating
 
 
 Bagging (Bootstrap Aggregating) is a technique where:
@@ -12254,8 +18146,218 @@ These concepts help create robust ML models.
 
 ## What is K-Nearest Neighbors (KNN)?
 
-
 K-Nearest Neighbors (KNN) is a supervised machine learning algorithm used for classification and regression.
+
+Introduction
+
+K-nearest neighbors (KNN) is a type of supervised learning algorithm used for both regression and classification. KNN tries to predict the correct class for the test data by calculating the distance between the test data and all the training points. Then select the K number of points which is closet to the test data. The KNN algorithm calculates the probability of the test data belonging to the classes of ‘K’ training data and class holds the highest probability will be selected. In the case of regression, the value is the mean of the ‘K’ selected training points.
+
+Suppose, we have an image of a creature that looks similar to cat and dog, but we want to know either it is a cat or dog. So for this identification, we can use the KNN algorithm, as it works on a similarity measure. Our KNN model will find the similar features of the new data set to the cats and dogs images and based on the most similar features it will put it in either cat or dog category.
+
+## Why do we need a K-NN Algorithm?
+
+Suppose there are two categories, i.e., Category A and Category B, and we have a new data point x1, so this data point will lie in which of these categories. To solve this type of problem, we need a K-NN algorithm. With the help of K-NN, we can easily identify the category or class of a particular dataset. Consider the below diagram:
+
+## How does K-NN work?
+
+The K-NN working can be explained on the basis of the below algorithm:
+
+Step-1: Select the number K of the neighbors
+Step-2: Calculate the Euclidean distance of K number of neighbors
+Step-3: Take the K nearest neighbors as per the calculated Euclidean distance.
+Step-4: Among these k neighbors, count the number of the data points in each category.
+Step-5: Assign the new data points to that category for which the number of the neighbor is maximum.
+Step-6: Our model is ready.
+Suppose we have a new data point and we need to put it in the required category.
+
+Firstly, we will choose the number of neighbors, so we will choose the k=5.
+
+Next, we will calculate the Euclidean distance between the data points. The Euclidean distance is the distance between two points,
+
+which we have already studied in geometry.
+
+By calculating the Euclidean distance we got the nearest neighbors, as three nearest neighbors in category A and two nearest neighbors in category B.
+
+As we can see the 3 nearest neighbors are from category A, hence this new data point must belong to category A.
+
+## How to choose a K value?
+
+Kvalue indicates the count of the nearest neighbors. We have to compute distances between test points and trained labels points. 
+
+Updating distance metrics with every iteration is computationally expensive, and that’s why KNN is a lazy learning algorithm.
+
+As you can verify from the above image, if we proceed with K=3, then we predict that test input belongs to class B, and if we continue with K=7, then we predict that test input belongs to class A.
+That’s how you can imagine that the K value has a powerful effect on KNN performance.
+Then how to select the optimal K value?
+
+There are no pre-defined statistical methods to find the most favorable value of K.
+Initialize a random K value and start computing.
+Choosing a small value of K leads to unstable decision boundaries.
+The substantial K value is better for classification as it leads to smoothening the decision boundaries.
+Derive a plot between error rate and K denoting values in a defined range. Then choose the K value as having a minimum error rate.
+Now you will get the idea of choosing the optimal K value by implementing the model.
+
+Calculating distance:
+
+The first step is to calculate the distance between the new point and each training point. There are various methods for calculating this distance, of which the most commonly known methods are — Euclidian, Manhattan (for continuous) and Hamming distance (for categorical).
+
+Euclidean Distance: Euclidean distance is calculated as the square root of the sum of the squared differences between a new point (x) and an existing point (y).
+
+Manhattan Distance: This is the distance between real vectors using the sum of their absolute difference.
+
+Hamming Distance: It is used for categorical variables. If the value (x) and the value (y) are the same, the distance D will be equal to 0 . Otherwise D=1.
+
+Ways to perform K-NN
+
+KNeighborsClassifier(n_neighbors=5, *, weights=’uniform’, algorithm=’auto’, leaf_size=30, p=2, metric=’minkowski’, metric_params=None, n_jobs=None, **kwargs)
+algorithm : {‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, default=’auto’
+
+
+Lets consider for simple case with two dimension plot. If we look mathematically, the simple intuition is to calculate the euclidean distance from point of interest ( of whose class we need to determine) to all the points in training set. Then we take class with majority points. This is called brute force method.
+
+k-Dimensional Tree (kd tree)
+k-d tree is a hierarchical binary tree. When this algorithm is used for k-NN classficaition, it rearranges the whole dataset in a binary tree structure, so that when test data is provided, it would give out the result by traversing through the tree, which takes less time than brute search.
+
+Press enter or click to view image in full size
+
+For a better understanding of how this can look like in a computer science topic, you can find below an HTML-code. A tree helps to structure a website and websites can normally be depicted using a tree.
+
+KNN model implementation
+
+Let’s start the application by importing all the required packages. Then read the telecommunication data file using read_csv() function.
+
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+from matplotlib.ticker import NullFormatter
+
+import pandas as pd
+
+import matplotlib.ticker as ticker
+
+%matplotlib inline
+
+df = pd.read_csv('Telecustomers.csv')
+
+df.head()
+
+
+
+## Dataset
+
+As you can see, there are 12 columns, namely as region, tenure, age, marital, address, income, ed, employ, retire, gender, reside, and custcat. We have a target column, ‘custcat’ categorizes the customers into four groups:
+
+1- Basic Service
+
+2- E-Service
+
+3- Plus Service
+
+4- Total Service
+
+X = df.drop(['custcat'], axis = 1)
+
+y = df['custcat']
+
+from sklearn import preprocessing
+
+X = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random_state=4)
+
+from sklearn.neighbors import KNeighborsClassifier
+
+from sklearn import metrics
+
+#Train Model and Predict
+
+k = 4  
+
+neigh = KNeighborsClassifier(n_neighbors = k).fit(X_train,y_train)
+
+Pred_y = neigh.predict(X_test)
+
+print("Accuracy of model at K=4 is",metrics.accuracy_score(y_test, Pred_y))
+
+
+We collect all independent data features into the X data-frame and target field into a y data-frame. Then we manipulate the data and 
+
+normalize it.
+
+After splitting the data, we take 0.8% data for training and remaining for testing purposes.
+
+We import the classifier model from the sklearn library and fit the model by initializing K=4. So we have achieved an accuracy of 0.32 
+
+here.
+
+Now it’s time to improve the model and find out the optimal k value.
+
+error_rate = []
+
+for i in range(1,40):
+
+ knn = KNeighborsClassifier(n_neighbors=i)
+ 
+ knn.fit(X_train,y_train)
+ 
+ pred_i = knn.predict(X_test)
+ 
+ error_rate.append(np.mean(pred_i != y_test))
+ 
+plt.figure(figsize=(10,6))
+
+plt.plot(range(1,40),error_rate,color='blue', linestyle='dashed',
+
+         marker='o',markerfacecolor='red', markersize=10)
+		 
+plt.title('Error Rate vs. K Value')
+
+plt.xlabel('K')
+
+plt.ylabel('Error Rate')
+
+print("Minimum error:-",min(error_rate),"at K =",error_rate.index(min(error_rate)))
+
+
+
+From the plot, you can see that the smallest error we got is 0.59 at K=37. Further on, we visualize the plot between accuracy and K value.
+
+acc = []
+
+# Will take some time
+
+from sklearn import metrics
+
+for i in range(1,40):
+
+    neigh = KNeighborsClassifier(n_neighbors = i).fit(X_train,y_train)
+	
+    yhat = neigh.predict(X_test)
+	
+    acc.append(metrics.accuracy_score(y_test, yhat))
+	
+    
+plt.figure(figsize=(10,6))
+
+plt.plot(range(1,40),acc,color = 'blue',linestyle='dashed', 
+
+         marker='o',markerfacecolor='red', markersize=10)
+		 
+plt.title('accuracy vs. K Value')
+
+plt.xlabel('K')
+
+plt.ylabel('Accuracy')
+
+print("Maximum accuracy:-",max(acc),"at K =",acc.index(max(acc)))
+
+
+Now you see the improved results. We got the accuracy of 0.41 at K=37. As we already derived the error plot and got the minimum error at k=37, so we will get better efficiency at that K value.
+
+
 
 The algorithm works by:
 
@@ -12268,6 +18370,8 @@ Look at nearby examples
  See their labels
  
 Predict the same label
+
+
 
 
 ## Simple Intuition
